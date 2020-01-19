@@ -1,0 +1,57 @@
+<footer id="footer" class="footer2">
+                    <div class="container clearfix">
+                     <div class="footer-col">
+                <h5>Contact Us</h5>
+                <p><%= current_organization.try(:name)%>
+                    <br><%= current_organization.try(:address) %>
+                    <br><%="#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+                    <br><%="PH: #{current_organization.try(:phone_number)}" %>
+                    <br><%= "FAX #{current_organization.try(:fax_number)}" %></p>
+            </div>
+            <div class="footer-col">
+                <h5>Schools</h5>
+                <ul class="footer-links">
+               <li><a href="#">Central Plains Elementary (PRE-K - 4th)</a></li>
+               <li><a href="#">Central Plains Middle</a></li>
+               <li><a href="#">Central Plains High</a></li>
+               <li><a href="#">Wilson JR/SR HIGH</a></li>
+               <li><a href="#">Wilson elementary</a></li>
+               <li><a href="#">LAKESIDE LEARNING</a></li>
+            </ul>
+            </div>
+            <div class="footer-col">
+            <h5>Quicklinks</h5>
+                 <ul class="footer-links">
+                    <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"  %>>Live Feed</a></li>
+                    <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"  %>>News</a></li>
+                    <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"  %>>Events</a></li>
+                    <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"  %>>Staff</a></li>
+                    <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/dining"  %>>Dining</a></li>
+                    <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"  %>>Documents</a></li>
+                    <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"  %>>Athletics</a></li>
+                </ul>
+         </div>
+
+         <div class="footer-col quicklinks-depted">
+       <%= image_tag "apptegy_cms/themes/usd112ks/dept-ed-logo.png", alt: " "%>
+       </div>
+
+
+            <div class="footer-col last">
+            <a href="#" class="app-store"><%= image_tag "apptegy_cms/themes/usd112ks/apple.png", alt: " "%></a>
+            <a href="#" class="google-play"><%= image_tag "apptegy_cms/themes/usd112ks/google.png", alt: " "%></a>
+            <div class="soacial-media">
+                <% if current_organization[:facebook_link].present? %>
+                   <a href="<%= current_organization.try(:facebook_link) %>" class="fb">Facebook</a>
+               <% end %>
+               <% if current_organization[:twitter_link].present? %>
+                   <a href="<%= current_organization.try(:twitter_link) %>" class="tw">Twitter</a>
+               <% end %>
+            </div>
+         </div>
+
+        </div>
+        <div class="container bottom-footer">
+         <p>Copyright &copy;USD 112 Central Plains Schools 2017. All rights reserved. Powered by <a href="http://apptegy.com/" target="_blank">apptegy.</a></p>
+      </div>
+    </footer>

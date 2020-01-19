@@ -1,0 +1,404 @@
+/* ===== Menu ========================================================== */
+.svg_icon {
+  fill: $menu-wrap-bg;
+}
+
+.no_overflow {
+  overflow: hidden;
+}
+
+#left-nav .menu-wrap {
+  width      : 100%;
+  height     : 100%;
+  bottom     : 0;
+  left       : 0;
+  right      : 0;
+  min-height : 100vh;
+  z-index    : 9999;
+  background : $menu-wrap-bg;
+  position   : fixed;
+  display    : none;
+  left       : 0;
+  top        : 0;
+  padding-top: 0;
+  overflow   : auto;
+}
+
+.menu-wrap ul {
+  list-style: none;
+  padding   : 0;
+  margin    : 0;
+  display   : block;
+  position  : relative;
+  width     : 100%;
+}
+
+.menu-wrap .generated-links {
+  text-align   : left;
+  margin-top   : 40px;
+  @include responsive-property("margin-top",40,15px,60px);
+  @include responsive-property("padding-left",150,25px,190px);
+  padding-right: 20px;
+  overflow     : visible;
+  margin-left  : auto;
+  margin-right : auto;
+  font-size    : 0;
+  line-height  : initial;
+  max-width    : 1360px;
+  @include responsive-property("max-width",1360,800px,1400px);
+}
+
+.menu-wrap ul.static-links {
+  @include responsive-property("margin-top",125,40px,140px);
+  text-align   : center;
+  padding-right: 0;
+}
+
+ul.static-links li {
+  display   : inline-block;
+  @include responsive-property("font-size",$static-links-font-size,15px,$static-links-font-size + 10px);
+  @include responsive-property("line-height",$static-links-font-size + 4,18px,$static-links-font-size + 14px);
+  color     : $static-links-color;
+  @include responsive-property("margin-bottom",35,40px,50px);
+  text-align: center;
+  padding   : 0;
+  overflow  : visible;
+  @include responsive-property("width",130,90px,140px);
+  @include static-links-font;
+}
+
+ul.static-links li a {
+  display           : block;
+  color             : $static-links-color;
+  white-space       : nowrap;
+  -webkit-transition: color 0.2s;
+  -moz-transition   : color 0.2s;
+  transition        : color 0.2s;
+
+  &:hover {
+    color: $static-links-color-hover;
+  }
+}
+
+ul.static-links li span {
+  @include responsive-property("width",$static-links-icons-width,45px,$static-links-icons-width+20px);
+  @include responsive-property("height",$static-links-icons-width,45px,$static-links-icons-width+20px);
+  @include responsive-property("line-height",$static-links-icons-width,45px,$static-links-icons-width+20px);
+  text-align: center;
+  display   : block;
+  background: $static-links-lf-bg;
+  margin    : 0 auto;
+  @include responsive-property("margin-bottom",20,6px,30px);
+  font-size : 0;
+  @include border-radius(50%);
+}
+
+ul.static-links li span img {
+  vertical-align: middle;
+}
+
+ul.static-links li.live-feed span {
+  background: $static-links-lf-bg;
+}
+
+ul.static-links li.staff span {
+  background: $static-links-staff-bg;
+}
+
+ul.static-links li.news span {
+  background: $static-links-news-bg;
+}
+
+ul.static-links li.events span {
+  background: $static-links-events-bg;
+}
+
+ul.static-links li.dining span {
+  background: $static-links-dining-bg;
+}
+
+ul.static-links li.documents span {
+  background: $static-links-documents-bg;
+}
+
+ul.static-links li span img {
+  vertical-align: middle;
+  display       : inline-block;
+}
+
+ul.static-links li a:hover {
+  text-decoration: none;
+}
+
+.generated-links li {
+  @include responsive-property("font-size",$generated-links-font-size,14px,$generated-links-font-size+15px);
+  @include responsive-property("line-height",$generated-links-font-size + 5,18px,$generated-links-font-size+19px);
+  color         : $generated-links-color;
+  margin        : 0;
+  @include responsive-property("margin-bottom",25,8px,30px);
+  text-align    : left;
+  width         : $generated-links-width;
+  padding       : 0 5px;
+  display       : inline-block;
+  float         : none;
+  vertical-align: top;
+  position      : relative;
+  @include generated-links-font;
+}
+
+.generated-links li.has-child {
+  position  : relative;
+  cursor    : pointer;
+  /* min-width: 210px; */
+  text-align: left;
+}
+
+.generated-links li.has-child > a,
+.generated-links li.has-child > span {
+  position     : relative;
+  display      : inline-block;
+  padding-right: 28px;
+}
+
+.generated-links li.has-child > a:after,
+.generated-links li.has-child > span:after {
+  display     : inline-block;
+  position    : absolute;
+  z-index     : 30;
+  right       : 0;
+  bottom      : 4px;
+  content     : " ";
+  overflow    : hidden;
+  border-right: 8px solid $generated-links-color;
+  border-top  : 8px solid transparent;
+}
+
+.generated-links li.has-child.open > a:after,
+.generated-links li.has-child.open span:after {
+  border-right: 8px solid transparent;
+  border-top  : 8px solid $generated-links-color;
+}
+
+.generated-links li.has-child ul li.has-child > a:after,
+.generated-links li.has-child ul li.has-child > span:after {
+  border-right-color: $generated-links-color-level2;
+  border-top-color  : transparent;
+}
+
+.generated-links li.has-child ul li.has-child.open > a:after,
+.generated-links li.has-child ul li.has-child.open > span:after {
+  border-top-color  : $generated-links-color-level2;
+  border-right-color: transparent;
+}
+
+.generated-links li.has-child ul {
+  position     : absolute;
+  @include responsive-property("left",-30,0px,-50px);
+  top          : 40px;
+  background   : $menu-dropdown-level-2-bg;
+  @include responsive-property("padding-top",40,15px,50px);
+  @include responsive-property("padding-right",18,8px,22px);
+  @include responsive-property("padding-bottom",35,10px,40px);
+  @include responsive-property("padding-left",50,30px,60px);
+  width        : auto;
+  z-index      : 9999;
+  min-width    : 390px;
+  margin-bottom: 20px;
+
+  li.has-child ul {
+    position     : relative;
+    top          : 0;
+    left         : 0;
+    margin-bottom: 0;
+    min-width    : inherit;
+    border-left  : 1px solid $generated-links-color-level2;
+  }
+}
+
+.generated-links li.has-child ul {
+  display: none;
+}
+
+.generated-links li.has-child ul li {
+  float : none;
+  width : auto;
+  margin: 15px 0 0;
+  @include responsive-property("margin-top",15,7px,25px);
+}
+
+.generated-links li > ul > li,
+.generated-links ul h5 {
+  display       : block;
+  @include responsive-property("font-size",$generated-links-font-size,15px,$generated-links-font-size+10px);
+  @include responsive-property("line-height",$generated-links-font-size + 5,20px,$generated-links-font-size+15px);
+  text-transform: none;
+  text-align    : left;
+  margin-left   : 0;
+  margin-bottom : 10px;
+}
+
+.generated-links li.has-child ul li a,
+.generated-links li.has-child ul li span {
+  color: $generated-links-color-level2;
+
+  &:hover {
+    color     : $generated-links-color-level2-hover;
+    background: $generated-links-bg-level2-hover;
+  }
+}
+
+.generated-links li a {
+  color          : $generated-links-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $generated-links-color-hover;
+  }
+}
+
+.generated-links li.has-child ul li:first-child {
+  margin: 0;
+}
+
+.menu-wrap h2 {
+  position      : absolute;
+  @include responsive-property("left",41,20px,44px);
+  @include responsive-property("top",45,20px,50px);
+  @include responsive-property("font-size",25,16px,30px);
+  @include responsive-property("line-height",30,20px,35px);
+  font-weight   : 400;
+  color         : $generated-links-color;
+  text-transform: uppercase;
+}
+
+.menu-wrap .menu-close {
+  width         : auto;
+  display       : inline-block;
+  height        : 27px;
+  line-height   : 27px;
+  @include responsive-property("font-size",24,15px,30px);
+  position      : absolute;
+  @include responsive-property("top",42,20px,50px);
+  cursor        : pointer;
+  @include responsive-property("right",42,20px,50px);
+  @include responsive-property("padding-right",80,40px,90px);
+  padding-right : 80px;
+  color         : $generated-links-color;
+  text-transform: uppercase;
+  background    : url("close.png") no-repeat right center;
+}
+
+#left-nav .menu-wrap,
+.generated-links li.has-child ul {
+  display           : block;
+  visibility        : hidden;
+  opacity           : 0;
+  -webkit-transform : scale(0.9);
+  transform         : scale(0.9);
+  -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+  transition        : transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+#left-nav.active .menu-wrap,
+.generated-links li.has-child.open > ul {
+  visibility        : visible;
+  opacity           : 1;
+  -webkit-transform : scale(1);
+  transform         : scale(1);
+  -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+  transition        : transform 0.4s, opacity 0.4s;
+}
+
+.generated-links li.has-child ul li.has-child ul {
+  max-height: 0;
+  overflow  : hidden;
+  padding   : 0;
+  margin    : 0;
+}
+
+.generated-links li.has-child.open ul li.has-child.open ul {
+  max-height : 700px;
+  padding    : 10px 10px 10px 20px;
+  margin-top : 15px;
+  margin-left: 15px;
+}
+
+.generated-links li.has-child > a:before,
+.generated-links li.has-child > span:before {
+  position     : absolute;
+  content      : " ";
+  bottom       : -69px;
+  left         : 50%;
+  margin-left  : -22px;
+  width        : 0;
+  height       : 0;
+  border-left  : 11px solid transparent;
+  border-right : 11px solid transparent;
+
+  border-bottom: 11px solid $menu-dropdown-level-2-bg;
+  opacity      : 0;
+
+}
+
+.generated-links li.has-child.open > a:before,
+.generated-links li.has-child.open > span:before {
+  opacity: 1;
+  bottom : -19px;
+  @include transition();
+}
+
+.generated-links li ul li.has-child > a:before,
+.generated-links li ul li.has-child > span:before {
+  display: none;
+}
+
+/**
+ * Responsive
+ */
+
+@media only screen and (max-width: 1300px) {
+  .menu-wrap .generated-links {
+    padding-left: 60px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .menu-wrap .generated-links {
+    padding-left: 20px;
+  }
+
+  .menu-wrap h2 {
+    position   : relative;
+    left       : 0;
+    top        : 0;
+    font-size  : 22px;
+    line-height: 25px;
+    padding    : 20px;
+    margin-top : 35px;
+    text-align : center;
+  }
+
+  .menu-wrap .menu-close {
+    font-size: 0;
+    top      : 20px;
+    right    : 20px;
+  }
+
+  .generated-links li {
+    width: 50%;
+  }
+
+  .menu-wrap ul.static-links {
+    margin-top: 30px;
+  }
+
+  .generated-links li.has-child ul {
+    left     : 0;
+    padding  : 20px 10px 20px 20px;
+    min-width: 290px;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .generated-links li {
+    width: 100%;
+  }
+}

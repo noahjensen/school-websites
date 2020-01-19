@@ -1,0 +1,321 @@
+/*************************
+*
+*  SUBPAGE
+*
+*************************/
+.container {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.container.subpage { text-align: center; }
+.breadcrumb {
+    width: 100%;
+    min-width: 100%;
+    background: $breadcrumbBg;
+    min-height: 47px;
+}
+.breadcrumb ol {
+    padding: 15px 4% 0;
+    list-style: none;
+    left: 0;
+    position: relative;
+    margin: 0 auto;
+}
+.breadcrumb li {
+    display: inline-block;
+    @include font-size(15);
+    @include line-height(18);
+    text-transform: uppercase;
+    color: $fifth-color;
+    padding-left: 45px;
+    position: relative;
+}
+.breadcrumb li:first-child {
+    padding: 0;
+    background: none;
+    margin-left: 15px;
+}
+.breadcrumb li a {
+    color: $fifth-color;
+}
+.breadcrumb ol>li+li:before {
+    position: absolute;
+    top: 2px;
+    left: 16px;
+    width: 24px;
+    height: 18px;
+    color: $fifth-color;
+    content: " //";
+    @include font-size(15);
+    @include line-height(18);
+}
+.sub .main {
+    padding-bottom: 70px;
+}
+.sub .main .container {
+    background: $white;
+    max-width: 1522px;
+    padding-top: 68px;
+    text-align: center;
+}
+.main .container > .right-content {
+    width: 725px;
+    min-height: 500px;
+    margin: 0 auto;
+    text-align: left;
+}
+.main .container > .right-content p {
+    color: $fifth-color;
+    margin-bottom: 25px;
+    @include font-size(16);
+    @include line-height(25);
+}
+.main .container> .right-content p a {
+    color: $text-color;
+}
+.left-sidebar {
+    display: inline-block;
+    width: 263px;
+    vertical-align: top;
+    margin-right: 125px;
+    text-align: left;
+}
+.left-sidebar + .right-content {
+    display: inline-block;
+    vertical-align: top;
+}
+.left-sidebar h3 {
+    @include font-size(18);
+    @include line-height(57);
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    color: $white;
+    padding-left: 10px;
+    padding-right: 10px;
+    text-align: center;
+    background: $second-color;
+    @include second-font-family;
+}
+.left-sidebar .left-links {
+    margin: 0 0 53px;
+    padding-left: 27px;
+    padding-right: 10px;
+}
+.left-sidebar .left-links li {
+    @include font-size(16);
+    @include line-height(21);
+    padding: 5px 0;
+}
+.left-sidebar .left-links li:first-child {
+    padding-top: 0;
+}
+.left-sidebar .left-links li a {
+    color: $fifth-color;
+}
+.images-grid {
+    width: 735px;
+    overflow: hidden;
+    font-size: 0;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+.images-grid a {
+    width: 50%;
+    padding: 0 10px 0 0;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.images-grid a img {
+    width: auto;
+    max-width: 50%;
+    height: auto;
+}
+.images-grid.photos-1 a {
+    width: 100%;
+}
+.images-grid.photos-3 a + a + a {
+    width: 100%;
+    clear: both;
+}
+img.image-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Custom popup scroll */
+
+.scrollable {
+    position: relative;
+}
+.scrollable:focus {
+    outline: 0;
+}
+.scrollable .viewport {
+    position: relative;
+    overflow: hidden;
+}
+.scrollable .viewport .overview {
+    position: absolute;
+}
+.scrollable .scroll-bar {
+    display: none;
+}
+.scrollable .scroll-bar.vertical {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+.scrollable .scroll-bar.horizontal {
+    position: relative;
+    width: 100%;
+}
+.scrollable .scroll-bar .thumb {
+    position: absolute;
+}
+.scrollable .scroll-bar.vertical .thumb {
+    width: 100%;
+    min-height: 10px;
+}
+.scrollable .scroll-bar.horizontal .thumb {
+    height: 100%;
+    min-width: 5px;
+    left: 0;
+}
+.not-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*Default skin*/
+
+#slider p.scrollable.default-skin {
+    padding-right: 30px;
+    padding-bottom: 6px;
+    margin-right: 15px;
+}
+.scrollable.default-skin .scroll-bar.vertical {
+    width: 5px;
+    background-color: #a9bad8;
+}
+.scrollable.default-skin .scroll-bar.horizontal {
+    height: 11px;
+    background: #f7f7f7;
+}
+.scrollable.default-skin .scroll-bar .thumb {
+    background-color: #738bb7;
+    cursor: pointer;
+}
+.scrollable.default-skin .scroll-bar:hover .thumb {
+    background-color: #42629c;
+}
+
+/* General subpage elements */
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+table tr>th,
+table>tbody>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+table>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+.right-content ul,
+.right-content ol {
+    margin-bottom: 15px;
+    list-style-position: inside;
+}
+.right-content ul li,
+table,
+ol li {
+    color: $fifth-color;
+    @include font-size(15);
+    @include line-height(28);
+    @include first-font-family;
+}
+.right-content > a {
+    margin-bottom: 15px;
+    display: block;
+}
+.right-content ul li {
+    list-style-type: disc;
+}
+.right-content ol li {
+    list-style-type: decimal;
+}
+.right-content h2 {
+    @include font-size(20);
+    @include line-height(24);
+    color: $fifth-color;
+    @include second-font-family;
+    margin: 0 0 10px;
+     
+    text-transform: uppercase;
+}
+.right-content h3 {
+    @include font-size(18);
+    @include line-height(22);
+    color: $fifth-color;
+    @include second-font-family;
+    margin: 0 0 10px;
+    text-transform: uppercase;
+}
+.right-content h4 {
+    @include font-size(16);
+    @include line-height(20);
+    color: $fifth-color;
+    @include second-font-family;
+    margin: 0 0 10px;     
+    text-transform: uppercase;
+}
+.right-content h5 {
+    @include font-size(14);
+    @include line-height(19);
+    color: $fifth-color;
+    @include second-font-family;
+    margin: 0 0 10px;    
+    text-transform: uppercase;
+}
+.right-content h6 {
+    @include font-size(12);
+    @include line-height(17);
+    color: $fifth-color;
+    @include second-font-family;
+    margin: 0 0 10px;     
+    text-transform: uppercase;
+}
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    @include font-size(17);
+    @include line-height(21);
+    border-left: 5px solid #eee;
+}
+

@@ -1,0 +1,554 @@
+////////////// Blue Theme Changes By School////////////////////
+.district{
+.main .col-item {
+  &.events-wrapper {
+    background: rgb(229,232,235) url('logo_bg_district.png') no-repeat center;
+    background: -moz-linear-gradient(top, rgba(229,232,235,1) 0%, rgba(244,244,244,1) 100%) url('logo_bg_district.png') no-repeat center;
+    background: -webkit-linear-gradient(top, rgba(229,232,235,1) 0%,rgba(244,244,244,1) 100%) url('logo_bg_district.png') no-repeat center;
+    background: linear-gradient(to bottom, rgba(229,232,235,1) 0%,rgba(244,244,244,1) 100%) url('logo_bg_district.png') no-repeat center;
+      background-size: contain;
+      background-size: 370px auto;
+
+
+  }
+}
+.logo img {
+  width: 200px !important;
+  height: auto !important;
+}
+
+}
+
+.bishop-elementary{
+.main .col-item {
+  &.events-wrapper {
+    background: rgb(229,232,235) url('logo_bg_elem.png') no-repeat center;
+    background: -moz-linear-gradient(top, rgba(229,232,235,1) 0%, rgba(244,244,244,1) 100%) url('logo_bg_elem.png') no-repeat center;
+    background: -webkit-linear-gradient(top, rgba(229,232,235,1) 0%,rgba(244,244,244,1) 100%) url('logo_bg_elem.png') no-repeat center;
+    background: linear-gradient(to bottom, rgba(229,232,235,1) 0%,rgba(244,244,244,1) 100%) url('logo_bg_elem.png') no-repeat center;
+      background-size: contain;
+      background-size: 370px auto;
+
+
+  }
+}
+
+.logo img {
+ width: 100px !important;
+ height: auto !important;
+}
+}
+
+.bishop-high{
+.main .col-item {
+  &.events-wrapper {
+    background: rgb(229,232,235) url('logo_bg_bhs.png') no-repeat center;
+    background: -moz-linear-gradient(top, rgba(229,232,235,1) 0%, rgba(244,244,244,1) 100%) url('logo_bg_bhs.png') no-repeat center;
+    background: -webkit-linear-gradient(top, rgba(229,232,235,1) 0%,rgba(244,244,244,1) 100%) url('logo_bg_bhs.png') no-repeat center;
+    background: linear-gradient(to bottom, rgba(229,232,235,1) 0%,rgba(244,244,244,1) 100%) url('logo_bg_bhs.png') no-repeat center;
+      background-size: contain;
+      background-size: 370px auto;
+
+
+  }
+}
+.logo img {
+  width: 210px !important;
+  height: auto !important;
+}
+
+}
+
+
+//////////////General Blue Theme Changes ////////////////////
+.blue{
+
+
+/////////////HEADER//////////////
+
+
+//Menu Logos
+  ul.first-nav li:nth-child(odd) span {
+      background: $blue2;
+  }
+
+ul.first-nav li span {
+      background: $blue1;
+}
+
+// School Dropdown
+#right-nav .menu-wrap li:hover{
+  background: $blue1;
+}
+
+//Language Dropdown
+
+.options li {
+  &.selected {
+      background: $blue1;
+
+    }
+    }
+
+    .options li:hover {
+        background: $blue1;
+    }
+
+//Menu Dropdowns
+    ul.second-nav li.has-child ul {
+        position: absolute;
+        left: 32px;
+        top: 25px;
+        background: #8a8f91;
+        padding: 20px 0px 30px 0px;
+        width: auto;
+        z-index: 999999;
+        min-width: 180px;
+    }
+
+      ul.second-nav li.has-child ul li:hover{
+        background: $blue1;
+      }
+
+    ul.second-nav li ul li.has-child ul {
+        background: #373737;
+        border: 1px solid $blue1;
+        left: 20px;
+        a {
+            color: white;
+        }
+    }
+
+
+/////////////SLIDER//////////////
+#slider  {
+    overflow: hidden;
+    position: relative;
+    background: url('mountain_logo_blue.png') no-repeat 0px;
+    background-size: 35vw 100vh;
+  }
+
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: $blue1;
+}
+
+
+
+/////////////SECTION BOXES//////////////
+.subpage h3,
+.right-content h3,
+.right-content h3 a,
+.right-content h3 p a,
+left-content h3 {
+   @include font-size(19);
+   @include line-height(19);
+   color: $blue2;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+
+
+
+   &.news-wrapper {
+      background: $news-wrapper-bg;
+  }
+
+
+  /////////////SECTION BOXES//////////////
+
+  .main .col-item {
+     &.news-wrapper {
+        background: $news-wrapper-bg;
+    }
+
+    &.live-feeds-wrapper {
+        background: url('content_bg_blue.png') no-repeat center;
+        background-size: cover;
+    }
+
+    h4{
+        border-bottom: 7px solid $blue1;
+    }
+
+    &.live-feeds-wrapper h4 {
+        color: $live-feed-title-color;
+        background: $live-feed-title-bg;
+        border-bottom: 7px solid $blue2;
+    }
+
+    &.events-wrapper h4 {
+        border-bottom: 7px solid $blue2;
+    }
+
+    &.news-wrapper .bx-wrapper .bx-pager.bx-default-pager a:hover,
+    &.news-wrapper .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background: $blue1;
+    }
+
+    .news .right-content h3 {
+      color: $blue1;
+  }
+
+  &.events-wrapper .right-content p a,
+  &.events-wrapper .right-content a {
+    color: $blue2;
+  }
+
+// Link Colors
+
+  &.live-feeds-wrapper .right-content h3,
+  &.live-feeds-wrapper .right-content h3 a {
+      color: $blue2;
+
+
+      }
+
+}
+
+}
+// --------End of Blue General Theme---------//
+/////////////////////BLUE SUBPAGE /////////////////////////////
+.subpage-blue{
+.left-sidebar h3 {
+    font-size: 35px;
+    font-size: 3.6rem;
+    line-height: 40px;
+    line-height: 4rem;
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 20px 15px;
+    text-align: center;
+    background: $blue2;
+     font-weight: 400;
+}
+
+.subpage h2,
+.right-content h2,
+left-content h2 {
+   @include font-size(30);
+   @include line-height(34);
+   color: $blue2;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h3,
+.right-content h3,
+.right-content h3 a,
+left-content h3 {
+   @include font-size(19);
+   @include line-height(19);
+     color: $blue2;
+
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h4,
+.right-content h4,
+left-content h4 {
+   @include font-size(20);
+   @include line-height(25);
+      color: $blue2;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h5,
+.right-content h5,
+left-content h5 {
+   @include font-size(16);
+   @include line-height(20);
+      color: $blue2;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h6,
+.right-content h6,
+left-content h6 {
+   @include font-size(12);
+   @include line-height(17);
+      color: $blue2;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.right-content a{
+  color: $blue2;
+}
+blockquote{
+   border-left: 5px solid $blue2;
+ }
+}
+/////////////////////END OF BLUE SUBPAGE /////////////////////////////
+// --------End of Blue Theme---------//
+
+
+
+
+////////////// Red Theme Changes By School////////////////////
+.home-street{
+.main .col-item {
+  &.events-wrapper {
+    background: rgb(239,230,230) url('logo_bg_homestreet.png') no-repeat center;
+    background: -moz-linear-gradient(top, rgba(239,230,230,1) 0%, rgba(240,218,218,1) 100%) url('logo_bg_homestreet.png') no-repeat center;
+    background: -webkit-linear-gradient(top, rgba(239,230,230,1) 0%,rgba(240,218,218,1) 100%) url('logo_bg_homestreet.png') no-repeat center;
+    background: linear-gradient(to bottom, rgba(239,230,230,1) 0%,rgba(240,218,218,1) 100%) url('logo_bg_homestreet.png') no-repeat center;
+      background-size: contain;
+
+
+  }
+}
+}
+
+.palisade{
+.main .col-item {
+  &.events-wrapper {
+    background: rgb(239,230,230) url('logo_bg_palisade.png') no-repeat center;
+    background: -moz-linear-gradient(top, rgba(239,230,230,1) 0%, rgba(240,218,218,1) 100%) url('logo_bg_palisade.png') no-repeat center;
+    background: -webkit-linear-gradient(top, rgba(239,230,230,1) 0%,rgba(240,218,218,1) 100%) url('logo_bg_palisade.png') no-repeat center;
+    background: linear-gradient(to bottom, rgba(239,230,230,1) 0%,rgba(240,218,218,1) 100%) url('logo_bg_palisade.png') no-repeat center;
+      background-size: contain;
+
+
+  }
+}
+}
+
+
+
+//////////////General Red Theme Changes ////////////////////
+.red{
+
+
+/////////////HEADER//////////////
+
+
+//Menu Logos
+  ul.first-nav li:nth-child(odd) span {
+      background: #c10000;
+  }
+
+ul.first-nav li span {
+      background: #8A8F91;
+}
+
+// School Dropdown
+#right-nav .menu-wrap li:hover{
+  background: #c10000;
+}
+
+//Language Dropdown
+
+.options li {
+  &.selected {
+      background: #c10000;
+
+    }
+    }
+
+    .options li:hover {
+        background: #c10000;
+    }
+
+    //Menu Dropdowns
+        ul.second-nav li.has-child ul {
+            position: absolute;
+            left: 32px;
+            top: 25px;
+            background: #8a8f91;
+            padding: 20px 0px 30px 0px;
+            width: auto;
+            z-index: 999999;
+            min-width: 180px;
+        }
+
+          ul.second-nav li.has-child ul li:hover{
+            background: #c10000;
+          }
+
+        ul.second-nav li ul li.has-child ul {
+            background: #373737;
+            border: 1px solid #c10000;
+            left: 20px;#slider  {
+                overflow: hidden;
+                position: relative;
+                background: url('mountain_logo_blue.png') no-repeat 0px;
+                background-size: 35vw 100vh;
+              }
+            a {
+                color: white;
+            }
+        }
+
+        /////////////SLIDER//////////////
+        #slider  {
+            overflow: hidden;
+            position: relative;
+            background: url('mountain_logo_red.png') no-repeat 0px;
+            background-size: 35vw 100vh;
+          }
+
+
+
+        .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        .bx-wrapper .bx-pager.bx-default-pager a.active {
+            background: #c10000;
+        }
+
+
+        /////////////SECTION BOXES//////////////
+
+        .subpage h3,
+        .right-content h3,
+        .right-content h3 a,
+        .right-content h3 p a,
+        left-content h3 {
+           @include font-size(19);
+           @include line-height(19);
+           color: $red1;
+           @include second-font-family;
+           margin: 0 0 10px;
+           text-transform: uppercase;
+        }
+
+        .main .col-item {
+
+          &.events-wrapper .right-content p a,
+          &.events-wrapper .right-content a {
+            color: $red1;
+          }
+           &.news-wrapper {
+              background: $news-wrapper-bg;
+          }
+          &.live-feeds-wrapper {
+            background: rgb(239,230,230);
+            background: -moz-linear-gradient(top, rgba(239,230,230,1) 0%, rgba(240,218,218,1) 100%);
+            background: -webkit-linear-gradient(top, rgba(239,230,230,1) 0%,rgba(240,218,218,1) 100%);
+            background: linear-gradient(to bottom, rgba(239,230,230,1) 0%,rgba(240,218,218,1) 100%);
+            background-size: cover;
+          }
+
+
+
+          h4{
+              border-bottom: 7px solid $red1;
+          }
+
+          &.live-feeds-wrapper h4 {
+              color: $live-feed-title-color;
+              background: $live-feed-title-bg;
+              border-bottom: 7px solid $red1;
+          }
+
+          &.events-wrapper h4 {
+              border-bottom: 7px solid $red1;
+          }
+
+
+        &.news-wrapper .bx-wrapper .bx-pager.bx-default-pager a:hover,
+        &.news-wrapper .bx-wrapper .bx-pager.bx-default-pager a.active {
+            background: $red1;
+        }
+
+        .news .right-content h3 {
+          color: $red1;
+      }
+
+
+
+    // Link Colors
+
+
+        }
+
+
+
+}
+// --------End of Red General Theme---------
+/////////////////////RED SUBPAGE /////////////////////////////
+.subpage-red{
+.left-sidebar h3 {
+    font-size: 35px;
+    font-size: 3.6rem;
+    line-height: 40px;
+    line-height: 4rem;
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 20px 15px;
+    text-align: center;
+    background: $red1;
+     font-weight: 400;
+}
+
+.subpage h2,
+.right-content h2,
+left-content h2 {
+   @include font-size(30);
+   @include line-height(34);
+   color: $red1;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h3,
+.right-content h3,
+.right-content h3 a,
+left-content h3 {
+   @include font-size(19);
+   @include line-height(19);
+   color: $red1;
+
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h4,
+.right-content h4,
+left-content h4 {
+   @include font-size(20);
+   @include line-height(25);
+   color: $red1;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h5,
+.right-content h5,
+left-content h5 {
+   @include font-size(16);
+   @include line-height(20);
+   color: $red1;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h6,
+.right-content h6,
+left-content h6 {
+   @include font-size(12);
+   @include line-height(17);
+   color: $red1;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+
+.right-content a{
+  color: $red1;
+}
+
+blockquote{
+   border-left: 5px solid $red1;
+ }
+
+}
+
+///////////////////// END OF RED SUBPAGE /////////////////////////////
+// --------End of Red Theme---------

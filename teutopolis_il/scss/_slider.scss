@@ -1,0 +1,295 @@
+/****************************
+*   SLIDER
+*
+*************************/
+
+.bx-wrapper {
+  position    : relative;
+  margin      : 0 auto;
+  padding     : 0;
+  *zoom       : 1;
+  float       : none;
+  overflow    : hidden;
+  width       : 100%;
+  padding-left: $leftSlider;
+}
+
+.bx-wrapper img {
+  max-width: 100%;
+  display  : block;
+}
+
+img {
+  max-width: 100%;
+  height   : auto;
+}
+
+.bx-wrapper .bx-viewport {
+  overflow         : hidden;
+  /*fix other elements on the page moving (on Chrome)*/
+  -webkit-transform: translatez(0);
+  -moz-transform   : translatez(0);
+  -ms-transform    : translatez(0);
+  -o-transform     : translatez(0);
+  transform        : translatez(0);
+}
+
+.bx-wrapper .bx-controls-auto,
+.bx-wrapper .bx-pager {
+  position: absolute;
+  bottom  : -50px;
+  width   : 100%;
+}
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+  min-height: 50px;
+  background: url("bx_loader.gif") center center no-repeat #fff;
+  height    : 100%;
+  width     : 100%;
+  position  : absolute;
+  top       : 0;
+  left      : 0;
+  z-index   : 2000;
+}
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+  text-align: center;
+  position  : absolute;
+  width     : auto;
+  right     : 50px;
+  bottom    : 20px;
+}
+
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item,
+.bx-wrapper .bx-pager .bx-pager-item {
+  display : inline-block;
+  *zoom   : 1;
+  *display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+  background  : $pager-slider;
+  text-indent : -9999px;
+  display     : block;
+  width       : 15px;
+  height      : 15px;
+  margin      : 0;
+  outline     : 0;
+  text-align  : left;
+  overflow    : hidden;
+  @include border-radius(50%);
+  margin-right: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a.active,
+.bx-wrapper .bx-pager.bx-default-pager a:hover {
+  background: rgb(154, 122, 35);
+}
+
+.bx-wrapper .bx-controls-direction a {
+  position        : absolute;
+  top             : 50%;
+  margin-top      : -50px;
+  outline         : 0;
+  width           : 50px;
+  height          : 100px;
+  text-indent     : -9999px;
+  z-index         : 9999;
+  background      : url("back.png") no-repeat center;
+  background-color: rgba(255, 255, 255, 0.7);
+  @include opacity(0);
+  @include transition;
+}
+
+#slider:hover {
+  .bx-wrapper .bx-controls-direction a {
+    @include opacity(1);
+  }
+}
+
+.bx-wrapper .bx-controls-direction a.bx-next {
+  right           : 0;
+  background      : url("next.png") no-repeat center;
+  background-color: rgba(255, 255, 255, 0.7);
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+  display: none;
+}
+
+.bx-wrapper .bx-viewport .slide:after {
+  content   : "";
+  position  : absolute;
+  left      : 0;
+  bottom    : 0;
+  width     : 100%;
+  z-index   : 10;
+  height    : 450px;
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 1)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+}
+/*** END DEFAULT SLIDER CODE  **/
+
+#slider {
+  //overflow: hidden;
+  position  : relative;
+  z-index   : 0;
+  width     : 100%;
+  max-width : 1920px;
+  margin    : 0 auto;
+  background: #FFF;
+}
+
+.slider-container {
+  float: left;
+}
+
+.slider-container .slide {
+  float   : left;
+  /*max-height: 724px;*/
+  overflow: hidden;
+}
+
+.slider-container img {
+  max-width: inherit;
+  width    : auto;
+  height   : auto;
+}
+
+.slider-container img {
+  width             : 100%;
+  max-height        : 100vh;
+  -o-object-fit     : cover;
+  object-fit        : cover;
+  object-position   : top;
+  -o-object-position: top;
+}
+
+#slider .bx-wrapper {
+  padding-left: 0;
+}
+
+#slider .slider-info {
+  width     : 100%;
+  position  : absolute;
+  left      : 0;
+  bottom    : 30px;
+  padding   : 0 20px;
+  margin    : 0 0 30px;
+  z-index   : 9;
+  text-align: center;
+}
+
+#slider .slider-info h1,
+#slider .slider-info h2,
+#slider .slider-info h3,
+#slider .slider-info h4,
+#slider .slider-info h5,
+#slider .slider-info h6,
+#slider .slider-info p {
+  color         : $white;
+  margin        : 0 0 15px;
+  text-transform: uppercase;
+  @include first-font-family;
+}
+
+#slider .slider-info h1 {
+  @include font-size(60);
+  @include line-height(60);
+}
+
+#slider .slider-info h2 {
+  @include font-size(50);
+  @include line-height(55);
+}
+
+#slider .slider-info h3 {
+  @include font-size(45);
+  @include line-height(50);
+}
+
+#slider .slider-info h4 {
+  @include font-size(40);
+  @include line-height(40);
+}
+
+#slider .slider-info h5 {
+  @include font-size(30);
+  @include line-height(40);
+}
+
+#slider .slider-info h6 {
+  @include font-size (25);
+  @include line-height (30);
+}
+
+#slider .slider-info p {
+  @include font-size(22);
+  @include line-height(35);
+  text-transform: none;
+  padding       : 0 20%;
+}
+
+@media only screen and (max-width: 1920px) and (min-width: 885px) {
+  /*Changes for slider*/
+  #slider .slider-info h1 {
+    font-size  : get-vw(60px);
+    line-height: get-vw(60px);
+  }
+
+  #slider .slider-info h2 {
+    font-size  : get-vw(50px);
+    line-height: get-vw(55px);
+  }
+
+  #slider .slider-info h3 {
+    font-size  : get-vw(45px);
+    line-height: get-vw(50px);
+  }
+
+  #slider .slider-info h4 {
+    font-size  : get-vw(40px);
+    line-height: get-vw(40px);
+  }
+
+  #slider .slider-info h5 {
+    font-size  : get-vw(30px);
+    line-height: get-vw(40px);
+  }
+
+  #slider .slider-info h6 {
+    font-size  : get-vw(25px);
+    line-height: get-vw(30px);
+  }
+
+  #slider .slider-info p {
+    font-size  : get-vw(22px);
+    line-height: get-vw(35px);
+  }
+
+  .slider-container img {
+    width        : 100%;
+    height       : 730px;
+    max-height   : 850px;
+    -o-object-fit: cover;
+    object-fit   : cover;
+  }
+}
+
+#slider .bx-wrapper {
+  padding-left: 0;
+}
+
+#header,
+#slider,
+.container {
+  max-width   : 1920px;
+  margin-left : auto;
+  margin-right: auto;
+}

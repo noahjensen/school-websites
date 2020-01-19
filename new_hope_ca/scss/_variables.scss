@@ -1,0 +1,195 @@
+$paragraph-font-size               : 16;
+$paragraph-line-height             : 28;
+
+$page-bg                           : #FFF;
+$text-color                        : #646464;
+$links-color                       : #22428f;
+
+$header-bg                         : #FFF;
+$header-height                     : 120;
+
+$margin-between-logo-and-title     : 30;
+
+$logo-title-font-size              : 30;
+$logo-color                        : #330066;
+
+$logo-subtitle-font-size           : 30;
+$logo-subtitle-color               : #242323;
+
+$menu-btns-font-size               : 22;
+
+$menu-btn-bg-color                 : #FFF;
+$menu-active-btn-bg-color          : transparent;
+
+$menu-btn-txt-color                : #330066;
+$menu-active-btn-txt-color         : #330066;
+
+$schools-menu-btn-bg-color         : #fff;
+$schools-menu-active-btn-bg-color  : #fff;
+
+$schools-menu-btn-txt-color        : #330066;
+$schools-menu-active-btn-txt-color : #330066;
+
+$language-btn-bg                   : transparent;
+$language-btn-color                : #330066;
+$language-btn-font-size            : 22;
+
+$menu-wrap-bg                      : #330066;
+$menu-dropdown-level-2-bg          : #FFF;
+
+$static-links-color                : #FFF;
+$static-links-color-hover          : #FFF;
+$static-links-font-size            : 18;
+$static-links-icons-width          : 60;
+
+$static-links-lf-bg                : #FFF;
+$static-links-staff-bg             : #FFF;
+$static-links-news-bg              : #FFF;
+$static-links-events-bg            : #FFF;
+$static-links-dining-bg            : #FFF;
+$static-links-documents-bg         : #FFF;
+
+$generated-links-color             : #FFF;
+$generated-links-color-hover       : #FFF;
+$generated-links-font-size         : 18;
+
+$generated-links-color-level2      : #330066;
+$generated-links-color-level2-hover: #5e5c5c;
+$generated-links-bg-level2-hover   : transparent;
+
+$generated-links-width             : 33.33%;
+
+$schools-menu-bg                   : #330066;
+$schools-menu-links-color          : #FFF;
+$schools-menu-links-color-hover    : #FFF;
+$schools-menu-links-bg-hover       : transparent;
+$schools-menu-links-font-size      : 22;
+
+$language-dropdown-bg              : #330066;
+$language-dropdown-width           : 290px;
+$language-options-font-size        : 20;
+$language-options-color            : #FFF;
+$language-options-color-hover      : #FFF;
+$language-options-bg-hover         : transparent;
+
+$search-bg-color                   : #330066;
+$search-bg-hover-color             : darken($search-bg-color,5%);
+$search-txt-color                  : #203f8b;
+$search-btn-font-size              : 22;
+
+$pager-slider-bg                   : #FFF;
+$active-pager-slider-bg            : #330066;
+
+$slider-arrow-bg                   : rgba(51, 0, 102, .85);
+$slider-arrow-width                : 43;
+$slider-arrow-height               : 126;
+
+$left-slider-bg                    : #330066;
+
+$bb-text-color                     : #FFF;
+$bb-h1-font-size                   : 42;
+
+$bb-p-font-size                    : 18;
+
+$bb-first-text-bg                  : rgba(51, 0, 102, .85);
+$bb-second-text-bg                 : rgba(94, 92, 92, .85);
+
+$events-wrapper-bg                 : #330066;
+$news-wrapper-bg                   : #fff;
+$live-feeds-wrapper-bg             : #fff;
+
+$see-all-btns-font-size            : 18;
+
+$see-all-news-btn-color            : #fff;
+$see-all-events-btn-color          : #fff;
+$see-all-live-feeds-btn-color      : #fff;
+
+$see-all-news-btn-bg               : #330066;
+$see-all-events-btn-bg             : #5e5c5c;
+$see-all-live-feeds-btn-bg         : #330066;
+
+$sections-titles-font-size         : 30;
+
+$sections-titles-border-color      : #5e5c5c;
+
+$events-title-color                : #fff;
+$news-title-color                  : #330066;
+$live-feed-title-color             : #330066;
+
+$events-diagonal-stripes-color     : #330066;
+$news-diagonal-stripes-color       : #a1a1a1;
+$live-feed-diagonal-stripes-color  : #a1a1a1;
+
+$events-title-bg                   : #f8d7dc;
+$news-title-bg                     : #dde6fb;
+$live-feed-title-bg                : #c7cfe3;
+
+$first-news-border-top-color       : #330066;
+$second-news-border-top-color      : #5e5c5c;
+$third-news-border-top-color       : #330066;
+
+$news-paragraph-color              : #000;
+$news-p-font-size                  : 16;
+
+$news-titles-color                 : #330066;
+$news-titles-font-size             : 18;
+
+$news-date-color                   : #a1a1a1;
+$news-date-font-size               : 18;
+
+$read-more-new-bg                  : #330066;
+$read-more-new-color               : #fff;
+$news-pager                        : #a1a1a1;
+$news-pager-active                 : #330066;
+
+$news-text-background              : rgba(94, 92, 92, .85);
+$lh-title-color                    : #330066;
+
+$live-feed-text-color              : #000;
+$live-feed-link-color              : #330066;
+$live-feed-text-font-size          : 16;
+
+$live-feed-author-color            : #a1a1a1;
+$live-feed-author-font-size        : 16;
+
+$live-feed-time-color              : #a1a1a1;
+$live-feed-time-font-size          : 16;
+
+$event-date-color                  : #fff;
+$event-date-font-size              : 16;
+$event-date-bg                     : #5e5c5c;
+
+$event-title-color                 : #000;
+$event-title-font-size             : 18;
+
+$footer-container-max-width        : 1556;
+$footer-bg                         : #242323;
+$footer-bottom-part-bg             : #051438;
+
+$footer-col-width                  : 27%;
+
+$footer-text-color                 : #FFF;
+$footer-text-font-size             : 18;
+
+$footer-title-color                : #fff;
+$footer-title-font-size            : 22;
+
+$footer-copyright-font-size        : 17;
+
+$footer-pb-txt-color               : #FFF;
+$footer-pb-link-color              : #009ddd;
+
+$breadcrumb-height                 : 47px;
+$breadcrumb-bg                     : #F5F5F5;
+$breadcrumb-color                  : #111111;
+$breadcrumb-font-size              : 15;
+
+$subpage-one-col-width             : 90%;
+
+$subpage-sidebar-width             : 30%;
+$subpage-column-two                : 65%;
+
+$subpage-sidebar-title-bg          : #DD0000;
+$subpage-sidebar-title-color       : #FFF;
+
+$subpage-h1-font-size              : 30;

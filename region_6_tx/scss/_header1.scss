@@ -1,0 +1,496 @@
+/* ===== Header ========================================================== */
+
+html #header {
+	max-width: 100%;
+
+	.container {
+		max-width: 100%;
+		@include responsive-property("padding-right",58,10px,58px);
+		@include responsive-property("padding-left",35,10px,50px);
+	}
+}
+html #slider {
+	max-width: 100%;
+}
+#header {
+	padding: 0;
+	@include responsive-property("min-height",$header-height,50px,$header-height + 40px);
+	@include responsive-property("line-height",$header-height,50px,$header-height + 40px);
+	background: $header-bg;
+	position: relative;
+	width: 100%;
+	-webkit-box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.71);
+	-moz-box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.71);
+	box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.71);
+
+	.logo {
+		position: relative;
+		float: left;
+		text-align: left;
+		margin: 0;
+		z-index: 22;
+		text-decoration: none;
+		display: block;
+		font-size: 0;
+		h1 {
+			display: inline-block;
+			vertical-align: middle;
+			color: $logo-color;
+			@include responsive-property("font-size",$logo-title-font-size,17px,$logo-title-font-size + 10px);
+			@include responsive-property("line-height",$logo-title-font-size+4,21px,$logo-title-font-size + 14px);
+			margin: 0;
+			@include logo-title-font;
+			font-weight: 600;
+			span {
+				@include responsive-property("font-size",$logo-subtitle-font-size,17px,$logo-subtitle-font-size + 10px);
+			  //  @include responsive-property("line-height",$logo-subtitle-font-size+4,21px,$logo-subtitle-font-size + 14px);
+				line-height: 0.875vw;
+				display: block;
+				color: $logo-subtitle-color;
+				margin-top: 5px;
+				@include logo-subtitle-font;
+				.dot {
+					display: inline-block;
+					vertical-align: middle;
+					width: 10px;
+					height: 9px;
+					background: $logo-subtitle-color;
+					margin: 0 6px;
+					@include border-radius (50%);
+				}
+			}
+		}
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			z-index: 2;
+			@include responsive-property("margin-right",$margin-between-logo-and-title,7px,$margin-between-logo-and-title + 10px);
+			position: relative;
+			height: auto;
+			@include responsive-property("max-height",$header-height - 20,50px,$header-height - 20px);
+			width: auto;
+		}
+		.image {
+			position: relative;
+			@include responsive-property("margin-right",$margin-between-logo-and-title,7px,$margin-between-logo-and-title + 10px);
+			display: inline-block;
+			vertical-align: middle;
+			img {
+				@include responsive-property("top",15,0px, 15px);
+				@include responsive-property("max-height",$header-height,50px,$header-height + 50px);
+				height: auto;
+				margin: 0;
+				position: relative;
+				overflow: hidden;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				@include responsive-property("bottom",-40,0px,-40px);
+				@include responsive-property("left",-30,0px,-30px);
+				@include responsive-property("right",-30,0px,-30px);
+				@include responsive-property("height",$header-height + 60, 50px, $header-height + 90px);
+				background: #FFF;
+				@include border-radius(50%);
+				z-index: -1;
+			}
+		}
+	}
+}
+.homepage #header {
+	z-index: 2;
+}
+// menu buttons
+#header .nav {
+	float: right;
+	margin-right: 50px;
+	@include responsive-property("margin-right",50, 10px, 80px);
+	@include responsive-property("height",$header-height,50px,$header-height + 50px);
+	@include responsive-property("line-height",$header-height,50px,$header-height + 50px);
+	&#right-nav {
+		margin-right: 0;
+		position: relative;
+	}
+	.menu-btn {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+#left-nav .menu-btn > span,
+#right-nav .menu-btn > span {
+	@include responsive-property("font-size",$menu-btns-font-size, 13px, $menu-btns-font-size + 10px);
+	@include responsive-property("line-height",51, 50px, 60px);
+	color: $menu-btn-txt-color;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+   padding-left: 30px;
+	position: relative;
+	background: $menu-btn-bg-color url('menu-icon.png') no-repeat 0 center;
+	@include menu-btn-font;
+}
+#left-nav.active .menu-btn > span {
+	background-color: $menu-active-btn-bg-color;
+	color: $menu-active-btn-txt-color;
+}
+#right-nav .menu-btn > span {
+	background: $schools-menu-btn-bg-color;
+	@include responsive-property("padding-left",25,10px,30px);
+	padding-right: 40px;
+	color: $schools-menu-btn-txt-color;
+	position: relative;
+
+	&:after {
+		position: absolute;
+		top: 50%;
+		right: 8px;
+		content: '';
+		width: 28px;
+		height: 10px;
+		margin-top: -5px;
+		background: url('arrow.png') no-repeat right top;
+	}
+}
+#right-nav .menu-btn > span.active {
+	background: $schools-menu-active-btn-bg-color;
+	color: $schools-menu-active-btn-txt-color;
+
+	&:after {
+		background: url("arrow.png") no-repeat right bottom;
+	}
+}
+//search icon
+#header .search-icon {
+	float: right;
+	@include responsive-property("font-size",$search-btn-font-size,13px,$search-btn-font-size + 10px);
+	color: $search-txt-color;
+	@include responsive-property("height",$header-height,50px,$header-height + 50px);
+	@include responsive-property("line-height",$header-height,50px,$header-height + 50px);
+	@include responsive-property("width",102,50px,110px);
+	background: $search-bg-color url('search-icon-white.png') no-repeat center center;
+	@include responsive-property("margin-right",-58,10px,-58px);
+	@include responsive-property("margin-left",35,10px,40px);
+	margin-top: 0;
+	@include border-radius(0px);
+	&:hover {
+		background-color: $search-bg-hover-color;
+	}
+	&.no-bg-color {
+		background: url('search-icon.png') no-repeat center center;
+		margin-left: 0;
+	}
+	&.with-text {
+		width: auto;
+		padding: 0;
+		@include responsive-property("padding-right",60,10px,70px);
+		@include responsive-property("padding-left",35,30px,40px);
+		background-position: left center;
+		text-transform: uppercase;
+		@include responsive-property("margin-left",40,10px,50px);
+	}
+	&.no-icon {
+		background: transparent;
+		width: auto;
+		@include responsive-property("padding-right",60,10px,70px);
+		@include responsive-property("margin-left",40,10px,50px);
+	}
+}
+// Language dropdown
+#header #change_language_form {
+	float: right;
+	padding: 0 7px;
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+	background: $language-btn-bg;
+	form {
+		margin: 0;
+		@include responsive-property("margin-left",40,10px,50px);
+	}
+	select {
+		@include responsive-property("height",$header-height,50px,$header-height + 50px);
+		@include responsive-property("line-height",$header-height,50px,$header-height + 50px);
+		background: transparent;
+		font-size: 22px;
+		color: $language-btn-color;
+		position: relative;
+		left: -4px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+	.s-hidden {
+		position: absolute;
+		visibility: hidden;
+		padding-right: 10px;
+		width: 0px;
+		overflow: hidden;
+		height: 0px;
+	}
+	.select {
+		cursor: pointer;
+		display: block;
+		position: relative;
+		background-color: transparent;
+		margin: 0;
+		font-size: 0;
+		width: auto;
+		@include responsive-property("height",$header-height,50px,$header-height + 50px);
+		@include responsive-property("line-height",$header-height,50px,$header-height + 50px);
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&:hover {
+		.styledSelect {
+			color: $language-btn-color
+		}
+	}
+	.styledSelect {
+		position: relative;
+		display: inline-block;
+		@include responsive-property("font-size",$language-btn-font-size, 13px, $language-btn-font-size + 10px);
+		padding-right: 25px;
+		text-transform: uppercase;
+		cursor: pointer;
+		color: $language-btn-color;
+		@include language-btn-font();
+	}
+	.styledSelect:after {
+		content: '';
+        display: inline-block;
+        margin-left: 5px;
+		position: relative;
+		bottom: 5px;
+		border-left: 9px solid transparent;
+    border-right: 9px solid transparent;
+    border-top: 9px solid $black;
+	}
+	.styledSelect:active:after,
+	.styledSelect.active:after {
+        border-top: 0;
+        border-bottom: 9px solid #000;
+	}
+	.options {
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: -30px;
+		left: auto;
+		z-index: 999;
+		margin: 0 0;
+		padding: 20px 0;
+		list-style: none;
+		border: 0;
+		background-color: $language-dropdown-bg;
+		width: $language-dropdown-width;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.options li {
+		display: block;
+		margin-top: 5px;
+		@include responsive-property("font-size",$language-options-font-size, 13px, $language-options-font-size + 10px);
+		@include responsive-property("line-height",$language-options-font-size + 4, 17px, $language-btn-font-size + 14px);
+		color: $language-options-color;
+		text-align: left;
+		padding: 5px 8px 5px 30px;
+		@include responsive-property("padding-left",30, 6px, 40px);
+		border-left: 15px solid transparent;
+		text-decoration: none;
+		@include language-options-font;
+		&:first-child {
+			margin-top: 0;
+		}
+		&.selected {
+			border-color: #e5bf10;
+		}
+        &:hover {
+            border-color: #e5bf10;
+        }
+	}
+
+	.options li[rel="0"] {
+		display: none;
+	}
+}
+
+/**
+ * Responsive
+ */
+/*
+@media only screen and (max-width: 1920px) and (min-width: 1000px){
+	html #header .container {
+		padding: 0 get-vw(58) 0 get-vw(35);
+	}
+	#header {
+		min-height: get-vw($header-height);
+		line-height: get-vw($header-height);
+		.logo {
+
+			.img {
+				margin-right: get-vw($margin-between-logo-and-title);
+				max-height: get-vw($header-height - 20);
+			}
+			.image {
+				margin-right: get-vw($margin-between-logo-and-title);
+				img {
+					top: get-vw(15);
+					max-height: get-vw($header-height);
+				}
+				&:before {
+					bottom: get-vw(-40);
+					left: get-vw(-30);
+					right: get-vw(-30);
+					height: get-vw($header-height + 60);
+				}
+			}
+		}
+
+		.nav {
+			margin-right: get-vw(50);
+			height: get-vw($header-height);
+			line-height: get-vw($header-height);
+		}
+	}
+
+	#right-nav .menu-btn > span {
+		padding-left: get-vw(25);
+		background-position: right get-vw(22);
+	}
+	#header #change_language_form form {
+		margin-left: get-vw(40);
+	}
+	#header .search-icon {
+		width: get-vw(102);
+		margin: 0 get-vw(-58) 0 get-vw(35);
+		height: get-vw($header-height);
+	   line-height: ($header-height);
+
+		&.with-text {
+			padding: 0 get-vw(60) 0 get-vw(35);
+			margin-left: get-vw(40);
+		}
+		&.no-icon {
+			padding-right: get-vw(60);
+			margin-left: get-vw(40);
+		}
+	}
+	#header #change_language_form select, #header #change_language_form .select {
+		height: get-vw($header-height);
+		line-height: get-vw($header-height);
+	}
+}
+*/
+@media only screen and (max-width: 1000px) {
+	#header:after {
+		left: -20px
+	}
+	#header:before {
+		bottom: -45px;
+		width: 190px;
+		height: 45px;
+	}
+	#header .nav {
+		margin-right: 0;
+	}
+	#right-nav .menu-btn > span {
+		padding-left: 20px;
+	}
+    #header #change_language_form {
+        padding-left: 30px;
+    }
+    #header #change_language_form .styledSelect:after {
+        bottom: 0;
+    }
+	#header #change_language_form form {
+		margin: 0;
+	}
+	#header .search-icon.no-icon {
+		margin-left: 15px;
+	}
+
+	#header #change_language_form .options li {
+		font-size: 15px;
+		line-height: 19px;
+	}
+	#header #change_language_form .options {
+		right: -10px;
+		width: 200px;
+	}
+}
+@media only screen and (max-width: 900px) {
+	#header:before {
+		display: none;
+	}
+	#header .nav .menu-btn {
+		display: block;
+	}
+	#header .search-icon {
+		width: 51px;
+		height: 51px;
+		line-height: 51px;
+		margin-left: 0;
+	}
+	#header .nav {
+		line-height: 51px;
+		height: 51px;
+	}
+	#header .logo {
+		float: none;
+		width: 100%;
+		text-align: center;
+		padding: 0;
+		top: 0;
+		font-size: 17px;
+		line-height: 20px;
+		margin-bottom: 20px;
+		img,
+		.image img {
+			position: relative;
+			height: auto;
+			left: 0;
+			margin: 0 auto 15px;
+			display: block;
+			top: 10px;
+		}
+	}
+	#header #left-nav {
+		float: left;
+	}
+	#left-nav {
+		margin-right: 0;
+		margin-left: 10px;
+	}
+	#header #change_language_form .select,
+	#header #change_language_form select,
+	#header #change_language_form {
+		height: 51px;
+		line-height: 51px;
+	}
+	#header #change_language_form .options {
+		top: 51px;
+	}
+}
+@media only screen and (max-width: 450px) {
+	#left-nav .menu-btn > span,
+	#right-nav .menu-btn > span,
+	#header #change_language_form .styledSelect,
+	#header .search-icon.no-icon {
+		font-size: 14px;
+	}
+	#right-nav .menu-btn > span {
+		padding-left: 5px;
+	}
+	#header #left-nav {
+		margin-left: 0;
+	}
+	#header .search-icon.no-icon {
+		margin-left: 0;
+		padding-right: 10px;
+	}
+	#header .logo h1 {
+		font-size: 16px;
+	}
+	#header .search-icon.with-text {
+		text-indent: -9999px;
+	}
+}

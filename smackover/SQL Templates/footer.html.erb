@@ -1,0 +1,57 @@
+<footer id="footer">
+    <div class="container clearfix">
+        <div class="footer-col">
+            <h5>Contact Us</h5>
+            <p>Sheridan School District
+                <br> 400 North Rock Street
+                <br> Sheridan, AR 72150
+                <br> Phone: 870-942-3135
+                <br> Fax: 870-942-2931 </p>
+        </div>
+
+        <div class="footer-col">
+            <h5>Schools</h5>
+            <ul class="footer-schools">
+ <li><%= link_to 'Central Office', '/o/bes' %></li>
+        <li><%= link_to 'Smackover Pre-K', '/o/buhs' %></li>
+<li><%= link_to 'Smackover Elementary', '/o/buhs' %></li>
+<li><%= link_to 'Smackover High School', '/o/buhs' %></li>
+<li><%= link_to 'Norphlet Elementary', '/o/buhs' %></li>
+<li><%= link_to 'Norphlet Middle', '/o/buhs' %></li>
+
+
+            </ul>
+        </div>
+
+        <div class="footer-col quicklinks">
+            <h5>Quicklinks</h5>
+            <ul class="footer-links">
+              <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>  Live Feed </a></li>
+  <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>> News </a> </li>
+  <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>  Events </a></li>
+  <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>  Athletics </a></li>
+</ul>
+
+      </div>
+  <div class="footer-col quicklinks-col-2">
+        <h5>&nbsp</h5>
+
+        <ul class="footer-links">
+  <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>  Dining </a></li>
+  <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Faculty & Staff </a> </li>
+  <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+</ul>
+    </div>
+
+        <div class="footer-col sri-logo">
+            <a href="#"><img src="css/logo-sri.png" alt=""></a>
+        </div>
+        <div class="footer-col last">
+
+            <img class="fb" src="css/fb-icon.png"><a href="#" class="app-store">Download on the App Store</a> <br>
+            <img class="tw" src="css/tw-icon.png"><a href="#" class="google-play">Get it on Google play</a> </div>
+    </div>
+    <div class="container copyright">
+        <p>Copyright Sheridan School District 2015. All rights reserved.</p>
+    </div>
+</footer>

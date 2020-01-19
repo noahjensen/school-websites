@@ -1,0 +1,112 @@
+<header id="header" class="clearfix">
+
+    <a class="logo" href="/">
+         <h1>Buchanan County R-IV</h1>
+         <%= image_tag "apptegy_cms/themes/buchananrivmo/logo.png", alt: "Buchanan County R-IV School District" %>
+         <h2>School District</h2>
+      </a>
+
+
+
+<nav id="left-nav" class="nav" role="navigation">
+
+            <div class="menu-btn"><span>Menu</span></div>
+
+ <div class="menu-wrap">
+          <ul class="first-nav clearfix">
+
+        <li class="live-feed">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+                <span><%= image_tag 'apptegy_cms/themes/buchananrivmo/menu/feed-icon.png' %></span>
+               News Feed
+            </a>
+        </li>
+        <li class="news">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+                <span><%= image_tag 'apptegy_cms/themes/buchananrivmo/menu/news-icon.png' %> </span>
+                Headlines
+            </a>
+        </li>
+
+
+
+            <li class="events">
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+                  <span>  <%= image_tag 'apptegy_cms/themes/buchananrivmo/menu/events.png' %> </span>
+                    Events
+                </a>
+            </li>
+
+<li class="dining">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>
+                   <span> <%= image_tag 'apptegy_cms/themes/buchananrivmo/menu/dining.png' %> </span>
+                    Dining
+                </a>
+        </li>
+
+ <li class="staff">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+              <span>  <%= image_tag 'apptegy_cms/themes/buchananrivmo/menu/staff.png' %> </span>
+               Staff
+            </a>
+        </li>
+
+ <li class="staff">
+            <a href=<%= "/o/#{params[:org]}/athletics"%>>
+              <span>  <%= image_tag 'apptegy_cms/themes/buchananrivmo/menu/athletics.png' %> </span>
+               Athletics
+            </a>
+        </li>
+
+        <li class="documents">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                <span> <%= image_tag 'apptegy_cms/themes/buchananrivmo/menu/documents.png' %> </span>
+                Documents
+            </a>
+        </li>
+
+          </ul>
+           <% current_pages.roots.navigation_pages.each do |page| %>
+          <ul class="second-nav clearfix">
+
+
+               <% if page.header? %>
+               <h5><%= page.name.upcase %></h5>
+               <% else %>
+               <% end %>
+               <% if page.children.any? %>
+               <% page.children.order(:position).each do |subpage| %>
+               <li>
+               <a href=<%=subpage.page_link? ? "#{subpage.url}" : "/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+               <%= subpage.name %>
+               </a>
+               </li>
+               <% end %>
+               <% end %>
+
+               <% end %>
+         </ul>
+        <span class="menu-close"></span>
+                </div>
+            </nav>
+
+      <%= render 'apptegy_cms/shared/change_language' %>
+
+      <span class="search-icon" ></span>
+      <nav id="right-nav" class="nav" role="navigation">
+                <div class="menu-btn"><span>Schools</span>
+                    <div class="menu-wrap">
+                        <ul>
+                            <% current_site.secondary_organizations.order(:position).each do |org| %>
+                              <li>
+                                <a href=<%= "/o/#{org.organization_alias.try(:parameterize)}" %>>
+                                <%= org.name %>
+                                </a>
+                              </li>
+                            <% end %>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+    </header>

@@ -1,0 +1,562 @@
+/*************************
+*
+*  SUBPAGE
+*
+*************************/
+
+.main {
+  padding-bottom: 70px;
+}
+
+.homepage .main {
+  padding-bottom: 0;
+}
+
+.main .container {
+  background : $white;
+  max-width  : 1522px;
+  padding-top: 68px;
+  text-align : center;
+
+  & > * {
+    text-align: left;
+  }
+}
+
+.homepage .main .container {
+  max-width  : 1920px;
+  padding-top: 0;
+  text-align : left;
+  background : transparent;
+}
+
+#header,
+#slider,
+.breadcrumb ol,
+.container {
+  max-width   : 1920px;
+  margin-left : auto;
+  margin-right: auto;
+}
+
+.breadcrumb {
+  width     : 100%;
+  background: $breadcrumbBg;
+  min-height: 47px;
+  max-width : 1607px;
+  margin    : 0 auto;
+  padding   : 80px 15px 40px 100px;
+}
+
+.breadcrumb ol {
+  padding   : 0;
+  list-style: none;
+  left      : 0;
+  position  : relative;
+  margin    : 0 auto;
+}
+
+.breadcrumb li {
+  display       : inline-block;
+  @include responsive-property("font-size",20px,14px,20px + 10px);
+  @include responsive-property("line-height",20px,19px,20px + 14px);
+  @include first-font-family;
+  text-transform: none;
+  color         : $breadcrumbActiveColor;
+  padding-left  : 41px;
+  position      : relative;
+}
+
+.breadcrumb li:first-child {
+  padding    : 0;
+  background : none;
+  margin-left: 15px;
+}
+
+.breadcrumb li a {
+  color: $breadcrumbColor;
+  @include third-font-family;
+}
+
+.breadcrumb ol > li+li:before {
+  position: absolute;
+  top     : 2px;
+  left    : 13px;
+  width   : 24px;
+  height  : 18px;
+  color   : $breadcrumbColor;
+  content : "//";
+  @include responsive-property("font-size",20px,14px,20px + 10px);
+  @include responsive-property("line-height",20px,19px,20px + 14px);
+}
+
+.breadcrumb li.active {
+  display: inline;
+}
+
+.container.subpage .left-content,
+.container.subpage .right-content,
+.main .container > .left-content,
+.main .container > .right-content {
+  width     : $subpage-one-col-width;
+  min-height: 500px;
+  margin    : 0 auto;
+  text-align: left;
+}
+
+.container.subpage p,
+.main .container > .right-content p {
+  color        : $text-color;
+  margin-bottom: 25px;
+  @include responsive-property("font-size",20px,15px,20px + 10px);
+  @include responsive-property("line-height",30px,23px,30px + 10px);
+}
+
+.main .container > .right-content p a,
+.subpage a,
+.subpage p a {
+  color: $links-color;
+}
+
+.main .container .left-sidebar p a,
+.main .container .right-content a,
+.main .container .right-content p a {
+  text-decoration: underline;
+}
+
+.left-sidebar {
+  display       : inline-block;
+  width         : $subpage-sidebar-width;
+  vertical-align: top;
+  padding-right : 50px;
+  text-align    : left;
+}
+
+.container.subpage .left-sidebar + .right-content,
+.main .container .left-sidebar + .right-content {
+  display       : inline-block;
+  vertical-align: top;
+  width         : $subpage-column-two;
+}
+
+.images-grid {
+  width        : 735px;
+  overflow     : hidden;
+  font-size    : 0;
+  margin-top   : 50px;
+  margin-bottom: 25px;
+}
+
+.images-grid a {
+  width             : 50%;
+  padding           : 0 10px 0 0;
+  display           : inline-block;
+  vertical-align    : top;
+  margin-bottom     : 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing   : border-box;
+  box-sizing        : border-box;
+}
+
+.images-grid a img {
+  width : 100%;
+  height: auto;
+}
+
+.images-grid.photos-1 a {
+  width: 100%;
+}
+
+.images-grid.photos-3 a + a + a {
+  width: 100%;
+  clear: both;
+}
+
+img.image-block {
+  display     : block;
+  margin-left : auto;
+  margin-right: auto;
+}
+/* Custom popup scroll */
+
+.scrollable {
+  position: relative;
+}
+
+.scrollable:focus {
+  outline: 0;
+}
+
+.scrollable .viewport {
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollable .viewport .overview {
+  position: absolute;
+}
+
+.scrollable .scroll-bar {
+  display: none;
+}
+
+.scrollable .scroll-bar.vertical {
+  position: absolute;
+  right   : 0;
+  height  : 100%;
+}
+
+.scrollable .scroll-bar.horizontal {
+  position: relative;
+  width   : 100%;
+}
+
+.scrollable .scroll-bar .thumb {
+  position: absolute;
+}
+
+.scrollable .scroll-bar.vertical .thumb {
+  width     : 100%;
+  min-height: 10px;
+}
+
+.scrollable .scroll-bar.horizontal .thumb {
+  height   : 100%;
+  min-width: 5px;
+  left     : 0;
+}
+
+.not-selectable {
+  -webkit-touch-callout: none;
+  -webkit-user-select  : none;
+  -khtml-user-select   : none;
+  -moz-user-select     : none;
+  -ms-user-select      : none;
+  user-select          : none;
+}
+/*Default skin*/
+
+#slider p.scrollable.default-skin {
+  padding-right : 30px;
+  padding-bottom: 6px;
+  margin-right  : 15px;
+}
+
+.scrollable.default-skin .scroll-bar.vertical {
+  width           : 5px;
+  background-color: #a9bad8;
+}
+
+.scrollable.default-skin .scroll-bar.horizontal {
+  height    : 11px;
+  background: #f7f7f7;
+}
+
+.scrollable.default-skin .scroll-bar .thumb {
+  background-color: #738bb7;
+  cursor          : pointer;
+}
+
+.scrollable.default-skin .scroll-bar:hover .thumb {
+  background-color: #42629c;
+}
+/* General subpage elements */
+
+table {
+  width          : 100%;
+  max-width      : 100%;
+  margin-bottom  : 20px;
+  border-spacing : 0;
+  border-collapse: collapse;
+  border         : 1px solid #ddd;
+}
+
+table > tbody > tr > td,
+table tr > th {
+  padding       : 8px;
+  line-height   : 1.42857143;
+  vertical-align: top;
+  border-top    : 1px solid #ddd;
+  text-align    : left;
+  word-wrap     : break-word;
+}
+
+table > thead > tr > th {
+  vertical-align: bottom;
+  border-bottom : 2px solid #ddd;
+}
+
+table > thead:first-child > tr:first-child > th {
+  border-top: 0;
+}
+
+table > tbody > tr:nth-of-type(odd) {
+  background-color: #f9f9f9;
+}
+
+.article-page ol,
+.article-page ul:not(.redactor_toolbar),
+.right-content ol,
+.right-content ul:not(.redactor_toolbar),
+.subpage ol,
+.subpage ul:not(.redactor_toolbar) {
+  margin-bottom      : 15px;
+  list-style-position: inside;
+  padding-left       : 20px;
+
+  ol,
+  ul {
+    padding-left: 30px;
+  }
+}
+
+.article-page ol li,
+.article-page ul:not(.redactor_toolbar) li,
+.right-content ol li,
+.right-content ul:not(.redactor_toolbar) li,
+.subpage ol li,
+.subpage ul:not(.redactor_toolbar) li,
+table {
+  color    : $text-color;
+  @include responsive-property("font-size",20px,15px,20px + 10px);
+  @include responsive-property("line-height",30px,23px,30px + 10px);
+  @include first-font-family;
+  word-wrap: break-word;
+}
+
+.left-sidebar > a,
+.right-content > a {
+  margin-bottom: 15px;
+  display      : block;
+}
+
+.article-page ul li,
+.right-content ul li,
+.subpage ul li {
+  list-style-type: disc;
+}
+
+.left-sidebar ul li {
+  list-style-type: none;
+  padding-bottom : 10px;
+}
+
+.article-page ol li,
+.right-content ol li,
+.subpage ol li {
+  list-style-type: decimal;
+}
+
+.left-content h1,
+.left-content h2,
+.left-content h3,
+.left-content h4,
+.left-content h5,
+.left-content h6,
+.right-content h1,
+.right-content h2,
+.right-content h3,
+.right-content h4,
+.right-content h5,
+.right-content h6,
+.subpage h1,
+.subpage h2,
+.subpage h3,
+.subpage h4,
+.subpage h5,
+.subpage h6 {
+  @include responsive-property("font-size",28px,34px,28px + 10px);
+  @include responsive-property("line-height",28px + 4,39px,28px + 14px);
+  color : $links-color;
+  margin: 0 0 10px;
+  @include subpage-h1-font;
+}
+
+.left-content h1,
+.right-content h1,
+.subpage h1 {
+  color: #333;
+}
+$subpage-h2-font-size: $subpage-h1-font-size - 3;
+$subpage-h3-font-size: $subpage-h2-font-size - 3;
+$subpage-h4-font-size: $subpage-h3-font-size - 3;
+$subpage-h5-font-size: $subpage-h4-font-size - 3;
+$subpage-h6-font-size: $subpage-h5-font-size - 3;
+
+.left-content h2,
+.right-content h2,
+.subpage h2 {
+  @include responsive-property("font-size",25px,30px,25px + 10px);
+  @include responsive-property("line-height",25px + 4,34px,25px + 14px);
+}
+
+.left-content h3,
+.right-content h3,
+.subpage h3 {
+  @include responsive-property("font-size",22px,26px,22px + 10px);
+  @include responsive-property("line-height",22px + 4,30px,22px + 14px);
+}
+
+.left-content h4,
+.right-content h4,
+.subpage h4 {
+  @include responsive-property("font-size",19px,22px,19px + 10px);
+  @include responsive-property("line-height",19px + 4,26px,19px + 14px);
+}
+
+.left-content h5,
+.right-content h5,
+.subpage h5 {
+  @include responsive-property("font-size",16px,18px,16px + 10px);
+  @include responsive-property("line-height",16px + 4,22px,16px + 14px);
+}
+
+.left-content h6,
+.right-content h6,
+.subpage h6 {
+  @include responsive-property("font-size",13px,15px,13px + 10px);
+  @include responsive-property("line-height",13px + 4,19px,13px + 14px);
+}
+
+blockquote {
+  @include responsive-property("padding-top",10px,4px,10px);
+  @include responsive-property("padding-bottom",10px,4px,10px);
+  @include responsive-property("padding-left",20px,9px,20px);
+  @include responsive-property("padding-right",20px,9px,20px);
+  @include responsive-property("font-size",20px,13px,20px);
+  @include responsive-property("line-height",25px,18px,25px);
+  border-left: 5px solid #4f7728;
+}
+
+.container.subpage blockquote p,
+.main .container > .right-content blockquote p {
+  margin-bottom: 0;
+  margin-top   : 25px;
+}
+
+.container.subpage blockquote p:first-child,
+.main .container > .right-content blockquote p:first-child {
+  margin-top: 0;
+}
+
+.left-sidebar h3 {
+  @include responsive-property("font-size",22px,26px,22px + 10px);
+  @include responsive-property("line-height",22px + 4,30px,22px + 14px);
+  @include responsive-property("margin-bottom",35px,14px,35px);
+  text-transform: uppercase;
+  color         : $subpage-sidebar-title-color;
+  @include responsive-property("padding-top",30px,14px,30px);
+  @include responsive-property("padding-bottom",30px,14px,30px);
+  @include responsive-property("padding-left",15px,5px,15px);
+  @include responsive-property("padding-right",15px,5px,15px);
+  text-align    : center;
+  background    : $subpage-sidebar-title-bg;
+  font-weight   : 700;
+}
+//fixes
+.subpage .left-content {
+  @include responsive-property("padding-top",30px,14px,30px);
+  @include responsive-property("padding-bottom",30px,14px,30px);
+}
+
+.block-container .bx-wrapper .bx-viewport:after,
+.block-container .bx-wrapper .bx-viewport:before,
+body .subpage .bx-wrapper .bx-viewport:after,
+body .subpage .bx-wrapper .bx-viewport:before {
+  display: none;
+}
+
+.partial-container .image_block.block-container {
+  text-align: center;
+}
+
+.image-block-container.overlay-caption {
+  display       : inline-block;
+  vertical-align: top;
+}
+/**
+* Responsive
+*/
+
+@media only screen and (max-width: 1000px) {
+  .main {
+    padding-bottom: 50px;
+  }
+
+  .container.subpage .left-sidebar + .right-content,
+  .main .container .left-sidebar + .right-content,
+  .main .container > .left-content,
+  .main .container > .right-content,
+  .main .left-sidebar {
+    float             : none;
+    width             : 100%;
+    margin-top        : 0;
+    margin-bottom     : 0;
+    padding           : 0 20px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition   : all 0.5s ease-in-out;
+    -o-transition     : all 0.5s ease-in-out;
+    transition        : all 0.5s ease-in-out;
+  }
+
+  .main .container > .right-content {
+    margin-top   : 25px;
+    margin-bottom: 0;
+  }
+
+  .images-grid {
+    margin-left : auto;
+    margin-right: auto;
+  }
+
+  .main .left-sidebar h1,
+  .right-content .right-links,
+  .right-content h3 {
+    text-align: left;
+  }
+
+  .right-content .right-links {
+    margin-bottom: 20px;
+  }
+
+  .main .left-sidebar {
+    margin: 25px 0 20px;
+  }
+
+  .breadcrumb + .main .container {
+    padding: 0;
+  }
+
+  .breadcrumb + .main .right-content {
+    padding: 0 20px 30px;
+    /*min-height: initial;*/
+  }
+
+  .breadcrumb li:first-child {
+    margin-left: 0;
+  }
+
+  .breadcrumb ol {
+    text-align: center;
+    padding   : 10px;
+  }
+
+  .breadcrumb li {
+    padding-left: 55px;
+  }
+
+  .left-sidebar .left-links li {
+    margin-left: 10px;
+  }
+}
+@media only screen and (max-width: 805px) {
+  .images-grid {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 505px) {
+  .images-grid a {
+    width        : 100%;
+    padding-right: 0;
+  }
+}

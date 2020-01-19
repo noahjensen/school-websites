@@ -1,0 +1,39 @@
+<footer id="footer">
+        <div class="container clearfix">
+               <div class="footer-col">
+         <h5>Contact Us</h5>
+         <p><%= current_organization.try(:name) %>
+           <br><%= current_organization.try(:address) %>
+             <br><%= "#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+             <br><%= "Ph #{current_organization.try(:phone_number)}" %>
+             <br><%= "Fax #{current_organization.try(:fax_number)}" %></p>
+     </div>
+
+         <div class="footer-col quicklinks">
+            <h5>Quicklinks</h5>
+            <ul class="footer-links">
+              <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"  %>>News</a></li>
+              <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"  %>>Events</a></li>
+               <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"  %>>Dining</a></li>
+                   <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"  %>>Documents</a></li>
+
+            </ul>
+         </div>
+
+
+            <div class="footer-col last">
+               <% if current_organization[:facebook_link].present? %>
+                <a href="<%= current_organization.try(:facebook_link) %>" target="_blank" class="fb"><%= image_tag "apptegy_cms/themes/valleyheightsks/fb.png", alt: " "%></a>
+               <% end %>
+                <a href="https://itunes.apple.com/us/app/floodwood-school-mn/id1185675949?mt=8" class="app-store" target="_blank">Download on the App Store</a>
+                <br>
+                <% if current_organization[:twitter_link].present? %>
+                  <a href="<%=current_organization.try(:twitter_link) %>" class="tw" target="_blank"><%= image_tag "apptegy_cms/themes/valleyheightsks/tw.png", alt: " "%></a>
+                <% end %>
+                <a href="https://play.google.com/store/apps/details?id=com.apptegy.floodwood&hl=en" class="google-play" target="_blank">Get it on Google play</a>
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>Copyright &copy; Floodwood School District 2016. All rights reserved. Powered by <a href="http://www.apptegy.com">apptegy</a></p>
+        </div>
+    </footer>

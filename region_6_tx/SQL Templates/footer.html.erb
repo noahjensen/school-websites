@@ -1,0 +1,54 @@
+<footer id="footer">
+                    <div class="container clearfix">
+                      <div class="footer-col">
+   <h5>Contact Us</h5>
+   <p><%= current_organization.try(:name)%>
+     <br><%= current_organization.try(:address) %>
+     <br><%="#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+     <br><%="PH: #{current_organization.try(:phone_number)}" %>
+     <br><%= "FAX #{current_organization.try(:fax_number)}" %></p>
+ </div>
+
+ <div class="footer-col col-1">
+     <h5>Quicklinks</h5>
+     <ul>
+        <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>Live Feed</a></li>
+        <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>Staff</a></li>
+        <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>News</a></li>
+        <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>Events</a></li>
+     <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>Dining</a></li>
+     <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>Documents</a></li>
+     <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>Athletics</a></li>
+  </ul>
+</div>
+
+
+      <div class="footer-col col2">
+        <h5>&nbsp</h5>
+        <ul class="footer-links">
+          <%= image_tag "apptegy_cms/themes/region6tx/ODE-logo.png", alt: " "%>
+        </ul>
+      </div>
+
+
+          <div class="footer-col last">
+              <a href="" class="social"><%= image_tag "apptegy_cms/themes/region6tx/yt.png", alt: " "%></a>
+            <a href="" class="social"><%= image_tag "apptegy_cms/themes/region6tx/fb.png", alt: " "%></a>
+            <a href="#" class="app-store"><%= image_tag "apptegy_cms/themes/region6tx/apple.png", alt: " "%></a>
+            <br>
+              <a href="" class="social"><%= image_tag "apptegy_cms/themes/region6tx/ig.png", alt: " "%></a>
+                <a href="" class="social"><%= image_tag "apptegy_cms/themes/region6tx/tw.png", alt: " "%></a>
+            <a href="#" class="google-play"><%= image_tag "apptegy_cms/themes/region6tx/google.png", alt: " "%></a>
+          </div>
+
+</div>
+<div class="container bottom-footer">
+   <p>Copyright &copy; REGION 6 ESC 2017. All rights reserved. </p>
+  <p class="powered-by">Powered by <a href="">Apptegy</a></p>
+</div>
+
+
+
+
+
+    </footer>

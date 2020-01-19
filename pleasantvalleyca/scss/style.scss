@@ -1,0 +1,36 @@
+ // ===== Central Hub ========================================================
+ //  The main file where all SCSS files are collected. This is the files that
+//   will be called by the SCSS compiler
+ //  ========================================================================== */
+
+
+
+
+@import "_mixins.scss";
+@import "_variables.scss";
+
+
+ @import "_reset.scss";
+//////////////////////*/
+////// Components ////*/
+///////////////////////*/
+
+@import "_header.scss";
+@import "_footer.scss";
+@import "_slider.scss";
+@import "_content.scss";
+@import "_subpage.scss";
+@import "_colorbox.scss";
+@import "_responsive.scss";
+@import "_district.scss";
+@import "_camarillo-heights.scss";
+@import "_dos-caminos.scss";
+@import "_la-mariposa.scss";
+@import "_las-colinas.scss";
+@import "_las-posas.scss";
+@import "_lpssa.scss";
+@import "_monte-vista.scss";
+@import "_pvsea.scss";
+@import "_rancho-rosal.scss";
+@import "_srtms.scss";
+@import "_tierra-linda.scss";

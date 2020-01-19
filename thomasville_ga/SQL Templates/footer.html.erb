@@ -1,0 +1,44 @@
+<footer id="footer">
+    <div class="container clearfix">
+      <div class="footer-col">
+          <h5><%= current_organization.try(:name)%></h5>
+          <p><%= current_organization.try(:address) %>
+              <br><%="#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+              <br><%="PH: #{current_organization.try(:phone_number)}" %>
+              <br><%= "FAX #{current_organization.try(:fax_number)}" %></p>
+      </div>
+        <div class="footer-col">
+            <h5>Sites</h5>
+            <ul class="footer-links">
+                <li><a href="">Thomasville City School District</a></li>
+                <li><a href="">Thomasville High School</a></li>
+                <li><a href="">Thomasville Scholars Academy</a></li>
+                <li><a href="">Macintyre Park Middle School</a></li>
+                <li><a href="">Jerger Elementary School</a></li>
+                <li><a href="">Harper Elementary School</a></li>
+                <li><a href="">Scott Elementary School</a></li>
+                <li><a href="">Athletics</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h5>quicklinks</h5>
+            <ul class="footer-links">
+                <li><a href="">Power School for Parents</a></li>
+                <li><a href="">Power School For Teachers</a></li>
+                <li><a href="">Power School for Staff</a></li>
+                <li><a href="">Employee Directory</a></li>
+                <li><a href="">School Success Tips- Elementary</a></li>
+                  <li><a href="">School Success Tips- Secondary</a></li>
+                    <li><a href="">Employee Request Portal</a></li>
+            </ul>
+        </div>
+        <div class="footer-col last">
+            <a href="#" class="fb"><%= image_tag "apptegy_cms/themes/thomasvillega/fb-icon.png", alt: " "%></a>
+
+            <a href="#" class="tw"><%= image_tag "apptegy_cms/themes/hillsboromo/tw-icon.png", alt: " "%></a>
+        </div>
+    </div>
+    <div class="container copyright">
+        <p> Copyright © Thomasville City Schools District 2017. All Rights Reserved. Powered by <a href="http://www.apptegy.com/" target="_blank">Apptegy</a> </p>
+    </div>
+</footer>

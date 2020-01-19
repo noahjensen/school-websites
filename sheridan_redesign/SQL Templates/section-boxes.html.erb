@@ -1,0 +1,107 @@
+<!-- Begin first-col -->
+<div class="first-col">
+   <div class="col-item live-feeds-wrapper active">
+      <h4>Live Feed</h4>
+      <div class="hover-content">
+         <% current_organization.live_feeds.limit(3).each do |post| %>
+         <div class="live-feed">
+            <div class="right-content">
+
+                  <p><a style="font-size: 20px !important; text-transform: none;" href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"  %>><%= translate(raw post.linkify) %></a></p>
+               </a>
+               <span class="time" style="text-transform: none; font-size: 1.8rem"><%=translate( "#{time_ago_in_words(post.created_at)} ago") %></span>
+               <span class="autor" style="text-transform: none; font-size: 1.8rem"><%= post.author_name %></span>
+            </div>
+         </div>
+         <% end %>
+      </div>
+      <a  style="margin-right: 30px;" href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"  %> class="see-more"><%=translate("SEE ALL posts")%></a>
+   </div>
+   <div class="col-item news-wrapper active">
+      <h4>News</h4>
+      <div class="hover-content">
+         <div class="news-slider">
+            <% current_organization.articles.limit(2).each do |article|  %>
+            <div class="news">
+               <div class="right-content">
+                  <p><a style="font-size: 23px !important;" href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"  %> class="read-more"><%= translate(article.title) %></a></p>
+                  <p class="autor" style="text-transform: none; font-weight: 700; font-size: 1.8rem"><%= article.author_name %></p>
+                  <p class="date" style="text-transform: none;  font-weight: 700;  font-size: 1.8rem"><%= article.published_on.strftime("%d %B %Y") %></p>
+               </div>
+            </div>
+            <% end %>
+         </div>
+      </div>
+         <a style="margin-right: 30px;" href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"  %> class="see-more"><%=translate("SEE ALL NEWS")%></a>
+   </div>
+
+</div>
+<!-- End first-col -->
+<div class="second-col">
+   <!-- Date -->
+   <div class="col-item date-wrapper">
+      <p>
+         <span class="day"><%= Time.current.strftime("%A") %></span>
+         <span class="number"><%= Time.current.strftime("%d") %></span>
+         <span class="month-year"><%= Time.current.strftime("%B %Y") %></span>
+      </p>
+   </div>
+   <!-- Athletics -->
+   <div class="col-item athletics-wrapper  active">
+      <h4>Athletics</h4>
+      <div class="hover-content">
+        <%= image_tag "apptegy_cms/themes/sheridanar_redesign/link-icon.png", alt: "Smackover Norphlet School District"%>
+
+
+   <% if params[:org] == "central-office" %>
+        <a href="/o/smackover-high-school/athletics" class="view-more">Athletics</a>
+
+                <% elsif params[:org] == "smackover-preschool" %>
+        <a href="/o/smackover-high-school/athletics" class="view-more">Athletics</a>
+
+   <% elsif params[:org] == "smackover-high-school" || params[:org] == "norphlet-middle" || params[:org] == "norphlet-elementary" || params[:org] == "smackover-elementary"%>
+       <a style="text-decoration: none; color: black; text-transform: uppercase; font-size: 3.5rem; padding-top: 10px;" href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"  %>> Athletics</a>
+
+            <% else%>
+        <a href="o/smackover-high-school/athletics" class="view-more">Athletics</a>
+
+<%end%>
+      </div>
+   </div>
+
+
+   <!-- End Athletics -->
+</div>
+<!-- End second-col -->
+<div class="col-item events-wrapper">
+
+<!-- Events -->
+<h4>Calendar</h4>
+<div class="hover-content">
+   <% current_organization.events.limit(7).each do |event| %>
+   <div class="event">
+      <div class="date"><%= "#{event.start_date.try(:strftime, '%b %e')} #{event.start_time.try(:strftime, 'at %l:%M %p')}" %>
+         <% if event.end_date.present? ||   event.end_time.present? %>
+         to
+         <% end %>
+         <%= "#{event.end_date.try(:strftime, '%b %e')} #{event.end_time.try(:strftime, '%l:%M %p')}" %>
+      </div>
+      <div class="right-content">
+<p ><%= link_to translate(event.title), params[:org].present? ? "/o/#{params[:org]}/events" : "/events" %></p>
+      </div>
+   </div>
+   <% end %>
+</div>
+<a style="margin-right: 30px;" href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"  %> class="see-more events-btn"><%=translate("See all events")%></a>
+
+</div>
+
+<style>
+.right-content p a{
+text-transform: uppercase;
+}
+
+.main .col-item.athletics-wrapper .hover-content img {
+    margin-bottom: 25px;
+}
+</style>

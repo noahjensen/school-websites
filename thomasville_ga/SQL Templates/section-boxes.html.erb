@@ -1,0 +1,65 @@
+<div class="col-item live-feeds-wrapper same-height">
+            <h4>Live Feed</h4>
+            <% current_organization.live_feeds.limit(4).each do |post| %>
+                <div class="live-feed">
+                    <div class="avatar">
+                        <% if post.avatar == 'http://www.apptegy.com/default.png' %>
+                            <%= image_tag 'apptegy_cms/default_avatar.png', alt: post.author_name, size: '60x60', class: 'avatar-section' %>
+                                <% else %>
+                                    <%= image_tag post.avatar, alt: post.author_name, size: '60x60', class: 'avatar-section' %>
+                                        <% end %>
+                    </div>
+                    <div class="right-content">
+                        <h3><%= post.author_name %>, <span class="time">
+                            <%= "#{time_ago_in_words(post.created_at)} ago" %>
+                        </span></h3>
+                        <p>
+                            <%= raw post.linkify %>
+                            <%= link_to 'see pic', post.image_large, target: '_blank' if post.image_large? %>
+                        </p>
+
+                    </div>
+                </div>
+                <% end %>
+                    <a href=<%=params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed" %> class="see-more">SEE ALL posts</a>
+        </div>
+
+        <div class="col-item events-wrapper same-height">
+            <h4>Events</h4>
+            <% current_organization.events.limit(6).each do |event| %>
+                <div class="event">
+                        <p>
+                             <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"  %> >
+                                <%= event.title %>
+                            </a>
+                        </p>
+                        <div class="date"><%= "#{event.start_date.try(:strftime, '%a, %B %e')}" %></div>
+
+                </div>
+                <% end %>
+                    <a href=<%=params[:org].present? ? "/o/#{params[:org]}/events" : "/events" %> class="see-more events-btn">See all events</a>
+
+        </div>
+
+<div class="col-item news-wrapper">
+   <h4>News</h4>
+   <div class="news-slider">
+      <% articles = current_organization.articles %>
+      <% gallery = articles.select{|a| a.images_list.any? }[0..3]%>
+     <% articles_gallery_removed = articles.reject{|a| gallery.include?(a)} %>
+      <% headlines = articles_gallery_removed.take(8) %>
+      <% gallery.each do |g| %>
+      <div class="news">
+         <div class="image">
+            <img src=<%= g.images_list.first %>>
+         </div>
+         <div class="right-content">
+            <h3><%= g.title %></h3>
+            <a href=<%=  "/article/#{g.id}"   %> class="read-more">read more</a>
+         </div>
+      </div>
+         <% end %>
+   </div>
+   <a href=<%=params[:org].present? ? "/o/#{params[:org]}/news" : "/news" %> class="see-more">SEE ALL NEWS</a>
+
+</div>

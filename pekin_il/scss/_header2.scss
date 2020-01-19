@@ -1,0 +1,526 @@
+/* ===== Header ========================================================== */
+
+#header {
+  padding           : 0;
+  min-height        : $header-height;
+  line-height       : $header-height;
+  background        : $header-bg;
+  position          : relative;
+  width             : 100%;
+  -webkit-box-shadow: 1px 1px 21px 0 rgba(0, 0, 0, 0.71);
+  -moz-box-shadow   : 1px 1px 21px 0 rgba(0, 0, 0, 0.71);
+  box-shadow        : 1px 1px 21px 0 rgba(0, 0, 0, 0.71);
+
+  .logo {
+    position       : relative;
+    float          : right;
+    text-align     : left;
+    margin         : 0 0 0 15px;
+    z-index        : 22;
+    text-decoration: none;
+    display        : block;
+    font-size      : 0;
+
+    h1 {
+      display       : inline-block;
+      vertical-align: middle;
+      color         : $logo-color;
+      @include font-size($logo-title-font-size);
+      @include line-height($logo-title-font-size+3);
+      margin        : 0;
+      @include logo-title-font;
+
+      span {
+        @include font-size($logo-subtitle-font-size);
+        @include line-height($logo-subtitle-font-size+3);
+        display   : block;
+        color     : $logo-subtitle-color;
+        margin-top: 5px;
+        @include logo-subtitle-font;
+
+        .dot {
+          display       : inline-block;
+          vertical-align: middle;
+          width         : 10px;
+          height        : 9px;
+          background    : $logo-subtitle-color;
+          margin        : 0 6px;
+          @include border-radius (50%);
+        }
+      }
+    }
+
+    img {
+      display       : inline-block;
+      vertical-align: middle;
+      z-index       : 2;
+      margin-right  : $margin-between-logo-and-title;
+      position      : relative;
+      height        : auto;
+      max-height    : $header-height - 20;
+      width         : auto;
+    }
+
+    .image {
+      position      : relative;
+      margin-right  : $margin-between-logo-and-title;
+      display       : inline-block;
+      vertical-align: middle;
+
+      img {
+        max-height   : $header-height;
+        height       : auto;
+        margin       : 0;
+        position     : relative;
+        overflow     : hidden;
+        padding-right: 40px;
+      }
+    }
+  }
+}
+
+#header .menu-sections {
+  background     : #fff url("menu-bg.jpg") no-repeat center center;
+  content        : "";
+  background-size: cover;
+  width          : auto;
+  float          : left;
+}
+
+.homepage #header {
+  z-index: 2;
+}
+// menu buttons
+#header .nav {
+  float: left;
+
+  &#right-nav {
+    margin-right: 0;
+    position    : relative;
+  }
+
+  .menu-btn {
+    display       : inline-block;
+    vertical-align: top;
+  }
+}
+
+#left-nav .menu-btn > span,
+#right-nav .menu-btn > span {
+  @include font-size($menu-btns-font-size);
+  color        : $menu-btn-txt-color;
+  text-align   : center;
+  display      : block;
+  cursor       : pointer;
+  padding-left : 65px;
+  padding-right: 65px;
+  position     : relative;
+  background   : transparent url("menu-icon.png") no-repeat 34px center;
+  @include menu-btn-font;
+}
+
+#left-nav.active .menu-btn > span,
+#left-nav:hover .menu-btn > span {
+  background-color: $menu-active-btn-bg-color;
+  color           : $menu-active-btn-txt-color;
+}
+
+#right-nav .menu-btn > span {
+  background: $schools-menu-btn-bg-color;
+  color     : $schools-menu-btn-txt-color;
+  @include schools-menu-btn-font;
+}
+
+#right-nav .menu-btn > span.active,
+#right-nav:hover .menu-btn > span {
+  background: $schools-menu-active-btn-bg-color;
+  color     : $schools-menu-active-btn-txt-color;
+}
+//search icon
+#header .search-icon {
+  float      : right;
+  @include font-size($search-btn-font-size);
+  color      : $search-txt-color;
+  height     : $header-height;
+  line-height: $header-height;
+  width      : 117px;
+  background : $search-bg-color url('search-icon-bg.jpg') no-repeat center center;
+  margin     : 0;
+  @include border-radius(0);
+
+  &:hover {
+    background-color: $search-bg-hover-color;
+  }
+
+  &.no-bg-color {
+    background : url("search-icon.png") no-repeat center center;
+    margin-left: 0;
+  }
+
+  &.with-text {
+    width              : auto;
+    padding            : 0 60px 0 35px;
+    background-position: left center;
+    text-transform     : uppercase;
+    margin-left        : 40px;
+  }
+
+  &.no-icon {
+    background   : transparent;
+    width        : auto;
+    padding-right: 60px;
+    margin-left  : 40px;
+  }
+}
+
+#header .search-icon:after {
+  background: url("search-icon-white.png") no-repeat center center;
+  content   : "";
+  position  : absolute;
+  height    : 128px;
+  width     : 117px;
+}
+// Language dropdown
+#header #change_language_form {
+  float     : left;
+  //background: $language-btn-bg;
+  padding   : 0;
+  text-align: center;
+  position  : relative;
+  cursor    : pointer;
+
+  &:hover {
+    background: $language-active-btn-bg-color;
+  }
+
+  form {
+    margin: 0;
+  }
+
+  select {
+    height     : $header-height;
+    line-height: $header-height;
+    background : transparent;
+    @include font-size($language-btn-font-size);
+    color      : $language-btn-color;
+    position   : relative;
+    left       : -4px;
+    @include language-btn-font;
+    cursor     : pointer;
+  }
+
+  .s-hidden {
+    position     : absolute;
+    visibility   : hidden;
+    padding-right: 10px;
+    width        : 0;
+    overflow     : hidden;
+    height       : 0;
+  }
+
+  .select {
+    cursor          : pointer;
+    display         : block;
+    position        : relative;
+    background-color: transparent;
+    margin          : 0;
+    font-size       : 0;
+    width           : auto;
+    height          : $header-height;
+    line-height     : $header-height;
+    display         : inline-block;
+    vertical-align  : top;
+  }
+
+  &:hover {
+    .styledSelect {
+      color: $language-btn-color;
+    }
+  }
+
+  .styledSelect {
+    position: relative;
+    display : inline-block;
+    @include font-size($language-btn-font-size);
+    cursor  : pointer;
+    color   : $language-btn-color;
+    @include language-btn-font;
+    padding : 0 100px 0 60px;
+  }
+
+  .styledSelect:after {
+    content   : "";
+    position  : absolute;
+    right     : 60px;
+    top       : 50%;
+    margin-top: -6px;
+    width     : 17px;
+    height    : 12px;
+    background: url("language_arrow.png") no-repeat center top;
+  }
+
+  .styledSelect.active:after,
+  .styledSelect:active:after {
+    background-position: center bottom 2px;
+  }
+
+  .options {
+    display         : none;
+    position        : absolute;
+    top             : 100%;
+    left            : 0;
+    z-index         : 999;
+    margin          : 0;
+    padding         : 40px 30px 35px 15px;
+    list-style      : none;
+    border          : 0;
+    background-color: $language-dropdown-bg;
+    width           : $language-dropdown-width;
+    min-width       : 100%;
+    overflow-x      : hidden;
+    overflow-y      : auto;
+  }
+
+  .options li {
+    display        : block;
+    margin-top     : 0;
+    @include font-size($language-options-font-size);
+    @include line-height($language-options-font-size + 4);
+    color          : $language-options-color;
+    text-align     : left;
+    padding        : 15px 0 15px 25px;
+    border-left    : 20px transparent solid;
+    text-decoration: none;
+    @include language-options-font;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &.selected {
+      border-left: 20px #cf0606 solid;
+    }
+  }
+
+  .options li:hover {
+    color      : $language-options-color-hover;
+    background : $language-options-bg-hover;
+    border-left: 20px #cf0606 solid;
+  }
+
+  .options li[rel="0"] {
+    display: none;
+  }
+}
+
+/**
+ * Responsive
+ */
+
+@media only screen and (max-width: 1920px) and (min-width: 1000px) {
+  #header .logo h1 {
+    font-size  : get-vw($logo-title-font-size);
+    line-height: get-vw($logo-title-font-size + 3);
+  }
+
+  #header .logo h1 span {
+    font-size  : get-vw($logo-subtitle-font-size);
+    line-height: get-vw($logo-subtitle-font-size + 3);
+  }
+
+  #header #change_language_form .styledSelect {
+    padding  : 0 get-vw(100) 0 get-vw(60);
+    font-size: get-vw($language-btn-font-size);
+
+    &:after {
+      right: get-vw(60);
+    }
+  }
+
+  #left-nav .menu-btn > span {
+    padding-left       : get-vw(65);
+    padding-right      : get-vw(65);
+    background-position: get-vw(34) center;
+    font-size          : get-vw($menu-btns-font-size);
+    background-size    : get-vw(21) auto;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #header .logo .image .image img,
+  #header .logo .image img,
+  #header .logo .image img,
+  #header .logo img {
+    padding-right: 0;
+  }
+
+  #header .search-icon:after {
+    width : 51px;
+    height: 51px;
+  }
+
+  #header .logo h1 {
+    font-size  : 25px;
+    line-height: 30px;
+  }
+
+  #header .logo h1 span {
+    font-size  : 20px;
+    line-height: 24px;
+  }
+
+  #header .logo .image:before {
+    display: none;
+  }
+
+  #header {
+    padding: 0 0 5px;
+  }
+
+  #header .nav .menu-btn {
+    display: block;
+  }
+
+  #header .search-icon {
+    width       : 51px;
+    height      : 51px;
+    line-height : 51px;
+    margin-right: 0;
+    margin-left : 0;
+  }
+
+  #header .nav {
+    line-height: 51px;
+    height     : 51px;
+  }
+
+  #header .logo,
+  #header .logo .image {
+    float      : none;
+    display    : block;
+    width      : 100%;
+    text-align : center;
+    padding    : 0;
+    top        : 0;
+    font-size  : 17px;
+    line-height: 20px;
+    margin     : 0;
+
+    .image img,
+    img {
+      position  : relative;
+      height    : auto;
+      left      : 0;
+      max-height: inherit;
+      margin    : 0 auto 25px;
+      display   : block;
+      top       : 10px;
+    }
+  }
+
+  #header .logo {
+    margin-bottom: 20px;
+    clear        : both;
+  }
+
+  #header #left-nav {
+    float: left;
+    width: 45%;
+  }
+
+  #header #change_language_form {
+    width: 45%;
+  }
+
+  #header .search-icon {
+    //width: 10%;
+    position: absolute;
+    top     : 0;
+    right   : 0;
+  }
+
+  #left-nav {
+    margin-right: 0;
+  }
+
+  #header #change_language_form,
+  #header #change_language_form .select,
+  #header #change_language_form select,
+  #left-nav .menu-btn > span,
+  #right-nav .menu-btn > span {
+    height     : 51px;
+    line-height: 51px;
+    font-size  : 16px;
+  }
+
+  #header #change_language_form .options {
+    top    : 51px;
+    padding: 20px 10px 15px;
+  }
+
+  #header #change_language_form .styledSelect {
+    font-size: 16px;
+  }
+
+  #header #change_language_form .options li {
+    font-size  : 16px;
+    line-height: 20px;
+  }
+
+  #header #change_language_form .options li,
+  #header #change_language_form .options li.selected,
+  #header #change_language_form .options li:hover {
+    border-width: 10px;
+    padding     : 7px 0 7px 10px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  #header #change_language_form .styledSelect,
+  #header .search-icon.no-icon,
+  #left-nav .menu-btn > span,
+  #right-nav .menu-btn > span {
+    font-size: 14px;
+  }
+
+  #header .search-icon.no-icon {
+    margin-left  : 0;
+    padding-right: 10px;
+  }
+
+  #header .logo h1 {
+    font-size: 16px;
+  }
+
+  #header .logo h1 span {
+    font-size: 13px;
+  }
+
+  #left-nav .menu-btn > span,
+  #right-nav .menu-btn > span {
+    padding-left       : 40px;
+    padding-right      : 10px;
+    background-position: 10px center;
+    text-align         : left;
+  }
+
+  #header #change_language_form .styledSelect {
+    padding-left : 10px;
+    padding-right: 20px;
+  }
+
+  #header #change_language_form .styledSelect:after {
+    right: 2px;
+  }
+
+  #header #change_language_form {
+    padding: 0 5px 0 10px;
+  }
+
+  #header .search-icon {
+    width: 20%;
+  }
+
+  #header #change_language_form,
+  #header #left-nav {
+    width: 40%;
+  }
+}

@@ -1,0 +1,618 @@
+/* ===== Menu ========================================================== */
+
+#left-nav .menu-wrap {
+	width             : 100%;
+	left              : 0;
+	min-height        : 630px;
+	z-index           : 99;
+	background        : #1a0315;
+	opacity           : 0.97 !important;
+	position          : absolute;
+	display           : none;
+	left              : 0;
+	top               : 100%;
+	padding-top       : 0;
+	overflow          : visible;
+	z-index           : 999;
+	-webkit-box-shadow: inset 0 27px 79px 0 rgba(0, 0, 0, 0.52);
+	-moz-box-shadow   : inset 0 27px 79px 0 rgba(0, 0, 0, 0.52);
+	box-shadow        : inset 0 27px 79px 0 rgba(0, 0, 0, 0.52);
+}
+
+.menu-wrap ul {
+	list-style: none;
+	padding   : 0;
+	margin    : 0;
+	display   : block;
+	position  : relative;
+	//float: left;
+	width     : 100%;
+}
+
+.menu-wrap .generated-links ul {
+	&:first-child {
+		h5 {
+			margin-top: 0;
+		}
+	}
+
+	h5 {
+		margin-top: 30px;
+	}
+}
+
+.galcolumn {
+	float         : none !important;
+	display       : inline-block;
+	vertical-align: top;
+	width         : auto !important;
+	margin-left   : 10%;
+	max-width     : 26%;
+}
+
+.galcolumn:first-child {
+	margin-left: 0;
+}
+
+.menu-wrap .generated-links {
+	text-align  : center;
+	margin-top  : 70px;
+	/*padding-left: 200px;
+   padding-right: 100px;*/
+	overflow    : visible;
+	margin-left : auto;
+	margin-right: auto;
+	font-size   : 0;
+	line-height : initial;
+	@include responsive-property("max-width", 1710, 1000px, 1410px);
+
+	& > ul {
+		display       : inline-block;
+		vertical-align: top;
+		margin        : 0 35px 35px;
+		text-align    : left;
+	}
+}
+
+.menu-wrap ul.static-links {
+	@include responsive-property("margin-top", 120, 50px, 120px);
+	text-align   : center;
+	padding-right: 0;
+}
+
+ul.static-links li {
+	display      : inline-block;
+	@include responsive-property("font-size", $static-links-font-size, 15px, $static-links-font-size+0px);
+	@include responsive-property("line-height", $static-links-font-size+4, 19px, $static-links-font-size+4px);
+	color        : $static-links-color;
+	margin-bottom: 35px;
+	text-align   : center;
+	padding      : 0;
+	overflow     : visible;
+	@include responsive-property("width", 185, 120px, 185px);
+	@include static-links-font();
+}
+
+ul.static-links li a {
+	display           : block;
+	color             : $static-links-color;
+	white-space       : nowrap;
+	-webkit-transition: color 0.2s;
+	-moz-transition   : color 0.2s;
+	transition        : color 0.2s;
+}
+
+ul.static-links li span {
+	@include responsive-property("width", $static-links-icons-width, 60px, $static-links-icons-width+0px);
+	@include responsive-property("height", $static-links-icons-width, 60px, $static-links-icons-width+0px);
+	@include responsive-property("line-height", $static-links-icons-width, 60px, $static-links-icons-width+0px);
+	text-align: center;
+	display   : block;
+	background: $static-links-lf-bg;
+	margin    : 0 auto 20px;
+	font-size : 0;
+	@include border-radius(50%);
+}
+
+ul.static-links li span img {
+	vertical-align: middle;
+}
+
+/*ul.static-links li.live-feed span {
+   background: $static-links-lf-bg;
+}
+ul.static-links li.staff span {
+   background: $static-links-staff-bg;
+}
+ul.static-links li.news span {
+   background: $static-links-news-bg;
+}
+ul.static-links li.events span {
+   background: $static-links-events-bg;
+}
+ul.static-links li.dining span {
+   background: $static-links-dining-bg;
+}
+ul.static-links li.documents span {
+   background: $static-links-documents-bg;
+}
+ul.static-links li.athletics span {
+   background: $static-links-athletics-bg;
+}*/
+
+ul.static-links li span img {
+	vertical-align: middle;
+	display       : inline-block;
+}
+
+ul.static-links li a:hover {
+	text-decoration: none;
+}
+
+ul.static-links li:nth-child(even) span {
+	background: $static-links-staff-bg;
+}
+
+.generated-links ul {
+	-webkit-box-shadow: 0 0 25px 0 rgba(0,0,0,0.5);
+	-moz-box-shadow   : 0 0 25px 0 rgba(0,0,0,0.5);
+	box-shadow        : 0 0 25px 0 rgba(0,0,0,0.5);
+}
+
+.generated-links li {
+	@include font-size(20);
+	@include line-height($generated-links-line-height);
+	color         : $generated-links-color;
+	margin        : 0 0 25px;
+	text-align    : left;
+	width         : 100%;
+	display       : block;
+	/*width: $generated-links-width;
+   padding: 0 5px;
+   display: inline-block;
+   float: none;
+   vertical-align: top;*/
+	position      : relative;
+	text-transform: uppercase;
+	@include first-font-family;
+	cursor        : pointer;
+}
+
+.generated-links li.has-child {
+	position  : relative;
+	cursor    : pointer;
+	text-align: left;
+}
+
+.generated-links li a,
+.generated-links li.has-child span {
+	position      : relative;
+	display       : inline-block;
+	padding-bottom: 25px;
+}
+
+.generated-links li.has-child span > a {
+	padding-bottom: 0;
+}
+
+.generated-links li.has-child li.has-child > a,
+.generated-links li.has-child span {
+	padding-right: 28px;
+}
+
+.generated-links li.has-child li.has-child span {
+	padding-bottom: 6px;
+
+	a {
+		padding: 0;
+	}
+}
+
+.generated-links li.has-child li.has-child a {
+	span {
+		padding: 0;
+	}
+}
+
+.generated-links li.has-child > a .arrow {
+	position: absolute;
+	right   : 0;
+	top     : 0;
+	height  : 100%;
+	width   : 28px;
+	display : inline-block;
+
+	&:after {
+		right: auto;
+		left : 50%;
+		@include responsive-property("margin-left", -4, -3px, -4px);
+	}
+}
+
+.generated-links li.has-child > a .arrow:after,
+.generated-links li.has-child > span:after {
+	display     : inline-block;
+	position    : absolute;
+	z-index     : 30;
+	right       : 0;
+	top         : 10px;
+	content     : " ";
+	overflow    : hidden;
+	width       : 0;
+	height      : 0;
+	border-left : 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-top  : 5px solid $generated-links-color;
+}
+
+.generated-links li.has-child.open > a:after,
+.generated-links li.has-child.open span:after {
+	border-top   : 0;
+	border-bottom: 5px solid $generated-links-color;
+}
+
+.generated-links li.has-child ul li.has-child > a .arrow:after,
+.generated-links li.has-child ul li.has-child > span:after {
+	border-top: 5px solid #000;
+	top       : 18px;
+}
+
+.generated-links li.has-child ul li.has-child.open > a .arrow:after,
+.generated-links li.has-child ul li.has-child.open > span:after {
+	border-bottom: 5px solid #000;
+	border-top   : 0;
+}
+
+.generated-links li.has-child ul {
+	position  : absolute;
+	left      : 15%;
+	top       : 28px;
+	background: $menu-dropdown-level-2-bg;
+	padding   : 10px 0;
+	width     : auto;
+	z-index   : 9999;
+	min-width : 360px;
+}
+
+.generated-links li.has-child li.has-child ul {
+	top: 35px;
+}
+
+.generated-links li.has-child ul li.has-child ul {
+	background: #89b435;
+
+	li,
+	li a {
+		color: #fff;
+	}
+}
+
+.generated-links li.has-child ul {
+	display: none;
+}
+
+.generated-links li.has-child ul li {
+	display    : block;
+	float      : none;
+	width      : auto;
+	border-left: 15px transparent solid;
+}
+
+.generated-links li.has-child ul li:hover {
+	border-left: 15px #89b435 solid;
+}
+
+.generated-links li.has-child ul li ul li:hover {
+	border-left: 15px #ffffff solid;
+}
+
+.generated-links li ul li {
+	@include font-size($generated-links-font-size);
+	@include line-height($generated-links-line-height);
+	text-transform: uppercase;
+	text-align    : left;
+	margin        : 5px 0;
+	padding       : 5px 0;
+
+	a,
+	span {
+		padding: 6px 20px;
+	}
+}
+
+.generated-links li.has-child ul li,
+.generated-links li.has-child ul li a {
+	color: #000;
+}
+
+.generated-links li.has-child ul li a {
+	position: relative;
+	display : inline-block;
+}
+
+.generated-links li a {
+	color          : $generated-links-color;
+	text-decoration: none;
+}
+
+.menu-wrap .menu-close {
+	width     : 25px;
+	height    : 25px;
+	position  : absolute;
+	top       : 15px;
+	cursor    : pointer;
+	right     : 42px;
+	background: url("close.png") no-repeat center center;
+}
+
+.generated-links li.has-child ul {
+	display           : block;
+	visibility        : hidden;
+	opacity           : 0;
+	-webkit-transform : scale(0.9);
+	transform         : scale(0.9);
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+	transition        : transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+.generated-links li.has-child.open > ul {
+	visibility        : visible;
+	opacity           : 1;
+	-webkit-transform : scale(1);
+	transform         : scale(1);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition        : transform 0.4s, opacity 0.4s;
+}
+
+#right-nav .menu-wrap {
+	position          : absolute;
+	width             : 480px;
+	padding-right     : 10px;
+	//@include responsive-property("padding-left", 15, 6px, 15px);
+	@include responsive-property("padding-top", 20, 10px, 20px);
+	@include responsive-property("padding-bottom", 25, 10px, 25px);
+	left              : auto;
+	right             : 0;
+	top               : 100%;
+	height            : auto;
+	overflow          : hidden;
+	z-index           : 11;
+	background        : $schools-menu-bg;
+	-webkit-box-shadow: 0 15px 16px 0 rgba(0, 0, 0, 0.3);
+	-moz-box-shadow   : 0 15px 16px 0 rgba(0, 0, 0, 0.3);
+	box-shadow        : 0 15px 16px 0 rgba(0, 0, 0, 0.3);
+
+	&:after {
+		content           : "";
+		position          : absolute;
+		top               : -8px;
+		left              : 0;
+		width             : 100%;
+		height            : 8px;
+		-webkit-box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.5);
+		-moz-box-shadow   : 0 0 35px 0 rgba(0, 0, 0, 0.5);
+		box-shadow        : 0 0 35px 0 rgba(0, 0, 0, 0.5);
+	}
+}
+
+#right-nav .menu-wrap ul {
+	margin    : 0;
+	text-align: left;
+}
+
+#right-nav .menu-wrap li {
+	@include responsive-property("font-size", $schools-menu-links-font-size, 15px, $schools-menu-links-font-size+0px);
+	@include responsive-property("line-height", $schools-menu-links-font-size+4, 19px, $schools-menu-links-font-size+4px);
+	color         : $schools-menu-links-color;
+	@include schools-menu-links-font;
+	text-transform: uppercase;
+}
+
+#right-nav .menu-wrap li:first-child {
+	margin-top: 0;
+}
+
+#right-nav .menu-wrap li a {
+	color          : $schools-menu-links-color;
+	display        : inline-block;
+	text-decoration: none;
+	//min-width: 97px;
+	position       : relative;
+	border-left    : 15px transparent solid;
+	@include responsive-property("border-width", 15, 5px, 15px);
+	padding        : 5px 5px 5px 15px;
+	margin-bottom  : 10px;
+}
+
+#right-nav .menu-wrap li.active a,
+#right-nav .menu-wrap li:hover a {
+	border-color: #89b435;
+}
+
+#districts-nav .menu-wrap,
+#header #change_language_form .options,
+#left-nav .menu-wrap,
+#right-nav .menu-wrap {
+	visibility        : hidden;
+	display           : block;
+	opacity           : 0;
+	-webkit-transform : scale(0.9);
+	transform         : scale(0.9);
+	-webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+	transition        : transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+#districts-nav .menu-btn > span.active + .menu-wrap,
+#header #change_language_form .options.open,
+#left-nav.active .menu-wrap,
+#right-nav .menu-btn > span.active + .menu-wrap {
+	visibility        : visible;
+	opacity           : 1;
+	-webkit-transform : scale(1);
+	transform         : scale(1);
+	-webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+	transition        : transform 0.4s, opacity 0.4s;
+}
+
+/**
+ * Responsive
+ */
+@media only screen and (max-width: 1300px) {
+	.generated-links li.has-child ul {
+		min-width: 250px;
+		left     : 30px;
+	}
+
+	.generated-links li,
+	.generated-links li ul li {
+		font-size  : 16px;
+		line-height: 19px;
+	}
+
+	.generated-links li ul li a,
+	.generated-links li ul li span {
+		padding: 5px 20px 5px 30px;
+	}
+
+	.generated-links li.has-child > a:after,
+	.generated-links li.has-child > span:after {
+		top: 8px;
+	}
+
+	.generated-links li.has-child ul li.has-child > a:after,
+	.generated-links li.has-child ul li.has-child > span:after {
+		top: 12px;
+	}
+
+	.menu-wrap .generated-links {
+		padding-left : 40px;
+		padding-right: 40px;
+		margin-top   : 30px;
+	}
+
+	.generated-links li ul li.has-child {
+		padding-right: 20px;
+	}
+
+	#right-nav .menu-wrap {
+		width: 400px;
+	}
+
+}
+@media only screen and (max-width: 1000px) {
+	.menu-wrap .generated-links > ul {
+		margin-bottom: 30px;
+		padding      : 0;
+		display      : block;
+	}
+
+	.menu-wrap ul.generated-links {
+		margin-top: 20px;
+	}
+
+	.galcolumn {
+		max-width  : 35%;
+		margin-left: 10%;
+	}
+
+	#left-nav .menu-wrap:after,
+	#left-nav .menu-wrap:before {
+		width     : 100%;
+		background: #393939;
+		height    : 50%;
+	}
+
+	#left-nav .menu-wrap:after {
+		top       : auto;
+		bottom    : 0;
+		background: #FFF;
+	}
+
+	.menu-wrap ul.generated-links {
+		margin-top: 20px;
+	}
+
+	.menu-wrap > ul,
+	.menu-wrap ul.static-links {
+		float       : none;
+		text-align  : center;
+		margin-top  : 40px;
+		margin-left : auto;
+		margin-right: auto;
+	}
+
+	.menu-wrap {
+		height: auto !important;
+	}
+
+	#left-nav .menu-wrap {
+		border-bottom: 4px solid #000;
+	}
+}
+@media only screen and (max-width: 900px) {
+	#header .nav#right-nav {
+		position: static;
+	}
+
+	ul.static-links li {
+		width: 45%;
+	}
+
+	#right-nav .menu-btn > span.inactive {
+		opacity: 1;
+	}
+
+	#left-nav .menu-wrap,
+	#right-nav .menu-wrap {
+		width: 100%;
+		top  : 100%;
+		left : 0;
+		right: 0;
+	}
+
+	.menu-wrap .menu-close {
+		top  : 10px;
+		right: 10px;
+	}
+
+	.generated-links li {
+		width: 100%;
+	}
+
+	.generated-links li.has-child ul,
+	.generated-links li.has-child ul li.has-child ul {
+		left: 15px;
+	}
+}
+@media only screen and (max-width: 780px) {
+	#right-nav .menu-wrap ul {
+		width: 100%;
+		float: none;
+	}
+
+	#right-nav .menu-wrap ul:last-of-type {
+		margin-top: 0;
+	}
+
+	#right-nav .menu-wrap li:first-child h5 {
+		margin-top: 30px;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.galcolumn {
+		max-width  : 100%;
+		margin-left: 10%;
+	}
+
+	.generated-links li {
+		width: 100%;
+	}
+
+	.generated-links li.has-child ul {
+		max-width: 96%;
+	}
+
+	.generated-links li.has-child ul {
+		left: 0;
+	}
+}

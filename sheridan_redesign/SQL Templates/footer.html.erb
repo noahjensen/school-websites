@@ -1,0 +1,73 @@
+<footer id="footer">
+ <div class="container clearfix">
+    <div class="footer-col">
+<h5>Contact Us</h5>
+        <p style= "font-size: 1.6rem"><%= current_organization.try(:name)%>
+<br>
+   <%= current_organization.try(:address) %>
+            <br><%="#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+            <br><%="PH: #{current_organization.try(:phone_number)}" %>
+            <br><%= "FAX #{current_organization.try(:fax_number)}" %></p>
+    </div>
+
+        <div class="footer-col">
+            <h5>Schools</h5>
+            <ul class="footer-schools" style="font-size: 2rem;">
+ <li ><%= link_to 'Central Office', '/o/central-office', style: "font-size: 1.6rem" %></li>
+        <li><%= link_to 'Smackover Pre-K', '/o/smackover-preschool', style: "font-size: 1.6rem"%></li>
+<li><%= link_to 'Smackover Elementary', '/o/smackover-elementary', style: "font-size: 1.6rem" %></li>
+<li><%= link_to 'Smackover High School', '/o/smackover-high-school', style: "font-size: 1.6rem" %></li>
+<li><%= link_to 'Norphlet Elementary', '/o/norphlet-elementary', style: "font-size: 1.6rem" %></li>
+<li><%= link_to 'Norphlet Middle', '/o/norphlet-middle', style: "font-size: 1.6rem" %></li>
+
+
+            </ul>
+        </div>
+
+        <div class="footer-col quicklinks" style="width: 15%">
+            <h5>Quicklinks</h5>
+            <ul class="footer-links" style="font-size: 2rem;">
+
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>  Live Feed </a></li>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>> News </a> </li>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>  Events </a></li>
+
+   <% if params[:org] == "central-office" %>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Faculty & Staff </a> </li>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+
+     <% elsif params[:org] == "smackover-preschool" %>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Faculty & Staff </a> </li>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>> Dining  </a></li>
+
+   <% elsif params[:org] == "smackover-high-school" || params[:org] == "norphlet-middle" || params[:org] == "norphlet-elementary" || params[:org] == "smackover-elementary"%>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Faculty & Staff </a> </li>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>> Dining  </a></li>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>> Athletics  </a></li>
+
+<%else%>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Faculty & Staff </a> </li>
+  <li> <a style= "font-size: 1.6rem" href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+<%end%>
+
+</ul>
+    </div>
+
+
+
+
+
+        <div class="footer-col sri-logo">
+            <a href="/o/central-office/browse/9906"><%= image_tag "apptegy_cms/themes/sheridanar_redesign/logo-sri.png", alt: "Smackover Norphlet School District" %></a>
+        </div>
+        <div class="footer-col last">
+
+            <%= image_tag "apptegy_cms/themes/sheridanar_redesign/fb-icon.png", alt: "Smackover Norphlet School District",  class: "fb", style: "margin-right: 5px;" %><a href="https://itunes.apple.com/us/app/smackover-norphlet-school-district-ar/id1230619577?mt=8" target="_blank" class="app-store">Download on the App Store</a> <br>
+<a href="https://play.google.com/store/apps/details?id=com.apptegy.smackover" target="_blank" class="google-play">Get it on Google play</a> </div>
+    </div>
+    <div class="container copyright">
+        <p>Copyright Smackover Norphlet School District 2015. All rights reserved.</p>
+    </div>
+</footer>

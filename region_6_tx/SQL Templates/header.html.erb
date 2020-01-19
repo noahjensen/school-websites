@@ -1,0 +1,93 @@
+<header id="header" class="clearfix">
+     <div class="container">
+      <a href="/" class="logo">
+         <%= image_tag "apptegy_cms/themes/region6tx/logo.png", alt: "Grand Valley Local School district" %>
+        		<h1>Region 6 Education Service Center<span> <i>Dedicated to Serve</i> </span></h1>
+      </a>
+
+            <span class="search-icon  no-bg-color"></span>
+
+				<%= render 'apptegy_cms/shared/change_language_unstyled' %>
+
+            <nav id="left-nav" class="nav" role="navigation">
+                <div class="menu-btn"><span>MENU</span>
+                    <div class="menu-wrap">
+                        <ul class="static-links clearfix">
+
+                            <li class="live-feed">
+                                <a href=<%=params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+                <span><%= image_tag 'apptegy_cms/themes/region6tx/menu/feed-icon.png' %></span>
+                LIVE FEED
+            </a>
+                            </li>
+                            <li class="news">
+                                <a href=<%=params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+             <span>   <%= image_tag 'apptegy_cms/themes/region6tx/menu/news-icon.png' %> </span>
+               NEWS
+            </a>
+                            </li>
+
+                            <li class="events">
+                                <a href=<%=params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+                <span>    <%= image_tag 'apptegy_cms/themes/region6tx/menu/events.png' %> </span>
+              EVENTS
+                </a> </li>
+
+                            <li class="dining">
+                                <a href=<%=params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>
+                <span><%= image_tag 'apptegy_cms/themes/region6tx/menu/dining.png' %> </span>
+                Menu
+            </a>
+                            </li>
+
+                            <li class="staff">
+                                <a href=<%=params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+                <span><%= image_tag 'apptegy_cms/themes/region6tx/menu/staff.png' %></span>
+                Directory
+            </a>
+                            </li>
+
+                            <li class="documents">
+                                <a href=<%=params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                <span><%= image_tag 'apptegy_cms/themes/region6tx/menu/documents.png' %> </span>
+                DOCUMENTS
+            </a>
+                            </li>
+
+				<li class="athletics">
+					 <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>
+						<span> <%= image_tag 'apptegy_cms/themes/region6tx/menu/athletics.png' %></span>
+						ATHLETICS
+					 </a>
+				</li>
+
+     </ul>
+
+                        </ul>
+                        <div class="generated-links clearfix">
+                                                <% current_pages.roots.navigation_pages.each do |page| %>
+
+                                                <% if page.header? %>
+                    <ul>
+                                                <h5><%= translate(page.name.upcase) %></h5>
+                                                <% if page.children.any? %>
+                                                <% page.children.order(:position).each do |subpage| %>
+                                                <li>
+                    <a href=<%=subpage.page_link? ? "#{subpage.url}" : "#{params[:org].present? ?  '/o/'  + params[:org] + '/page/' + subpage.slug : subpage.slug}"  %> target=<%= '_blank' if subpage.page_link? %> >
+                                                <%= translate(subpage.name) %>
+                                                </a>
+                                                </li>
+                                                <% end %>
+                                                <% end %>
+                                                </ul>
+                    <% end %>
+                                                <% end %>
+                                                </div>
+                            <span class="menu-close"></span>
+
+</div>
+            </nav>
+
+							  </div>
+        </header>
+<%= render 'apptegy_cms/shared/search' %>

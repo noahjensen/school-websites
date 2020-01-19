@@ -1,0 +1,100 @@
+/*************************
+*
+*  FOOTER
+*
+*************************/
+
+#footer {
+   background: $footer-bg;
+}
+#footer > .container {
+   position: relative;
+   padding: 45px 0;
+   max-width: 1495px;
+}
+#footer .footer-col {
+   width: 18%;
+   float: left;
+   padding-right: 15px;
+   -webkit-transition: all .5s ease-in-out;
+   -moz-transition: all .5s ease-in-out;
+   -o-transition: all .5s ease-in-out;
+   transition: all .5s ease-in-out;
+}
+#footer .footer-col.missouri-logo {
+   width: 26%;
+}
+#footer .footer-col ul {
+   margin: 0;
+}
+#footer .footer-col p,
+#footer .footer-col li,
+#footer .footer-col li a,
+#footer .footer-col h5 {
+   @include font-size(14);
+   @include line-height(30);
+   color: $white;
+   @include first-font-family;
+}
+#footer .footer-col h5 {
+   @include font-size(14);
+   @include line-height(18);
+   color: $footer-title-color;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+
+#footer .footer-col.apps {
+	width: 16%;
+	text-align: left;
+	font-size: 0;
+}
+#footer .footer-col.apps a {
+	display: block;
+	width: 148px;
+	height: 44px;
+	background: url('google.png') no-repeat center;
+	margin: 0 0 6px;
+    text-indent: 9999px;
+}
+#footer .footer-col.apps a.appstore {
+	background: url('apple.png') no-repeat center;
+}
+#footer .footer-col.apps a:hover {
+	text-decoration: none;
+	background-color: #4169e1;
+}
+ 
+
+#footer .footer-col.last {
+	width: 22%;
+	position: relative;
+	text-align: right;
+   padding-right: 0;
+}
+#footer .footer-col.last p {
+	color: #FFF;
+	font-size: 14px;
+	font-size: 1.4rem;
+	line-height: 18px;
+	line-height: 1.8rem;
+	margin: 25px 0 0;
+	text-align: right;
+}
+#footer .social {
+	text-align: right;
+}
+#footer .social a {
+	display: inline-block;
+	text-align: left;
+	text-indent: -9999px;
+	overflow: hidden;
+	height: 51px;
+	width: 49px;
+}
+#footer .social a.fb {
+	background: url('fb.png') no-repeat center center;
+}
+#footer .social a.tw {
+	background: url('tw.png') no-repeat center center;
+}

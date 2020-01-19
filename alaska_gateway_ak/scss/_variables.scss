@@ -1,0 +1,90 @@
+// ===== Variables ========================================================== //
+
+//Website color and background
+ 
+$white:                       #FFFFFF;   //white
+$black:                       #000000;   //black
+ 
+$breadcrumbBg:                #171c48;
+$breadcrumbColor:             #FFF;
+$breadcrumbActiveColor:       #FFF;
+
+ 
+
+//Elements color and background
+$page-bg:                            #FFF;
+$paragraph-font-size:                20;
+$paragraph-line-height:                28;
+$text-color:                        #333333;
+$links-color:                       #0f2668;
+$logo-color:                        $white;
+$menu-txt-color:                    #fff;
+$menu-btn-txt-color:                #fff;
+$menu-wrap-bg:                      rgba(23,28,72,.9);
+$right-menu-wrap-bg:                #000;
+$right-submenu-color:               #FFF;
+$submenu-bg:                        #FFF;
+$pager-slider:                     #FFF;
+$pager-slider-active:              #296cac;
+$SliderBgColor:                    transparent;
+$leftSlider:                       0; 
+ 
+$separator-bg:                    #FFF;
+$left-sidebar:                    #5c92c6;
+
+
+$see-all-btn-bg:                    transparent;
+$see-all-news-btn-bg:              transparent;
+$see-all-events-btn-bg:             transparent;
+$see-all-live-feeds-btn-bg:         transparent;
+
+$see-all-btn-color:                 #fff;
+$see-all-news-btn-color:            #FFF;
+$see-all-events-btn-color:          #FFF;
+$see-all-live-feeds-btn-color:      #fff;
+ 
+$events-wrapper-bg:                 #f5f5f5;
+$news-wrapper-bg:                   #ededec;
+$footer-title-color:                #fff;
+$live-feed-time-color:              #296cac;
+
+$events-title-color:                #fff;
+$news-title-color:                  #fff;
+$live-feed-title-color:             #fff;
+
+$events-title-bg:                   url('events-title-bg.png') no-repeat left top;
+$news-title-bg:                     url('news-title-bg.png') no-repeat left top;
+$live-feed-title-bg:                url('lf-title-bg.png') no-repeat left top;
+
+$read-more-new-bg:                  transparent;
+$read-more-new-color:               #fff;
+$news-pager-active:                 #296cac;
+$news-pager:                        #fff;     
+
+$live-feed-text:                    #2a2a2a;
+$live-feed-h3:                      #296cac;
+$event-date:                        #2a2a2a;
+$event-title:                       #296cac;
+$new-feed-paragraph:                #fff;
+$new-feed-h3:                       #fff;
+
+$header-bg:                         transparent;
+$footer-bg:                         transparent;
+$footer-text:                        #FFF;
+
+
+//Some padding and margin
+
+$colspadding:                       130px 50px 50px 60px;
+$footer-padding:                    35px 0 45px;
+
+          
+$avatarWidth:                       75px;
+
+
+
+ $subpage-one-col-width:  80%; 
+$subpage-sidebar-width:  30%; 
+$subpage-column-two:     65%; 
+$subpage-cols-margin:    50px; 
+ 

@@ -1,0 +1,42 @@
+  <footer id="footer">
+          <div class="container clearfix">
+           <div class="footer-col">
+              <h5><%= current_organization.try(:name) %></h5>
+              <p><%= current_organization.try(:address) %>
+                 <br><%= "#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+                 <br><%= "Ph #{current_organization.try(:phone_number)}" %>
+                 <br><%= "Fax #{current_organization.try(:fax_number)}" %>
+              </p>
+           </div>
+    <div class="footer-col">
+      <h5>Schools</h5>
+      <ul class="footer-links">
+        <li><a href="#">district</a></li>
+        <li><a href="#">elementary</a></li>
+        <li><a href="#">middle school</a></li>
+        <li><a href="#">high school</a></li>
+      </ul>
+    </div>
+          <div class="footer-col">
+          <h5>Quicklinks</h5>
+          <ul>
+             <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>Live Feed</a></li>
+             <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>Faculty and Staff</a></li>
+             <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>News</a></li>
+             <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>Events</a></li>
+          </ul>
+       </div>
+
+      <div class="footer-col last">
+         <a href="<%= current_organization.try(:facebook_link) %>" class="social"><%= image_tag "apptegy_cms/themes/schuylercountyr1/fb.png", alt: " "%></a>
+          <a href="#" class="app-store"><%= image_tag "apptegy_cms/themes/schuylercountyr1/apple.png", alt: " "%></a> <br>
+          <a href="<%= current_organization.try(:twitter_link)%>" class="social"><%= image_tag "apptegy_cms/themes/schuylercountyr1/tw.png", alt: "Link to Twitter"%> </a>
+          <a href="#" class="google-play"><%= image_tag "apptegy_cms/themes/schuylercountyr1/google.png", alt: " "%></a>
+       </div>
+
+      </div>
+      <div class="container bottom-footer">
+      <p>Copyright &copy;2017 Garretson School District 49-4. All rights reserved.&nbsp;</p>
+       <p class="powered-by">Powered by <a href="http://apptegy.com/" target="_blank">Apptegy</a></p>
+    </div>
+  </footer>

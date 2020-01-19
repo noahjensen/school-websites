@@ -1,0 +1,392 @@
+// ===== Variables  &  Mixins ========================================================== //
+
+// FONT FAMILY
+@mixin first-font-family { 
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+@mixin second-font-family {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+@mixin third-font-family {
+    font-family: 'futura-pt', sans-serif, Arial;
+    font-weight: 500;
+}
+@mixin fourth-font-family {
+    font-family: 'futura-pt', sans-serif, Arial;
+    font-weight: 600;
+}
+@mixin fifth-font-family {
+    font-family: 'futura-pt', sans-serif, Arial;
+    font-weight: 700;
+}
+@mixin sixth-font-family {
+    font-family: 'Oswald', sans-serif, Arial;
+    font-weight: 600;
+}
+
+
+
+$white:									#FFFFFF;   
+$black:									#000000;  
+$paragraph-font-size:                	16;
+$paragraph-line-height:              	21;
+
+
+//Main colors
+$page-bg:                            #FFF;
+$text-color:                         #333333;
+$links-color:                        #c80000;
+
+
+// HEADER
+$header-bg:                         #101010;
+$header-height:                      128;
+$margin-between-logo-and-title:      10;
+$logo-title-font-size:                70; 
+$logo-color:                        #fff;
+@mixin logo-title-font {
+   @include sixth-font-family;
+   text-transform: uppercase;
+}
+
+$logo-subtitle-font-size:             37; 
+$logo-subtitle-color:               #fff;
+@mixin logo-subtitle-font {
+   @include fifth-font-family;
+   text-transform: uppercase;
+}
+
+$menu-btns-font-size:                27;
+
+$menu-btn-bg-color:                  transparent;
+$menu-active-btn-bg-color:           transparent;
+
+$menu-btn-txt-color:                 #fff;
+$menu-active-btn-txt-color:          #fff;
+
+@mixin menu-btn-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+$schools-menu-btn-bg-color:          #fff;
+$schools-menu-active-btn-bg-color:   #fff;
+
+$schools-menu-btn-txt-color:          #fff;
+$schools-menu-active-btn-txt-color:   #fff;
+
+@mixin schools-menu-btn-font {
+   @include fourth-font-family;
+   text-transform: uppercase;
+}
+
+
+$language-btn-bg:                    transparent;
+$language-btn-color:                 #fff;
+$language-btn-font-size:             25;
+
+@mixin language-btn-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+
+//MENU DROPDOWNS
+
+$menu-wrap-bg:                       rgba(0,29,49, 0.95);
+$menu-dropdown-level-2-bg:           #faf9f5;
+
+$static-links-color:                 #fff;
+$static-links-color-hover:           #fff;
+$static-links-font-size:             32;
+$static-links-icons-width:           60;
+@mixin static-links-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+$static-links-lf-bg:                 #fff;
+$static-links-staff-bg:              #fff;
+$static-links-news-bg:               #fff;
+$static-links-events-bg:             #fff;
+$static-links-dining-bg:             #fff;
+$static-links-documents-bg:          #fff;
+$static-links-athletics-bg:          #fff;
+
+
+
+$generated-links-color:              #fff;
+$generated-links-color-hover:        #fff;
+$generated-links-font-size:          17;
+@mixin generated-links-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+$generated-links-color-level2:             #000;
+$generated-links-color-level2-hover:       #000;
+$generated-links-bg-level2-hover:          transparent;
+
+$generated-links-color-level3:             #fff;
+$generated-links-color-level3-hover:       #fff;
+$generated-links-bg-level3-hover:          transparent;
+
+$generated-links-width:              100%;  //when are multiple columns number
+
+
+//Schools MENU Dropdown
+
+$schools-menu-width:                  261px;
+$schools-menu-bg:                     #bd0323;
+$schools-menu-links-color:            #FFF;
+$schools-menu-links-color-hover:       #FFF;
+$schools-menu-links-bg-hover:           transparent;
+$schools-menu-links-font-size:        18;
+
+@mixin schools-menu-links-font {
+   @include first-font-family;
+   text-transform: none;
+}
+
+
+//language dropdown
+$language-dropdown-bg:               #00193d;
+$language-dropdown-width:            200px;
+$language-options-font-size:         25;
+$language-options-color:             #FFF;
+$language-options-color-hover:       #FFF;
+$language-options-bg-hover:          transparent;
+
+@mixin language-options-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+
+//search icon
+$search-bg-color:                    transparent;
+$search-txt-color:                   #fff;
+$search-btn-font-size:               20;
+
+
+
+// SLIDER GALLERY 
+
+$pager-slider-bg:                    #fff;
+$active-pager-slider-bg:             #c80000;
+
+$slider-arrow-bg:                 rgba(189,3,35, 0.85);
+$slider-arrow-width:              43;
+$slider-arrow-height:             126;
+
+//for _slider2.scss
+$left-slider-bg:                  #02206f;
+
+
+//bulletin board
+$bb-text-color:     #FFF;
+$bb-h1-font-size:     82;
+@mixin bb-h1-font {
+   @include sixth-font-family;
+   text-transform: uppercase;
+}
+
+@mixin bb-h4-font {
+   @include fifth-font-family;
+   text-transform: uppercase;
+}
+
+$bb-p-font-size:     23;
+@mixin bb-p-font {
+   @include fourth-font-family;
+   text-transform: uppercase;
+}
+
+// for _slider1.scss
+$bb-first-text-bg:            rgba(189, 3, 35, 0.85);  
+$bb-second-text-bg:           rgba(32, 63, 139, 0.85);
+
+
+
+//SECTION BOXES HOMEPAGE
+
+$events-wrapper-bg:                  #efefef;
+$news-wrapper-bg:                    #FFF;
+$live-feeds-wrapper-bg:              #efefef;
+
+$see-all-btns-font-size:              19;
+@mixin see-all-btns-font {
+   @include fifth-font-family;
+   text-transform: uppercase;
+}
+
+$see-all-news-btn-color:            #313131;
+$see-all-events-btn-color:          #313131;
+$see-all-live-feeds-btn-color:      #313131;
+
+$see-all-news-btn-bg:               transparent;
+$see-all-events-btn-bg:             transparent;
+$see-all-live-feeds-btn-bg:         transparent;
+
+
+$sections-titles-font-size:         54;
+
+@mixin sections-titles-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+$sections-titles-border-color:      #c80000;   // for _section_boxes3.scss, _section_boxes4.scss, _section_boxes6.scss
+
+$events-title-color:                #000; // section title
+$news-title-color:                  #000; // section title
+$live-feed-title-color:             #000;  // section title
+
+// for template that have diagonal stripes lines at sections titles
+$events-diagonal-stripes-color:               #22428f;
+$news-diagonal-stripes-color:                 #a4bbec;
+$live-feed-diagonal-stripes-color:            #bd0323;
+
+$events-title-bg:                   transparent;
+$news-title-bg:                     transparent;
+$live-feed-title-bg:                transparent;
+
+
+// for _section_boxes1.scss
+$first-news-border-top-color:       #203f8b;
+$second-news-border-top-color:      #f0a81e;
+$third-news-border-top-color:       #bd0323;
+
+
+$news-paragraph-color:              #000;
+$news-p-font-size:                  18;
+@mixin news-paragraph-font {
+   @include third-font-family;
+   text-transform: none;
+}
+
+$news-titles-color:                 #646464;
+$news-titles-font-size:             25;
+@mixin news-titles-font {
+   @include second-font-family;
+   text-transform: uppercase;
+}
+
+$news-date-color:                   #545454;
+$news-date-font-size:               15;
+@mixin news-date-font {
+   @include fourth-font-family;
+   text-transform: none;
+}
+
+// if the news section is a slider
+$read-more-new-bg:                  transparent;
+$read-more-new-color:               #000;
+$read-more-new-font-size:             16;
+@mixin read-more-new-font {
+   @include fifth-font-family;
+   text-transform: uppercase;
+}
+
+$news-pager:                        #191919;
+$news-pager-active:                 #808080;
+
+
+$news-text-background:              rgba(189, 3, 35, 0.85);  // for _section_boxes3.scss 
+$lh-title-color:                    #bd0323;                 // Latest Headlines from News section
+
+
+$live-feed-text-color:              #000;
+$live-feed-link-color:              #3774b0;
+$live-feed-text-font-size:          18;
+@mixin live-feed-text-font {
+   @include third-font-family;
+   text-transform: none;
+}
+
+$live-feed-author-color:                #c80000;
+$live-feed-author-font-size:            23;
+@mixin live-feed-author-font {
+   @include fourth-font-family;
+   text-transform: uppercase;
+}
+
+$live-feed-time-color:              #000;
+$live-feed-time-font-size:          15;
+@mixin live-feed-time-font {
+   @include third-font-family;
+   text-transform: none;
+}
+
+$event-date-color:                  #000;
+$event-date-font-size:              18;
+$event-date-bg:                     transparent;
+@mixin event-date-font {
+   @include third-font-family;
+   text-transform: none;
+} 
+
+$event-title-color:                 #c80000;
+$event-title-font-size:             25;
+@mixin event-title-font {
+   @include fourth-font-family;
+   text-transform: uppercase;
+}
+
+
+
+// FOOTER
+$footer-container-max-width:        1745;
+$footer-bg:                         #101010;
+$footer-bottom-part-bg:             #1c1c1c;
+
+$footer-col-width:                  28%;
+
+$footer-text-color:                 #FFF;
+$footer-text-font-size:                 19;
+@mixin footer-text-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+$footer-title-color:                #fff;
+$footer-title-font-size:                27;
+@mixin footer-title-font {
+   @include fourth-font-family;
+   text-transform: uppercase;
+}
+
+$footer-copyright-font-size:            17;
+@mixin footer-copyright-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+$footer-pb-txt-color:               #fff;    // footer power by text color
+$footer-pb-link-color:              #fff; // footer power by links color
+
+
+
+//SUBPAGES
+$breadcrumb-height:            45px;
+$breadcrumb-bg:                #1c1c1c;
+$breadcrumb-color:             #fff;
+$breadcrumb-font-size:         20;
+
+$subpage-one-col-width:  90%; 
+
+$subpage-sidebar-width:  30%;
+$subpage-column-two:     65%;
+
+$subpage-sidebar-title-bg: #c80000;
+$subpage-sidebar-title-color: #FFF;
+
+
+$subpage-h1-font-size:    28;
+
+@mixin subpage-h1-font {
+   @include fifth-font-family;
+   text-transform: uppercase;
+}

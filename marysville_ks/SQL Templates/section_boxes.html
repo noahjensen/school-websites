@@ -1,0 +1,54 @@
+<div class="col-item live-feeds-wrapper">
+  <h4>Live Feed</h4>
+  <% current_organization.live_feeds.limit(4).each do |post| %>
+    <div class="live-feed">
+      <div class="avatar">
+        <% if post.avatar == 'http://www.apptegy.com/default.png' %>
+          <%= image_tag 'apptegy_cms/default_avatar.png', alt: post.author_name, size: '60x60', class: 'avatar-section' %>
+        <% else %>
+          <%= image_tag post.avatar, alt: post.author_name, size: '60x60', class: 'avatar-section' %>
+        <% end %>
+      </div>
+      <div class="right-content">
+        <h3><a href=<%=params[:org].present? ? "/o/#{params[:org]}/live_feed#lf_#{post.id}" : "/live_feed#lf_#{post.id}" %>><%= post.author_name %></a></h3>
+        <div class="time"><%= translate("#{time_ago_in_words(post.created_at)} ago") %></div>
+        <p><%=raw post.linkify.length > 130 ? ( "#{translate( raw post.status[0..130])} ..." ) : translate(raw post.linkify) %></p>
+      </div>
+    </div>
+  <% end %>
+  <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"  %> class="see-more"><%=translate("SEE ALL posts")%></a>
+</div>
+<div class="col-item news-wrapper">
+  <h4>News</h4>
+  <div class="hover-content">
+    <div class="news-slider">
+      <% current_organization.articles.limit(3).each do |article|  %>
+        <div class="news">
+          <div class="image">
+            <% if article.images_list.present? %>
+              <img src=<%= article.images_list.try(:first) %>>
+            <% end %>
+          </div>
+          <div class="right-content">
+            <h3><%=translate( article.title) %></h3>
+            <p><%= translate("#{article.content_text(175)}..." )%></p>
+            <a href=<%=  "/article/#{article.id}"   %> class="read-more"><%=translate("read more")%></a>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"  %> class="see-more"><%=translate("SEE ALL NEWS")%></a>
+</div>
+<div class="col-item events-wrapper">
+  <h4>Events</h4>
+  <% current_organization.events.limit(6).each do |event| %>
+    <div class="event">
+      <div class="right-content">
+        <p><%= link_to translate(event.title), params[:org].present? ? "/o/#{params[:org]}/events#event_#{event.id}" : "/events#event_#{event.id}" %></p>
+      </div>
+      <div class="date"><%=translate( "#{event.start_date.try(:strftime, '%A, %b %e')} #{event.start_time.try(:strftime, 'at %l:%M %p')}" )%></div>
+    </div>
+  <% end %>
+  <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"  %> class="see-more events-btn"><%=translate("See all events")%></a>
+</div>

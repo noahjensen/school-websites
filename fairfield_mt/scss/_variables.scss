@@ -1,0 +1,84 @@
+// ===== Variables ========================================================== //
+//Website color and background
+$white: #FFFFFF; //white
+$black: #000000; //black
+$breadcrumbBg: #f5f5f5;
+$breadcrumbColor: #111111; //Elements color and background
+$page-bg: #FFF;
+$text-color: #000000;
+$links-color: #000000;
+$header-bg: #FFF;
+$logo-color: #4169e1;
+$menu-txt-color: #FFF;
+$menu-btn-txt-color: #FFF;
+$menu-wrap-bg: #4169e1;
+$right-menu-wrap-bg: #000000;
+$right-submenu-color: #FFF;
+$submenu-bg: #000000;
+$pager-slider: #FFF;
+$SliderBgColor: #4169e1;
+$leftSlider: 0;
+$separator-bg: #FFF;
+$left-sidebar: #4169e1;
+$see-all-btn-bg: url("gold_arrow.png") no-repeat right center;
+$see-all-news-btn-bg: url("gold_arrow.png") no-repeat right center;
+$see-all-events-btn-bg: url("black_arrow.png") no-repeat right center;
+$see-all-live-feeds-btn-bg: url("blue_arrow.png") no-repeat right center;
+$see-all-btn-color: #4169e1;
+$see-all-news-btn-color: #e1b941;
+$see-all-events-btn-color: #000000;
+$see-all-live-feeds-btn-color: #4169e1;
+$events-wrapper-bg: #FFF;
+$news-wrapper-bg: #FFF;
+$live-feed-wrapper-bg: #FFF;
+$events-title-color: #000;
+$news-title-color: #e1b941;
+$live-feed-title-color: #4169e1;
+$events-title-bg: #000;
+$news-title-bg: #e1b941;
+$live-feed-title-bg: #4169e1;
+$read-more-new-bg: #070707;
+$read-more-new-color: #fff;
+$news-pager-active: #4169e1;
+$news-pager: #000000;
+$new-feed-paragraph: #e1b941;
+$new-feed-h3: #e1b941;
+$live-feed-text: #090909;
+$live-feed-h3: #4169e1;
+$live-feed-time-color: #686663;
+$event-date: #000000;
+$event-title: #000000;
+$footer-bg: #4169e1;
+$footer-text: #fff;
+$footer-title-color: #a7a7a7; //Some padding and margin
+$colspadding: 0 30px 40px;
+$footer-padding: 55px 70px 35px; //MENU DROPDOWNS
+$menu-wrap-bg: rgba(65, 105, 225 ,0.95);
+$menu-dropdown-level-2-bg: #FFF;
+$static-links-color: #fff;
+$static-links-color-hover: #fff;
+$static-links-font-size: 27px;
+$static-links-icons-width: 99px;
+@mixin static-links-font {
+  //@include fourth-font-family;
+  text-transform: uppercase;
+}
+$static-links-lf-bg: $black;
+$static-links-staff-bg: $black;
+$static-links-news-bg: $black;
+$static-links-events-bg: $black;
+$static-links-dining-bg: $black;
+$static-links-documents-bg: $black;
+$static-links-athletics-bg: $black;
+$generated-links-color: #fff;
+$generated-links-color-hover: #fff;
+$generated-links-font-size: 25px;
+@mixin generated-links-font {
+  //@include fourth-font-family;
+  text-transform: uppercase;
+}
+$generated-links-color-level2: $logo-color;
+$generated-links-color-level2-hover: $logo-color;
+$generated-links-bg-level2-hover: rgba(0,0,0,0);
+$generated-links-width: 33.33%; //depending the columns number
+$avatarWidth: 79px;

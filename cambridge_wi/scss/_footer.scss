@@ -1,0 +1,90 @@
+/*************************
+*
+*  FOOTER
+*
+*************************/
+
+#footer {
+    background: $footer-bg;
+    padding: 0 25px;
+}
+#footer > .container {
+    position: relative;
+    padding: $footer-padding;
+    max-width:1594px;
+}
+#footer > .copyright {
+    border-top: 1px solid #fff;
+    padding-top:23px;
+    text-align:center;
+    color:#fff;
+    text-transform:uppercase;
+    @include font-size(14);
+    @include line-height(35);
+}
+#footer .footer-col {
+    width: 22.66%;
+    float: left;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+#footer .footer-col:third-child {
+   
+}
+#footer .footer-col:last-child,
+#footer .footer-col.last {
+    text-align: right;
+    float:right;
+}
+#footer .footer-col.sri-logo {
+    padding-top: 32px;
+    width: 32%;
+}
+#footer .footer-col ul {
+    margin: 0;
+}
+#footer .footer-col p,
+#footer .footer-col li,
+#footer .footer-col li a,
+#footer .footer-col h5 {
+    @include font-size(14);
+    @include line-height(35);
+    color: $white;
+    text-transform: uppercase;
+    @include first-font-family;
+}
+#footer .footer-col h5 {
+    color: $footer-title-color;
+    @include second-font-family;
+    @include font-size(19);
+    margin: 0;
+}
+#footer .app-store,
+#footer .google-play {
+    width: 100%;
+    max-width: 217px;
+    height: 67px;
+    display: inline-block;
+    margin: 0 0 19px;
+    background: url('apple.png') no-repeat right top;
+    background-size: 100% auto;
+    text-indent: -9999px;
+    text-align: left;
+    vertical-align: top;
+}
+#footer .google-play {
+    background: url('google.png') no-repeat right top;
+    margin: 0;
+    background-size: 100% auto;
+}
+#footer .social_media{
+    display:inline-block;
+    margin-right:32px;
+   width: 67px;
+   img {
+      width: 100%;
+      height: auto;
+   }
+}

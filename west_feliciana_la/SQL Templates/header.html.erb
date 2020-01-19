@@ -1,0 +1,169 @@
+<header id="header" class="clearfix">
+  <% if ['district', 'wfhs', 'wfms', 'bns', 'ble'].include? params[:org] %>
+
+  <a class="logo" href="/">
+    <h1>
+      <%= image_tag "apptegy_cms/themes/westfelicianala/left-header-#{params[:org]}.png", alt: "" %></h1>
+    <span class="image"><%= image_tag "apptegy_cms/themes/westfelicianala/logo.png", alt: " " %></span>
+    <h2><%= image_tag "apptegy_cms/themes/westfelicianala/right-header-#{params[:org]}.png", alt: "" %></h2>
+  </a>
+
+<% else %>
+  <a class="logo" href="/">
+    <h1>
+      <%= image_tag "apptegy_cms/themes/westfelicianala/left-header-district.png", alt: "" %></h1>
+    <span class="image"><%= image_tag "apptegy_cms/themes/westfelicianala/logo.png", alt: " " %></span>
+    <h2><%= image_tag "apptegy_cms/themes/westfelicianala/right-header-district.png", alt: "" %></h2>
+  </a>
+
+  <% end %>
+  <nav id="left-nav" class="nav" role="navigation">
+
+    <div class="menu-btn">
+      <span>Menu</span>
+
+      <div class="menu-wrap">
+        <ul class="static-links clearfix">
+
+          <li class="live-feed">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+              <span><%= image_tag 'apptegy_cms/themes/westfelicianala/menu/feed-icon.png' %></span>
+              Live Feed
+            </a>
+          </li>
+          <li class="news">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+              <span><%= image_tag 'apptegy_cms/themes/westfelicianala/menu/news-icon.png' %>
+              </span>
+              News
+            </a>
+          </li>
+
+          <li class="events">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+              <span>
+                <%= image_tag 'apptegy_cms/themes/westfelicianala/menu/events.png' %>
+              </span>
+              Events
+            </a>
+          </li>
+
+          <li class="dining">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>
+              <span>
+                <%= image_tag 'apptegy_cms/themes/westfelicianala/menu/dining.png' %>
+              </span>
+              Lunch Menu
+            </a>
+          </li>
+
+          <li class="staff">
+            <a href="/staff">
+              <span>
+                <%= image_tag 'apptegy_cms/themes/westfelicianala/menu/staff.png' %>
+              </span>
+              STAFF
+            </a>
+          </li>
+
+          <li class="documents">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+              <span>
+                <%= image_tag 'apptegy_cms/themes/westfelicianala/menu/documents.png' %>
+              </span>
+              Documents
+            </a>
+          </li>
+
+        </ul>
+
+        <div class="generated-links clearfix">
+          <% current_pages.roots.navigation_pages.each do |page| %>
+
+          <% if page.header? %>
+          <ul>
+            <h5><%= translate(page.name.upcase) %></h5>
+
+            <% if page.children.any? %>
+                <ul>
+                  <% page.children.order(:position).each do |subpage| %>
+                  <% if subpage.children.any? %>
+  <li>
+
+                <% if subpage.header? %>
+                 <span> <%= subpage.name %></span>
+                <% else %>
+                  <a href=<%= subpage.page_link? ? "#{subpage.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+                    <%= subpage.name %>
+                  </a>
+                <% end %>
+
+                    <ul>
+                      <% subpage.children.order(:position).each do |subpage2| %>
+                        <li>
+                        <a href=<%= subpage2.page_link? ? "#{subpage2.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage2.slug}" %> target=<%= '_blank' if subpage2.page_link? %> >
+                          <%= subpage2.name %>
+                        </a>
+                        </li>
+                        <% end %>
+                      </ul>
+  </li>
+                    <% else %>
+                    <li>
+                      <a href=<%= subpage.page_link? ? "#{subpage.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+                          <%= subpage.name %>
+                      </a>
+                    </li>
+                    <% end %>
+                  <% end %>
+                </ul>
+              <% end %>
+            </li>
+          <% end %>
+            </ul>
+                      <% end %>
+
+        <span class="menu-close"></span>
+      </div>
+    </div>
+  </nav>
+
+  <%= render 'apptegy_cms/shared/change_language_unstyled' %>
+  <span class="search-icon"></span>
+  <nav id="right-nav" class="nav" role="navigation">
+    <div class="menu-btn">
+      <span>Schools</span>
+      <div class="menu-wrap">
+        <h3>
+          <a href="/o/district" style="color: #FFF;">District 25</a>
+        </h3>
+        <ul>
+          <li>
+            <h5>Elementary Schools</h5>
+          </li>
+          <li>
+            <a href="/o/ble">Bains Lower Elementary</a>
+          </li>
+          <li>
+            <a href="/o/bns">Bains Elementary</a>
+          </li>
+          <li>
+            <a href="/o/wfms">West Feliciana Middle</a>
+          </li>
+          <li>
+            <a href="/o/wfhs">West Feliciana High</a>
+          </li>
+          <li>
+            <a href="/o/fsc">Family Service Center</a>
+          </li>
+
+        </ul>
+
+        <span class="menu-close"></span>
+      </div>
+    </div>
+  </nav>
+
+</header>
+
+<%= render 'apptegy_cms/shared/search' %>

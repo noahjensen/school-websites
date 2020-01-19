@@ -1,0 +1,53 @@
+<div class="col-item news-wrapper active">
+                <h4>News</h4>
+                   <%= image_tag("apptegy_cms/themes/placervilleca/news-bg.jpg", alt: "") %>
+                <div class="hover-content">
+                    <% current_organization.articles.limit(4).each do |article|  %>
+                        <div class="news">
+                                <p><a href=<%=  "/article/#{article.id}"   %>><%= article.title %></a></p>
+                                 <span class="date-autor"> <%= article.author_name %></span>
+                        </div>
+                    <% end %>
+                </div>
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"  %> class="see-more"><span>SEE ALL NEWS</span></a>
+</div>
+
+
+<div class="col-item events-wrapper">
+                <h4>Events</h4>
+                   <%= image_tag("apptegy_cms/themes/placervilleca/calendar-bg.jpg", alt: "") %>
+                 <div class="hover-content">
+                <% current_organization.events.limit(5).each do |event| %>
+                    <div class="event">
+                            <p><a href="#"><%= event.title %></a></p>
+                        <div class="date"><%= "#{event.start_date.try(:strftime, '%a, %B %e')}" %></div>
+                    </div>
+                <% end %>
+                </div>
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"  %> class="see-more"><span>See all events</span></a>
+
+</div>
+
+<div class="col-item live-feeds-wrapper">
+                <h4>Live Feed</h4>
+                   <%= image_tag("apptegy_cms/themes/placervilleca/live-feed-bg.jpg", alt: "") %>
+                 <div class="hover-content">
+                <% current_organization.live_feeds.limit(3).each do |post| %>
+                    <div class="live-feed">
+                        <div class="avatar">
+                            <% if post.avatar == 'http://www.apptegy.com/default.png' %>
+                                <%= image_tag 'apptegy_cms/default_avatar.png', alt: post.author_name, size: '60x60', class: 'avatar-section' %>
+                            <% else %>
+                                <%= image_tag post.avatar, alt: post.author_name, size: '60x60', class: 'avatar-section' %>
+                            <% end %>
+                        </div>
+                        <div class="right-content">
+                            <div class="autor"><%= "#{post.author_name} " %></div>
+                            <div class="time"><%= "#{time_ago_in_words(post.created_at)} ago" %></div>
+                            <p><%= raw post.linkify %></p>
+                        </div>
+</div>
+                <% end %>
+                     </div>
+               <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"  %> class="see-more"><span>SEE ALL posts</span></a>
+         </div>

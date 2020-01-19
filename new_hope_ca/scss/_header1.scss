@@ -1,0 +1,424 @@
+/* ===== Header ========================================================== */
+
+html #header {
+	max-width: 100%;
+
+	.container {
+		max-width: 100%;
+		@include responsive-property("padding-right",58,10px,58px);
+		@include responsive-property("padding-left",35,10px,50px);
+	}
+}
+
+html #slider {
+	max-width: 100%;
+}
+
+#header {
+	padding           : 0;
+	@include responsive-property("min-height",$header-height,50px,$header-height + 40px);
+	@include responsive-property("line-height",$header-height,50px,$header-height + 40px);
+	background        : $header-bg;
+	position          : relative;
+	width             : 100%;
+	-webkit-box-shadow: 1px 1px 21px 0 rgba(0, 0, 0, 0.41);
+	-moz-box-shadow   : 1px 1px 21px 0 rgba(0, 0, 0, 0.41);
+	box-shadow        : 1px 1px 21px 0 rgba(0, 0, 0, 0.41);
+
+	.logo {
+		width          : auto;
+		line-height    : get-vw(108);
+		position       : absolute;
+		@extend %horizontal-align;
+		top            : 0;
+		margin         : 0;
+		z-index        : 2;
+		overflow       : visible;
+		text-decoration: none;
+
+		img {
+			display       : inline-block;
+			vertical-align: top;
+			position      : relative;
+			z-index       : -1;
+		}
+
+		h1 {
+			display       : inline-block;
+			vertical-align: middle;
+			color         : $logo-color;
+			@include responsive-property("font-size",$logo-title-font-size,17px,$logo-title-font-size + 10px);
+			@include responsive-property("line-height",$logo-title-font-size+4,21px,$logo-title-font-size + 14px);
+			margin        : 0;
+			@include logo-title-font;
+
+			span {
+				@include responsive-property("font-size",$logo-subtitle-font-size,17px,$logo-subtitle-font-size + 10px);
+				@include responsive-property("line-height",$logo-subtitle-font-size+4,21px,$logo-subtitle-font-size + 14px);
+				display   : block;
+				color     : $logo-subtitle-color;
+				margin-top: 5px;
+				@include logo-subtitle-font;
+
+				.dot {
+					display       : inline-block;
+					vertical-align: middle;
+					width         : 10px;
+					height        : 9px;
+					background    : $logo-subtitle-color;
+					margin        : 0 6px;
+					@include border-radius (50%);
+				}
+			}
+		}
+
+		img {
+			display       : inline-block;
+			vertical-align: middle;
+			z-index       : 2;
+			@include responsive-property("margin-right",$margin-between-logo-and-title,7px,$margin-between-logo-and-title + 10px);
+			position      : relative;
+			height        : auto;
+			@include responsive-property("max-height",$header-height - 20,50px,$header-height - 20px);
+			width         : auto;
+		}
+
+		.image {
+			position      : relative;
+			@include responsive-property("margin-right",$margin-between-logo-and-title,7px,$margin-between-logo-and-title + 10px);
+			display       : inline-block;
+			vertical-align: middle;
+
+			img {
+				@include responsive-property("max-height",$header-height,50px,$header-height + 50px);
+				height  : auto;
+				margin  : 0;
+				position: relative;
+				overflow: hidden;
+				padding : 5px;
+			}
+
+			&:before {
+				content : "";
+				position: absolute;
+				@include responsive-property("bottom",-40,0px,-40px);
+				@include responsive-property("left",-30,0px,-30px);
+				@include responsive-property("right",-30,0px,-30px);
+				@include responsive-property("height",$header-height + 60, 50px, $header-height + 90px);
+				@include border-radius(50%);
+				z-index : -1;
+			}
+		}
+	}
+}
+
+.homepage #header {
+	z-index: 2;
+}
+
+#header .nav {
+	float       : left;
+	margin-right: 50px;
+	@include responsive-property("margin-right",50, 10px, 80px);
+	@include responsive-property("height",$header-height,50px,$header-height + 50px);
+	@include responsive-property("line-height",$header-height,50px,$header-height + 50px);
+
+	&#right-nav {
+		margin-right: 0;
+		position    : relative;
+	}
+
+	.menu-btn {
+		display       : inline-block;
+		vertical-align: middle;
+	}
+}
+
+#left-nav .menu-btn > span,
+#right-nav .menu-btn > span {
+	@include responsive-property("font-size",$menu-btns-font-size, 13px, $menu-btns-font-size + 10px);
+	@include responsive-property("line-height",51, 35px, 60px);
+	color       : $menu-btn-txt-color;
+	text-align  : center;
+	display     : inline-block;
+	cursor      : pointer;
+	padding-left: 30px;
+	position    : relative;
+	@include menu-btn-font;
+}
+
+#left-nav.active .menu-btn > span {
+	background-color: $menu-active-btn-bg-color;
+	color           : $menu-active-btn-txt-color;
+}
+
+#right-nav .menu-btn > span {
+	background: $schools-menu-btn-bg-color;
+	@include responsive-property("padding-left",25,10px,30px);
+	// padding-right: 40px;
+	color     : $schools-menu-btn-txt-color;
+	position  : relative;
+}
+
+#right-nav .menu-btn > span.active {
+	background: $schools-menu-active-btn-bg-color;
+	color     : $schools-menu-active-btn-txt-color;
+
+	&:after {
+		background: url("/images/arrow.png") no-repeat right bottom;
+	}
+}
+
+#header .search-icon {
+	float     : right;
+	@include responsive-property("font-size",$search-btn-font-size,13px,$search-btn-font-size + 10px);
+	color     : $search-txt-color;
+	@include responsive-property("height",$header-height,35px,$header-height + 50px);
+	@include responsive-property("line-height",$header-height,35px,$header-height + 50px);
+	@include responsive-property("width",102,35px,110px);
+	background: $search-bg-color url('search-icon-white.png') no-repeat center center;
+	@include responsive-property("margin-right",-58,10px,-58px);
+	@include responsive-property("margin-left",35,10px,40px);
+	margin-top: 0;
+	@include border-radius(0);
+
+	&:hover {
+		background-color: $search-bg-hover-color;
+	}
+
+	&.no-bg-color {
+		background : url("search-icon.png") no-repeat center center;
+		margin-left: 0;
+	}
+
+	&.with-text {
+		width              : auto;
+		padding            : 0;
+		@include responsive-property("padding-right",60,10px,70px);
+		@include responsive-property("padding-left",35,30px,40px);
+		background-position: left center;
+		text-transform     : uppercase;
+		@include responsive-property("margin-left",40,10px,50px);
+	}
+
+	&.no-icon {
+		background: transparent;
+		width     : auto;
+		@include responsive-property("padding-right",60,10px,70px);
+		@include responsive-property("margin-left",40,10px,50px);
+	}
+}
+
+#header #change_language_form {
+	float     : right;
+	padding   : 0 7px;
+	text-align: center;
+	position  : relative;
+	cursor    : pointer;
+	background: $language-btn-bg;
+
+	form {
+		margin: 0;
+		@include responsive-property("margin-left",40,10px,50px);
+	}
+
+	select {
+		@include responsive-property("height",$header-height,35px,$header-height + 50px);
+		@include responsive-property("line-height",$header-height,35px,$header-height + 50px);
+		background    : transparent;
+		font-size     : 22px;
+		color         : $language-btn-color;
+		position      : relative;
+		left          : -4px;
+		text-transform: uppercase;
+		cursor        : pointer;
+	}
+
+	.s-hidden {
+		position     : absolute;
+		visibility   : hidden;
+		padding-right: 10px;
+		width        : 0;
+		overflow     : hidden;
+		height       : 0;
+	}
+
+	.select {
+		cursor          : pointer;
+		display         : block;
+		position        : relative;
+		background-color: transparent;
+		margin          : 0;
+		font-size       : 0;
+		width           : auto;
+		@include responsive-property("height",$header-height,35px,$header-height + 50px);
+		@include responsive-property("line-height",$header-height,35px,$header-height + 50px);
+		display         : inline-block;
+		vertical-align  : top;
+	}
+
+	&:hover {
+		.styledSelect {
+			color: $language-btn-color;
+		}
+	}
+
+	.styledSelect {
+		position      : relative;
+		display       : inline-block;
+		@include responsive-property("font-size",$language-btn-font-size, 13px, $language-btn-font-size + 10px);
+		// padding-right: 25px;
+		text-transform: uppercase;
+		cursor        : pointer;
+		color         : $language-btn-color;
+		@include language-btn-font();
+	}
+	// .styledSelect:after {
+	// 	content: '';
+	// 	position: absolute;
+	// 	right: 0;
+	// 	top: 50%;
+	// 	margin-top: -2px;
+	// 	width: 14px;
+	// 	height: 8px;
+	// 	background: url('/images/language_arrow.png') no-repeat center top;
+	// }
+	// .styledSelect:active:after,
+	// .styledSelect.active:after {
+	// 	background-position: center bottom 2px;
+	// }
+}
+
+.language-arrow-icon-svg,
+.menu-icon-svg,
+.sites-arrow-icon-svg {
+	display       : inline-block;
+	vertical-align: middle;
+	height        : 40px;
+	width         : auto;
+}
+
+.menu-icon-svg {
+	fill: $menu-btn-txt-color;
+}
+
+.sites-arrow-icon-svg {
+	fill: $schools-menu-btn-txt-color;
+}
+
+.language-arrow-icon-svg {
+	fill: $language-btn-color;
+}
+
+@media only screen and (max-width: 1000px) {
+	#header:after {
+		left: -20px;
+	}
+
+	#header:before {
+		bottom: -45px;
+		width : 190px;
+		height: 45px;
+	}
+
+	#right-nav .menu-btn > span {
+		padding-left: 20px;
+	}
+
+	#header #change_language_form form {
+		margin: 0;
+	}
+
+	#header .search-icon.no-icon {
+		margin-left: 15px;
+	}
+}
+@media only screen and (max-width: 900px) {
+	#header:before {
+		display: none;
+	}
+
+	#header .nav .menu-btn {
+		display: block;
+	}
+
+	#header .search-icon {
+		width      : 51px;
+		height     : 51px;
+		line-height: 51px;
+		margin-left: 0;
+	}
+
+	#header .nav {
+		line-height: 51px;
+		height     : 51px;
+	}
+
+	#header .logo {
+		position     : relative;
+		text-align   : center;
+		width        : 100%;
+		padding      : 0;
+		top          : 0;
+		display      : block;
+		font-size    : 17px;
+		line-height  : 20px;
+		margin-bottom: 20px;
+
+		.image img,
+		img {
+			position: relative;
+			height  : auto;
+			left    : 0;
+			margin  : 0 auto 15px;
+			display : block;
+			top     : 10px;
+		}
+	}
+
+	#header #left-nav {
+		float: left;
+	}
+
+	#left-nav {
+		margin-right: 0;
+		margin-left : 10px;
+	}
+
+	#header #change_language_form,
+	#header #change_language_form .select,
+	#header #change_language_form select {
+		height     : 51px;
+		line-height: 51px;
+	}
+
+}
+@media only screen and (max-width: 450px) {
+	#header #change_language_form .styledSelect,
+	#header .search-icon.no-icon,
+	#left-nav .menu-btn > span,
+	#right-nav .menu-btn > span {
+		font-size: 14px;
+	}
+
+	#right-nav .menu-btn > span {
+		padding-left: 5px;
+	}
+
+	#header #left-nav {
+		margin-left: 0;
+	}
+
+	#header .search-icon.no-icon {
+		margin-left  : 0;
+		padding-right: 10px;
+	}
+
+	#header .logo h1 {
+		font-size: 16px;
+	}
+
+	#header .search-icon.with-text {
+		text-indent: -9999px;
+	}
+}

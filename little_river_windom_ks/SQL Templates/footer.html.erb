@@ -1,0 +1,38 @@
+<footer id="footer" class="footer2">
+        <div class="container clearfix">
+         <div class="footer-col">
+              <h5><%= current_organization.try(:name) %></h5>
+              <p><%= current_organization.try(:address) %>
+                  <br><%= "#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+                  <br><%= "Ph #{current_organization.try(:phone_number)}" %>
+                  <br><%= "Fax #{current_organization.try(:fax_number)}" %></p>
+          </div>
+
+
+
+         <div class="footer-col second">
+            <h5>Quicklinks</h5>
+            <ul>
+               <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/calendar" : "/calendar"%>>calendar</a></li>
+
+               <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/employment" : "employment"%>>Employment</a></li>
+               <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/for_parents" : "/for-parents"%>>For Parents</a></li>
+               <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/for_students" : "/for-students"%>>For Students</a></li>
+
+            </ul>
+         </div>
+
+
+            <div class="footer-col last">
+            <a href="#" class="social"><%= image_tag "apptegy_cms/themes/littleriverwindomks/fb.png", alt: " "%> </a>
+            <a href="#" class="app-store"><%= image_tag "apptegy_cms/themes/littleriverwindomks/apple.png", alt: " "%></a> <br>
+            <a href="#" class="social"><%= image_tag "apptegy_cms/themes/littleriverwindomks/tw.png", alt: " "%></a>
+            <a href="#" class="google-play"><%= image_tag "apptegy_cms/themes/littleriverwindomks/google.png", alt: " "%></a>
+         </div>
+        </div>
+        <div class="container copyright">
+            <p>Copyright &copy; USD #444: Little River Windom 2017. All rights reserved. Powered by <a href="http://www.apptegy.com" target="_blank">apptegy</a></p>
+
+        </div>
+
+    </footer>

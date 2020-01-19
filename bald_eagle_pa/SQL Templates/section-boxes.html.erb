@@ -1,0 +1,61 @@
+<div class="col-item news-wrapper same-height">
+        <h4>NEWS</h4>
+        <% current_organization.articles.select{|a| a.images_list.any? }[0..3].each do |article| %>
+            <div class="news">
+                <div class="avatar">
+                    <% if article.images_list.any? %>
+                        <img src=<%= article.images_list.first %> class="image">
+                    <% end %>
+                </div>
+
+                <div class="right-content">
+                    <h3><%= link_to article.title, params[:org].present? ? "/o/#{params[:org]}/news" : "/news" %></h3>
+                     <p><%= article.content_text(70) %></p>
+                </div>
+            </div>
+        <% end %>
+        <a href=<%=params[:org].present? ? "/o/#{params[:org]}/news" : "/news" %> class="see-more">SEE ALL NEWS</a>
+</div>
+
+
+    <div class="col-item live-feeds-wrapper same-height">
+     <h4>LIVE FEED</h4>
+        <% current_organization.live_feeds.limit(5).each do |live_feed| %>
+            <div class="live-feed">
+                <div class="avatar">
+                    <%= image_tag live_feed.avatar, class: "avatar", style: 'margin:5px' %>
+                </div>
+                <div class="right-content">
+                    <p>
+                        <%= translate(raw post.linkify) %>
+<%= link_to 'view image', live_feed.image_large, target: '_blank' if live_feed.image_large? %>
+                    </p>
+                    <div class="clearfix">
+                     <div class="time"><%= translate("#{time_ago_in_words(live_feed.created_at)} ago" )%> |  </div>
+                     <div class="autor"><%= "#{live_feed.author_name} " %></div>
+                  </div>
+
+                </div>
+
+            </div>
+        <% end %>
+        <a href=<%=params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed" %> class="see-more"><span>SEE ALL posts</span></a>
+</div>
+
+    <div class="col-item events-wrapper">
+       <h4>Events</h4>
+       <% current_organization.events.limit(9).each do |event| %>
+           <div class="event">
+                  <div class="date"><%= "#{event.start_date.try(:strftime, '%b %e')}#{event.start_time.try(:strftime, ', %l:%M %p')}" %></div>
+                  <div class="right-content">
+                   <p><a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"  %>><%= event.title %></a></p>
+                  </div>
+           </div>
+       <% end %>
+<div class="event">
+              <div class="right-content">
+                 <p class="type"><a href="/events" class="see-more events-btn active">See all events</a></p>
+              </div>
+           </div>
+
+</div>

@@ -1,0 +1,113 @@
+ //  SASS Mixins & Extend & Placeholder Selectors
+ 
+@mixin first-font-family {
+    font-family: 'Museo Sans Rounded W03_500';
+    font-weight: 400;
+ }
+ @mixin second-font-family {
+    font-family: "Museo Sans Rounded W03_300";
+    font-weight: 400;
+ }
+@mixin third-font-family {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+}
+
+// Clearfix
+// ----------------------------------
+
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+.clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+@mixin hidden {
+  display: none;
+  visibility: hidden;
+}
+%hidden-text {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+ 
+ 
+
+// Center-align a block level element
+// ----------------------------------
+%center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+%vertical-align {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+%horizontal-align {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+//*//////////////*/
+//*//// REMS ////*/
+//*//////////////*/
+
+@mixin font-size($fontPx){
+	font-size: 1px * $fontPx; 
+	font-size: 1rem * ($fontPx/10);
+}
+@mixin line-height($lhPx){
+	line-height: 1px * $lhPx; 
+	line-height: 1rem * ($lhPx/10);
+}
+// px too vw
+ @function get-vw($target) {
+     $vw-context: (1920*.01) * 1px;
+     @return ($target/$vw-context) * 1vw;
+ }
+
+@mixin border-radius ($radius: 5px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius:    $radius;
+	border-radius:         $radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+@mixin transition ($property: all, $duration: .5s) {
+    -webkit-transition: $property $duration ease-in-out;
+    -moz-transition: $property $duration ease-in-out;
+    -o-transition: $property $duration ease-in-out;
+    transition: $property $duration ease-in-out;
+}
+
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}

@@ -1,0 +1,388 @@
+/****************************
+*   SLIDER
+*
+*************************/
+
+.bx-wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    *zoom: 1;
+    float: right;
+    width: 100%;
+//     padding-left: $leftSlider;
+}
+
+.bx-wrapper img {
+    max-width: 100%;
+    display: block;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.bx-wrapper .bx-viewport {
+    /*fix other elements on the page moving (on Chrome)*/
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+}
+
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+}
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+    min-height: 50px;
+    background: url(bx_loader.gif) center center no-repeat #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+    text-align: left;
+    position: absolute;
+    width: auto;
+    right: 15%;
+    bottom: 25px;
+}
+
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: $white;
+    text-indent: -9999px;
+    display: block;
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    outline: 0;
+    text-align: left;
+    overflow: hidden;
+    @include border-radius(50%);
+    margin-right: 5px;
+}
+
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background:  #BB922E;
+}
+
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+
+.bx-wrapper .bx-controls-direction a.disabled {
+    display: none;
+}
+/* .bx-wrapper .bx-viewport .slide:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 40;
+    height: 450px;
+    background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 1)));
+    background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%);
+} */
+/*** END DEFAULT SLIDER CODE  **/
+
+#slider {
+    overflow: hidden;
+    background: $SliderBgColor;
+    position: relative;
+    z-index: 0;
+}
+
+#slider .slider-info {
+    //max-width: 1400px;
+    height: auto;
+    bottom: 55px;
+    left: 35px;
+    z-index: 4;
+    padding: 0 20px 0 0;
+    position: absolute;
+}
+
+#slider .slider-info h1,
+#slider .slider-info h2,
+#slider .slider-info h3,
+#slider .slider-info h4,
+#slider .slider-info h5,
+#slider .slider-info h6,
+#slider .slider-info p {
+    color: $white;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+    @include first-font-family;
+    max-width: 790px;
+}
+
+#slider .slider-info h1 {
+    @include font-size(60);
+    @include line-height(60);
+}
+
+#slider .slider-info h2 {
+    @include font-size(50);
+    @include line-height(55);
+}
+
+#slider .slider-info h3 {
+    @include font-size(45);
+    @include line-height(50);
+}
+
+#slider .slider-info h4 {
+    @include font-size(40);
+    @include line-height(40);
+}
+
+#slider .slider-info h5 {
+    @include font-size(30);
+    @include line-height(40);
+}
+
+#slider .slider-info h6 {
+    @include font-size (25);
+    @include line-height (30);
+}
+
+#slider .slider-info p {
+    @include font-size(22);
+    @include line-height(35);
+    text-transform: none;
+    max-width: 1020px;
+}
+
+#slider .slider-info *:first-child {
+    background: rgba(40, 52, 91, 0.85);
+    padding: 20px 30px;
+}
+
+#slider .slider-info *:last-child {
+    background: rgba(91, 113, 154, 0.85);
+    padding: 15px 30px;
+}
+
+#slider .slider-info>*:empty {
+    display: none;
+}
+
+.slider-container {
+    float: left;
+}
+
+#slider .slider-info.scroll-container p {
+    overflow: auto;
+    padding-bottom: 10px;
+}
+
+.slider-container .slide {
+    float: left;
+    /*max-height: 724px;*/
+    overflow: hidden;
+}
+
+.slider-container img {
+    max-width: inherit;
+    width: 100%;
+    height: auto;
+}
+
+@media only screen and (max-width: 1920px) and (min-width: 1000px) {
+    /*Changes for slider*/
+    #slider .slider-info h1 {
+        font-size: get-vw(60px);
+        line-height: get-vw(60px);
+    }
+    #slider .slider-info h2 {
+        font-size: get-vw(50px);
+        line-height: get-vw(55px);
+    }
+    #slider .slider-info h3 {
+        font-size: get-vw(45px);
+        line-height: get-vw(50px);
+    }
+    #slider .slider-info h4 {
+        font-size: get-vw(40px);
+        line-height: get-vw(40px);
+    }
+    #slider .slider-info h5 {
+        font-size: get-vw(30px);
+        line-height: get-vw(40px);
+    }
+    #slider .slider-info h6 {
+        font-size: get-vw(25px);
+        line-height: get-vw(30px);
+    }
+    #slider .slider-info p {
+        font-size: get-vw(22px);
+        line-height: get-vw(35px);
+    }
+    .slider-container img {
+        width: 100%;
+        height: 730px;
+        max-height: 850px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+
+  #slider .slider-info *:first-child {
+      background: rgba(40, 52, 91, 0.85);
+      margin-top: 196px;
+      padding: 10px 10px;
+      font-size: 12px;
+      width: 100%;
+  }
+
+  #slider .slider-info *:last-child {
+    background: rgba(91, 113, 154, 0.85);
+    padding: 10px 10px;
+    font-size: 12px;
+    width: 100%;
+}
+
+#slider .slider-info{
+  top: 10px;
+  bottom: 0px;
+}
+
+}
+
+
+#slider .bx-wrapper {
+    padding-left: 0;
+}
+
+#header,
+#slider,
+.container {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@media only screen and (max-width: 500px){
+
+  #slider .slider-info *:first-child {
+      background: rgba(40, 52, 91, 0.85);
+      margin-top: 0px !important;
+      padding: 5px 5px;
+      font-size: 12px;
+      line-height: 12px;
+      width: 100%;
+  }
+
+  #slider .slider-info *:last-child {
+    background: rgba(91, 113, 154, 0.85);
+    margin-top: 80px;
+    padding: 10px 10px;
+    font-size: 12px;
+    line-height: 12px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.bx-wrapper .bx-pager {
+    text-align: left;
+    position: absolute;
+    width: auto;
+    right: 4%;
+    bottom: 3px;
+}
+}
+
+
+@media only screen and (max-width: 550px){
+
+  #slider .slider-info *:first-child {
+      background: rgba(40, 52, 91, 0.85);
+      margin-top: 0px;
+      padding: 5px 5px;
+      font-size: 12px;
+      line-height: 12px;
+      width: 100%;
+  }
+
+  #slider .slider-info *:last-child {
+    background: rgba(91, 113, 154, 0.85);
+    margin-top: 80px;
+    padding: 10px 10px;
+    font-size: 12px;
+    line-height: 12px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.bx-wrapper .bx-pager {
+    text-align: left;
+    position: absolute;
+    width: auto;
+    right: 4%;
+    bottom: 3px;
+}
+}
+
+@media only screen and (max-width: 750px){
+
+  #slider .slider-info *:first-child {
+      background: rgba(40, 52, 91, 0.85);
+      margin-top: 150px;
+      padding: 5px 5px;
+      font-size: 12px;
+      line-height: 12px;
+      width: 100%;
+  }
+
+  #slider .slider-info *:last-child {
+    background: rgba(91, 113, 154, 0.85);
+    padding: 10px 10px;
+    font-size: 12px;
+    line-height: 12px;
+    width: 100%;
+    text-transform: uppercase;
+}
+
+.bx-wrapper .bx-pager {
+    text-align: left;
+    position: absolute;
+    width: auto;
+    right: 4%;
+    bottom: 3px;
+}
+}

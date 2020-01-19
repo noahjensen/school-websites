@@ -1,0 +1,108 @@
+/*************************
+*
+*  FOOTER
+*
+*************************/
+
+#footer {
+    background: $footer-bg;
+    padding: 0 70px;
+}
+#footer > .container {
+    position: relative;
+    padding: $footer-padding;
+    width: 100%;
+    max-width: 1587px;
+}
+#footer .footer-col {
+    width: 16.5%;
+    float: left;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+#footer .footer-col:first-child {
+    padding-right: 0px;
+}
+#footer .footer-col:last-child,
+#footer .footer-col.last {
+   width: 30%;
+    display: block;
+   text-align: right;
+   padding: 25px 0 0;
+   float: right;
+   font-size: 0;
+}
+#footer .footer-col.sri-logo {
+    padding-top: 25px;
+    width: 20%;
+    padding-right: 15px;
+    text-align: center;
+    img {
+        width: 7vw;
+        height: auto;
+    } 
+}
+#footer .footer-col ul {
+    margin: 0;
+}
+#footer .footer-col p,
+#footer .footer-col li,
+#footer .footer-col li a,
+#footer .footer-col h5 {
+    @include font-size(14);
+    @include line-height(34);
+    color: $white;
+    text-transform: none;
+    @include first-font-family;
+}
+#footer .footer-col h5 {
+    color: $footer-title-color;
+    @include second-font-family;
+    margin: 20px 0 25px;
+    @include font-size(18);
+    @include line-height(22);
+    text-transform: uppercase;
+}
+
+#footer .fb, .tw {
+    display: inline-block;
+    width: 50px;
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+#footer .app-store,
+#footer .google-play {
+   width: 100%;
+   max-width: 170px;
+   height: 60px;
+   display: inline-block;
+   margin: 0 0 15px 15px;
+   background: url('apple.png') no-repeat right top;
+   background-size: 100% auto;
+   text-indent: -9999px;
+   text-align: left;
+   vertical-align: top;
+}
+#footer .google-play {
+   background: url('google.png') no-repeat right top;
+   margin-bottom: 0;
+   background-size: 100% auto;
+}
+#footer > .container.copyright {
+    border-top: 1px solid #e1e1e1;
+    text-align: center;
+    padding: 25px 0;
+}
+#footer > .container.copyright, #footer > .container.copyright p {
+    @include font-size(14);
+    @include line-height(34);
+    color: $white;
+    margin-bottom: 0;
+    
+}
+ 

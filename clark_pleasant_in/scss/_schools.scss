@@ -1,0 +1,67 @@
+.athletics {
+    //HEADER//
+    #header {
+        background: #374488;
+    }
+    #header:after {
+        background: url(athletics-logo-bg.png) no-repeat;
+    }
+    ul.first-nav li span {
+        background: #374488
+    }
+    ul.first-nav li.live-feed span,
+    ul.first-nav li.staff span,
+    ul.first-nav li.news span,
+    ul.first-nav li.events span,
+    ul.first-nav li.dining span,
+    ul.first-nav li.documents span {
+        background: #374488;
+    }
+    //SLIDER//
+    .bx-wrapper .bx-pager.bx-default-pager a:hover,
+    .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background: #f0843a;
+    }
+    //NEWS//
+    .main .col-item.news-wrapper .news:first-of-type .avatar {
+        border-color: #374488;
+    }
+    .main .col-item.news-wrapper .avatar {
+        border-color: #5a6ac1;
+    }
+    .main .col-item.news-wrapper .news:last-of-type .avatar {
+        border-color: #374488;
+    }
+    .main .col-item.news-wrapper .see-more {
+        background: #374488;
+    }
+    //EVENTS//
+    .main .col-item .event .date {
+        background: #f0843a;
+    }
+    .main .col-item.events-wrapper .right-content a.see-more {
+        background: #f0843a;
+    }
+    .main .col-item.events-wrapper {
+        background: #5a6ac1;
+    }
+    //LIVE FEED//
+    .main .col-item.live-feeds-wrapper .see-more {
+        background: #5a6ac1;
+    }
+    .main .col-item.live-feeds-wrapper .right-content p {
+        color: #5a6ac1;
+    }
+    .main .col-item.live-feeds-wrapper {
+        background: #d4e3ef;
+    }
+    //FOOTER//
+    #footer {
+        background: #374488;
+    }
+    @media only screen and (max-width: 65em) {
+        #slider .slider-info {
+            background: #374488;
+        }
+    }
+}

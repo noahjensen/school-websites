@@ -1,0 +1,326 @@
+/****************************
+*   SLIDER
+*
+*************************/
+
+.bx-wrapper {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	*zoom: 1;
+	width: 100%;
+	padding-left: 0;
+}
+.bx-wrapper img {
+	max-width: 100%;
+	display: block;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+.bx-wrapper .bx-viewport {
+	/*fix other elements on the page moving (on Chrome)*/
+	-webkit-transform: translatez(0);
+	-moz-transform: translatez(0);
+	-ms-transform: translatez(0);
+	-o-transform: translatez(0);
+	transform: translatez(0);
+}
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+	position: absolute;
+	width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+	min-height: 50px;
+	background: url(bx_loader.gif) center center no-repeat #fff;
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+	position: absolute;
+	left: 0;
+	bottom: 30px;
+	text-align: right;
+	width: 100%;
+	padding: 0 40px;
+}
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+	display: inline-block;
+	*zoom: 1;
+	*display: inline;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+	background: $pager-slider-bg;
+	text-indent: -9999px;
+	display: block;
+	@include responsive-property("width", 14, 7px, 14px);
+	@include responsive-property("height", 14, 7px, 14px);
+	margin: 0;
+	outline: 0;
+	text-align: left;
+	overflow: hidden;
+	margin-left: 5px;
+	@include border-radius (50%);
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+	background: $active-pager-slider-bg;
+}
+.bx-wrapper .bx-pager .bx-pager-item:first-child {
+	margin: 0;
+}
+.bx-wrapper .bx-controls-direction a {
+	position: absolute;
+	top: 50%;
+	@include responsive-property("margin-top", -49, -20px, -49px);
+	outline: 0;
+	@include responsive-property("width", 52, 25px, 52px);
+	@include responsive-property("height", 98, 40px, 98px);
+	text-indent: -9999px;
+	//z-index: 9;
+	@include opacity(0);
+	@include transition();
+}
+.bx-wrapper:hover .bx-controls-direction a {
+	@include opacity(0.8);
+}
+.bx-wrapper .bx-controls-direction a.bx-prev {
+	background: url('arrow-left.png') no-repeat center center;
+	left: 0;
+	background-color: $slider-arrow-bg;
+	background-size: 48% auto;
+}
+.bx-wrapper .bx-controls-direction a.bx-next {
+	background: url('arrow-right.png') no-repeat center center;
+	right: 0;
+	background-color: $slider-arrow-bg;
+	background-size: 48% auto;
+}
+.col-item .bx-wrapper .bx-controls-direction {
+	display: none;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+	display: none;
+}
+.bx-wrapper .bx-viewport .slide:after {
+	content: '';
+	position: absolute;
+	z-index: -1;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	z-index: 0;
+	height: 100%;
+	max-height: 479px;
+	@include slider-gradient;
+}
+
+/*** END DEFAULT SLIDER CODE  **/
+
+#slider {
+	background: #FFF;
+	position: relative;
+	padding: 0;
+	z-index: 0;
+}
+#slider .slider-info {
+	//max-width: 1400px;
+	height: auto;
+	z-index: 4;
+	position: absolute;
+	width: 100%;
+	bottom: 100px;
+	left: 0;
+	text-align: center;
+	padding: 0 5%;
+}
+#slider .slider-info h1,
+#slider .slider-info h2,
+#slider .slider-info h3,
+#slider .slider-info h4,
+#slider .slider-info h5,
+#slider .slider-info h6 {
+	@include responsive-property("font-size",$bb-h1-font-size,34px,$bb-h1-font-size+10px);	
+	@include responsive-property("line-height",$bb-h1-font-size + 4,39px,$bb-h1-font-size+14px);	
+	color: $bb-text-color;
+	margin: 0 auto 10px;
+	@include bb-h1-font;
+	max-width: 1230px;
+}
+$titles-differences: 10*$bb-h1-font-size/100 ;
+$bb-h2-font-size: $bb-h1-font-size - $titles-differences;
+$bb-h3-font-size: $bb-h2-font-size - $titles-differences;
+$bb-h4-font-size: $bb-h3-font-size - $titles-differences;
+$bb-h5-font-size: $bb-h4-font-size - $titles-differences;
+$bb-h6-font-size: $bb-h5-font-size - $titles-differences;
+
+
+#slider .slider-info h2 {
+	@include responsive-property("font-size",$bb-h2-font-size,30px,$bb-h2-font-size+10px);	
+	@include responsive-property("line-height",$bb-h2-font-size + 4,34px,$bb-h2-font-size+14px);
+}
+#slider .slider-info h3 {
+	@include responsive-property("font-size",$bb-h3-font-size,26px,$bb-h3-font-size+10px);	
+	@include responsive-property("line-height",$bb-h3-font-size + 4,30px,$bb-h3-font-size+14px);
+}
+#slider .slider-info h4 {
+	@include responsive-property("font-size",$bb-h4-font-size,22px,$bb-h4-font-size+10px);	
+	@include responsive-property("line-height",$bb-h4-font-size + 4,25px,$bb-h4-font-size+14px);
+}
+#slider .slider-info h5 {
+	@include responsive-property("font-size",$bb-h5-font-size,18px,$bb-h5-font-size+10px);	
+	@include responsive-property("line-height",$bb-h5-font-size + 4,22px,$bb-h5-font-size+14px);
+	@include first-font-family;
+}
+#slider .slider-info h6 {
+	@include responsive-property("font-size",$bb-h6-font-size,15px,$bb-h6-font-size+10px);	
+	@include responsive-property("line-height",$bb-h6-font-size + 4,19px,$bb-h6-font-size+14px);
+}
+#slider .slider-info p {
+	color: $bb-text-color;
+	@include responsive-property("font-size",$bb-p-font-size,14px,$bb-p-font-size+10px);
+	@include responsive-property("line-height",$bb-p-font-size + 4,19px,$bb-p-font-size+14px);
+	margin: 0 auto 8px;
+	@include bb-p-font;
+	max-width: 1230px;
+}
+.slider-container .slide {
+	height: auto;
+	max-height: inherit;
+}
+.slider-container img {
+	max-width: inherit;	
+	width: 100%; 
+	@include responsive-property("height",753,200px,753px);
+	max-height: -webkit-calc(95vh - #{$header-height}px) !important;
+	 max-height: expression(95vh - #{$header-height}px) !important;
+	 max-height: -moz-calc(95vh - #{$header-height}px) !important;
+	 max-height: -o-calc(95vh - #{$header-height}px) !important;
+	 max-height: calc(95vh - #{$header-height}px) !important;
+}
+
+.slider-container img {
+	width: 100%;
+	//max-height: 786px;
+	// height: 70vh;
+	-o-object-fit: cover;
+	object-fit: cover;
+}
+#slider .bx-wrapper {
+	padding-left: 0;
+}
+
+/**
+ * Responsive
+ */
+
+@media only screen and (max-width: 1000px) {
+	
+	#slider .slider-info {
+		position: relative;
+		margin: 0 !important;
+		width: 100%;
+		text-align: center;
+		padding: 15px 20px 10px;
+		left: 0;
+		-webkit-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		transform: translateY(0%);
+		top: 0;
+		background: #1a1a1a;
+	}
+	#slider .slider-info *:first-child,
+	#slider .slider-info *:last-child {
+		padding: 0;
+		background: transparent;
+		max-width: 100%;
+	}
+	.bx-controls-direction {
+		right: auto;
+		left: 50%;
+		margin-left: -30px;
+	}
+	#slider .bx-wrapper {
+		padding-left: 0;
+	}
+	.slider-container img {
+		max-width: 100%;
+		width: 100%;
+	}
+	.slider-container img {
+		height: auto !important;
+	}
+	.bx-wrapper .bx-viewport:after {
+		display: none;
+	}
+	.bx-wrapper .bx-pager {
+		position: relative;
+		text-align: center;
+		right: auto;
+		left: 0;
+		width: 100%;
+		background: #f2f2f2;
+		bottom: 0;
+		top: 0;
+		padding: 10px 0;
+	}
+	.slider-container .slide {
+		float: left;
+	   overflow: hidden;
+	}
+	#slider .slider-info {
+		position: relative;
+		margin: 0 !important;
+		width: 100%;
+		text-align: center;
+		padding: 15px 40px;
+		left: 0;
+	}
+	.bx-wrapper {
+		width: 100%;
+		float: none;
+		margin-top: 0;
+		padding: 0;
+	}
+	#slider {
+		padding: 0;
+		height: auto !important;
+	}
+	#slider p,
+	#slider .slider-info * {
+		text-align: center;
+		padding-right: 0;
+	}
+	.bx-wrapper .bx-pager {
+		text-align: center;
+		right: auto;
+		left: 0;
+		width: 100%;
+		background: #393939;
+		bottom: 0;
+		padding: 10px 0;
+	}
+	.bx-wrapper {
+		width: 100%;
+		float: none;
+		padding: 0;
+	}
+}
+@media only screen and (max-width: 480px) {
+	.bx-controls-direction {
+		opacity: 0;
+	}
+}

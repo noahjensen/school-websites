@@ -1,0 +1,175 @@
+/**
+ * Main Content
+ */
+
+.main .col-item {
+    position: relative;
+    width: 33.33%;
+    padding: 0;
+    float: left;
+    margin: 0;
+    overflow: hidden;
+    padding: $colspadding;
+    position: relative;
+    @include transition;
+    &.events-wrapper {
+        background: $events-wrapper-bg;
+    }
+    &.news-wrapper {
+        background: $news-wrapper-bg;
+    }
+    &.live-feeds-wrapper {
+        background: $live-feed-wrapper-bg;
+    }
+    &:first-child {
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+    &:last-child {
+        padding-right: 70px;
+        padding-left: 70px;
+    }
+    .see-more {
+        position: absolute;
+        bottom: 35px;
+        right: 48px;
+        display: inline-block;
+        padding: 0 10px;
+        height: 31px;
+        background: $see-all-btn-bg;
+        @include font-size(18);
+        @include line-height(31);
+        color: $see-all-btn-color;
+        @include second-font-family;
+        text-transform: uppercase;
+    }
+    &.news-wrapper .see-more {
+        color: $see-all-news-btn-color;
+    }
+    &.events-wrapper .see-more {
+        color: $see-all-events-btn-color;
+    }
+    &.live-feeds-wrapper .see-more {
+        color: $see-all-live-feeds-btn-color;
+    }
+    h4 {
+        @include font-size(58);
+        @include line-height(90);
+        color: #000;
+        padding: 0px;
+        @include fourth-font-family;
+        text-align: center;
+        text-transform: uppercase;
+        position: absolute;
+        display: block;
+        left: 70px;
+        right: 70px;
+        top: 0;
+        margin-top: 28px;
+        background: $events-title-bg;
+        border-bottom: 7px solid #f78b1f;
+    }
+    &.news-wrapper h4 {
+        color: $news-title-color;
+        background: $news-title-bg;
+    }
+    &.live-feeds-wrapper h4 {
+        color: $live-feed-title-color;
+        background: $live-feed-title-bg;
+        border-bottom: 7px solid #030476;
+    }
+    &.events-wrapper h4 {
+        border-bottom: 7px solid #030476;
+    }
+    &.live-feeds-wrapper .avatar {
+        float: left;
+        text-align: left;
+        margin-right: 17px;
+    }
+    &.live-feeds-wrapper .right-content {
+        overflow: hidden;
+    }
+    &.live-feeds-wrapper .live-feed {
+        margin: 0 0 15px;
+        overflow: hidden;
+    }
+    &.live-feeds-wrapper .right-content .time {
+        @include font-size(14);
+        @include line-height(17);
+        color: #636363;
+        @include first-font-family;
+    }
+    &.live-feeds-wrapper .right-content p {
+        @include font-size(16);
+        @include line-height(20);
+        color: $live-feed-text;
+        margin: 10px 0 0;
+        @include first-font-family;
+    }
+    &.live-feeds-wrapper .right-content h3,
+    &.live-feeds-wrapper .right-content h3 a {
+        color: $live-feed-h3;
+        @include font-size(23);
+        @include line-height(25);
+        margin: 0;
+        text-transform: uppercase;
+        @include second-font-family;
+        overflow: hidden;
+    }
+    &.events-wrapper .month {
+        float: left;
+        text-align: center;
+        text-transform: uppercase;
+        @include font-size(19);
+        @include line-height(22);
+        @include second-font-family;
+        margin-right: 35px;
+        color: #333;
+        span {
+            @include font-size(24);
+        }
+    }
+    &.events-wrapper .event {
+        padding: 0;
+        margin: 0 0 30px;
+    }
+    &.events-wrapper .date {
+        @include font-size(17);
+        @include line-height(20);
+        color: #333;
+        overflow: hidden;
+        margin-left: 69px;
+    }
+    &.events-wrapper .right-content p,
+    &.events-wrapper .right-content a {
+        margin: 0 0 2px;
+        @include second-font-family;
+        @include font-size(25);
+        @include line-height(30);
+        color: $event-title;
+        text-transform: uppercase;
+        overflow: hidden;
+    }
+    &.news-wrapper p {
+        @include font-size(25);
+        @include line-height(30);
+        color: $new-feed-paragraph;
+        margin: 0 0 5px;
+        @include second-font-family;
+        max-width: 400px;
+        text-transform: uppercase;
+        a {
+            color: $new-feed-paragraph;
+        }
+    }
+    .news {
+        margin-bottom: 30px;
+    }
+    .news .date-autor {
+        color: #333;
+        display: block;
+        @include font-size(16);
+        @include line-height(20);
+        @include first-font-family;
+    }
+}

@@ -1,0 +1,587 @@
+/**
+ * Responsive
+ */
+
+
+/********** Media Queries *****************************************************/
+
+@media only screen and (max-width: 1550px) {
+    #footer > .container {
+        padding: 45px 35px 20px 40px;
+    }
+    .main .col-item h4 {
+        height: 80px;
+        line-height: 80px;
+        font-size: 25px;
+        font-size: 2.5rem;
+    }
+    #header .logo {
+        left: 40px;
+    }
+    .main .col-item .see-more {
+        bottom: 10px;
+    }
+    $colspadding: 90px 10px 30px 40px;
+    .main .col-item {
+        padding: $colspadding;
+    }
+    .main .col-item.live-feeds-wrapper {
+        padding-right: 40px;
+    }
+    .main .col-item.news-wrapper,
+    .main .col-item.events-wrapper,
+    .main .col-item h4,
+    .main .col-item.live-feeds-wrapper h4,
+    .main .col-item.news-wrapper h4,
+    #slider .slider-info,
+    .main .col-item.live-feeds-wrapper {
+        padding-left: 40px;
+    }
+    #slider .slider-info {
+        padding-right: 40px;
+    }
+    .main .col-item.live-feeds-wrapper .avatar {
+        width: 65px;
+        margin-right: 10px;
+    }
+    .main .col-item.news-wrapper .bx-wrapper {
+        margin-left: -15px;
+        overflow: hidden;
+    }
+}
+
+@media only screen and (max-width: 1160px) {
+    #slider .slider-info {
+        max-width: 100%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .main .col-item .see-more {
+        right: 20px;
+    }
+    #footer > .container {
+        padding: 45px 35px 20px 35px;
+    }
+}
+
+@media only screen and (min-width: 1041px) and (max-width: 1210px) {
+    #left-nav span#menu {
+        margin-top: 0;
+    }
+    .menu-wrap ul.first-nav {
+        width: 65%;
+    }
+    #left-nav .menu-btn {
+        width: 200px;
+        height: 100px;
+        float: right;
+    }
+    #left-nav .menu-btn > span:first-child {
+        font-size: 24px;
+        line-height: 100px;
+        padding-left: 50px;
+    }
+    #left-nav .menu-close {
+        left: 150px;
+        top: 30px
+    }
+    #left-nav.active .menu-btn {
+        width: 200px;
+        height: 100px;
+        float: right;
+    }
+    #left-nav.active .menu-close {
+        left: 150px;
+        top: 30px
+    }
+    #left-nav.active .menu-btn > span:first-child {
+        font-size: 24px;
+        line-height: 100px;
+        padding-left: 50px;
+    }
+    .active .menu-close,
+    #left-nav.active .menu-btn:hover .menu-close,
+    {
+        left: 150px;
+    }
+    #left-nav.active .menu-btn .active,
+    #left-nav .first-menu span:hover,
+    #left-nav .schools-menu span:hover {
+        line-height: 100px;
+    }
+    #left-nav .first-menu,
+    #left-nav .schools-menu {
+        right: 21px;
+    }
+    #left-nav .first-menu:after,
+    #left-nav .schools-menu:after {
+        top: 86px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    #left-nav.active .menu-btn > span:first-child {
+        display: none;
+    }
+    #left-nav.active .first-menu {
+        margin: 0 0 0 71px;
+    }
+}
+
+//*Start Menu Padding Fixes*//
+@media only screen and (min-width: 1039px) and (max-width: 1650px) {
+    .menu-wrap ul.first-nav {
+        .extra-padding {
+            padding-left: 100px;
+            line-height: 0;
+            display: block;
+        }
+    }
+    .menu-wrap ul.first-nav {
+        #third-line-padding {
+            padding-left: 100px;
+            line-height: 1;
+            display: inline;
+        }
+    }
+}
+
+@media only screen and (min-width: 1039px) and (max-width: 1225px) {
+    .menu-wrap ul.first-nav {
+        #no-line-break {
+            white-space: nowrap;
+        }
+    }
+}
+
+//*End Menu Padding Fixes *//
+@media only screen and (max-width: 1040px) {
+    #footer .footer-col.hrs-logo {
+        padding-right: 0;
+        a {
+            display: inline-block;
+            float: none;
+            padding-right: 0px;
+            img {
+                display: none;
+            }
+        }
+    }
+    #footer .app-store,
+    #footer .google-play {
+        margin-top: 15px;
+    }
+    #header .logo {
+        padding: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 27px;
+        line-height: 30px;
+        a {
+            padding-left: 0;
+        }
+        span {
+            padding: 0;
+            font-size: 21px;
+            line-height: 24px;
+        }
+        img {
+            display: inline-block;
+        }
+    }
+    #left-nav span#menu {
+        margin-top: 0;
+    }
+    #left-nav,
+    #left-nav.active {
+        width: 100%;
+    }
+    #left-nav .menu-btn {
+        height: 50px;
+        width: 100%
+    }
+    #left-nav.active .menu-btn {
+        width: 100%
+    }
+    #left-nav .menu-btn > span:first-child,
+    #right-nav .menu-btn > span {
+        height: 50px;
+        line-height: 50px;
+        font-size: 24px;
+        text-align: center;
+        padding-left: 0px;
+    }
+    .menu-close,
+    .active .menu-close,
+    #left-nav.active .menu-btn:hover .menu-close {
+        right: 20px;
+        height: 50px;
+        background-position: center center;
+        top: 0;
+        left: auto;
+    }
+    #left-nav .first-menu,
+    #left-nav .schools-menu {
+        height: 50px;
+        line-height: 50px;
+        font-size: 20px;
+        left: -50px;
+    }
+    .schools-nav li {
+        font-size: 16px;
+    }
+    #left-nav .first-menu:after {
+        display: none;
+    }
+    #left-nav.active .first-menu {
+        margin-left: 50%;
+    }
+    ul.first-nav li a {
+        font-size: 20px;
+    }
+    .menu-wrap ul.first-nav {
+        padding: 0;
+    }
+    .menu-wrap.school-wrap {
+        padding-top: 45px;
+    }
+    ul.first-nav li,
+    .menu-wrap ul.first-nav,
+    .menu-wrap .second-nav,
+    .menu-wrap.school-wrap {
+        float: none;
+        width: 100%;
+    }
+    #left-nav.active .schools-menu {
+        margin-left: 35px;
+    }
+    .schools-nav li {
+        margin-bottom: 20px;
+    }
+    .menu-wrap {
+        top: 50px;
+        padding: 20px;
+    }
+    #header {
+        height: auto;
+        padding-bottom: 0px;
+    }
+    #header .logo {
+        left: 0;
+        text-align: center;
+        padding: 0;
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+    #header .logo a {
+        display: block;
+        margin: 0 auto 10px;
+    }
+    #header .logo img {
+        position: relative;
+        margin: 0 auto 10px;
+        display: block;
+        float: none;
+    }
+    #right-nav,
+    #left-nav {
+        top: auto;
+        right: 0;
+        position: relative;
+        float: none;
+        margin-top: 0px;
+    }
+    #slider p {
+        font-size: 18px;
+    }
+    #slider .bx-wrapper {
+        padding-left: 0;
+    }
+    #footer > .container {
+        padding: 25px 40px 20px;
+        background: url("logo-footer.png") no-repeat center 15px;
+        background-size: 118px auto;
+    }
+    .slider-container img {
+        max-width: 100%;
+        width: 100%;
+    }
+    .slider-container img {
+        height: auto !important;
+    }
+    #slider .slider-info h1 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 18px;
+    }
+    #slider .slider-info h2 {
+        font-size: 25px;
+        line-height: 29px;
+        margin-bottom: 18px;
+    }
+    #slider .slider-info h3 {
+        font-size: 23px;
+        line-height: 29px;
+        margin-bottom: 15px;
+    }
+    #slider .slider-info h4 {
+        font-size: 20px;
+        line-height: 29px;
+        margin-bottom: 15px;
+    }
+    #slider .slider-info h5 {
+        font-size: 18px;
+        line-height: 29px;
+        margin-bottom: 15px;
+    }
+    #slider .slider-info h6 {
+        font-size: 16px;
+        line-height: 29px;
+        margin-bottom: 15px;
+    }
+    #slider .slider-info p {
+        font-size: 14px;
+        line-height: 29px;
+    }
+    .bx-wrapper .bx-viewport .slide:after {
+        display: none;
+    }
+    .bx-wrapper .bx-pager {
+        text-align: center;
+        right: auto;
+        left: 0;
+        width: 100%;
+        background: $black;
+        bottom: 0;
+        padding: 10px 0;
+    }
+    #slider .slider-info {
+        position: relative;
+        margin: 0 !important;
+        width: 100%;
+        text-align: center;
+        padding: 15px 40px 25px;
+        left: 0;
+    }
+    .bx-wrapper {
+        width: 100%;
+        float: none;
+        margin-top: 0;
+        padding: 0;
+    }
+    .menu-wrap {
+        height: auto !important;
+    }
+    #slider .slider-info {
+        -webkit-transform: translateY(0%);
+        -ms-transform: translateY(0%);
+        transform: translateY(0%);
+        top: 0;
+        background: #08338f;
+    }
+    .main .col-item .see-more {
+        position: relative;
+        display: block;
+        text-align: center;
+        right: 0;
+        top: 0;
+    }
+    #slider {
+        height: auto !important;
+    }
+    #slider p,
+    #slider h2 {
+        text-align: center;
+        padding-right: 0;
+    }
+    .main .col-item.news-wrapper h4,
+    .main .col-item h4,
+    .main .col-item.live-feeds-wrapper h4 {
+        padding-left: 0;
+        text-align: center;
+    }
+    .main .col-item.news-wrapper,
+    .main .col-item,
+    .main .col-item.events-wrapper,
+    .main .col-item.live-feeds-wrapper {
+        padding: 0;
+    }
+    .main .col-item .news,
+    .main .col-item.events-wrapper .event,
+    .main .col-item .live-feed {
+        padding: 0 40px;
+    }
+    .main .col-item.news-wrapper .bx-wrapper .bx-pager {
+        padding: 5px 0;
+        right: 0;
+        width: 100%;
+        text-align: center;
+        bottom: auto;
+        top: -35px;
+    }
+    .news .image img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .col-item .news .right-content {
+        padding: 0 15px;
+    }
+    .main .col-item.news-wrapper {
+        width: 100%;
+    }
+    .main .col-item.news-wrapper .see-more {
+        background: #08338f;
+        color: #fff;
+    }
+    .bx-wrapper .bx-pager {
+        text-align: center;
+        right: auto;
+        left: 0;
+        width: 100%;
+        background: #08338f;
+        bottom: 0;
+        padding: 10px 0;
+    }
+    .main .col-item.live-feeds-wrapper {
+        width: 100%;
+    }
+    .main .col-item {
+        height: auto !important;
+        padding: 0 0 15px;
+    }
+    #footer .app-store,
+    #footer .google-play {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+    #footer .app-store,
+    #footer .google-play {
+        background-position: center top;
+    }
+    .bx-wrapper {
+        width: 100%;
+        float: none;
+        padding: 0;
+    }
+    .main .col-item,
+    .main .left-sidebar,
+    .main .container > .right-content,
+    .main .col-item:first-child {
+        float: none;
+        width: 100%;
+        margin-top: 25px;
+        margin-bottom: 20px;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    .images-grid {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .main .left-sidebar h1,
+    .right-content h3,
+    .right-content .right-links {
+        text-align: left;
+    }
+    .col-item .news .right-content {
+        line-height: normal;
+        min-height: initial;
+    }
+    .main .col-item h4 {
+        margin-bottom: 25px;
+        position: relative;
+        height: 70px;
+        line-height: 70px;
+        line-height: 7rem;
+    }
+    .right-content .right-links {
+        margin-bottom: 20px;
+    }
+    .right-content h3 {
+        line-height: 30px;
+        line-height: 3rem;
+    }
+    #footer .footer-col {
+        width: 100% !important;
+        float: none;
+        margin-bottom: 10px;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    #footer .footer-col {
+        text-align: center;
+        padding-top: 30px;
+    }
+    #footer .footer-col.sri-logo {
+        margin-bottom: 50px;
+    }
+    #footer .footer-col h5,
+    #footer .footer-col:last-child h5 {
+        width: 100%;
+        padding: 0;
+        max-width: 100%;
+        text-align: center;
+    }
+    .footer-links {
+        width: 100%;
+    }
+    .main .left-sidebar {
+        margin: 0;
+    }
+    .breadcrumb + .main .container {
+        padding: 0;
+    }
+    .breadcrumb + .main .right-content {
+        padding: 0 40px 30px;
+        min-height: initial;
+    }
+    .breadcrumb li:first-child {
+        margin-left: 0;
+    }
+    .breadcrumb ol {
+        text-align: center;
+    }
+    .left-sidebar h3 {
+        margin-top: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .left-sidebar .left-links li {
+        margin-left: 10px;
+    }
+    #right-nav .menu-wrap li,
+    #right-nav .menu-wrap ul {
+        display: block;
+        padding: 0;
+    }
+    .menu-wrap {
+        height: auto !important;
+    }
+}
+
+@media only screen and (max-width: 805px) {
+    .images-grid {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    .menu-wrap .second-nav > ul {
+        width: 100%;
+        padding: 15px 0 0;
+        border: 0;
+    }
+}
+
+@media only screen and (max-width: 505px) {
+    .images-grid a {
+        width: 100%;
+        padding-right: 0;
+    }
+}

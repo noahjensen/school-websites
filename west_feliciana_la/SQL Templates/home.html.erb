@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html class="homepage no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marysville Schools</title>
+     <%= include_gon %>
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,400italic,700,700italic' rel='stylesheet' type='text/css'>
+	<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/4880e9e1-00b2-422f-b406-e35c4c4a064c.css" />
+
+
+<%= favicon_link_tag "apptegy_cms/themes/westfelicianala/favicon.ico" %>
+
+    <%= javascript_include_tag "apptegy_cms/themes/westfelicianala/application" %>
+    <%= stylesheet_link_tag    "apptegy_cms/themes/westfelicianala/application", :media => "all"  %>
+</head>
+
+<body class="homepage cbp-spmenu-push <%= "#{current_organization.organization_alias.downcase.tr(' ', '-')}-page no-js" %>">
+
+ <%= render 'westfelicianala/shared/header'  %>
+
+<!-- ======================== SLIDER ======================== -->
+
+
+<div id="slider" class="clearfix">
+  <img src="css/school-overlay.png" alt="" class="school-overlay">
+	<div class="slider-container">
+		<% current_organization.photos.order(:position).each do |photo| %>
+			  <div class="slide">
+					<img src="<%= photo.try(:url) %>">
+						<div class="slider-info">
+							<%= raw current_organization.bulletin_board.try(:content) %>
+						</div>
+			  </div>
+     <% end %>
+    </div>
+</div>
+
+<!-- ======================== MAIN CONTENT ======================== -->
+<%= cms_slider_menu %>
+<div class="main" role="main">
+    <div class="container clearfix">
+       <%= render 'westfelicianala/shared/section_boxes'  %>
+     </div>
+</div>
+
+<!-- ======================== FOOTER ======================== -->
+
+ <%= render 'westfelicianala/shared/footer'  %>
+
+<!-- ======================== JAVASCRIPTS ======================== -->
+
+
+
+
+  <script type="text/javascript">
+		if ((/Android|iPhone|iPad|iPod|BlackBerry|Windows Phone/i).test(navigator.userAgent || navigator.vendor || window.opera)) {
+			$('body').removeClass('desktop');
+		}
+		$(document).ready(function() {
+
+			$('.main .col-item.news-wrapper .news p').dotdotdot({
+				watch: 'window'
+			});
+
+
+			/* ---	Equal height function resizeable on window resize ---- */
+			if ($(window).width() > 880) {
+				delay(function() {
+					$('.main .col-item').css('height', 'auto'); //solve for all you browser stretchers out there!
+					setEqualHeight($('.main .col-item'));
+				}, 500);
+			}
+			$(window).resize(function() {
+				if ($(window).width() > 880) {
+					delay(function() {
+						$('.main .col-item').css('height', 'auto'); //solve for all you browser stretchers out there!
+						setEqualHeight($('.main .col-item'));
+					}, 500);
+
+				} else {
+					$(".main .col-item").css('height', 'auto');
+				}
+			});
+
+
+
+			$(window).on('scroll', function() {
+				var delay = 0;
+				$('.main .col-item').children().each(function(i) {
+
+					var bottom_of_object = $(this).offset().top;
+					var bottom_of_window = $(window).scrollTop() + $(window).height();
+					if (bottom_of_window > bottom_of_object) {
+
+						var $li = $(this);
+						setTimeout(function() {
+							$li.addClass('active');
+						}, delay += 50);
+					}
+
+				});
+
+			});
+			$(window).trigger('scroll');
+
+			if ($(window).width() > 1040) {
+				var sliderheight = $('#slider').height();
+				var headerheight = $('#header').height();
+				var windowheight = $(window).height();
+				var imgheight = windowheight - headerheight;
+				$('.slider-container img, #slider,.slider-container  .bx-wrapper .bx-viewport').css("max-height", imgheight);
+				//$('#left-nav .menu-wrap').css("min-height", imgheight);
+
+			} else {
+				$('.slider-container img, #slider,.slider-container .bx-wrapper .bx-viewport').css("max-height", "100%");
+				$('.slider-container img, #slider, .bx-wrapper .bx-viewport').css("min-height", 90);
+				//$('#left-nav .menu-wrap').css("height", "auto");
+			}
+			$(window).resize(function() {
+				if ($(window).width() > 1040) {
+					var sliderheight = $('#slider').height();
+					var headerheight = $('#header').height();
+					var windowheight = $(window).height();
+					var imgheight = windowheight - headerheight;
+					$('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("max-height", imgheight);
+					//$('#left-nav .menu-wrap').css("min-height", imgheight);
+
+				} else {
+					$('.slider-container img, #slider,.slider-container  .bx-wrapper .bx-viewport').css("max-height", "100%");
+					$('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("min-height", 90);
+					//$('#left-nav .menu-wrap').css("height", "auto");
+				}
+			});
+			$('.slider-container').bxSlider({
+				mode: 'fade',
+				auto: true,
+				autoHover: true,
+				adaptiveHeight: true,
+				onSliderLoad: function() {
+					if ($(window).width() > 1040) {
+						var sliderheight = $('#slider').height();
+						var headerheight = $('#header').height();
+						var windowheight = $(window).height();
+						var imgheight = windowheight - headerheight;
+						$('.slider-container img, #slider,.slider-container  .bx-wrapper .bx-viewport').css("max-height", imgheight);
+						//$('#left-nav .menu-wrap').css("min-height", imgheight);
+
+					} else {
+						$('.slider-container img, #slider,.slider-container .bx-wrapper .bx-viewport').css("max-height", "100%");
+						$('.slider-container img, #slider, .bx-wrapper .bx-viewport').css("min-height", 90);
+						//$('#left-nav .menu-wrap').css("height", "auto");
+					}
+					$(window).resize(function() {
+						if ($(window).width() > 1040) {
+							var sliderheight = $('#slider').height();
+							var headerheight = $('#header').height();
+							var windowheight = $(window).height();
+							var imgheight = windowheight - headerheight;
+							$('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("max-height", imgheight);
+							//$('#left-nav .menu-wrap').css("min-height", imgheight);
+
+						} else {
+							$('.slider-container img, #slider,.slider-container  .bx-wrapper .bx-viewport').css("max-height", "100%");
+							$('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("min-height", 90);
+							//$('#left-nav .menu-wrap').css("height", "auto");
+						}
+					});
+				}
+
+			});
+
+		});
+
+	</script>
+
+  </body>
+</html>

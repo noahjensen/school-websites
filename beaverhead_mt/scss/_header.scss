@@ -1,0 +1,696 @@
+/* ===== Header ========================================================== */
+
+#header {
+    padding: 0 0 0 35px;
+    min-height: 108px;
+    background: $header-bg;
+    position: relative;
+    width: 100%;
+    .logo {
+        width: auto;
+        line-height: 108px;
+        position: absolute;
+        @extend %horizontal-align;
+        top: 0;
+        margin: 0;
+        z-index: 101;
+        overflow: visible;
+        text-decoration: none;
+        white-space: nowrap;
+        margin-left: -75px;
+        img {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            z-index: -1;
+        }
+        h1,
+        h2 {
+            @include second-font-family;
+            @include font-size(45);
+            @include line-height(50);
+            text-transform: uppercase;
+            color: $logo-color;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            //margin-right: -15px;
+        }
+        h2 {
+            margin: 0;
+            text-transform: none;
+            margin-left: -20px;
+        }
+    }
+}
+
+
+/* ===== Menu ========================================================== */
+
+#left-nav {
+    float: left;
+    margin-right: 0;
+    margin-top: 0;
+    //position: relative;
+}
+
+#right-nav {
+    float: right;
+    margin-right: 0;
+}
+
+#left-nav .menu-btn {
+    background: $menu-btn-bg url('menu-icon.png') no-repeat left center;
+    //width: 365px;
+    position: relative;
+    height: 108px;
+    overflow: hidden;
+    @include transition();
+}
+
+#left-nav .menu-btn>span:first-child,
+#right-nav .menu-btn>span {
+    @include font-size(20);
+    @include line-height(108);
+    color: $menu-btn-txt-color;
+    text-transform: uppercase;
+    padding-left: 24px;
+    padding-right: 18px;
+    background: transparent;
+    text-align: left;
+    display: block;
+    cursor: pointer;
+    @include second-font-family;
+}
+
+#right-nav .menu-btn>span {
+    padding-left: 10px;
+    padding-right: 25px;
+    position: relative;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -4px;
+        right: 0;
+        width: 15px;
+        height: 8px;
+        background: url('arrows.png') no-repeat center top;
+    }
+}
+
+#right-nav.active .menu-btn>span {
+    &:after {
+        background-position: center bottom;
+    }
+}
+
+.menu-wrap {
+    z-index: 100;
+    background: $menu-wrap-bg;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    right: 0;
+    left: auto;
+    top: 95px;
+    padding-top: 0;
+    overflow: visible;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 115px;
+    padding-bottom: 38px;
+    text-align: center;
+    @include transition();
+}
+
+#left-nav .menu-wrap {
+    display: block;
+    top: 108px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+    transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+#left-nav.active .menu-wrap {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+.menu-wrap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+}
+
+.menu-wrap .second-nav {
+    text-align: center;
+    margin-top: 90px;
+    width: 100%;
+    ul {
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0 35px 25px;
+        float: none;
+    }
+}
+
+.menu-wrap .second-nav>ul {
+    width: auto;
+    float: none;
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 40px 0 40px;
+}
+
+.menu-wrap .second-nav>ul.two-cols {
+    overflow: hidden;
+    padding-right: 30px;
+}
+
+.menu-wrap .second-nav>ul.two-cols li {
+    width: 200px;
+    padding-right: 10px;
+}
+
+.menu-wrap .second-nav>ul.two-cols li:nth-child(even) {
+    float: left;
+}
+
+.menu-wrap .second-nav>ul.two-cols li:nth-child(odd) {
+    overflow: hidden;
+}
+
+.menu-wrap .second-nav>ul:first-child {
+    border: 0;
+    padding-left: 0;
+}
+
+.menu-wrap .second-nav>ul:last-child {
+    padding-right: 0;
+}
+
+.menu-wrap .second-nav {
+  text-align: center;
+  margin-top: 50px;
+  overflow: visible;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 50px;
+}
+
+.menu-wrap ul.first-nav {
+    margin-top: 0px;
+    text-align: center;
+    padding-left: 0;
+    padding-right: 0;
+    display: block;
+    width: 100%;
+    float: none;
+}
+
+ul.first-nav li {
+    display: inline-block;
+    vertical-align: top;
+    width: auto;
+    font-size: 27px;
+    color: $white;
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin: 0 35px 20px;
+    text-align: center;
+    &:nth-child(odd) span {
+        background: #0b2646;
+    }
+}
+
+ul.first-nav li a {
+    font-size: 27px;
+    display: block;
+    color: $white;
+    line-height: 33px;
+    @include second-font-family;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+ul.first-nav li span {
+    width: 118px;
+    height: 118px;
+    line-height: 118px;
+    text-align: center;
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #b29754;
+    margin: 0 auto 20px;
+    font-size: 0;
+}
+
+
+/*
+ul.first-nav li.live-feed span {
+   background: #232323;
+}
+ul.first-nav li.staff span {
+   background: #2ccdc4;
+}
+ul.first-nav li.news span {
+   background: #2ccd43;
+}
+ul.first-nav li.events span {
+   background: #9a3de8;
+}
+ul.first-nav li.dining span {
+   background: #e53552;
+}
+ul.first-nav li.documents span {
+   background: #18b955;
+}
+ul.first-nav li.athletics span {
+   background: #e8b836;
+}
+*/
+
+ul.first-nav li span img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+ul.first-nav li a:hover {
+    text-decoration: none;
+    color: #b29754;
+}
+
+.schools-nav li,
+.second-nav li {
+    @include font-size(25);
+    @include line-height(20);
+    color: $white;
+    margin: 0 0 20px;
+    text-align: left;
+    width: auto;
+    padding: 0 15px;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.second-nav li.has-child {
+    position: relative;
+    cursor: pointer;
+    /* min-width: 210px; */
+    text-align: left;
+}
+
+.second-nav li.has-child span {
+    position: relative;
+    display: inline-block;
+    padding-right: 28px;
+}
+
+.second-nav li.has-child span:after {
+    display: block;
+    position: absolute;
+    z-index: 9;
+    right: 0;
+    top: 2px;
+    content: " ";
+    background: url('submenu-arrow.png') no-repeat right 6px;
+    height: 22px;
+    width: 20px;
+    overflow: hidden;
+}
+
+.second-nav li.has-child.open span:after {
+    background: url('submenu-arrow.png') no-repeat right -101px;
+}
+
+.second-nav li.has-child ul {
+    position: absolute;
+    left: 72px;
+    top: 25px;
+    background: $submenu-bg;
+    padding: 15px 4px 15px 10px;
+    width: auto;
+    z-index: 99;
+    min-width: 210px;
+    background: $white;
+}
+
+.second-nav li.has-child ul li {
+    float: none;
+    width: auto;
+    margin: 15px 0 0;
+    text-transform: uppercase;
+}
+
+.second-nav li>ul>li,
+.second-nav ul h5 {
+    display: block;
+    @include font-size(15);
+    @include line-height(18);
+    text-transform: none;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.second-nav ul h5 {
+    color: #131313;
+    @include font-size(16);
+    @include line-height(19);
+    text-transform: uppercase;
+    font-weight: 400;
+}
+
+.second-nav li.has-child ul li a {
+    color: $black;
+}
+
+.second-nav li a {
+    color: $white;
+    text-decoration: none;
+}
+
+.second-nav li.has-child ul li:first-child {
+    margin: 0;
+}
+
+ul.second-nav li.has-child {
+    position: relative;
+    cursor: pointer;
+    /* min-width: 210px; */
+    text-align: left;
+}
+
+ul.second-nav li.has-child span {
+    position: relative;
+    display: inline-block;
+    padding-right: 28px;
+}
+
+ul.second-nav li.has-child>span:after,
+ul.second-nav li.has-child>a:after {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 2px;
+    content: " ";
+    background: url('submenu-arrow.png') no-repeat right 6px;
+    height: 22px;
+    width: 20px;
+    overflow: hidden;
+}
+
+ul.second-nav li.has-child.open>span:after,
+ul.second-nav li.has-child.open>a:after {
+    background: url('submenu-arrow.png') no-repeat right -101px;
+}
+
+ul.second-nav li ul li.has-child:after,
+ul.second-nav li ul li.has-child>span:after,
+ul.second-nav li ul li.has-child>a:after {
+    background: url('submenu-arrow.png') no-repeat right 6px;
+}
+
+ul.second-nav li ul li.has-child.open:after,
+ul.second-nav li ul li.has-child.open>span:after,
+ul.second-nav li ul li.has-child.open>a:after {
+    background: url('submenu-arrow.png') no-repeat right -104px;
+}
+
+ul.second-nav li.has-child>ul {
+    position: absolute;
+    background: #0b2646;
+    visibility: hidden;
+    @include opacity(0);
+    @include transition(all,
+    0.3s);
+    width: auto;
+    min-width: 250px;
+}
+
+ul.second-nav li.has-child.open>ul {
+    overflow: visible;
+    visibility: visible;
+    max-height: 800px;
+    @include opacity(1);
+    z-index: 999999;
+    @include transition(all,
+    0.6s);
+}
+
+ul.second-nav li ul li.has-child ul {
+    background: #dfdfdf;
+    border: 1px solid #252525;
+    left: auto;
+    width: auto;
+    min-width: 180px;
+    a {
+        color: #252525;
+    }
+}
+
+ul.second-nav li.has-child ul li {
+    float: none;
+    width: auto;
+    margin: 15px 0 0;
+    white-space: nowrap;
+}
+
+ul.second-nav li.has-child ul li a {
+    color: #fff;
+    border-left: transparent solid 10px;
+    padding-left: 10px;
+}
+
+ul.second-nav li.has-child ul li a:hover {
+    border-left: #b29754 solid 10px;
+}
+
+ul.second-nav li.has-child ul li:first-child {
+    margin: 0;
+}
+
+.menu-close {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 43px;
+    top: 42px;
+    overflow: hidden;
+    border: none;
+    background: url(close.png) no-repeat center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+    cursor: pointer;
+}
+
+#right-nav .menu-wrap {
+    width: 540px;
+    background: $right-menu-wrap-bg;
+    padding: 55px 10px 55px 65px;
+    left: auto;
+    right: 0;
+    top: 108px;
+    height: auto;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+    transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+}
+
+#right-nav.active .menu-wrap {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+}
+
+#right-nav .menu-wrap ul {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+#right-nav .menu-wrap li {
+    font-size: 25px;
+    color: $white;
+    line-height: 30px;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    @include second-font-family;
+}
+
+#right-nav .menu-wrap li a {
+    color: $white;
+    display: inline-block;
+    padding: 0;
+    text-decoration: none;
+}
+
+#right-nav .menu-wrap li.active a {
+    border-bottom: 2px solid #FFF;
+}
+
+
+/* new css code for search and language  */
+
+#header .search-icon {
+    float: right;
+    width: 89px;
+    height: 108px;
+    cursor: pointer;
+    background: url("search-icon.png") no-repeat center center;
+    display: block;
+    margin: 0;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+
+#header #change_language_form {
+    float: right;
+    //min-width: 152px;
+    padding: 0 40px 0 5px;
+    margin-left: 20px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    background: #fff;
+    form {
+        margin: 0;
+        font-size: 0;
+    }
+    select {
+        height: 108px;
+        line-height: 108px;
+        background: #fff;
+        font-size: 20px;
+        color: #333;
+        text-transform: uppercase;
+        cursor: pointer;
+        position: relative;
+        left: -4px;
+        @include second-font-family;
+    }
+    .s-hidden {
+        visibility: hidden !important;
+        padding-right: 10px;
+        width: 0px;
+        overflow: hidden;
+        height: 0px;
+        position: absolute;
+    }
+    .select {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        background-color: transparent;
+        margin: 0;
+        font-size: 0;
+        &:hover {
+            .styledSelect {
+                color: #000;
+            }
+        }
+    }
+    .select {
+        height: 108px;
+        line-height: 108px;
+        width: auto;
+        display: inline-block;
+        vertical-align: top;
+    }
+    .styledSelect {
+        position: relative;
+        display: inline-block;
+        font-size: 20px;
+        color: #333;
+        padding-right: 15px;
+        text-transform: uppercase;
+        cursor: pointer;
+        @include second-font-family;
+    }
+    .styledSelect:after {
+        content: '';
+        position: absolute;
+        right: -4px;
+        top: 50%;
+        margin-top: -4px;
+        width: 14px;
+        height: 8px;
+        background: url('arrows.png') no-repeat center top;
+    }
+    .styledSelect:active:after,
+    .styledSelect.active:after {
+        background-position: center bottom;
+    }
+    .options {
+        display: none;
+        position: absolute;
+        top: 108px;
+        right: 0;
+        left: 0;
+        z-index: 999;
+        margin: 0 0;
+        padding: 20px 0;
+        list-style: none;
+        border: 0;
+        background: #636363;
+        width: 200px;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .options li {
+        display: block;
+        margin-top: 10px;
+        font-size: 20px;
+        line-height: 30px;
+        color: #FFF;
+        text-align: left;
+        text-transform: uppercase;
+        padding: 5px 8px 5px 35px;
+        border-left: 15px solid transparent;
+        text-decoration: none;
+        font-weight: 700;
+        &:first-child {
+            margin-top: 0;
+        }
+        &.selected {
+            border-color: #b29754;
+        }
+    }
+    .options li[rel="0"] {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .second-nav li {
+        width: 100%;
+    }
+}

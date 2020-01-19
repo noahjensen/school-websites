@@ -1,0 +1,56 @@
+<footer id="footer">
+    <div class="container clearfix">
+        <div class="footer-col">
+            <h5><%= current_organization.try(:name) %></h5>
+            <p><%= current_organization.try(:address) %>
+                <br><%= "#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+                <br><%= "Ph #{current_organization.try(:phone_number)}" %>
+                <br><%= "Fax #{current_organization.try(:fax_number)}" %></p>
+        </div>
+
+        <div class="footer-col">
+            <h5>O-F School District</h5>
+            <p>50851 East Street
+                <br>Osseo, WI 54758
+                <br>Ph (715) 597-3141
+                <br>Fax (715) 597-3606 </p>
+        </div>
+
+        <div class="footer-col">
+            <h5>O-F Middle/High</h5>
+            <p>50851 East Street
+                <br>Osseo, WI 54758
+                <br>Ph (715) 597-3141
+                <br>Fax (715) 597-3647 </p>
+        </div>
+
+        <div class="footer-col">
+            <h5>Osseo Elementary</h5>
+            <p>13025 15th Street
+                <br>Osseo, WI 54758
+                <br>Ph (715) 597-3196
+                <br>Fax (715) 597-3406 </p>
+        </div>
+
+        <div class="footer-col">
+            <h5>Fairchild Elementary</h5>
+            <p>220 W Main Street, PO Box 100
+                <br>Fairchild, WI 54741
+                <br>Ph (715) 334-3311
+                <br>Fax (715) 334-5461 </p>
+        </div>
+
+        <div class="footer-col last">
+            <% if current_organization.try(:facebook_link).present? %>
+            <a href="<%= current_organization.try(:facebook_link) %>" class="fb" target="_blank"><%= image_tag "apptegy_cms/themes/osseofairchildwi/facebook-icon.png", alt: " "%></a>
+           <% end %>
+
+             <a href="https://itunes.apple.com/us/app/elkhorn-area-school-district/id1180724674" class="app-store">Download on the App Store</a>
+            <br>
+           <% if current_organization.try(:twitter_link).present? %>
+            <a href="<%= current_organization.try(:twitter_link) %>" class="tw" target="_blank"><%= image_tag "apptegy_cms/themes/osseofairchildwi/twitter.png", alt: " "%></a>
+         <% end %>
+       <a href="https://play.google.com/store/apps/details?id=com.apptegy.elkhorn" class="google-play">Get it on Google play</a> </div>
+    </div>
+    <div class="container copyright">Copyright &copy; Osseo-Fairchild School District 2017. All rights reserved. Powered by <a href="http://apptegy.com/" target="_blank">apptegy</a>.</div>
+</footer>

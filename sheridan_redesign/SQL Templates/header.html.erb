@@ -1,0 +1,293 @@
+<!-- ======================== HEADER ======================== -->
+<header id="header" class="clearfix">
+    <span class="search-icon" style="z-index: 1000;"></span>
+    <h1 class="logo">
+        <a href="/">
+            <%= image_tag "apptegy_cms/themes/sheridanar_redesign/logo.png", alt: "Smackover Norphlet School District" %>
+
+        </a>
+Smackover-Norphlet School District <br><span>Home of the Battlin' Buckaroos
+    </h1>
+
+    <nav id="left-nav" class="nav active" role="navigation">
+
+        <div class="menu-btn">
+
+            <div class="first-menu">
+                <span>MENU</span>
+            </div>
+            <div class="schools-menu">
+                <span>Schools</span>
+            </div>
+
+        </div>
+
+        <div class="menu-wrap">
+            <ul class="first-nav clearfix">
+
+                <li class="live-feed">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+                        <span><%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/feed-icon.png', alt: "Live Feed Icon" %></span>
+                        Live Feed
+                    </a>
+                </li>
+
+                <li class="news">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+                        <span><%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/news-icon.png', alt: "News Icon" %>
+                        </span>
+                        News
+                    </a>
+                </li>
+
+                <li class="events">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/events.png', alt: "Events Icon" %>
+                        </span>
+                        Events
+                    </a>
+                </li>
+
+                <% if params[:org] == "central-office" %>
+                <li class="staff">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/staff.png', alt: "Staff Icon" %>
+                        </span>
+                        Staff
+                    </a>
+                </li>
+
+                <li class="documents">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/documents.png', alt: "Documents Icon" %>
+                        </span>
+                        Documents
+                    </a>
+                </li>
+
+
+
+
+
+
+                <% elsif params[:org] == "smackover-preschool" %>
+                <li class="staff">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/staff.png', alt: "Staff Icon" %>
+                        </span>
+                        Staff
+                    </a>
+                </li>
+
+                <li class="documents">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/documents.png', alt: "Documents Icon" %>
+                        </span>
+                        Documents
+                    </a>
+                </li>
+
+ <li class="dining">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/dining.png', alt: "Dining Icon" %>
+                        </span>
+                      Dining
+                    </a>
+                </li>
+
+
+
+
+                <% elsif params[:org] == "smackover-high-school" || params[:org] == "norphlet-middle" || params[:org] == "norphlet-elementary" || params[:org] == "smackover-elementary"%>
+                <li class="staff">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/staff.png', alt: "Staff Icon" %>
+                        </span>
+                        Staff
+                    </a>
+                </li>
+
+                <li class="dining">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>
+                        <span><%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/dining.png', alt: "Dining Icon" %>
+                        </span>
+                        Dining
+                    </a>
+                </li>
+
+                <li class="documents">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/documents.png', alt: "Documents Icon" %>
+                        </span>
+                        Documents
+                    </a>
+                </li>
+
+                <li class="athletics">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/athletics.png', alt: "Athletics Icon" %>
+                        </span>
+                        Athletics
+                    </a>
+                </li>
+
+
+            <% else%>
+
+            <li class="staff">
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+                    <span>
+                        <%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/staff.png', alt: "Staff Icon" %>
+                    </span>
+                    Staff
+                </a>
+            </li>
+
+            <li class="documents">
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                    <span>
+                        <%= image_tag 'apptegy_cms/themes/sheridanar_redesign/menu/documents.png', alt: "Documents Icon" %>
+                    </span>
+                    Documents
+                </a>
+            </li>
+
+                <%end%>
+            </ul>
+
+
+            <ul class="second-nav clearfix">
+             <% current_pages.roots.navigation_pages.each do |page| %>
+          <li>
+
+              <% if page.header? %>
+               <span> <%= translate(page.name) %> </span>
+              <% else %>
+                <a href=<%= page.page_link? ? "#{page.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{page.slug}" %> target=<%= '_blank' if page.page_link? %>>
+                  <%= translate(page.name) %>
+                </a>
+              <% end %>
+
+            <% if page.children.any? %>
+              <ul>
+                <% page.children.order(:position).each do |subpage| %>
+                <% if subpage.children.any? %>
+<li>
+
+              <% if subpage.header? %>
+               <span> <%= translate(subpage.name) %></span>
+              <% else %>
+                <a href=<%= subpage.page_link? ? "#{subpage.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+                  <span><%= translate(subpage.name) %></span>
+                </a>
+              <% end %>
+
+                  <ul>
+                    <% subpage.children.order(:position).each do |subpage2| %>
+                      <li>
+                      <a href=<%= subpage2.page_link? ? "#{subpage2.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage2.slug}" %> target=<%= '_blank' if subpage2.page_link? %> >
+                        <%= translate(subpage2.name) %>
+                      </a>
+                      </li>
+                      <% end %>
+                    </ul>
+</li>
+                  <% else %>
+                  <li>
+                    <a href=<%= subpage.page_link? ? "#{subpage.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+                       <%= translate(subpage.name) %>
+                    </a>
+                  </li>
+                  <% end %>
+                <% end %>
+              </ul>
+            <% end %>
+          </li>
+        <% end %>
+          </ul>
+<ul class="schools-nav clearfix" style="min-height: 430px !important;">
+
+
+        <span class="menu-close"></span>
+<% current_site.secondary_organizations.order(:position).each do |org| %>
+<li>
+<a href=<%= "/o/#{org.organization_alias.try(:parameterize)}" %>>
+<%= org.name %>
+</a>
+</li>
+<% end %>
+</ul>
+        </div>
+    </nav>
+<%#= render 'apptegy_cms/shared/change_language' %>
+<div id="change_language_form">
+  <%= form_tag change_language_path, method: :get, class: 'custom' do %>
+<label for="lang" style="display: none;">Change Language Form</label>
+      <%= select_tag(
+          :lang,
+          options_for_select(
+            current_site.try(:languages) || Translator::Language::LANGUAGES.keys,
+            current_language
+          ),
+          class: 'language-submittable'
+        )
+      %>
+  <% end %>
+</div>
+    <#%= render 'apptegy_cms/shared/search' %>
+<div class="search-overlay">
+   <div class="wrap-content">
+     <h5>Search</h5>
+     <form id="search-form" action="#">
+<label for="q" style="display: none;">Search Form</label>
+       <input id="q" type="text" autocomplete="off" autofocus=""></input>
+<label for="text" style="display: none;">Form Text</label>
+       <input type="text" disabled="disabled" autocomplete="off" id="text" class="search-term-shadow">
+     </form>
+
+     <div class="search-results" id="pages_results"></div>
+     <div class="search-results" id="articles_results"></div>
+     <div class="search-results" id="live_feed_results"></div>
+     <div class="search-results" id="staff_results"></div>
+     <div class="search-results" id="documents_results"></div>
+     <div class="search-results" id="events_results"></div>
+     <div class="search-results" id="scores_results"></div>
+
+     <div id="hits"></div>
+
+     <div class="close-icon">
+
+     </div>
+   </div>
+</div>
+
+<%= render 'apptegy_cms/shared/instant_search' %>
+</header>
+
+<style>
+.menu-wrap.school-wrap {
+min-height: 450px; !important}
+
+ul.second-nav li.has-child ul {
+width: 500px !important; }
+
+#left-nav .first-menu, #left-nav .schools-menu, #header #change_language_form .styledSelect {
+font-weight: bold !important;}
+
+ul.second-nav li.has-child ul li {white-space: normal !important;}
+
+@media only screen and (max-width: 1000px){
+#header .search-icon {
+    z-index: 1000;
+}
+}
+</style>

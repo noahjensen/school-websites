@@ -1,0 +1,121 @@
+// pusd Mixins and Variables
+
+
+.pusd {
+
+// Menu Icons
+  ul.first-nav li:nth-child(odd) span {
+      background: $pusd-menu-icon1;
+  }
+
+ul.first-nav li span {
+  background: $pusd-menu-icon2;
+}
+
+// First Level Dropdown
+.second-nav li.has-child ul {
+  background: $pusd-submenu-bg;
+}
+
+
+ul.first-nav li a {
+  color: $pusd-menu-text;
+}
+
+
+  .second-nav li ul li:hover {
+      a {
+          border-left: 15px solid $pusd-firstlevelhover;
+          color: #fff;
+      }
+  }
+
+
+// Second Level Dropdown
+  ul.second-nav li ul li.has-child ul {
+      background: $pusd-firstlevelhover;
+    }
+
+    ul.second-nav li ul li.has-child ul li:hover {
+        a {
+          border-left: 15px solid $pusd-submenu-bg;
+          color: #fff;
+        }
+    }
+
+
+// School Menu
+#right-nav .menu-wrap li:hover {
+    border-left: 15px solid $pusd-header-lefthover;
+}
+
+
+
+// Language Menu
+#header #change_language_form {
+    .options li.selected {
+            border-color: $pusd-header-lefthover;
+        }
+
+    .options li:hover {
+      border-left: 15px solid $pusd-header-lefthover;
+    }
+}
+
+.main .col-item {
+  &.news-wrapper:before {
+     background: $pusd-news;
+  }
+  &.events-wrapper:before {
+     background: $pusd-events;
+  }
+  &.live-feeds-wrapper:before {
+     background: $pusd-live-feed;
+  }
+
+}
+
+// Subpage
+.left-sidebar h3 {
+    background: $pusd-sidebar;
+}
+
+.right-content h2, .subpage h2, .right-content h3, .subpage h3,
+.right-content h4, .subpage h4, .right-content h5, .subpage h5,
+.right-content h6, .subpage h6{
+      color: $pusd-subpage-links;
+}
+
+blockquote {
+      border-left: 5px solid $pusd-subpage-links;
+}
+
+.right-content > a {
+
+    color: $pusd-subpage-links;
+;
+}
+
+
+// Slider
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: $pusd-slider !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}

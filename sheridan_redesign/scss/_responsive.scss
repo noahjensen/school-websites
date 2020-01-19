@@ -1,0 +1,850 @@
+/**
+ * Responsive
+ */
+/********** Media Queries *****************************************************/
+@media only screen and (max-width: 1920px) and (min-width: 1000px) {
+  .main .container {
+    padding-left: 3.64vw;
+    padding-right: 3.64vw;
+  }
+
+  .main .col-item.athletics-wrapper h4,
+  .main .col-item.gallery-wrapper h4,
+  .main .col-item.live-feeds-wrapper h4,
+  .main .col-item.news-wrapper h4,
+  body .main .col-item h4 {
+    background-size: 3.8vw auto;
+  }
+
+  .bx-wrapper .bx-pager {
+    bottom: get-vw(-50px);
+  }
+
+  .homepage .main {
+    padding-top: get-vw(0px);
+  }
+
+  .main .col-item {
+    height: get-vw(457px);
+  }
+
+  .main .col-item.events-wrapper {
+    height: get-vw(914px);
+  }
+
+  .main .col-item h4 {
+    font-size: get-vw(36px);
+    line-height: get-vw(40px);
+    padding-top: 0;
+  }
+
+  .main .col-item .hover-content {
+    padding-top: get-vw(120px);
+    padding-left: get-vw(70px);
+    padding-right: get-vw(55px);
+  }
+
+  .main .col-item .news {
+    margin-bottom: get-vw(40px);
+  }
+
+  .main .col-item.news-wrapper .right-content p {
+    @include font-size(29);
+    @include line-height(33);
+  }
+
+  .main .col-item .news .right-content .autor,
+  .main .col-item .news .right-content .date {
+    font-size: get-vw(18px);
+    line-height: get-vw(22px);
+    padding-left: get-vw(14px);
+    padding-right: get-vw(14px);
+  }
+
+  .main .col-item h4,
+  .main .col-item.athletics-wrapper h4,
+  .main .col-item.gallery-wrapper h4,
+  .main .col-item.live-feeds-wrapper h4,
+  .main .col-item.news-wrapper h4 {
+    top: get-vw(55px);
+    left: get-vw(70px);
+  }
+
+  .main .col-item .see-more {
+    height: get-vw(52px);
+    font-size: get-vw(18px);
+    line-height: get-vw(52px);
+  }
+
+  .main .col-item .see-more span {
+    padding-left: get-vw(45px);
+    padding-right: get-vw(45px);
+    height: get-vw(50px);
+    font-size: get-vw(18px);
+    line-height: get-vw(50px);
+  }
+
+  .main .col-item .news .right-content .autor {
+    padding-left: 0;
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    width: get-vw(20px);
+    height: get-vw(20px);
+  }
+
+  .main .col-item.live-feeds-wrapper .live-feed {
+    margin-bottom: get-vw(19px);
+  }
+
+  .main .col-item.live-feeds-wrapper .right-content p {
+    @include font-size(22);
+    @include line-height(26);
+    color: #282828;
+    margin: 0 0 8px;
+    @include first-font-family;
+  }
+
+  .main .col-item.live-feeds-wrapper .right-content p a {
+    max-height: get-vw(48px);
+  }
+
+  .main .col-item.live-feeds-wrapper .right-content .autor,
+  .main .col-item.live-feeds-wrapper .right-content .time {
+    font-size: get-vw(14px);
+    line-height: get-vw(14px);
+    padding-left: get-vw(9px);
+    padding-right: get-vw(9px);
+  }
+
+  .main .col-item.live-feeds-wrapper .right-content .time {
+    padding-left: 0;
+  }
+
+  .main .col-item.athletics-wrapper h5 {
+    font-size: get-vw(18px);
+    line-height: get-vw(22px);
+    margin-bottom: get-vw(8px);
+  }
+
+  .main .col-item.athletics-wrapper .team {
+    font-size: get-vw(30px);
+    line-height: get-vw(35px);
+  }
+
+  .main .col-item .event .date {
+    font-size: get-vw(18px);
+    line-height: get-vw(22px);
+  }
+
+  .main .col-item.events-wrapper .right-content a,
+  .main .col-item.events-wrapper .right-content p {
+    font-size: get-vw(24px);
+    line-height: get-vw(28px);
+    margin-top: get-vw(10px);
+  }
+
+  .main .col-item.athletics-wrapper .sport-event > span {
+    font-size: get-vw(18px);
+    line-height: get-vw(22px);
+    margin: get-vw(10px) 0;
+  }
+
+  .main .col-item.date-wrapper span.day {
+    margin-bottom: get-vw(47px);
+  }
+
+  .main .col-item.date-wrapper span {
+    font-size: get-vw(36px);
+    line-height: get-vw(40px);
+  }
+
+  .main .col-item.date-wrapper span.number {
+    font-size: get-vw(215px);
+    line-height: get-vw(219px);
+  }
+
+  .main {
+    padding-bottom: get-vw(70px);
+  }
+
+  #footer {
+    padding: 0 get-vw(70px);
+  }
+
+  #footer > .container {
+    max-width: get-vw(1920px);
+    padding: get-vw(40px) 0 get-vw(30px);
+  }
+
+  #footer > .container.copyright {
+    padding: get-vw(25px) 0;
+  }
+
+  #footer > .container.copyright,
+  #footer > .container.copyright p {
+    font-size: get-vw(20px);
+    line-height: get-vw(20px);
+    text-transform: uppercase;
+  }
+
+  #footer .footer-col:first-child {
+    padding-right: get-vw(15px);
+  }
+  /*#footer .footer-col p,
+    #footer .footer-col li,
+    #footer .footer-col li a,
+    #footer .footer-col h5 {
+        font-size: get-vw(14px);
+        line-height: get-vw(34px);
+    }*/
+  #footer .footer-col {
+    width: 23%;
+  }
+
+  #footer .footer-col.quicklinks {
+    width: 16%;
+    margin-left: 24px;
+  }
+
+  #footer .footer-col.sri-logo img {
+    height: 150px;
+    width: 125px;
+    margin-left: 0;
+  }
+
+  #footer .footer-col p {
+    margin-bottom: get-vw(19px);
+  }
+
+  #footer .footer-col h5 {
+    //font-size: get-vw(18px);
+    //line-height: get-vw(22px);
+    margin: get-vw(20px) 0 get-vw(25px);
+  }
+
+  #footer .footer-col.sri-logo {
+    padding-top: get-vw(105px);
+    padding-right: get-vw(15px);
+    width: 10%;
+  }
+
+  #footer .footer-col.last,
+  #footer .footer-col:last-child {
+    width: 21%;
+    margin-top: 36px;
+    text-align: right;
+  }
+
+  #footer .fb,
+  #footer .tw {
+    width: 3.18542vw;
+  }
+  // #footer .app-store, #footer .google-play {
+  //     max-width: get-vw(182px);
+  // }
+  .gallery-wrapper .hover-content .bx-wrapper,
+  .gallery-wrapper .hover-content .bx-wrapper .bx-viewport img {
+    min-height: get-vw(457px);
+  }
+
+  .main .col-item.athletics-wrapper .hover-content .view-more {
+    font-size: get-vw(50px);
+    line-height: get-vw(50px);
+    margin-top: get-vw(40px);
+  }
+
+  .main .col-item.athletics-wrapper .hover-content .view-more:after {
+    width: get-vw(26px);
+    height: get-vw(35px);
+  }
+
+  .main .col-item.events-wrapper .event {
+    margin-bottom: get-vw(45px);
+  }
+}
+/* limit min-font-size */
+@media only screen and (max-width: 1500px) {
+  #footer .footer-col h5,
+  #footer .footer-col li,
+  #footer .footer-col li a,
+  #footer .footer-col p,
+  #footer > .container.copyright,
+  #footer > .container.copyright p {
+    font-size: 12px;
+    line-height: 28px;
+  }
+
+  #footer .footer-col h5 {
+    font-size: 22px;
+    line-height: 17px;
+  }
+
+  .main .col-item.live-feeds-wrapper .right-content .autor,
+  .main .col-item.live-feeds-wrapper .right-content .time {
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  #footer .footer-col.last,
+  #footer .footer-col:last-child {
+    width: 25%;
+  }
+
+  #footer .fb,
+  #footer .tw {
+    width: 4.18542vw;
+  }
+}
+/*Mobile and Tablet */
+@media only screen and (max-width: 62.5em) {
+  .first-col,
+  .main .col-item.athletics-wrapper,
+  .main .col-item.date-wrapper,
+  .main .col-item.events-wrapper,
+  .main .col-item.gallery-wrapper,
+  .main .col-item.live-feeds-wrapper,
+  .second-col {
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+
+  .main .col-item.athletics-wrapper,
+  .main .col-item.date-wrapper,
+  .main .col-item.events-wrapper,
+  .main .col-item.gallery-wrapper,
+  .main .col-item.live-feeds-wrapper,
+  .second-col {
+    width: 100%;
+    text-align: center;
+    float: none;
+  }
+
+  .bx-wrapper .bx-pager {
+    bottom: 0;
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    width: 15px;
+    height: 15px;
+  }
+
+  .main .col-item,
+  .main .col-item.events-wrapper {
+    height: auto;
+    padding-bottom: 50px;
+    min-height: 300px;
+  }
+
+  .main .container {
+    padding: 0 30px 20px;
+  }
+
+  .homepage .main {
+    padding-top: 0;
+  }
+
+  #footer {
+    padding: 0 30px;
+  }
+
+  #footer .footer-col:first-child {
+    padding: 0;
+  }
+
+  #footer .footer-col.last h5,
+  #footer .footer-col:last-child h5 {
+    text-align: center;
+  }
+
+  #footer .footer-col.sri-logo {
+    padding: 20px 0 0;
+  }
+
+  .footer-col.sri-logo img {
+    height: 170px;
+    margin-left: 0;
+  }
+
+  #footer > div.container.clearfix > div.footer-col.quicklinks-col-2 > h5 {
+    display: none;
+  }
+
+  #footer > div.container.clearfix > div.footer-col.quicklinks {
+    margin-bottom: 0;
+  }
+
+  .main .col-item.athletics-wrapper {
+    min-height: 200px;
+  }
+
+  .main .col-item.athletics-wrapper .hover-content .view-more {
+    font-size: 24px;
+  }
+
+  .main .col-item.athletics-wrapper h4 {
+    display: none;
+  }
+
+  .main .col-item.news-wrapper .right-content p {
+    font-size: 23px;
+    line-height: 27px;
+  }
+
+  .main .col-item .event .date,
+  .main .col-item.athletics-wrapper h5 {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .main .col-item.athletics-wrapper .team,
+  .main .col-item.events-wrapper .right-content a,
+  .main .col-item.events-wrapper .right-content p {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .main .col-item .hover-content {
+    padding-left: 30px;
+    padding-right: 25px;
+    padding-top: 70px;
+  }
+
+  .main .col-item .hover-content .event,
+  .main .col-item .hover-content .sport-event {
+    padding-left: 30px;
+  }
+
+  .gallery-wrapper .hover-content .bx-wrapper,
+  .gallery-wrapper .hover-content .bx-wrapper .bx-viewport img {
+    min-height: 300px;
+  }
+
+  .main .col-item .hover-content .event {
+    padding-right: 30px;
+    width: 100%;
+  }
+
+  .main .col-item h4,
+  .main .col-item h4,
+  .main .col-item.athletics-wrapper h4,
+  .main .col-item.athletics-wrapper h4,
+  .main .col-item.gallery-wrapper h4,
+  .main .col-item.gallery-wrapper h4,
+  .main .col-item.live-feeds-wrapper h4,
+  .main .col-item.live-feeds-wrapper h4,
+  .main .col-item.news-wrapper h4,
+  .main .col-item.news-wrapper h4 {
+    height: auto;
+    top: 25px;
+    left: 30px;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    text-align: left;
+    padding: 0;
+    background: transparent;
+  }
+
+  .bx-wrapper .bx-viewport .slide:after {
+    display: none;
+  }
+
+  #slider .slider-info {
+    position: relative;
+    margin: 0 !important;
+    width: 100%;
+    text-align: center;
+    padding: 15px 40px 25px;
+    left: 0;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    top: 0;
+    background: #323b7c url('blue-concrete.png');
+  }
+
+  .main .col-item.athletics-wrapper .hover-content img {
+    height: 100px;
+  }
+
+  .main .col-item > img {
+    -webkit-transform: scale(1.33);
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform: scale(1.33);
+    -moz-transform-origin: 50% 50%;
+    transform: scale(1.33);
+    -transform-origin: 50% 50%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+  }
+
+  .main .col-item .hover-content {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  .main .col-item .see-more {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  .main .col-item.date-wrapper span {
+    font-size: 20px;
+    line-height: 25px;
+  }
+
+  .main .col-item .see-more {
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .main .col-item .see-more span {
+    height: 28px;
+    line-height: 28px;
+    padding: 0 20px;
+    font-size: 14px;
+  }
+
+  .main .col-item .news .right-content .autor,
+  .main .col-item .news .right-content .date,
+  .main .col-item.live-feeds-wrapper .right-content p {
+    font-size: 15px;
+    line-height: 17px;
+  }
+
+  .main .col-item.date-wrapper span.number {
+    font-size: 115px;
+    font-size: 11.5rem;
+    line-height: 119px;
+    line-height: 11.9rem;
+    margin-bottom: 25px;
+  }
+
+  .main .col-item.date-wrapper span.day {
+    margin-bottom: 27px;
+  }
+
+  .main .col-item h4 {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  #footer > .container {
+    padding: 20px 0;
+  }
+
+  #footer > .container.copyright {
+    padding: 10px 0;
+  }
+
+  #slider p {
+    font-size: 18px;
+  }
+
+  .slider-container img {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .slider-container img {
+    height: auto !important;
+  }
+
+  .menu-wrap {
+    min-height: 200vh;
+    height: auto;
+  }
+
+  #slider {
+    height: auto !important;
+  }
+
+  #slider .slider-info h1 {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 5px;
+  }
+
+  #slider .slider-info h2 {
+    font-size: 25px;
+    line-height: 29px;
+    margin-bottom: 5px;
+  }
+
+  #slider .slider-info h3 {
+    font-size: 23px;
+    line-height: 29px;
+    margin-bottom: 5px;
+  }
+
+  #slider .slider-info h4 {
+    font-size: 20px;
+    line-height: 29px;
+    margin-bottom: 5px;
+  }
+
+  #slider .slider-info h5 {
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 5px;
+  }
+
+  #slider .slider-info h6 {
+    font-size: 16px;
+    line-height: 29px;
+    margin-bottom: 5px;
+  }
+
+  #slider .slider-info p {
+    font-size: 14px;
+    line-height: 29px;
+  }
+
+  #footer .app-store,
+  #footer .google-play {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  #footer .app-store,
+  #footer .google-play {
+    background-position: center top;
+  }
+
+  .bx-wrapper {
+    width: 100%;
+    float: none;
+    padding: 0;
+  }
+
+  .main .col-item,
+  .main .col-item:first-child,
+  .main .container > .right-content,
+  .main .left-sidebar {
+    float: none;
+    width: 100%;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .images-grid {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .main .left-sidebar h1,
+  .right-content .right-links,
+  .right-content h3 {
+    text-align: left;
+  }
+
+  .col-item .news .right-content {
+    line-height: normal;
+    min-height: initial;
+  }
+
+  .right-content .right-links {
+    margin-bottom: 20px;
+  }
+
+  .right-content h3 {
+    line-height: 30px;
+    line-height: 3rem;
+  }
+
+  #footer .footer-col {
+    width: 100% !important;
+    float: none;
+    margin-bottom: 40px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    -o-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  #footer .footer-col {
+    text-align: center;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+
+  .main .left-sidebar {
+    margin: 0;
+  }
+
+  .breadcrumb + .main .container {
+    padding: 0;
+  }
+
+  .breadcrumb + .main .right-content {
+    padding: 0 40px 30px;
+    min-height: initial;
+  }
+
+  .breadcrumb li:first-child {
+    margin-left: 0;
+  }
+
+  .breadcrumb ol {
+    text-align: center;
+  }
+
+  .left-sidebar h3 {
+    margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .left-sidebar .left-links li {
+    margin-left: 10px;
+  }
+
+  #right-nav .menu-wrap li,
+  #right-nav .menu-wrap ul {
+    display: block;
+    padding: 0;
+  }
+}
+@media only screen and (max-width: 1090px) {
+  #footer .footer-col.sri-logo {
+    width: 12%;
+  }
+
+  #footer .footer-col.last,
+  #footer .footer-col:last-child {
+    width: 23% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #footer .footer-col h5 {
+    font-size: 18px !important;
+  }
+
+  #footer .footer-col h5,
+  #footer .footer-col li,
+  #footer .footer-col li a,
+  #footer .footer-col p,
+  #footer > .container.copyright,
+  #footer > .container.copyright p {
+    font-size: 11px;
+  }
+
+  #footer .app-store,
+  #footer .google-play {
+    width: 100%;
+    max-width: 142px;
+    height: 81px;
+    display: inline-block;
+    margin: 0 0 -36px;
+    background-size: 100% auto;
+    text-indent: -9999px;
+    text-align: left;
+    vertical-align: top;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #footer .footer-col.last,
+  #footer .footer-col:last-child {
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #footer .footer-col.last,
+  #footer .footer-col:last-child {
+    width: 20%;
+    text-align: center;
+  }
+
+  #footer .fb,
+  #footer .tw {
+    width: 40px;
+  }
+}
+@media only screen and (max-width: 805px) {
+  .images-grid {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 590px) {
+  #slider .bx-wrapper,
+  .slider-container img {
+    min-height: 200px !important;
+    object-fit: cover;
+  }
+}
+@media only screen and (max-width: 505px) {
+  .images-grid a {
+    width: 100%;
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 540px) {
+  #slider .slider-info h1,
+  #slider .slider-info h2,
+  #slider .slider-info h3,
+  #slider .slider-info h4,
+  #slider .slider-info h5,
+  #slider .slider-info h6,
+  #slider .slider-info p {
+    color: $white;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+    @include first-font-family;
+  }
+
+  #slider .slider-info h1 {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 18px;
+  }
+
+  #slider .slider-info h2 {
+    font-size: 25px;
+    line-height: 29px;
+    margin-bottom: 18px;
+  }
+
+  #slider .slider-info h3 {
+    font-size: 23px;
+    line-height: 29px;
+    margin-bottom: 15px;
+  }
+
+  #slider .slider-info h4 {
+    font-size: 20px;
+    line-height: 29px;
+    margin-bottom: 15px;
+  }
+
+  #slider .slider-info h5 {
+    font-size: 18px;
+    line-height: 29px;
+    margin-bottom: 15px;
+  }
+
+  #slider .slider-info h6 {
+    font-size: 16px;
+    line-height: 29px;
+    margin-bottom: 15px;
+  }
+
+  #slider .slider-info p {
+    font-size: 14px;
+    line-height: 29px;
+    text-transform: none;
+  }
+}

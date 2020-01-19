@@ -1,0 +1,51 @@
+/**
+ * Main Content
+ */
+
+// .js .homepage.desktop .col-item > * {
+//    opacity: 0;
+// }
+.js .homepage.desktop #intro > * {
+   visibility: hidden;
+   opacity: 0;
+   -webkit-transform: scale(0.9);
+   transform: scale(0.9);
+   -webkit-transition: -webkit-transform 1s, opacity 1s, visibility 0s 1s;
+   transition: transform 1s, opacity 1s, visibility 0s 1s;
+}
+.js .homepage.desktop .col-item > *.active {
+   opacity: 1;
+   -webkit-transition: all 0.5s ease-in-out;
+   -moz-transition: all 0.5s ease-in-out;
+   -o-transition: all 0.5s ease-in-out;
+   transition: all 0.5s ease-in-out;
+}
+.js .homepage.desktop #intro > *.active {
+   visibility: visible;
+   opacity: 1;
+   -webkit-transform: scale(1);
+   transform: scale(1);
+   -webkit-transition: -webkit-transform 1s, opacity 1s;
+   transition: transform 1s, opacity 1s;
+}
+#intro .nav-show-btn {
+   position: relative;
+   -webkit-animation: scrolldown 1s infinite;
+   animation: scrolldown 1s infinite;
+}
+@-webkit-keyframes scrolldown {
+   from {
+      top: 0;
+   }
+   to {
+      top: 20px;
+   }
+}
+@keyframes scrolldown {
+   from {
+      top: 0;
+   }
+   to {
+      top: 10px;
+   }
+}

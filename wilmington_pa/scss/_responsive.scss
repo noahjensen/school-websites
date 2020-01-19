@@ -1,0 +1,578 @@
+/**
+ * Responsive
+ */
+
+/********** Media Queries *****************************************************/
+@media only screen and (max-width: 1920px) and (min-width: 1000px) {
+  #left-nav {
+    width: 18.85vw;
+  }
+
+  #header .search-icon {
+    width : get-vw(142px) !important;
+    height: get-vw(142px) !important;
+  }
+
+  #header #change_language_form {
+    min-width: get-vw(152px);
+  }
+
+  #header #change_language_form .select {
+    line-height: get-vw(142px);
+    height     : get-vw(142px);
+  }
+
+  #header #change_language_form .options {
+    top: get-vw(145px);
+  }
+
+  #header {
+    min-height: get-vw(142px);
+  }
+
+  #left-nav .menu-btn,
+  #left-nav .menu-btn > span:first-child,
+  #right-nav .menu-btn > span {
+    height     : get-vw(142px);
+    line-height: get-vw(142px);
+  }
+
+  #left-nav .menu-btn > span:first-child,
+  #right-nav .menu-btn > span {
+    padding-left: get-vw(55px);
+    font-size   : 1.56vw;
+  }
+
+  .menu-close {
+    left           : 15.31vw;
+    top            : get-vw(52px);
+    width          : 1.87vw;
+    height         : 1.87vw;
+    background-size: 100% 100%;
+  }
+
+  #header .logo {
+    width       : get-vw(443px);
+    margin-right: get-vw(25px);
+    margin-top  : get-vw(15px);
+  }
+
+  #left-nav.active .menu-btn:hover .menu-close,
+  .active .menu-close {
+    left: get-vw(891px);
+  }
+
+  #left-nav.active {
+    width: get-vw(951px);
+  }
+
+  #left-nav .first-menu,
+  #left-nav .schools-menu {
+    font-size  : get-vw(24px);
+    margin-left: get-vw(90px);
+    line-height: get-vw(142px);
+  }
+
+  .menu-wrap {
+    left          : 3.64vw;
+    padding-left  : 3.64vw;
+    top           : get-vw(142px);
+    width         : get-vw(1075px);
+    padding-top   : get-vw(50px);
+    padding-bottom: get-vw(138px);
+  }
+
+  .menu-wrap ul.first-nav {
+    padding-right: get-vw(80px);
+  }
+
+  .menu-wrap ul.second-nav {
+    margin-top  : get-vw(18px);
+    margin-right: get-vw(45px);
+  }
+
+  ul.first-nav li {
+    font-size    : get-vw(24px);
+    margin-bottom: get-vw(20px);
+  }
+
+  ul.first-nav li a {
+    font-size  : get-vw(24px);
+    line-height: get-vw(65px);
+  }
+
+  ul.first-nav li span {
+    width       : get-vw(65px);
+    height      : get-vw(65px);
+    margin-right: get-vw(35px);
+    line-height : get-vw(65px);
+  }
+
+  ul.first-nav li span img {
+    max-width: 50%;
+    //width: 100%;
+  }
+
+  .schools-nav li,
+  ul.second-nav li {
+    font-size    : get-vw(24px);
+    line-height  : get-vw(30px);
+    margin-bottom: get-vw(24px);
+  }
+
+  .bx-wrapper .bx-pager {
+    bottom  : 0;
+    right   : 0;
+    position: absolute;
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    width : get-vw(20px);
+    height: get-vw(20px);
+  }
+
+  #footer {
+    padding: 0 get-vw(70px);
+  }
+
+  #footer > .container.copyright {
+    padding: get-vw(20px) 0;
+  }
+
+  #footer .footer-col:first-child {
+    padding-right: get-vw(15px);
+  }
+  /*#footer .footer-col p,
+    #footer .footer-col li,
+    #footer .footer-col li a,
+    #footer .footer-col h5 {
+        font-size: get-vw(14px);
+        line-height: get-vw(34px);
+    }*/
+  #footer .footer-col p {
+    margin-bottom: get-vw(19px);
+  }
+
+  #footer .footer-col h5 {
+    //font-size: get-vw(18px);
+    //line-height: get-vw(22px);
+    //margin: get-vw(20px) 0 get-vw(25px);
+  }
+
+  #footer .footer-col.sri-logo {
+    padding-top  : get-vw(105px);
+    padding-right: get-vw(15px);
+  }
+
+  .gallery-wrapper .hover-content .bx-wrapper,
+  .gallery-wrapper .hover-content .bx-wrapper .bx-viewport img {
+    min-height: get-vw(457px);
+  }
+}
+
+/* limit min-font-size */
+@media only screen and (max-width: 1500px) {
+  #footer .footer-col h5,
+  #footer .footer-col li,
+  #footer .footer-col li a,
+  #footer .footer-col p,
+  #footer > .container.copyright,
+  #footer > .container.copyright p {
+    font-size  : 12px;
+    line-height: 28px;
+  }
+
+  #footer .footer-col h5 {
+    font-size  : 13px;
+    line-height: 17px;
+  }
+}
+
+/*Mobile and Tablet */
+@media only screen and (max-width: 62.5em) {
+  #header .logo {
+    width: 100%;
+  }
+
+  .main .col-item.athletics-wrapper .hover-content {
+    display: block;
+  }
+
+  .second-nav li.has-child ul li.has-child ul {
+    margin-left: 5px;
+  }
+
+  #left-nav .first-menu.active:after,
+  #left-nav .schools-menu.active:after,
+  .bx-wrapper .bx-controls-direction a {
+    display: none;
+  }
+
+  #header #change_language_form {
+    float        : right;
+    width        : 80px;
+    text-align   : right;
+    padding-right: 12px;
+
+    .select {
+      line-height: 82px;
+      height     : 82px;
+    }
+  }
+
+  #header .search-icon {
+    width : 80px !important;
+    height: 82px !important;
+  }
+
+  #header #change_language_form .options {
+    left : auto;
+    right: 0;
+    top  : 83px;
+  }
+
+  #header .logo,
+  #left-nav .first-menu,
+  #left-nav .schools-menu {
+    width     : 100%;
+    text-align: center;
+    float     : none;
+  }
+
+  #left-nav {
+    width     : 100%;
+    text-align: center;
+    float     : none;
+  }
+
+  #header .logo {
+    margin : 0;
+    padding: 8px 15px;
+
+    img {
+      max-width: 100% !important;
+      position : relative !important;
+      right    : 0 !important;
+      height   : 11.675vw !important;
+    }
+  }
+
+  #left-nav .menu-btn {
+    height    : 40px;
+    text-align: center;
+  }
+
+  #left-nav .first-menu,
+  #left-nav .menu-btn > span:first-child,
+  #left-nav .schools-menu,
+  #right-nav .menu-btn > span {
+    line-height: 40px;
+    font-size  : 18px;
+    height     : 40px;
+    text-align : center;
+    padding    : 0 10px;
+  }
+
+  #left-nav .first-menu,
+  #left-nav .schools-menu {
+    margin: 0;
+  }
+
+  .menu-close {
+    right          : 5px;
+    left           : auto;
+    top            : 7px;
+    width          : 25px;
+    height         : 25px;
+    background-size: 100% 100%;
+  }
+
+  .menu-wrap {
+    left          : 0;
+    padding-left  : 30px;
+    padding-top   : 100px;
+    width         : 100%;
+    top           : 40px;
+    padding-bottom: 30px;
+  }
+
+  #left-nav.active .menu-btn > span:first-child {
+    float: none;
+  }
+
+  #left-nav.active .menu-btn:hover .menu-close,
+  .active .menu-close {
+    left: auto;
+  }
+
+  #left-nav.active {
+    width: 100%;
+  }
+
+  #left-nav.active .menu-btn {
+    overflow: visible;
+    z-index : 105;
+  }
+
+  .menu-wrap ul.second-nav {
+    margin: 20px 0 0;
+    float : none;
+  }
+
+  .menu-wrap ul.first-nav {
+    float: none;
+    width: 100%;
+  }
+
+  ul.first-nav li {
+    width    : 50%;
+    float    : left;
+    min-width: 179px;
+  }
+
+  .menu-wrap ul.schools-nav {
+    float       : right;
+    margin-right: 30px;
+  }
+
+  ul.first-nav li,
+  ul.first-nav li a {
+    font-size  : 17px;
+    line-height: 35px;
+  }
+
+  ul.first-nav li span {
+    margin-right: 15px;
+    width       : 35px;
+    height      : 35px;
+    line-height : 35px;
+  }
+
+  #footer {
+    padding: 0 30px;
+  }
+
+  #footer .footer-col:first-child {
+    padding: 0;
+  }
+
+  #footer .footer-col.last h5,
+  #footer .footer-col:last-child h5 {
+    text-align: center;
+  }
+
+  #footer .footer-col.sri-logo {
+    padding: 20px 0 0;
+  }
+
+  #footer .bottom-footer p {
+    font-size: 1.5rem;
+  }
+
+  #footer .required-info img {
+    width: 200px;
+  }
+
+  .gallery-wrapper .hover-content .bx-wrapper,
+  .gallery-wrapper .hover-content .bx-wrapper .bx-viewport img {
+    min-height: 300px;
+  }
+
+  .main .col-item .hover-content .event {
+    padding-right: 30px;
+    width        : 100%;
+  }
+
+  #footer > .container {
+    padding: 20px 0;
+  }
+
+  #footer > .container.copyright {
+    padding: 10px 0;
+  }
+
+  .slider-container img {
+    max-width: 100%;
+    width    : 100%;
+  }
+
+  .slider-container img {
+    height: auto !important;
+  }
+
+  .menu-wrap {
+    height: auto !important;
+  }
+
+  #slider {
+    height: auto !important;
+  }
+
+  #footer .app-store,
+  #footer .google-play {
+    margin-left : auto;
+    margin-right: auto;
+  }
+
+  #footer .app-store,
+  #footer .google-play {
+    background-position: center top;
+  }
+
+  .bx-wrapper {
+    width  : 100%;
+    float  : none;
+    padding: 0;
+  }
+
+  .images-grid {
+    margin-left : auto;
+    margin-right: auto;
+  }
+
+  .main .left-sidebar h1,
+  .right-content .right-links,
+  .right-content h3 {
+    text-align: left;
+  }
+
+  .col-item .news .right-content {
+    line-height: normal;
+    min-height : initial;
+  }
+
+  .right-content .right-links {
+    margin-bottom: 20px;
+  }
+
+  .right-content h3 {
+    line-height: 30px;
+    line-height: 3rem;
+  }
+
+  #footer .footer-col {
+    width             : 100% !important;
+    float             : none;
+    margin-bottom     : 40px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition   : all 0.5s ease-in-out;
+    -o-transition     : all 0.5s ease-in-out;
+    transition        : all 0.5s ease-in-out;
+  }
+
+  #footer .footer-col {
+    text-align: center !important;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+
+  .main .left-sidebar {
+    margin: 0;
+  }
+
+  .sub .main .container {
+    padding: 0;
+  }
+
+  .sub .main .right-content {
+    padding   : 0 40px 30px;
+    min-height: initial;
+  }
+
+  .breadcrumb li:first-child {
+    margin-left: 0;
+  }
+
+  .breadcrumb ol {
+    text-align: center;
+  }
+
+  .left-sidebar h3 {
+    margin-top  : 20px;
+    margin-left : 10px;
+    margin-right: 10px;
+  }
+
+  .left-sidebar .left-links li {
+    margin-left: 10px;
+  }
+
+  #right-nav .menu-wrap li,
+  #right-nav .menu-wrap ul {
+    display: block;
+    padding: 0;
+  }
+
+  .menu-wrap {
+    height: auto !important;
+  }
+
+  .bx-wrapper .bx-viewport .slide:after {
+    display: none;
+  }
+}
+@media only screen and (max-width: 805px) {
+  .images-grid {
+    width: 90%;
+  }
+
+  ul.second-nav li.has-child ul {
+    left     : 4px;
+    min-width: 200px;
+  }
+}
+@media only screen and (max-width: 590px) {
+  #slider .slider-info {
+    padding: 20px 10px 10px;
+  }
+
+  #slider .bx-wrapper,
+  .slider-container img {
+    min-height: 200px !important;
+    object-fit: cover;
+  }
+
+  #header #change_language_form {
+    width: 50px;
+
+    .select {
+      line-height: 52px;
+      height     : 52px;
+    }
+  }
+
+  #header .search-icon {
+    width : 50px !important;
+    height: 52px !important;
+  }
+
+  #header #change_language_form .options {
+    right: 0;
+    top  : 55px;
+  }
+
+  #header #change_language_form .options li {
+    font-size: 16px;
+  }
+}
+@media only screen and (max-width: 505px) {
+  .images-grid a {
+    width        : 100%;
+    padding-right: 0;
+  }
+}
+@media only screen and (max-width: 400px) {
+  #slider .slider-info {
+    padding: 0 5px 5px;
+  }
+}
+
+#header .logo a img {
+  height    : 4.675vw;
+  right     : 100px;
+  position  : absolute;
+  max-width : 152%;
+  margin-top: 8px;
+}

@@ -1,0 +1,39 @@
+<footer id="footer" class="footer2">
+        <div class="container clearfix">
+         <div class="footer-col">
+        <h5>Contact Us</h5>
+        <p><%= current_organization.try(:name)%>
+<br><%= current_organization.try(:address) %>
+            <br><%="#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+            <br><%="PH: #{current_organization.try(:phone_number)}" %>
+            <br><%= "FAX #{current_organization.try(:fax_number)}" %></p>
+    </div>
+
+         <div class="footer-col">
+            <h5>Schools</h5>
+            <ul class="footer-links">
+              <li ><%= link_to 'Bains Lower Elementary', '/o/ble'%></li>
+           <li><%= link_to 'Bains Elementary', '/o/bns'%></li>
+  <li ><%= link_to 'West Feliciana Middle', '/o/wfms'%></li>
+   <li ><%= link_to 'West Feliciana High', '/o/wfhs'%></li>
+<li ><%= link_to 'Family Service Center', '/o/fsc'%></li><
+
+            </ul>
+         </div>
+
+
+            <div class="footer-col last">
+                <a href="https://www.facebook.com/" class="social"><%= image_tag "apptegy_cms/themes/westfelicianala/fb.png", alt: " "%></a>
+                <a href="" class="app-store"><%= image_tag "apptegy_cms/themes/westfelicianala/apple.png", alt: " "%></a>
+                <br>
+                <a href="https://twitter.com/" class="social"><%= image_tag "apptegy_cms/themes/westfelicianala/tw.png", alt: " "%></a>
+                <a href="" class="google-play"><%= image_tag "apptegy_cms/themes/westfelicianala/google.png", alt: " "%></a>
+            </div>
+        </div>
+        <div class="container bottom-footer">
+           <p>Copyright &copy; West Feliciana Parish Schools 2017. All rights reserved.</p>
+			<p class="powered-by">Powered by <a href="http://www.apptegy.com" target="_blank">apptegy.</a></p>
+
+        </div>
+
+    </footer>

@@ -1,0 +1,111 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf760
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww15720\viewh11340\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <header id="header" class="clearfix" style="background-color: #0f4b2f;">\
+<style>.second-nav li.has-child span:after \{ z-index: 0;\} </style>\
+        <div class="container">\
+            <h1 class="logo"><a href="/"><%= image_tag "apptegy_cms/themes/copenhagenny/logo.png", alt: "Copenhagen Schools" %></a></h1>\
+\
+            <nav id="left-nav" class="nav" role="navigation">\
+                <div class="menu-btn"><span>MENU</span>\
+                    <div class="menu-wrap">\
+                        <ul class="first-nav clearfix">\
+\
+                            <li class="live-feed">\
+                                <a href=<%=params[:org].present? ? "/o/#\{params[:org]\}/live_feed" : "/live_feed"%>>\
+                <span><%= image_tag 'apptegy_cms/themes/copenhagenny/menu/feed-icon.png' %></span>\
+                <div class="section">LIVE FEED</div>\
+            </a>\
+                            </li>\
+                            <li class="news">\
+                                <a href=<%=params[:org].present? ? "/o/#\{params[:org]\}/news" : "/news"%>>\
+             <span>   <%= image_tag 'apptegy_cms/themes/copenhagenny/menu/news-icon.png' %> </span>\
+                <div class="section">NEWS</div>\
+            </a>\
+                            </li>\
+                            <li class="events">\
+                                <a href=<%=params[:org].present? ? "/o/#\{params[:org]\}/events" : "/events"%>>\
+                <span>    <%= image_tag 'apptegy_cms/themes/copenhagenny/menu/events.png' %> </span>\
+                    <div class="section">EVENTS</div>\
+                </a>\
+                            </li>\
+\
+\
+                            <li class="staff">\
+                                <a href=<%=params[:org].present? ? "/o/#\{params[:org]\}/staff" : "/staff"%>>\
+                <span><%= image_tag 'apptegy_cms/themes/copenhagenny/menu/staff.png' %></span>\
+                <div class="section">STAFF</div>\
+            </a>\
+                            </li>\
+                            <li class="dining">\
+                                <a href=<%=params[:org].present? ? "/o/#\{params[:org]\}/dining" : "/dining"%>>\
+                <span><%= image_tag 'apptegy_cms/themes/copenhagenny/menu/dining.png' %></span>\
+                <div class="section">Cafeteria</div>\
+            </a>\
+                            </li>\
+\
+                            <li class="documents">\
+                                <a href=<%=params[:org].present? ? "/o/#\{params[:org]\}/documents" : "/documents"%>>\
+                <span><%= image_tag 'apptegy_cms/themes/copenhagenny/menu/documents.png' %> </span>\
+                <div class="section">DOCUMENTS</div>\
+            </a>\
+                            </li>\
+\
+                            <li class="athletics">\
+                                <a href=<%=params[:org].present? ? "/o/#\{params[:org]\}/athletics" : "/athletics"%>>\
+               <span> <%= image_tag 'apptegy_cms/themes/copenhagenny/menu/athletics.png' %></span>\
+                <div class="section">ATHLETICS</div>\
+            </a>\
+                            </li>\
+\
+                        </ul>\
+\
+                    <ul class="second-nav">\
+            <% current_pages.roots.navigation_pages.each do |page| %>\
+                <li>\
+                    <span>\
+                      <% if page.header? %>\
+                        <%= page.name.upcase %>\
+                      <% else %>\
+                        <a href=<%= page.page_link? ? "#\{page.url\}" : "/#\{page.slug\}" %> >\
+                          <%= page.name.upcase %>\
+                      </a>\
+                      <% end %>\
+                    </span>\
+                    <% if page.children.any? %>\
+                        <ul>\
+                            <% page.children.order(:position).each do |subpage| %>\
+                                <li>\
+                                    <a href=<%= subpage.page_link? ? "#\{subpage.url\}" : "/#\{subpage.slug\}" %> target=<%= '_blank' if subpage.page_link? %> >\
+                                        <%= subpage.name %>\
+                                    </a>\
+                                </li>\
+                            <% end %>\
+                        </ul>\
+                    <% end %>\
+                </li>\
+\
+            <% end %>\
+        </ul>\
+ \
+                        <span class="menu-close"></span>\
+                    </div>\
+                </div>\
+            </nav>\
+\
+            <div class="social-icons">\
+                <a href="https://www.facebook.com/Copenhagen-Central-School-283513831673056/" target="_blank"><%= image_tag "apptegy_cms/themes/copenhagenny/fb-icon.png", alt: "Facebook" %></a>\
+                <a href="https://twitter.com/copen_knights" target="_blank"><%= image_tag "apptegy_cms/themes/copenhagenny/tw-icon.png", alt: "Twitter" %></a>\
+\
+ <a href="https://canvas.instructure.com/login/canvas" target="_blank"><%= image_tag "apptegy_cms/themes/copenhagenny/canvas.png", alt: "Canvas" %></a>\
+\
+                <a href="https://launchpad.classlink.com/ccsknights" target="_blank"><%= image_tag "apptegy_cms/themes/copenhagenny/crest.png", alt: "Copenhagen Portal" %></a>\
+                <a href="https://mail.ccsknights.org/owa/auth/logon.aspx?url=https://mail.ccsknights.org/owa/&reason=0" target="_blank"><%= image_tag "apptegy_cms/themes/copenhagenny/email.png", alt: " Email" %></a>\
+            </div>\
+\
+        </div>\
+    </header>}

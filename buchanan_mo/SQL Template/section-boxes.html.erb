@@ -1,0 +1,62 @@
+<div class="col-item live-feeds-wrapper">
+   <h4>Live Feed</h4>
+   <%= image_tag 'apptegy_cms/themes/buchananrivmo/live-feed-bg.jpg' %>
+   <div class="hover-content">
+      <% current_organization.live_feeds.limit(3).each do |post| %>
+      <div class="live-feed">
+         <div class="avatar">
+             <% if post.avatar == 'http://www.apptegy.com/default.png' %>
+                 <%= image_tag 'apptegy_cms/default_avatar.png', alt: post.author_name, size: '60x60', class: 'avatar-section' %>
+             <% else %>
+                 <%= image_tag post.avatar, alt: post.author_name, size: '60x60', class: 'avatar-section' %>
+             <% end %>
+         </div>
+         <div class="right-content">
+             <div class="autor"><%= "#{post.author_name} " %></div>
+             <div class="time"><%= "#{time_ago_in_words(post.created_at)} ago" %></div>
+             <p><%= raw post.linkify %></p>
+         </div></div>
+      <% end %>
+   </div>
+   <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"  %> class="see-more"><span>SEE ALL posts</span></a>
+</div>
+
+
+<div class="col-item events-wrapper">
+<!-- Events -->
+<h4>Calendar</h4>
+<%= image_tag 'apptegy_cms/themes/buchananrivmo/calendar-bg.jpg' %>
+<div class="hover-content">
+ <% current_organization.events.limit(6).each do |event| %>
+ <div class="event">
+
+<p><%= link_to event.title, params[:org].present? ? "/o/#{params[:org]}/events" : "/events" %></p>
+     <div class="date"><%= "#{event.start_date.try(:strftime, '%b %e')} #{event.start_time.try(:strftime, 'at %l:%M %p')}" %>
+       <% if event.end_date.present? %>
+       to
+       <% end %>
+       <%= "#{event.end_date.try(:strftime, '%b %e')} #{event.end_time.try(:strftime, 'at %l:%M %p')}" %>
+    </div>
+
+ </div>
+ <% end %>
+</div>
+<a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"  %> class="see-more events-btn"><span>See all events</span></a>
+
+</div>
+
+<div class="col-item news-wrapper">
+      <h4>News</h4>
+      <%=  image_tag 'apptegy_cms/themes/buchananrivmo/news-bg.jpg' %>
+      <div class="hover-content">
+            <% current_organization.articles.limit(5).each do |article|  %>
+            <div class="news">
+               <p><a href=<%= params[:org].present? ? "/article/#{article.id}?org=#{params[:org]}" : "/article/#{article.id}"%>><%= translate(article.title) %></%a></p>
+                  <span class="date-autor"><%= article.published_on.strftime("%d %B %Y") %>, posted by <%= article.author_name %></span>
+
+            </div>
+            <% end %>
+
+      </div>
+         <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"  %> class="see-more"><span>SEE ALL NEWS</span></a>
+   </div>

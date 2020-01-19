@@ -1,0 +1,84 @@
+<!-- Begin first-col -->
+<div class="first-col">
+   <div class="col-item live-feeds-wrapper active">
+      <h4>Live Feed</h4>
+      <div class="hover-content">
+         <% current_organization.live_feeds.limit(3).each do |post| %>
+         <div class="live-feed">
+            <div class="right-content">
+               <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"  %>>
+                  <p><%= raw post.linkify %></p>
+               </a>
+               <span class="time"><%= "#{time_ago_in_words(post.created_at)} ago" %></span>
+               <span class="autor"><%= post.author_name %></span>
+            </div>
+         </div>
+         <% end %>
+      </div>
+      <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"  %> class="see-more">SEE ALL posts</a>
+   </div>
+   <div class="col-item news-wrapper active">
+      <h4>News</h4>
+      <div class="hover-content">
+         <div class="news-slider">
+            <% current_organization.articles.limit(2).each do |article|  %>
+            <div class="news">
+               <div class="right-content">
+                  <h3><%= article.title %></h3>
+                  <p class="autor"><%= article.author_name %></p>
+                  <p class="date"><%= article.published_on.strftime("%d %B %Y") %></p>
+                  <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"  %> class="read-more">read more</a>
+               </div>
+            </div>
+            <% end %>
+         </div>
+      </div>
+         <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"  %> class="see-more">SEE ALL NEWS</a>
+   </div>
+
+</div>
+<!-- End first-col -->
+<div class="second-col">
+   <!-- Date -->
+   <div class="col-item date-wrapper">
+      <p>
+         <span class="day"><%= Time.current.strftime("%A") %></span>
+         <span class="number"><%= Time.current.strftime("%d") %></span>
+         <span class="month-year"><%= Time.current.strftime("%B %Y") %></span>
+      </p>
+   </div>
+   <!-- Athletics -->
+   <div class="col-item athletics-wrapper  active">
+      <h4>Athletics</h4>
+      <div class="hover-content">
+        <% image_tag 'apptegy_cms/themes/smsdar/link-icon.png' %>
+
+         <a href="/o/athletics" class="view-more">Athletics</a>
+
+      </div>
+   </div>
+   <!-- End Athletics -->
+</div>
+<!-- End second-col -->
+<div class="col-item events-wrapper">
+
+<!-- Events -->
+<h4>Calendar</h4>
+<div class="hover-content">
+   <% current_organization.events.limit(7).each do |event| %>
+   <div class="event">
+      <div class="date"><%= "#{event.start_date.try(:strftime, '%b %e')} #{event.start_time.try(:strftime, 'at %l:%M %p')}" %>
+         <% if event.end_date.present? ||   event.end_time.present? %>
+         to
+         <% end %>
+         <%= "#{event.end_date.try(:strftime, '%b %e')} #{event.end_time.try(:strftime, '%l:%M %p')}" %>
+      </div>
+      <div class="right-content">
+<p><%= link_to event.title, params[:org].present? ? "/o/#{params[:org]}/events" : "/events" %></p>
+      </div>
+   </div>
+   <% end %>
+</div>
+<a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"  %> class="see-more events-btn">See all events</a>
+
+</div>

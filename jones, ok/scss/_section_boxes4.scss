@@ -1,0 +1,461 @@
+/**
+ * Main Content
+ */
+
+html .homepage .main .container {
+   //padding: 0 50px 65px;
+	@include responsive-property("padding-left",50,15px,50px);
+	@include responsive-property("padding-right",50,15px,50px);
+	@include responsive-property("padding-bottom",65,25px,65px);
+}
+.main .col-item {
+   position: relative;
+   float: left;
+   margin: 0;
+   overflow: hidden;
+   position: relative;
+   text-align: left;
+   -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.15);
+   -moz-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.15);
+   box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.15);
+   &.events-wrapper {
+      //padding: 150px 40px 70px 70px;
+		@include responsive-property("padding-top",180, 70px, 180px);
+       @include responsive-property("padding-right",40, 20px, 70px);
+       @include responsive-property("padding-bottom",70, 30px, 90px);
+       @include responsive-property("padding-left",70, 30px, 90px);
+      width: 100%;
+      background: $events-wrapper-bg;
+      font-size: 0;
+      @include responsive-property("margin-top",21, 10px, 30px);
+   }
+   &.news-wrapper {
+      width: 65%;
+      @include responsive-property("padding-top",180, 70px, 180px);
+       @include responsive-property("padding-right",49, 25px, 80px);
+       @include responsive-property("padding-bottom",145, 65px, 165px);
+       @include responsive-property("padding-left",70, 30px, 90px);
+      background: $news-wrapper-bg;
+      float: left;
+     @include responsive-property("margin-right",21, 10px, 21px);
+   }
+   &.live-feeds-wrapper {
+      float: none;
+      width: auto;
+      @include responsive-property("padding-top",180, 70px, 180px);
+       @include responsive-property("padding-right",70, 20px, 70px);
+       @include responsive-property("padding-bottom",145, 65px, 165px);
+       @include responsive-property("padding-left",70, 30px, 90px);
+      background: $live-feeds-wrapper-bg;
+       
+   }
+   .see-more {
+      position: absolute;
+      display: block;
+      padding: 0;
+		@include responsive-property("padding-top",43, 15px, 60px); 
+      width: auto;
+      @include responsive-property("font-size",$see-all-btns-font-size, 13px, $see-all-btns-font-size +1px);
+       @include responsive-property("line-height",$see-all-btns-font-size + 4, 17px, $see-all-btns-font-size +6px);
+      text-align: right;
+       @include responsive-property("bottom",55, 20px, 70px);
+       @include responsive-property("left",70, 30px, 90px);
+       @include responsive-property("right",70, 30px, 90px);
+		@include see-all-btns-font;
+   }
+   &.events-wrapper .see-more {
+      @include responsive-property("top",73, 20px, 73px);
+		bottom: auto;
+		left: auto;
+      background: $see-all-events-btn-bg;
+      color: $see-all-events-btn-color;
+      display: inline-block;
+      text-align: right;
+      border-top: 0;
+      padding: 0;
+   }
+   &.news-wrapper .see-more {
+      background: $see-all-news-btn-bg;
+      color: $see-all-news-btn-color;
+   }
+   &.live-feeds-wrapper .see-more {
+      background: $see-all-live-feeds-btn-bg;
+      color: $see-all-live-feeds-btn-color;
+   }
+   h4 {
+      @include responsive-property("font-size",$sections-titles-font-size, 24px, $sections-titles-font-size +1px);
+       @include responsive-property("line-height",$sections-titles-font-size + 4, 30px, $sections-titles-font-size + 4px);
+      @include responsive-property("padding-bottom",16,6px,16px);  
+      @include responsive-property("margin-bottom",16,6px,16px);  
+      text-align: left;       
+      position: absolute;
+      @include responsive-property("top",58, 23px, 58px);
+       @include responsive-property("left",70, 30px, 70px);
+       @include responsive-property("right",70, 30px, 70px);
+       @include responsive-property("min-width",135, 50px, 135px);
+      width: auto;
+      display: inline-block;
+      border-bottom: 1px solid $sections-titles-border-color;
+		@include sections-titles-font;
+   }
+   &.news-wrapper h4 {
+      color: $news-title-color;
+      background: $news-title-bg;
+   }
+   &.live-feeds-wrapper h4 {
+      color: $live-feed-title-color;
+      background: $live-feed-title-bg;
+   }
+   &.events-wrapper h4 {
+      background: $events-title-bg;
+      color: $events-title-color;
+   }
+   &.live-feeds-wrapper .avatar {
+      float: left;
+      @include responsive-property("max-width",90, 45px, 130px);
+      text-align: left;
+      margin-right: 15px;
+      margin-bottom: 10px;
+   }
+   &.live-feeds-wrapper .live-feed {
+      margin: 0;
+		@include responsive-property("margin-bottom",30, 10px, 30px);
+      overflow: hidden;
+   }
+   &.live-feeds-wrapper .right-content {
+      overflow: hidden;
+      margin-bottom: 10px;
+   }
+   &.live-feeds-wrapper p {
+      @include responsive-property("font-size",$live-feed-text-font-size, 13px, $live-feed-text-font-size +1px);
+       @include responsive-property("line-height",$live-feed-text-font-size + 4, 17px, $live-feed-text-font-size +4px);
+      color: $live-feed-text-color;
+      margin: 0 0 5px 0;      
+      clear: both;
+      overflow: hidden;
+		@include live-feed-text-font;
+		max-height: 75px;
+      a {
+         color: #0c9428;
+      }
+   }
+   &.live-feeds-wrapper .right-content .time {
+      @include responsive-property("font-size",$live-feed-time-font-size, 13px, $live-feed-time-font-size +1px);
+       @include responsive-property("line-height",$live-feed-time-font-size + 4, 17px, $live-feed-time-font-size +4px);
+      color: $live-feed-time-color;
+      @include live-feed-time-font;
+   }
+   &.live-feeds-wrapper .right-content h3,
+   &.live-feeds-wrapper .right-content h3 a {
+      @include responsive-property("font-size",$live-feed-author-font-size, 13px, $live-feed-author-font-size +1px);
+       @include responsive-property("line-height",$live-feed-author-font-size + 4, 17px, $live-feed-author-font-size +4px);
+      color: $live-feed-author-color;
+      margin: 0;
+      @include live-feed-author-font;
+   }
+   &.events-wrapper .event {
+      padding: 0;
+      @include responsive-property("padding-right",30, 10px, 30px); 
+      margin: 0;
+      width: 20%;
+      display: inline-block;
+      vertical-align: top;
+      .clearfix {
+         position: relative;
+         @include responsive-property("height",317, 200px, 317px);
+         border: 1px solid #cdcdcd;
+         padding: 30px 10px 0 30px;
+			background: #eeeeee;
+         @include transition;
+			
+         &:hover {
+            background: #006a01;
+            @include transition;
+            border-color: #006a01;
+            .date {
+               color: #fff;
+            }
+            span, p,
+            p a {
+               color: #FFF;
+            }
+         }
+      }
+   }
+   .event .date {
+      @include responsive-property("font-size",$event-date-font-size, 13px, $event-date-font-size +1px);
+       @include responsive-property("line-height",$event-date-font-size + 4, 17px, $event-date-font-size +4px);
+      color: $event-date-color;
+      background: $event-date-bg;
+      @include event-date-font;
+      span {
+         @include second-font-family;
+         display: block;
+         margin: 0 0 5px;
+         @include responsive-property("font-size",$event-date-font-size +17, 25px, $event-date-font-size +12px);
+       @include responsive-property("line-height",$event-date-font-size +20, 29px, $event-date-font-size +16px);
+         color: #0c9428;
+      }
+   }
+   &.events-wrapper p {
+      margin: 0;
+      @include responsive-property("font-size",$event-title-font-size, 14px, $event-title-font-size +1px);
+       @include responsive-property("line-height",$event-title-font-size + 4, 17px, $event-title-font-size +4px);
+      color: $event-title-color;
+      min-height: 55px;
+      position: absolute;
+      left: 0;
+      width: 100%;
+      padding-right: 20px;
+       @include responsive-property("min-height",55, 30px, 65px);
+       @include responsive-property("bottom",45, 15px, 55px);
+       @include responsive-property("padding-left",30, 10px, 45px);
+       @include responsive-property("max-width",280, 150px, 350px);	
+      @include event-title-font;
+      a {
+         color: #06213f;
+         text-decoration: none;
+      }
+   }
+   &.news-wrapper .right-content {
+      padding: 0;
+      overflow: hidden;
+   }
+   &.news-wrapper .news {
+      float: left;
+      width: 33.33%;
+      padding-right: 21px;
+      margin-bottom: 20px;
+      
+      .image {
+      border-top: 6px #0c9428 solid;
+         
+      }
+      
+      &:first-of-type  .image {
+         border-top: 6px #006a01 solid;
+      }
+      &:last-of-type .image {
+         border-top: 6px #006a01 solid;
+         }
+		&:first-of-type  .right-content h3 {
+         color: $news-titles-color;
+			a {
+				color: $news-titles-color;
+			}
+      }
+      &:last-of-type .right-content h3 {
+         color: $news-titles-color;
+			a {
+				color: $news-titles-color;
+			}
+      }
+      
+   }
+   &.news-wrapper .right-content p {
+      @include responsive-property("font-size",$news-p-font-size, 13px, $news-p-font-size +1px);
+       @include responsive-property("line-height",$news-p-font-size + 4, 17px, $news-p-font-size +5px);
+      color: $news-paragraph-color;
+      margin: 0;
+      @include news-paragraph-font;
+   }
+   &.news-wrapper .right-content h3 {
+      @include responsive-property("font-size",$news-titles-font-size, 14px, $news-titles-font-size +1px);
+       @include responsive-property("line-height",$news-titles-font-size + 4, 18px, $news-titles-font-size +5px);
+      
+      margin: 0 0 12px;       
+      //@include responsive-property("min-height",75, 30px, 75px);
+      @include news-titles-font;
+      a {
+         color: #6d6e70;
+      }
+      
+   }
+   .news .image {
+      width: 100%;
+      @include responsive-property("margin-bottom",25, 10px, 25px);
+      img {
+         display: block;
+			width: 100%;
+			@include responsive-property("height",200, 100px, 200px);
+			object-fit: cover;
+      }
+   }
+   img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+      
+      
+   }
+}
+
+/**
+ * Responsive
+ */
+
+@media only screen and (max-width: 1200px) {
+   .main .col-item.events-wrapper .event {
+      width: 33.33%;
+      margin-bottom: 20px;
+   }
+}
+@media only screen and (max-width: 1000px) {
+	.main .col-item .news .image img {
+		height: auto;
+	}
+  html .homepage .main .container {
+    padding: 0 20px 25px;
+  }
+   .main .col-item.news-wrapper .news {
+      width: 100%;
+      float: none;
+      margin-bottom: 35px;
+		text-align: center;
+   }
+   .main .col-item.news-wrapper .right-content {
+      min-height: inherit;
+      border: 0;
+      padding-top: 0;
+		text-align: left;
+   }
+   .main .col-item .news .image {
+      width: auto;
+      display: inline-block;
+      text-align: center;
+      padding: 0;
+   }
+   .main .col-item.news-wrapper h4 {
+      top: 0;
+   }
+   .main .col-item.live-feeds-wrapper .see-more {
+      right: 0;
+      margin-bottom: 20px;
+   }
+   .main .col-item.events-wrapper .event {
+      width: 100%;
+      float: none;
+      margin-bottom: 20px;
+   }
+   .main .col-item.events-wrapper p,
+   .main .col-item.events-wrapper p a {
+      min-height: inherit;
+      margin: 0;
+      font-size: 15px;
+      line-height: 18px;
+   }
+   .main .col-item .see-more {
+      position: relative;
+      display: block;
+      text-align: center;
+      right: 0;
+      top: 0;
+   }
+   .main .col-item.events-wrapper .event .clearfix {
+      height: auto;
+      padding-bottom: 20px;
+   }
+   .main .col-item.events-wrapper p {
+      position: relative;
+      bottom: 0;
+      padding: 0;
+      margin: 15px 0 0;
+      max-width: 100%;
+   }
+   .main .col-item.events-wrapper .see-more {
+      top: 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
+   }
+   .main .col-item .news .right-content h3 {
+      min-height: inherit;
+       text-align: center;
+   }
+   .main .col-item.news-wrapper h4,
+   .main .col-item h4,
+   .main .col-item.live-feeds-wrapper h4 {
+      padding-left: 0;
+      text-align: center;
+      width: auto;
+      margin-left: 20px;
+      margin-right: 20px;
+      left: 0;
+      right: 0;
+      top: 0;
+      display: block;
+   }
+   .main .col-item.live-feeds-wrapper h4 {
+      margin-bottom: 5px;
+   }
+   .main .col-item.news-wrapper,
+   .main .col-item,
+   .main .col-item.events-wrapper,
+   .main .col-item.live-feeds-wrapper {
+      padding: 0;
+      margin-bottom: 25px;
+   }
+   .main .col-item .news,
+   .main .col-item.events-wrapper .event,
+   .main .col-item .live-feed,
+   .main .col-item.news-wrapper .news {
+      padding: 0 20px;
+   }
+   .main .col-item.news-wrapper .bx-wrapper .bx-pager {
+      padding: 5px 0;
+      right: 0;
+      width: 100%;
+      text-align: center;
+      bottom: auto;
+      top: -35px;
+   }
+   .news .image img {
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .col-item .news .right-content {
+      padding: 0 15px;
+   }
+   .main .col-item.events-wrapper {
+      width: 100%;
+   }
+   .main .col-item.live-feeds-wrapper {
+      width: 100%;
+   }
+   .main .col-item, .main .col-item, .main .col-item:first-child {
+      height: auto !important;
+      padding: 0 0 15px;
+      float: none;
+      width: 100%;
+      margin-top: 0;
+      margin-bottom: 25px;
+      -webkit-transition: all .5s ease-in-out;
+      -moz-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out;
+   }
+   .main .col-item.events-wrapper .see-more {
+      margin-bottom: 20px;
+   }
+   .main .col-item.news-wrapper .see-more,
+   .main .col-item.live-feeds-wrapper .see-more,
+   .main .col-item.events-wrapper .see-more {
+      bottom: 0;
+      left: 0;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-top: 20px;
+      border-top: 1px solid #dcdcdc;
+   }
+   .col-item .news .right-content {
+      line-height: normal;
+      min-height: initial;
+   }
+   .main .col-item h4 {
+      margin-bottom: 5px;
+      position: relative;
+      height: 70px;
+      line-height: 70px;
+      line-height: 7rem;
+   }
+}

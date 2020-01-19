@@ -1,0 +1,336 @@
+/*************************
+*
+*  FOOTER
+*
+*************************/
+#footer {
+  background        : url("footer-bg.png");
+  padding           : $footer-padding;
+  position          : relative;
+  -webkit-box-shadow: 0 1px 21px 0 rgba(0, 0, 0, 0.33);
+  -moz-box-shadow   : 0 1px 21px 0 rgba(0, 0, 0, 0.33);
+  box-shadow        : 0 1px 21px 0 rgba(0, 0, 0, 0.33);
+}
+
+#footer > .container {
+  position : relative;
+  padding  : 0 10px;
+  width    : 100%;
+  max-width: $footer-container-width;
+  display  : table;
+}
+
+#footer .footer-col {
+  width             : $footer-col-width;
+  display           : table-cell;
+  vertical-align    : top;
+  padding-right     : 15px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition   : all 0.5s ease-in-out;
+  -o-transition     : all 0.5s ease-in-out;
+  transition        : all 0.5s ease-in-out;
+}
+
+#footer .footer-col.last,
+#footer .footer-col:last-child {
+  text-align   : right;
+  padding-right: 0;
+  font-size    : 0;
+  float        : right;
+  width        : 124%;
+
+  h5 {
+    text-align: center;
+    max-width : 357px;
+    display   : block;
+    float     : right;
+    width     : 100%;
+  }
+}
+
+#footer .ed-logo {
+  max-width: 61%;
+}
+
+#footer .footer-col ul {
+  margin: 0;
+}
+
+#footer .footer-col h5,
+#footer .footer-col li,
+#footer .footer-col li a,
+#footer .footer-col p {
+  @include font-size(13);
+  @include line-height($footer-text-line-height);
+  color         : $footer-text-color;
+  @include second-font-family;
+  text-transform: uppercase;
+  font-weight   : normal;
+}
+
+#footer .footer-col h5 {
+  @include font-size(30);
+  @include line-height($footer-title-line-height);
+  color         : $footer-title-color;
+  font-family   : "Oswald",sans-serif;
+  font-weight   : 500;
+  margin        : 0 0 15px;
+  text-transform: uppercase;
+}
+
+.soacial-media {
+  overflow: hidden;
+  clear   : both;
+  width   : $footer-app-btns-width;
+  float   : right;
+}
+
+.soacial-media .fb,
+.soacial-media .tw {
+  width        : 50px;
+  height       : 50px;
+  margin-right : 10px;
+  background   : url("fb.png") no-repeat center center;
+  display      : block;
+  float        : left;
+  overflow     : hidden;
+  text-align   : left;
+  text-indent  : -99999px;
+  margin-bottom: 30px;
+}
+
+#footer .footer-col .tw {
+  background  : url("tw.png") no-repeat center center;
+  margin-right: 0;
+}
+
+#footer .app-store,
+#footer .google-play {
+  width          : 100%;
+  max-width      : $footer-app-btns-width;
+  height         : $footer-app-btns-height;
+  display        : inline-block;
+  vertical-align : top;
+  margin         : 0 0 15px;
+  background     : url("apple.png") no-repeat right top;
+  background-size: 100% auto;
+  text-indent    : -9999px;
+  text-align     : left;
+  vertical-align : top;
+  clear          : both;
+}
+
+#footer .google-play {
+  background     : url("google.png") no-repeat right top;
+  margin         : 0;
+  background-size: 100% auto;
+}
+
+#footer .container.bottom-footer {
+  padding   : 30px 0 20px;
+  margin-top: 40px;
+  text-align: center;
+  max-width : 100%;
+  background: $footer-bottom-part-bg;
+}
+
+#footer.footer2 .container.bottom-footer {
+  max-width  : $footer-container-width;
+  border-top : 1px solid #cacaca;
+  padding-top: 5px;
+}
+
+#footer .container.bottom-footer p {
+  @include font-size($footer-copyright-font-size);
+  @include line-height($footer-copyright-font-size + 4);
+  color         : $white;
+  text-transform: uppercase;
+  @include second-font-family;
+  margin        : 0;
+  text-align    : center;
+}
+
+#footer .logos {
+  text-align: center;
+  font-size : 0;
+}
+
+#footer .logos a {
+  display       : inline-block;
+  vertical-align: middle;
+  margin-left   : 60px;
+}
+
+#footer .logos a:first-child {
+  margin-left: 0;
+}
+
+#footer .container.bottom-footer p {
+  color : $footer-pb-txt-color;
+  margin: 0 0 5px;
+
+  a {
+    color: $footer-pb-link-color;
+  }
+}
+
+#footer .social_media {
+  display      : inline-block;
+  margin-right : 5px;
+  margin-bottom: 15px;
+}
+
+#footer .social_media img {
+  width : 100%;
+  height: auto;
+  width : 65px;
+}
+/**
+ * Responsive
+ */
+@media only screen and (max-width: 1920px) and (min-width: 1000px) {
+  #footer .app-store,
+  #footer .google-play {
+    max-width    : get-vw(205px);
+    height       : get-vw(79px);
+    margin-bottom: get-vw(15px);
+  }
+
+  #footer .social_media {
+    margin-right : get-vw(5px);
+    margin-bottom: get-vw(15px);
+  }
+
+  #footer .social_media img {
+    width : get-vw(65px);
+    height: auto;
+  }
+
+  #footer .footer-col.last h5,
+  #footer .footer-col:last-child h5 {
+    max-width: get-vw(357px);
+  }
+}
+@media only screen and (max-width: 1600px) {
+  #footer > .container {
+    padding: 0 60px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #footer .footer-col h5 {
+    font-size: 35px !important;
+  }
+
+  #footer .mobile-hide {
+    display: none;
+  }
+
+  #footer > div.container.clearfix > div:nth-child(2) {
+    margin-bottom: 0;
+  }
+
+  .soacial-media {
+    width     : 100%;
+    float     : none;
+    text-align: center;
+  }
+
+  #footer .logos a {
+    display   : block;
+    text-align: center;
+    margin    : 0 0 15px;
+  }
+
+  #footer .container.bottom-footer {
+    margin-top: 0;
+    padding   : 20px 20px 10px;
+  }
+
+  #footer .footer-col.last,
+  #footer .footer-col:last-child {
+    text-align: center;
+  }
+
+  #footer .footer-col.last h5,
+  #footer .footer-col:last-child h5 {
+    width     : 100%;
+    text-align: center;
+    float     : none;
+    max-width : 100%;
+  }
+
+  #footer .app-store,
+  #footer .google-play {
+    max-width: 180px;
+    height   : 55px;
+  }
+
+  #footer .app-store,
+  #footer .google-play {
+    background-position: center top;
+  }
+
+  #footer .social_media img {
+    height: 55px;
+    width : auto;
+  }
+
+  #footer .footer-col.sri-logo {
+    padding-top: 0;
+  }
+
+  #footer .container.copyright {
+    padding: 20px 0;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  #footer .footer-col h5,
+  #footer .footer-col li,
+  #footer .footer-col li a,
+  #footer .footer-col p {
+    font-size  : 16px;
+    line-height: 28px;
+  }
+
+  #footer .container.bottom-footer p {
+    font-size  : 15px;
+    line-height: 20px;
+  }
+
+  #footer .footer-col {
+    width             : 100% !important;
+    padding-right     : 0;
+    display           : block;
+    float             : none;
+    margin-bottom     : 40px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition   : all 0.5s ease-in-out;
+    -o-transition     : all 0.5s ease-in-out;
+    transition        : all 0.5s ease-in-out;
+  }
+
+  #footer {
+    padding: 30px 0 0;
+  }
+
+  #footer .footer-col {
+    text-align: center;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  #footer .container.bottom-footer p {
+    font-size: 11px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  #footer .footer-col h5 {
+    font-size: 22px;
+  }
+}

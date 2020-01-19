@@ -1,0 +1,206 @@
+/* ===== Schools and Languages Menus ========================================================== */
+#right-nav .menu-wrap {
+   position: absolute;
+   @include responsive-property("width",440,280px,440px);
+   background: $schools-menu-bg;
+	padding-right: 10px;
+	@include responsive-property("padding-top",50,30px,50px);
+	@include responsive-property("padding-bottom",50,20px,50px);
+	@include responsive-property("padding-left",90,30px,90px);
+	left: 50%;
+   @include responsive-property("top",$header-height - 10, 80px,$header-height + 45px);	
+   height: auto;
+	@include border-radius(8px);
+	-webkit-box-shadow: -7px 7px 21px 0px rgba(0,0,0,0.3);
+	-moz-box-shadow: -7px 7px 21px 0px rgba(0,0,0,0.3);
+	box-shadow: -7px 7px 21px 0px rgba(0,0,0,0.3);
+	
+	 visibility: hidden;
+    opacity: 0;
+    -webkit-transform: scale(0.9) translateX(-50%);
+    transform: scale(0.9) translateX(-50%);
+    -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+    transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+	
+	&:after {
+		position: absolute;
+		content: '';
+		left: 50%;
+		@include responsive-property("top",-20, -8px,-20px);	
+		@include responsive-property("margin-left",-20, -8px,-20px);	
+		width: 0px;
+		height: 0px;
+		border-left: 20px solid transparent;
+		border-right: 20px solid transparent;
+		border-bottom: 20px solid $schools-menu-bg;
+		@include responsive-property("border-left-width",20, 8px,20px);	
+		@include responsive-property("border-right-width",20, 8px,20px);	
+		@include responsive-property("border-bottom-width",20, 8px,20px);	
+	}
+}
+#right-nav .active .menu-wrap {
+	visibility: visible;
+    opacity: 1;
+    -webkit-transform: scale(1) translateX(-50%);
+    transform: scale(1) translateX(-50%);
+    -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+    transition: transform 0.4s, opacity 0.4s;
+}
+#right-nav .menu-wrap ul {
+   margin: 0;
+   text-align: left;
+   width: 100%;
+}
+#right-nav .menu-wrap li {
+	@include responsive-property("font-size",$schools-menu-links-font-size,15px,$schools-menu-links-font-size + 5px);
+   @include responsive-property("line-height",$schools-menu-links-font-size + 5,15px,$schools-menu-links-font-size + 10px);
+   color: $schools-menu-links-color;
+	@include responsive-property("margin-top",35,10px,40px);   
+}
+#right-nav .menu-wrap li:first-child {
+   margin-top: 0;
+}
+#right-nav .menu-wrap li a {
+   color: $schools-menu-links-color;
+   display: inline-block;
+   text-decoration: none;
+   position: relative;
+   @include schools-menu-links-font;
+   
+   &:after {
+      position: absolute;
+      width: 0%;
+      height: 2px;
+      background: #FFF;
+      bottom: 0;
+      left: 0;
+      display: block;
+      z-index: 2;
+      content: '';
+      @include transition();
+   }
+   &:hover:after {
+      width: 100%;
+   }
+   &:hover {
+      color: $schools-menu-links-color-hover;
+      background: $schools-menu-links-bg-hover;
+   }
+}
+#right-nav .menu-wrap li.active a {
+   color: $schools-menu-links-color-hover;
+   background: $schools-menu-links-bg-hover;
+   
+   &:after {
+      display: none;
+   }
+}
+
+
+#header #change_language_form {
+	.options {
+		position: absolute;		
+		z-index: 999;
+		margin: 0;
+		list-style: none;
+		border: 0;
+		background-color: $language-dropdown-bg;
+		width: auto;
+		@include responsive-property("padding-top",50,20px,50px);
+		@include responsive-property("padding-bottom",50,20px,50px);
+		@include responsive-property("padding-left",80,30px,80px);
+		@include responsive-property("padding-right",80,30px,80px);
+		left: 50%;
+		@include responsive-property("top",$header-height - 10, 80px,$header-height + 45px);	
+		height: auto;
+		@include border-radius(8px);
+		-webkit-box-shadow: -7px 7px 21px 0px rgba(0,0,0,0.3);
+		-moz-box-shadow: -7px 7px 21px 0px rgba(0,0,0,0.3);
+		box-shadow: -7px 7px 21px 0px rgba(0,0,0,0.3);
+		 visibility: hidden;
+		 opacity: 0;
+		 -webkit-transform: scale(0.9) translateX(-50%);
+		 transform: scale(0.9) translateX(-50%);
+		 -webkit-transition: -webkit-transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+		 transition: transform 0.2s, opacity 0.2s, visibility 0s 0.2s;
+		
+		&.open {
+			visibility: visible;
+			 opacity: 1;
+			 -webkit-transform: scale(1) translateX(-50%);
+			 transform: scale(1) translateX(-50%);
+			 -webkit-transition: -webkit-transform 0.4s, opacity 0.4s;
+			 transition: transform 0.4s, opacity 0.4s;
+		}
+
+		&:after {
+			position: absolute;
+			content: '';
+			left: 50%;
+			@include responsive-property("top",-20, -8px,-20px);	
+			@include responsive-property("margin-left",-20, -8px,-20px);	
+			width: 0px;
+			height: 0px;
+			border-left: 20px solid transparent;
+			border-right: 20px solid transparent;
+			border-bottom: 20px solid $language-dropdown-bg;
+			@include responsive-property("border-left-width",20, 8px,20px);	
+			@include responsive-property("border-right-width",20, 8px,20px);	
+			@include responsive-property("border-bottom-width",20, 8px,20px);	
+		}
+	}
+	.options li {
+		display: block;
+		@include responsive-property("font-size",$language-options-font-size, 13px, $language-options-font-size + 10px);
+		@include responsive-property("line-height",$language-options-font-size + 4, 17px, $language-btn-font-size + 14px);		 
+		color: $language-options-color;
+		text-align: left;
+		text-decoration: none;
+		@include responsive-property("margin-top",35,10px,40px); 
+		@include language-options-font;
+		&:first-child {
+			margin-top: 0;
+		}
+		&.selected {
+	
+		}
+	}
+	.options li:hover {
+	}
+	.options li[rel="0"] {
+		display: none;
+	}
+}
+
+
+
+/**
+ * Responsive
+ */
+
+@media only screen and (max-width: 1300px) {
+   #right-nav .menu-wrap {
+      padding: 40px 10px 30px 50px;
+   }
+   #right-nav .menu-wrap li {
+      margin-top: 20px;
+   }
+}
+@media only screen and (max-width: 1000px) {
+   #right-nav .menu-wrap li,
+   #right-nav .menu-wrap ul {
+      display: block;
+      padding: 0;
+   }
+}
+@media only screen and (max-width: 900px) {    
+   #right-nav .menu-btn > span.inactive {
+      opacity: 1;
+   }
+   #right-nav .menu-wrap, #right-nav .active .menu-wrap  {
+      top: 100%;  
+   }
+	#header #change_language_form .options {
+		top: 51px;
+	}
+}

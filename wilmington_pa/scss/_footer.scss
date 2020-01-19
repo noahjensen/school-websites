@@ -1,0 +1,154 @@
+/*************************
+*
+*  FOOTER
+*
+*************************/
+
+#footer {
+  background: $footer-bg;
+  padding   : 0 70px;
+}
+
+#footer > .container {
+  position : relative;
+  padding  : $footer-padding;
+  width    : 100%;
+  max-width: 1587px;
+}
+
+#footer .footer-col {
+  width             : 21%;
+  float             : left;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition   : all 0.5s ease-in-out;
+  -o-transition     : all 0.5s ease-in-out;
+  transition        : all 0.5s ease-in-out;
+}
+
+#footer .footer-col:first-child {
+  padding-right: 15px;
+}
+
+#footer .footer-col.last,
+#footer .footer-col:last-child {
+  width     : 37%;
+  text-align: right;
+}
+
+#footer .footer-col.last h5,
+#footer .footer-col:last-child h5 {
+  text-align: left;
+}
+
+#footer .footer-col.sri-logo {
+  padding-top  : 105px;
+  width        : 18%;
+  padding-right: 15px;
+}
+
+#footer .footer-col ul {
+  margin: 0;
+}
+
+#footer .footer-col h5,
+#footer .footer-col li,
+#footer .footer-col li a,
+#footer .footer-col p {
+  @include font-size(14);
+  @include line-height(34);
+  color         : $white;
+  text-transform: none;
+  @include first-font-family;
+  text-transform: uppercase;
+}
+
+#footer .footer-col h5 {
+  color    : $footer-title-color;
+  font-size: 2.3rem;
+}
+
+#footer .app-store,
+#footer .google-play {
+  width          : 100%;
+  max-width      : 200px;
+  max-height     : 60px;
+  height         : 67px;
+  display        : inline-block;
+  margin         : 0 0 19px;
+  background     : url("apple.png") no-repeat right top;
+  background-size: 100% auto;
+  text-indent    : -9999px;
+  text-align     : left;
+  vertical-align : top;
+}
+
+#footer .google-play {
+  background     : url("google.png") no-repeat right top;
+  margin         : 0;
+  background-size: 100% auto;
+}
+
+#footer > .container.copyright {
+  border-top: 1px solid #8095ae;
+  text-align: center;
+  padding   : 20px 0;
+}
+
+#footer .bottom-footer p {
+  @include font-size(20);
+  @include line-height(18);
+  color         : $white;
+  margin-bottom : 0;
+  text-transform: uppercase;
+
+  a {
+    color: $wilmingtonyellow;
+  }
+
+}
+
+#footer > .container.copyright p:first-child {
+  @include font-size(11);
+  @include line-height(15);
+  margin-bottom : 15px;
+  text-transform: none;
+  font-style    : italic;
+}
+
+#footer .footer-col.seal-logo {
+  width        : 18%;
+  padding-right: 10px;
+  padding-left : 10px;
+  text-align   : center;
+
+  a {
+    display: inline-block;
+  }
+
+  img {
+    width    : 100%;
+    max-width: 200px;
+    height   : auto;
+  }
+
+}
+
+#footer .bottom-footer {
+  text-align: center;
+  max-width : 100%;
+  background: #1a1a1a;
+  position  : absolute;
+  left      : 0;
+  height    : 20px;
+}
+
+#footer .footer-icon {
+  height      : 60px;
+  width       : 60px;
+  margin-right: 5px;
+}
+
+#footer .required-info img {
+  width : 75%;
+  height: auto;
+}

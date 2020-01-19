@@ -1,0 +1,992 @@
+/**
+ * Responsive
+ */
+
+/********** Media Queries *****************************************************/
+
+@media only screen and (max-width: 1920px) and (min-width: 1000px) {
+  #left-nav {
+    width: 18.85vw;
+  }
+
+  .main .col-item.athletics-wrapper h4 a,
+  .main .col-item.athletics-wrapper:hover h4 a {
+    padding-top: get-vw(290px);
+  }
+
+  .main .col-item.athletics-wrapper h4,
+  .main .col-item.athletics-wrapper:hover h4,
+  .middle-school-page .main .col-item.athletics-wrapper h4,
+  .middle-school-page .main .col-item.athletics-wrapper:hover h4 {
+    background-size: auto get-vw(255px);
+  }
+
+  #header .search-icon {
+    width : get-vw(142px) !important;
+    height: get-vw(142px) !important;
+  }
+
+  #header #change_language_form {
+    min-width: get-vw(152px);
+  }
+
+  #header #change_language_form .select {
+    line-height: get-vw(142px);
+    height     : get-vw(142px);
+  }
+
+  #header #change_language_form .options {
+    top: get-vw(145px);
+  }
+
+  #header {
+    min-height: get-vw(142px);
+  }
+
+  #left-nav .menu-btn,
+  #left-nav .menu-btn > span:first-child,
+  #right-nav .menu-btn > span {
+    height     : get-vw(142px);
+    line-height: get-vw(142px);
+  }
+
+  #left-nav .menu-btn > span:first-child,
+  #right-nav .menu-btn > span {
+    padding-left: get-vw(55px);
+    font-size   : 1.56vw;
+  }
+
+  .menu-close {
+    left           : 15.31vw;
+    top            : get-vw(52px);
+    width          : 1.87vw;
+    height         : 1.87vw;
+    background-size: 100% 100%;
+  }
+
+  #header .logo {
+    width       : get-vw(443px);
+    margin-right: get-vw(25px);
+    margin-top  : get-vw(15px);
+  }
+
+  #left-nav.active .menu-btn:hover .menu-close,
+  .active .menu-close {
+    left: get-vw(891px);
+  }
+
+  #left-nav.active {
+    width: get-vw(951px);
+  }
+
+  #left-nav .first-menu,
+  #left-nav .schools-menu {
+    font-size  : get-vw(24px);
+    margin-left: get-vw(90px);
+    line-height: get-vw(142px);
+  }
+
+  .menu-wrap {
+    left          : 3.64vw;
+    padding-left  : 3.64vw;
+    top           : get-vw(142px);
+    width         : get-vw(1075px);
+    padding-top   : get-vw(50px);
+    padding-bottom: get-vw(138px);
+  }
+
+  .main .container {
+    padding-left : 3.64vw;
+    padding-right: 3.64vw;
+  }
+
+  .menu-wrap ul.first-nav {
+    padding-right: get-vw(80px);
+  }
+
+  .menu-wrap ul.second-nav {
+    margin-top  : get-vw(18px);
+    margin-right: get-vw(45px);
+  }
+
+  ul.first-nav li {
+    font-size    : get-vw(24px);
+    margin-bottom: get-vw(20px);
+  }
+
+  ul.first-nav li a {
+    font-size  : get-vw(24px);
+    line-height: get-vw(65px);
+  }
+
+  ul.first-nav li span {
+    width       : get-vw(65px);
+    height      : get-vw(65px);
+    margin-right: get-vw(35px);
+    line-height : get-vw(65px);
+  }
+
+  ul.first-nav li span img {
+    max-width: 50%;
+    //width: 100%;
+  }
+
+  .schools-nav li,
+  ul.second-nav li {
+    font-size    : get-vw(18px);
+    line-height  : get-vw(21px);
+    margin-bottom: get-vw(18px);
+  }
+
+  .main .col-item.gallery-wrapper h4,
+  .main .col-item.live-feeds-wrapper h4,
+  .main .col-item.news-wrapper h4,
+  body .main .col-item h4 {
+    background-size: get-vw(54px) auto;
+  }
+
+  .main .col-item.live-feeds-wrapper h4 {
+    background-size: get-vw(46px) auto;
+  }
+
+  .main .col-item.news-wrapper h4 {
+    background-size: get-vw(60px) auto;
+  }
+
+  .bx-wrapper .bx-pager {
+    bottom: get-vw(-50px);
+  }
+
+  .homepage .main {
+    padding-top: get-vw(76px);
+  }
+
+  .main .col-item {
+    height: get-vw(457px);
+  }
+
+  .main .col-item.events-wrapper {
+    height: get-vw(914px);
+  }
+
+  .main .col-item h4 {
+    font-size  : get-vw(32px);
+    line-height: get-vw(40px);
+    padding-top: get-vw(80px);
+  }
+
+  .main .col-item .hover-content {
+    padding-top  : get-vw(120px);
+    padding-left : get-vw(70px);
+    padding-right: get-vw(55px);
+  }
+
+  .main .col-item .news {
+    margin-bottom: get-vw(40px);
+  }
+
+  .main .col-item.news-wrapper .right-content p {
+    font-size    : get-vw(24px);
+    margin-bottom: get-vw(8px);
+    line-height  : get-vw(31px);
+  }
+
+  .main .col-item .news .right-content .autor,
+  .main .col-item .news .right-content .date {
+    font-size    : get-vw(18px);
+    line-height  : get-vw(18px);
+    padding-left : get-vw(14px);
+    padding-right: get-vw(14px);
+  }
+
+  .main .col-item.gallery-wrapper:hover h4,
+  .main .col-item.live-feeds-wrapper:hover h4,
+  .main .col-item.news-wrapper:hover h4,
+  .main .col-item:hover h4 {
+    top : get-vw(55px);
+    left: get-vw(70px);
+  }
+
+  .main .col-item .see-more {
+    height     : get-vw(52px);
+    font-size  : get-vw(18px);
+    line-height: get-vw(52px);
+  }
+
+  .main .col-item .see-more span {
+    padding-left : get-vw(45px);
+    padding-right: get-vw(45px);
+    height       : get-vw(50px);
+    font-size    : get-vw(18px);
+    line-height  : get-vw(50px);
+  }
+
+  .main .col-item .news .right-content .autor {
+    padding-left: 0;
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a {
+    width : get-vw(20px);
+    height: get-vw(20px);
+  }
+
+  .main .col-item.live-feeds-wrapper .live-feed {
+    margin-bottom: get-vw(19px);
+  }
+
+  .main .col-item.live-feeds-wrapper .right-content p {
+    font-size    : get-vw(18px);
+    line-height  : get-vw(22px);
+    margin-bottom: get-vw(8px);
+  }
+
+  .main .col-item.live-feeds-wrapper .right-content p a {
+    max-height: get-vw(48px);
+  }
+
+  .main .col-item.live-feeds-wrapper .right-content .autor,
+  .main .col-item.live-feeds-wrapper .right-content .time {
+    font-size    : get-vw(14px);
+    line-height  : get-vw(14px);
+    padding-left : get-vw(9px);
+    padding-right: get-vw(9px);
+  }
+
+  .main .col-item.live-feeds-wrapper .right-content .time {
+    padding-left: 0;
+  }
+
+  .main .col-item.athletics-wrapper h5 {
+    font-size    : get-vw(18px);
+    line-height  : get-vw(22px);
+    margin-bottom: get-vw(8px);
+  }
+
+  .main .col-item.athletics-wrapper .team {
+    font-size  : get-vw(30px);
+    line-height: get-vw(35px);
+  }
+
+  .main .col-item .event .date {
+    font-size  : get-vw(18px);
+    line-height: get-vw(22px);
+  }
+
+  .main .col-item.events-wrapper .right-content a,
+  .main .col-item.events-wrapper .right-content p {
+    font-size  : get-vw(24px);
+    line-height: get-vw(28px);
+    margin-top : get-vw(10px);
+  }
+
+  .main .col-item.athletics-wrapper .sport-event > span {
+    font-size  : get-vw(18px);
+    line-height: get-vw(22px);
+    margin     : get-vw(10px) 0;
+  }
+
+  .main .col-item.date-wrapper span.day {
+    margin-bottom: get-vw(47px);
+  }
+
+  .main .col-item.date-wrapper span {
+    font-size  : get-vw(36px);
+    line-height: get-vw(40px);
+  }
+
+  .main .col-item.date-wrapper span.number {
+    font-size  : get-vw(215px);
+    line-height: get-vw(219px);
+  }
+
+  .main {
+    padding-bottom: get-vw(70px);
+  }
+
+  #footer {
+    padding: 0 get-vw(70px);
+  }
+
+  #footer > .container {
+    max-width: get-vw(1587px);
+    padding  : get-vw(40px) 0 get-vw(30px);
+  }
+
+  #footer > .container.copyright {
+    padding: get-vw(20px) 0;
+  }
+
+  #footer .footer-col:first-child {
+    padding-right: get-vw(15px);
+  }
+  /*#footer .footer-col p,
+    #footer .footer-col li,
+    #footer .footer-col li a,
+    #footer .footer-col h5 {
+        font-size: get-vw(14px);
+        line-height: get-vw(34px);
+    }*/
+  #footer .footer-col p {
+    margin-bottom: get-vw(19px);
+  }
+
+  #footer .footer-col h5 {
+    //font-size: get-vw(18px);
+    //line-height: get-vw(22px);
+    //margin: get-vw(20px) 0 get-vw(25px);
+  }
+
+  #footer .footer-col.sri-logo {
+    padding-top  : get-vw(105px);
+    padding-right: get-vw(15px);
+  }
+
+  .gallery-wrapper .hover-content .bx-wrapper,
+  .gallery-wrapper .hover-content .bx-wrapper .bx-viewport img {
+    min-height: get-vw(457px);
+  }
+
+  .main .col-item.athletics-wrapper .hover-content .view-more {
+    font-size    : get-vw(30px);
+    line-height  : get-vw(35px);
+    padding-right: get-vw(33px);
+  }
+
+  .main .col-item.athletics-wrapper .hover-content .view-more:after {
+    width : get-vw(26px);
+    height: get-vw(35px);
+  }
+
+  .main .col-item.events-wrapper .event {
+    margin-bottom: get-vw(45px);
+  }
+}
+
+/* limit min-font-size */
+
+@media only screen and (max-width: 1500px) {
+  #footer .footer-col h5,
+  #footer .footer-col li,
+  #footer .footer-col li a,
+  #footer .footer-col p,
+  #footer > .container.copyright,
+  #footer > .container.copyright p {
+    font-size  : 12px;
+    line-height: 28px;
+  }
+
+  #footer .footer-col h5 {
+    font-size  : 13px;
+    line-height: 17px;
+  }
+
+  .main .col-item.live-feeds-wrapper .right-content .autor,
+  .main .col-item.live-feeds-wrapper .right-content .time {
+    font-size  : 12px;
+    line-height: 12px;
+  }
+}
+
+/*Mobile and Tablet */
+
+@media only screen and (max-width: 62.5em) {
+  .main .col-item.athletics-wrapper .hover-content {
+    display: block;
+  }
+
+  .second-nav li.has-child ul li.has-child ul {
+    margin-left: 5px;
+  }
+
+  #left-nav .first-menu.active:after,
+  #left-nav .schools-menu.active:after,
+  .bx-wrapper .bx-controls-direction a {
+    display: none;
+  }
+
+  #header #change_language_form {
+    float        : right;
+    width        : 80px;
+    text-align   : right;
+    padding-right: 12px;
+
+    .select {
+      line-height: 82px;
+      height     : 82px;
+    }
+  }
+
+  #header .search-icon {
+    width : 80px !important;
+    height: 82px !important;
+  }
+
+  #header #change_language_form .options {
+    left : auto;
+    right: 0;
+    top  : 83px;
+  }
+
+  .main .col-item:before,
+  .main-col-item.hover:before {
+    width            : 100%;
+    height           : 100%;
+    margin           : 0;
+    left             : 0;
+    top              : 0;
+    -webkit-transform: none;
+    transform        : none;
+    border-radius    : 0;
+  }
+
+  .main .col-item.athletics-wrapper > div {
+    position: static;
+    margin  : 15px 0;
+    width   : 100%;
+  }
+
+  #header .logo,
+  .first-col,
+  .main .col-item.athletics-wrapper,
+  .main .col-item.date-wrapper,
+  .main .col-item.events-wrapper,
+  .main .col-item.gallery-wrapper,
+  .main .col-item.live-feeds-wrapper,
+  .second-col {
+    width     : 100%;
+    text-align: center;
+    float     : none;
+  }
+
+  .main .col-item,
+  .main .col-item.events-wrapper {
+    height        : auto;
+    padding-bottom: 50px;
+    min-height    : 300px;
+  }
+
+  #left-nav .first-menu,
+  #left-nav .schools-menu {
+    text-align: center;
+    width     : 50%;
+  }
+
+  #left-nav {
+    width     : 100%;
+    text-align: center;
+    float     : none;
+  }
+
+  #header .logo {
+    margin : 0;
+    padding: 8px 15px;
+
+    img {
+      max-width: 600px;
+    }
+  }
+
+  #left-nav .menu-btn {
+    height    : 40px;
+    text-align: center;
+  }
+
+  #left-nav .first-menu,
+  #left-nav .menu-btn > span:first-child,
+  #left-nav .schools-menu,
+  #right-nav .menu-btn > span {
+    line-height: 40px;
+    font-size  : 18px;
+    height     : 40px;
+    text-align : center;
+    padding    : 0 10px;
+  }
+
+  #left-nav .first-menu,
+  #left-nav .schools-menu {
+    margin: 0;
+  }
+
+  .menu-close {
+    right          : 5px;
+    left           : auto;
+    top            : 7px;
+    width          : 25px;
+    height         : 25px;
+    background-size: 100% 100%;
+  }
+
+  .menu-wrap {
+    left          : 0;
+    padding-left  : 30px;
+    padding-top   : 50px;
+    width         : 100%;
+    top           : 40px;
+    padding-bottom: 30px;
+  }
+
+  #left-nav.active .menu-btn > span:first-child {
+    float: none;
+  }
+
+  #left-nav.active .menu-btn:hover .menu-close,
+  .active .menu-close {
+    left: auto;
+  }
+
+  #left-nav.active {
+    width: 100%;
+  }
+
+  #left-nav.active .menu-btn {
+    overflow: visible;
+    z-index : 105;
+  }
+
+  .menu-wrap ul.second-nav {
+    margin: 20px 0 0;
+    float : none;
+  }
+
+  .menu-wrap ul.first-nav {
+    float: none;
+    width: 100%;
+  }
+
+  ul.first-nav li {
+    width    : 50%;
+    float    : left;
+    min-width: 179px;
+  }
+
+  .menu-wrap ul.schools-nav {
+    float       : right;
+    margin-right: 30px;
+  }
+
+  ul.first-nav li,
+  ul.first-nav li a {
+    font-size  : 17px;
+    line-height: 35px;
+  }
+
+  ul.first-nav li span {
+    margin-right: 15px;
+    width       : 35px;
+    height      : 35px;
+    line-height : 35px;
+  }
+
+  .main .container {
+    padding: 0 30px 20px;
+  }
+
+  .homepage .main {
+    padding-top: 40px;
+  }
+
+  #footer {
+    padding: 0 30px;
+  }
+
+  #footer .footer-col:first-child {
+    padding: 0;
+  }
+
+  #footer .footer-col.last h5,
+  #footer .footer-col:last-child h5 {
+    text-align: center;
+  }
+
+  #footer .footer-col.sri-logo {
+    padding: 20px 0 0;
+  }
+
+  .main .col-item.athletics-wrapper {
+    min-height: 200px;
+  }
+
+  .main .col-item.athletics-wrapper h4 {
+    display: none;
+  }
+
+  .main .col-item.news-wrapper .right-content p {
+    font-size  : 23px;
+    line-height: 27px;
+  }
+
+  .main .col-item .event .date,
+  .main .col-item.athletics-wrapper h5 {
+    font-size  : 15px;
+    line-height: 18px;
+  }
+
+  .main .col-item.athletics-wrapper .team,
+  .main .col-item.events-wrapper .right-content a,
+  .main .col-item.events-wrapper .right-content p {
+    font-size  : 20px;
+    line-height: 25px;
+  }
+
+  .main .col-item .hover-content {
+    padding-left : 30px;
+    padding-right: 25px;
+    padding-top  : 70px;
+  }
+
+  .main .col-item .hover-content .event,
+  .main .col-item .hover-content .sport-event {
+    padding-left: 30px;
+  }
+
+  .gallery-wrapper .hover-content .bx-wrapper,
+  .gallery-wrapper .hover-content .bx-wrapper .bx-viewport img {
+    min-height: 300px;
+  }
+
+  .main .col-item .hover-content .event {
+    padding-right: 30px;
+    width        : 100%;
+  }
+
+  .main .col-item h4,
+  .main .col-item.athletics-wrapper h4,
+  .main .col-item.gallery-wrapper h4,
+  .main .col-item.gallery-wrapper:hover h4,
+  .main .col-item.live-feeds-wrapper h4,
+  .main .col-item.live-feeds-wrapper:hover h4,
+  .main .col-item.news-wrapper h4,
+  .main .col-item.news-wrapper:hover h4,
+  .main .col-item:hover h4 {
+    height           : auto;
+    top              : 25px;
+    left             : 30px;
+    -webkit-transform: translateY(0%);
+    -ms-transform    : translateY(0%);
+    transform        : translateY(0%);
+    text-align       : left;
+    padding          : 0;
+    background       : transparent;
+  }
+
+  .main .col-item > img {
+    -webkit-transform       : scale(1.33);
+    -webkit-transform-origin: 50% 50%;
+    -moz-transform          : scale(1.33);
+    -moz-transform-origin   : 50% 50%;
+    transform               : scale(1.33);
+    -transform-origin       : 50% 50%;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+  }
+
+  .main .col-item .hover-content {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  .main .col-item .see-more {
+    opacity: 1;
+    filter: alpha(opacity=100);
+  }
+
+  .main .col-item.date-wrapper span {
+    font-size  : 20px;
+    line-height: 25px;
+  }
+
+  .main .col-item .see-more {
+    height     : 30px;
+    line-height: 30px;
+  }
+
+  .main .col-item .see-more span {
+    height     : 28px;
+    line-height: 28px;
+    padding    : 0 20px;
+    font-size  : 14px;
+  }
+
+  .main .col-item .news .right-content .autor,
+  .main .col-item .news .right-content .date,
+  .main .col-item.live-feeds-wrapper .right-content p {
+    font-size  : 15px;
+    line-height: 17px;
+  }
+
+  .main .col-item.date-wrapper span.number {
+    font-size    : 115px;
+    font-size    : 11.5rem;
+    line-height  : 119px;
+    line-height  : 11.9rem;
+    margin-bottom: 25px;
+  }
+
+  .main .col-item.date-wrapper span.day {
+    margin-bottom: 27px;
+  }
+
+  .main .col-item h4 {
+    font-size  : 24px;
+    line-height: 29px;
+  }
+
+  #footer > .container {
+    padding: 20px 0;
+  }
+
+  #footer > .container.copyright {
+    padding: 10px 0;
+  }
+
+  #slider p {
+    font-size: 18px;
+  }
+
+  .slider-container img {
+    max-width: 100%;
+    width    : 100%;
+  }
+
+  .slider-container img {
+    height: auto !important;
+  }
+
+  #slider .slider-info h2 {
+    font-size    : 35px;
+    font-size    : 3.5rem;
+    line-height  : 39px;
+    line-height  : 3.9rem;
+    margin-bottom: 20px;
+  }
+
+  #slider p {
+    font-size: 18px;
+    font-size: 1.8rem;
+  }
+
+  .menu-wrap {
+    height: auto !important;
+  }
+
+  #slider {
+    height: auto !important;
+  }
+
+  #slider h2,
+  #slider p {
+    text-align   : center;
+    padding-right: 0;
+  }
+
+  #footer .app-store,
+  #footer .google-play {
+    margin-left : auto;
+    margin-right: auto;
+    display     : block;
+  }
+
+  #footer .app-store,
+  #footer .google-play {
+    background-position: center top;
+  }
+
+  #footer .footer-col.last {
+    margin : 0 auto;
+    width  : 245px !important;
+    display: block;
+  }
+
+  .bx-wrapper {
+    width  : 100%;
+    float  : none;
+    padding: 0;
+  }
+
+  .main .col-item,
+  .main .col-item:first-child,
+  .main .container > .right-content,
+  .main .left-sidebar {
+    float             : none;
+    width             : 100%;
+    margin-top        : 25px;
+    margin-bottom     : 20px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition   : all 0.5s ease-in-out;
+    -o-transition     : all 0.5s ease-in-out;
+    transition        : all 0.5s ease-in-out;
+  }
+
+  .images-grid {
+    margin-left : auto;
+    margin-right: auto;
+  }
+
+  .main .left-sidebar h1,
+  .right-content .right-links,
+  .right-content h3 {
+    text-align: left;
+  }
+
+  .col-item .news .right-content {
+    line-height: normal;
+    min-height : initial;
+  }
+
+  .right-content .right-links {
+    margin-bottom: 20px;
+  }
+
+  .right-content h3 {
+    line-height: 30px;
+    line-height: 3rem;
+  }
+
+  #footer .footer-col {
+    width             : 100% !important;
+    float             : none;
+    margin-bottom     : 40px;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition   : all 0.5s ease-in-out;
+    -o-transition     : all 0.5s ease-in-out;
+    transition        : all 0.5s ease-in-out;
+  }
+
+  #footer .footer-col {
+    text-align: center;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+
+  .main .left-sidebar {
+    margin: 0;
+  }
+
+  .sub .main .container {
+    padding: 0;
+  }
+
+  .sub .main .right-content {
+    padding   : 0 40px 30px;
+    min-height: initial;
+  }
+
+  .breadcrumb li:first-child {
+    margin-left: 0;
+  }
+
+  .breadcrumb ol {
+    text-align: center;
+  }
+
+  .left-sidebar h3 {
+    margin-top  : 20px;
+    margin-left : 10px;
+    margin-right: 10px;
+  }
+
+  .left-sidebar .left-links li {
+    margin-left: 10px;
+  }
+
+  #right-nav .menu-wrap li,
+  #right-nav .menu-wrap ul {
+    display: block;
+    padding: 0;
+  }
+
+  .menu-wrap {
+    height: auto !important;
+  }
+
+  .main .col-item.date-wrapper span img {
+    width     : 35%;
+    margin-top: 10%;
+  }
+}
+
+@media only screen and (max-width: 805px) {
+  .images-grid {
+    width: 90%;
+  }
+
+  ul.second-nav li.has-child ul {
+    left     : 4px;
+    min-width: 200px;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  #slider .slider-info {
+    padding: 20px 10px 10px;
+  }
+
+  #slider .slider-info h2 {
+    font-size    : 17px;
+    line-height  : 20px;
+    margin-bottom: 10px;
+  }
+
+  #slider p {
+    font-size  : 14px;
+    line-height: 18px;
+  }
+
+  #slider .bx-wrapper,
+  .slider-container img {
+    min-height: 200px !important;
+    object-fit: cover;
+  }
+
+  #header #change_language_form {
+    width: 50px;
+
+    .select {
+      line-height: 52px;
+      height     : 52px;
+    }
+  }
+
+  #header .search-icon {
+    width : 50px !important;
+    height: 52px !important;
+  }
+
+  #header #change_language_form .options {
+    right: 0;
+    top  : 55px;
+  }
+
+  #header #change_language_form .options li {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 505px) {
+  .images-grid a {
+    width        : 100%;
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #slider .slider-info {
+    padding: 0 5px 5px;
+  }
+
+  #slider .slider-info h2 {
+    font-size    : 16px;
+    line-height  : 19px;
+    margin-bottom: 10px;
+  }
+
+  #slider p {
+    font-size  : 13px;
+    line-height: 16px;
+  }
+}

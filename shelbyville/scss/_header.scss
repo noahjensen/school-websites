@@ -1,0 +1,497 @@
+/* ===== Header ========================================================== */
+
+#header {
+   padding: 0 20px;
+   min-height: 109px;
+   background: $header-bg;
+   position: relative;
+   z-index: 99;
+   width: 100%;
+   max-width: 1920px;
+   @include first-font-family;
+   margin: 0 auto;
+   .logo {
+      position: relative;
+      line-height: 109px;
+      float: left;
+      text-align: left;
+      margin: 0;
+      text-decoration: none;
+      display: block;
+      font-size: 0;
+      h1 {
+         display: inline-block;
+         vertical-align: middle;
+         color: #000;
+         @include font-size(40);
+         @include line-height(44);
+         @include second-font-family;
+         text-transform: uppercase;
+         display: inline-block;
+         margin: 0;
+         letter-spacing: 3px;
+      }
+      span {
+         @include font-size(15);
+         @include line-height(30);
+         display: block;
+         text-transform: none;
+         letter-spacing: 3px;
+         color: #000;
+         @include first-font-family;
+         white-space: normal;
+      }
+      img {
+         display: inline-block;
+         vertical-align: middle;
+         z-index: 2;
+         margin-right: 15px;
+         position: relative;
+         width: auto;
+      }
+   }
+}
+.homepage #header {
+   position: absolute;
+   left: 50%;
+   top: 0;
+   -webkit-transform: translateX(-50%);
+   -ms-transform: translateX(-50%);
+   transform: translateX(-50%);
+}
+/* ===== New CSS for Search and Language ========================================================== */
+
+#header .search-icon {
+   float: right;
+    margin-top: 0;
+   margin-left: 0;
+    width: 75px;
+    height: 109px;
+    cursor: pointer;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+   background: url("search_icon.png") no-repeat center center;
+}
+#header #change_language_form {
+   float: right;
+   //min-width: 152px;
+   padding: 0;
+   margin-right: 35px;
+   text-align: center;
+   position: relative;
+   cursor: pointer;
+   form {
+      margin: 0;
+   }
+   .s-hidden {
+      visibility: hidden !important;
+      padding-right: 10px;
+      width: 0px;
+      overflow: hidden;
+      height: 0px;
+      position: absolute;
+   }
+   .select {
+      cursor: pointer;
+      display: block;
+      position: relative;
+      background-color: transparent;
+      margin: 0;
+      &:hover {
+         .styledSelect {
+            color: #000;
+         }
+      }
+   }
+   .select {
+      height: 109px;
+      line-height: 109px;
+      width: auto;
+      display: inline-block;
+      vertical-align: top;
+      font-size: 0;
+   }
+   .styledSelect {
+      position: relative;
+      display: inline-block;
+      font-size: 20px;
+      color: #000;
+      padding-right: 15px;
+      text-transform: uppercase;
+      cursor: pointer;
+      @include second-font-family;
+   }
+   .styledSelect:after {
+      content: '';
+      position: absolute;
+      right: -4px;
+      top: 50%;
+      margin-top: -4px;
+      width: 14px;
+      height: 8px;
+      background: url('arrow.png') no-repeat center top;
+   }
+   .styledSelect:active:after,
+   .styledSelect.active:after {
+      background-position: center bottom;
+   }
+   .options {
+      display: none;
+      position: absolute;
+      top: 108px;
+      right: 0;
+      left: 0;
+      z-index: 999;
+      margin: 0 0;
+      padding: 30px 0;
+      list-style: none;
+      border: 0;
+      background: rgba(0, 0, 0, 0.9);
+      width: 205px;
+      overflow-x: hidden;
+      overflow-y: auto;
+   }
+   .options li {
+      display: block;
+      margin-top: 35px;
+      font-size: 30px;
+      line-height: 40px;
+      color: #FFF;
+      text-align: left;
+      text-transform: uppercase;
+      padding: 5px 8px 5px 35px;
+      border-left: 3px solid transparent;
+      text-decoration: none;
+      &:first-child {
+         margin-top: 0;
+      }
+      &.selected {
+         border-color: $links-color;
+      }
+   }
+   .options li[rel="0"] {
+      display: none;
+   }
+}
+
+/* ===== Menu Button ========================================================== */
+
+#left-nav {
+   float: right;
+   margin-right: 55px;
+   height: 0px;
+   line-height: 109px;
+   font-size: 0;
+
+}
+#header .nav .menu-btn {
+    display: inline;
+    vertical-align: middle;
+}
+#left-nav .menu-btn > span,
+#center-nav .menu-btn > span,
+#right-nav .menu-btn > span {
+
+   @include font-size(20);
+   @include line-height(0);
+   color: $menu-btn-txt-color;
+   text-transform: uppercase;
+   padding-left: 35px;
+   background: url('menu-icon.png') no-repeat 0 center;
+   text-align: left;
+   display: block;
+   cursor: pointer;
+
+   @include second-font-family;
+}
+#right-nav .menu-btn > span,
+#center-nav .menu-btn > span {
+   background: url('arrow.png') no-repeat right 12px;
+   padding-left: 0;
+   padding-right: 25px;
+
+}
+/* ===== Menu ========================================================== */
+
+
+.menu-wrap {
+   z-index: 100;
+   background: $menu-wrap-bg;
+   position: absolute;
+   width: 100%;
+   display: none;
+   left: 0;
+   top: 109px;
+   padding-top: 0;
+   overflow: visible;
+}
+
+
+
+right-nav .menu-btn > span.active:before,
+#left-nav .menu-btn.active > span:before {
+   position: absolute;
+   left: 0;
+   bottom: -17px;
+   content: '';
+   background: $menu-btn-txt-color;
+   height: 2px;
+   width: 136px;
+}
+#left-nav .menu-wrap {
+   width: 100%;
+   left: 0;
+   min-height: 100vh;
+   padding-top: 100px;
+   padding-bottom: 45px;
+
+}
+.menu-wrap > ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+   display: block;
+   position: relative;
+}
+.menu-wrap .second-nav {
+   text-align: left;
+   margin-top: 10px;
+   padding: 0;
+   font-size: 0;
+   padding-left: 570px;
+   padding-right: 70px;
+}
+.menu-wrap ul.first-nav {
+   text-align: left;
+   width: 295px;
+   float: left;
+   margin-left: 160px;
+   z-index: 3;
+}
+
+ul.first-nav li {
+   display: block;
+   color: $white;
+   text-transform: uppercase;
+   -webkit-backface-visibility: hidden;
+   backface-visibility: hidden;
+   margin-top: 9px;
+   width: 275px;
+   position: relative;
+   padding-left: 108px;
+   text-align: center;
+   line-height: 10px;
+   overflow: visible;
+}
+
+ul.first-nav li:first-child {
+   margin-top: 0;
+}
+ul.first-nav li a {
+   font-size: 24px;
+   display: block;
+   color: #FFF;
+   line-height: 65px;
+   -webkit-transition: color 0.2s;
+   transition: color 0.2s;
+   text-align: left;
+   @include first-font-family;
+}
+ul.first-nav li span {
+   width: 166px;
+   height: 65px;
+   line-height: 85px;
+   text-align: center;
+   display: block;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   border-radius: 50%;
+   background: #238ee8;
+   margin: 0 30px 0 10;
+   font-size: 0;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
+
+ul.first-nav li.live-feed span {
+   background: #460265;
+}
+ul.first-nav li.staff span {
+   background: #460265;
+}
+ul.first-nav li.news span {
+   background: #300346;
+}
+ul.first-nav li.events span {
+   background: #460265;
+}
+ul.first-nav li.dining span {
+   background: #300346;
+}
+ul.first-nav li.documents span {
+   background:#460265;
+}
+ul.first-nav li.athletics span {
+   background: #300346;
+}
+ul.first-nav li span img {
+   vertical-align: middle;
+   display: inline-block;
+}
+ul.first-nav li a:hover {
+   text-decoration: none;
+}
+.second-nav li {
+   @include font-size(18);
+   @include line-height(22);
+   color: #FFF;
+   margin: 0 0 15px;
+   text-transform: uppercase;
+   text-align: left;
+   @include first-font-family;
+   padding-right: 10px;
+   vertical-align: top;
+   display: inline-block;
+   padding: 0 20px 0 0;
+   margin-bottom: 30px;
+   width: 25%;
+}
+.second-nav > li {
+   min-height: 46px;
+   margin-bottom: 20px;
+}
+.second-nav li.has-child {
+   position: relative;
+   cursor: pointer;
+   /* min-width: 210px; */
+   text-align: left;
+}
+
+
+.second-nav li.has-child > span,
+.second-nav li.has-child > a {
+   position: relative;
+   display: inline-block;
+   padding-right: 28px;
+}
+.second-nav li.has-child > span:after,
+.second-nav li.has-child > a:after {
+   display: block;
+   position: absolute;
+   z-index: 30;
+   right: 0;
+   top: 2px;
+   content: " ";
+   background: url('submenu-arrow.png') no-repeat right 8px;
+   height: 22px;
+   width: 20px;
+   overflow: hidden;
+}
+.second-nav li.has-child.open > span:after,
+.second-nav li.has-child.open > a:after {
+   background: url('submenu-arrow.png') no-repeat right -103px;
+}
+.second-nav li ul li.has-child > span:after,
+.second-nav li ul li.has-child > a:after {
+   background: url('submenu-red-arrow.png') no-repeat right 8px;
+}
+.second-nav li ul li.has-child.open > span:after,
+.second-nav li ul li.has-child.open > a:after {
+   background: url('submenu-red-arrow.png') no-repeat right -103px;
+}
+.second-nav li.has-child ul {
+   position: absolute;
+   left: 40px;
+   top: 40px;
+   background: #939393;
+   padding: 20px 10px 30px 25px;
+   width: auto;
+   z-index: 999;
+   min-width: 296px;
+   max-width: 396px;
+}
+.second-nav li ul li.has-child ul {
+   background: #fff;
+   border: 1px solid #FFF;
+   left: 20px;
+   min-width: 250px;
+   a {
+      color: #FFF;
+   }
+}
+.second-nav li.has-child ul {
+   display: none;
+}
+.second-nav li.has-child ul li {
+   float: none;
+   width: auto;
+   margin: 15px 0 0;
+   // white-space: nowrap;
+}
+.second-nav li > ul > li {
+   display: block;
+   @include font-size(18);
+   @include line-height(24);
+   text-transform: none;
+   text-align: left;
+   margin-left: 0;
+   margin-bottom: 15px;
+}
+.second-nav li.has-child ul li a {
+   color: #fff;
+}
+
+.second-nav li.has-child ul li a:hover {
+   background: $links-color;
+}
+.second-nav li a {
+   color: #FFF;
+   text-decoration: none;
+   display: block;
+}
+.second-nav li.has-child ul li:first-child {
+   margin: 0;
+}
+
+#right-nav .menu-wrap {
+   width: 340px;
+   background: $right-menu-wrap-bg;
+   padding: 90px 10px 90px 65px;
+   left: auto;
+   right: 55px;
+   top: 97px;
+   height: auto;
+
+}
+#right-nav .menu-wrap ul {
+   margin: 0;
+   text-align: left;
+   width: 100%;
+}
+#right-nav .menu-wrap li {
+   font-size: 16px;
+   color: $white;
+   line-height: 22px;
+   margin-top: 35px;
+   text-transform: uppercase;
+}
+#right-nav .menu-wrap li:first-child {
+   margin-top: 0;
+}
+#right-nav .menu-wrap li a {
+   color: $white;
+}
+#right-nav .menu-btn > span.active:after {
+   background-position: center -37px;
+}
+.menu-close {
+   width: 55px;
+   height: 55px;
+   background: url('close.png') no-repeat center center;
+   position: absolute;
+   right: 20px;
+   top: 20px;
+   cursor: pointer;
+}

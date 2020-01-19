@@ -1,0 +1,84 @@
+// ===== Variables ========================================================== //
+
+// Colors 
+
+//Website color and background
+$first-color:				  #151515;   //very-dark-gray
+$second-color:                #8b2942;   //dark-red
+$third-color:				  #cfd3ec;   //light-blue
+$fourth-color:                #a1a1a1;   //gray
+$fifth-color:                 #646464;   //gray02
+$sixth-color:                 #8d8d8d;   //gray03
+
+$white:                       #FFFFFF;   //white
+$black:                       #000000;   //black
+$third-bg:                    #a4abd6;   //light-purple
+$fourth-bg:                   #002a5c;   //yellow
+$fifth-bg:                    #393939;   //dark-gray
+
+$leftSliderColor:             #002a5c;
+$breadcrumbBg:                #959ca2;
+   
+
+
+//Elements color and background
+$text-color:                        $first-color;
+$see-all-btn-bg:                    transparent;
+$see-all-news-btn-bg:               transparent; 
+$see-all-events-btn-bg:             transparent;
+$see-all-live-feeds-btn-bg:         transparent;
+
+$see-all-btn-color:                 #002a5c; 
+$see-all-news-btn-color:            #002a5c; 
+$see-all-events-btn-color:          #002a5c; 
+$see-all-live-feeds-btn-color:      #002a5c; 
+
+$events-wrapper-bg:                 $third-bg;
+$footer-title-color:                #c0c0c0;
+$live-feed-time-color:              $fourth-color;
+
+$events-title-color:                $fourth-bg;
+$news-title-color:                  $fourth-bg;
+$live-feed-title-color:             $fourth-bg;
+
+$events-title-bg:                   url('calendar-icon.png') no-repeat center top;
+$news-title-bg:                     url('news-icon.png') no-repeat center top;
+$live-feed-title-bg:                url('live-feed-icon.png') no-repeat center top;
+$gallery-title-bg:                url('gallery-icon.png') no-repeat center 10px;
+
+$read-more-new-bg:                  $first-color;
+$read-more-new-color:               $white;
+$news-pager-active:                 $second-color;
+$news-pager:                        $third-color;        
+
+$live-feed-text:                    $black;
+$live-feed-h3:                      $second-color;
+$event-date:                        #8b2942;
+$event-title:                       $black;
+$new-feed-paragraph:                $black;
+$new-feed-h3:                       $second-color;
+
+$header-bg:                         $white;
+$footer-bg:                         #002a5c;
+
+//Some padding and margin
+
+$colspadding:                       0;
+$footer-padding:                    40px 0 30px;
+
+
+$leftMarginRightContent:            95px;          
+$avatarWidth:                       68px;
+
+$leftSlider:                        0;
+
+ $paragraph-font-size:                  20;
+$paragraph-line-height:                28;
+
+$links-color:                       #8b2942;
+
+$subpage-one-col-width:  80%; 
+$subpage-sidebar-width:  30%; 
+$subpage-column-two:     65%; 
+$subpage-cols-margin:    50px; 
+ 

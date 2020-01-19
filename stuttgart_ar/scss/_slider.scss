@@ -1,0 +1,200 @@
+    /****************************
+*   SLIDER
+*
+*************************/
+    
+    .bx-wrapper {
+       position: relative;
+       margin: 0 auto;
+       padding: 0;
+       *zoom: 1;
+       float: right;
+       width: 100%;
+       padding-left: $leftSlider;
+    }
+    .bx-wrapper img {
+       max-width: 100%;
+       display: block;
+    }
+    img {
+       max-width: 100%;
+       height: auto;
+    }
+    .bx-wrapper .bx-viewport {
+       /*fix other elements on the page moving (on Chrome)*/
+       -webkit-transform: translatez(0);
+       -moz-transform: translatez(0);
+       -ms-transform: translatez(0);
+       -o-transform: translatez(0);
+       transform: translatez(0);
+    }
+    .bx-wrapper .bx-pager,
+    .bx-wrapper .bx-controls-auto {
+       position: absolute;
+       bottom: -30px;
+       width: 100%;
+    }
+    /* LOADER */
+    
+    .bx-wrapper .bx-loading {
+       min-height: 50px;
+       background: url(bx_loader.gif) center center no-repeat #fff;
+       height: 100%;
+       width: 100%;
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: 2000;
+    }
+    /* PAGER */
+    
+    .bx-wrapper .bx-pager {
+       text-align: left;
+       position: absolute;
+       width: auto;
+       left: 626px;
+       bottom: 20px;
+    }
+    .bx-wrapper .bx-pager .bx-pager-item,
+    .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+       display: inline-block;
+       *zoom: 1;
+       *display: inline;
+    }
+    .bx-wrapper .bx-pager.bx-default-pager a {
+       background: $black;
+       text-indent: -9999px;
+       display: block;
+       width: 14px;
+       height: 14px;
+       margin: 0;
+       outline: 0;
+       text-align: left;
+       overflow: hidden;
+       @include border-radius(50%);
+       margin-right: 5px;
+    }
+    .bx-wrapper .bx-pager.bx-default-pager a:hover,
+    .bx-wrapper .bx-pager.bx-default-pager a.active {
+       background: $second-color;
+    }
+    .bx-wrapper .bx-controls-direction a {
+       position: absolute;
+       top: 50%;
+       margin-top: -16px;
+       outline: 0;
+       width: 32px;
+       height: 32px;
+       text-indent: -9999px;
+       z-index: 9999;
+    }
+    .bx-wrapper .bx-controls-direction a.disabled {
+       display: none;
+    }
+    .bx-wrapper .bx-viewport:after {
+       content: '';
+       position: absolute;
+       left: 0;
+       top: 0;
+       background: url(slider-mask.png) no-repeat;
+       width: 300px;
+       background-size: auto 100%;
+       z-index: 999999;
+       height: 100%;
+    }
+    /*** END DEFAULT SLIDER CODE  **/
+    
+    #slider {
+       overflow: hidden;
+       background: $leftSliderColor;
+       position: relative;
+    }
+    #slider .left-slider {
+       width: $leftSlider;
+       position: absolute;
+       padding: 10px 0px 10px 70px;
+       z-index: 9;
+       @extend %vertical-align;
+       margin-top: 0 !important;
+    }
+    #slider .left-slider h2 {
+       @include font-size(58);
+       @include line-height(63);
+       color: $second-color;
+       margin: 0 0 35px;
+       text-transform: none;
+       @include first-font-family;
+    }
+#slider .left-slider h4 {
+       @include font-size(36);
+       @include line-height(39);
+       color: $second-color;
+       margin: 0 0 5px;
+       text-transform: none;
+       @include first-font-family;
+    }
+    #slider p {
+       color: #151515;
+       @include font-size(18);
+       @include line-height(28);
+       margin: 0 0 15px;
+       padding-right: 55px;
+       @include first-font-family;
+    }
+    .right-slider {
+       float: left;
+    }
+    #slider .left-slider.scroll-container p {
+       overflow: auto;
+       padding-bottom: 10px;
+    }
+    .right-slider .slide {
+       float: left;
+       /*max-height: 724px;*/
+       overflow: hidden;
+    }
+    .right-slider img {
+       max-width: inherit;
+       width: auto;
+       height: auto;
+    }
+    .right-slider img {
+          width: 100%;
+          height: 70vh;
+          max-height: 780px;
+          -o-object-fit: cover;
+          object-fit: cover;
+       }
+    @media only screen and (max-width: 1920px) and (min-width: 1000px) {
+       /*Changes for slider*/
+       #slider .left-slider h2 {
+          font-size: get-vw(58px);
+          line-height: get-vw(63px);
+       }
+        #slider .left-slider h4 {
+          font-size: get-vw(36px);
+          line-height: get-vw(39px);
+       }
+       .right-slider img {
+          width: 100%;
+          height: 70vh;
+          max-height: 780px;
+          -o-object-fit: cover;
+          object-fit: cover;
+       }
+    }
+    @media only screen and (max-width: 1350px) {
+       #slider h4 {
+          @include font-size(17);
+          @include line-height(21);
+       }
+    }
+    #slider .left-slider {
+       width: 40%;
+    }
+    #slider .bx-wrapper {
+       padding-left: 40%;
+    }
+    .bx-wrapper .bx-pager {
+       left: 38%;
+    }

@@ -1,0 +1,161 @@
+// windsor Mixins and Variables
+
+.windsor {
+
+  .school-color{
+    color: $windsor-color1;
+  }
+  #left-nav,
+  #right-nav {
+    background: $nav-background-windsor;
+  }
+
+  #header #change_language_form {
+    background: $nav-background-windsor;
+  }
+
+  #right-nav .menu-wrap li:hover {
+    border: $windsor-firstlevelhover;
+  }
+
+
+  // Menu Icons
+  #header .search-icon {
+    background: url("search-icon-gray.png") no-repeat center center !important;
+  }
+
+  #header .header-logo {
+    background: url("logo-windsor.png") no-repeat center center !important;
+    height: 85px;
+    position: absolute;
+    width: 112px;
+    top: 0;
+    left: -32px;
+  }
+
+  ul.static-links li:nth-child(odd) span {
+    background: $windsor-menu-icon1;
+  }
+
+  ul.static-links li span {
+    background: $windsor-menu-icon2;
+  }
+  // First Level Dropdown
+  .second-nav li.has-child ul {
+    background: $windsor-submenu-bg;
+  }
+
+
+  .second-nav li ul li:hover {
+    a {
+      border-left: 15px solid $windsor-color1;
+    }
+  }
+  // Second Level Dropdown
+  ul.second-nav li ul li.has-child ul {
+    background: $windsor-color1;
+  }
+
+  ul.second-nav li ul li.has-child ul li a {
+    border-left: 15px solid $windsor-color1;
+    color: $white;
+  }
+
+  ul.second-nav li ul li.has-child ul li:hover {
+    a {
+      border-left: 15px solid $white;
+    }
+  }
+  // School Menu
+  #right-nav .menu-wrap li:hover {
+    border-left: 15px solid $windsor-header-lefthover;
+  }
+  // Language Menu
+  #header #change_language_form {
+    .options li.selected {
+      border-color: $windsor-header-lefthover;
+    }
+
+    .options li:hover {
+      border-left: 15px solid $windsor-header-lefthover;
+    }
+  }
+
+  .main .col-item {
+    &.news-wrapper:before {
+      background: $windsor-news;
+    }
+
+    &.events-wrapper:before {
+      background: $windsor-events;
+    }
+
+    &.live-feeds-wrapper:before {
+      background: $windsor-live-feed;
+    }
+  }
+  // Subpage
+  .left-sidebar h3 {
+    background: $windsor-sidebar;
+  }
+
+  .right-content h2,
+  .right-content h3,
+  .right-content h4,
+  .right-content h5,
+  .right-content h6,
+  .subpage h2,
+  .subpage h3,
+  .subpage h4,
+  .subpage h5,
+  .subpage h6 {
+    color: $windsor-subpage-links;
+  }
+
+  blockquote {
+    border-left: 5px solid $windsor-subpage-links;
+  }
+
+  .right-content > a {
+    color: $windsor-subpage-links;
+  }
+  // Slider
+  #slider:after {
+    background: url("slider-bg-windsor.jpg") center center no-repeat #fff;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    content: "";
+    background-size: cover;
+    z-index: 0;
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a.active,
+  .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: $windsor-slider !important;
+  }
+}
+@media only screen and (max-width: 950px) {
+    .windsor{
+  #slider .left-slider {
+    background: $windsor-color2;
+  }
+
+  #header {
+    background: url("navbackground-windsor.png");
+  }
+
+  #slider .slider-info {
+    background: $windsor-subpage-links;
+  }
+
+#header .header-logo {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+  }
+}
+}

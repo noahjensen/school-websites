@@ -1,0 +1,113 @@
+/*************************
+*
+*  FOOTER
+*
+*************************/
+
+#footer {
+    background: $footer-bg;
+    padding: 0 30px;
+}
+
+#footer > .container {
+    position: relative;
+    padding: $footer-padding;
+    width: 100%;
+}
+
+#footer .footer-col {
+    width: 26%;
+    float: left;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+
+#footer .footer-col:first-child {
+    padding-left: 0;
+}
+
+#footer .footer-col:last-child,
+#footer .footer-col.last {
+    width: 22%;
+    text-align: right;
+    padding: 25px 0 0;
+    float: right;
+    font-size: 0;
+}
+
+#footer .quick-links {
+    width: 18%;
+}
+
+#footer .footer-col:last-child h5,
+#footer .footer-col.last h5 {
+    text-align: left;
+    max-width: 250px;
+    display: block;
+    float: right;
+    width: 100%;
+}
+
+#footer .footer-col ul {
+    margin: 0;
+}
+
+#footer .footer-col p,
+#footer .footer-col li,
+#footer .footer-col li a,
+#footer .footer-col h5 {
+    @include font-size(16);
+    @include line-height(38);
+    color: $white;
+    text-transform: uppercase;
+    @include second-font-family;
+}
+
+#footer .footer-col h5 {
+    color: $footer-title-color;
+    //@include second-font-family;
+    margin: 10px 0 15px;
+    @include line-height(28);
+    font-weight: 900;
+    @include font-size(22);
+}
+
+#footer .app-store,
+#footer .google-play {
+    width: 100%;
+    max-width: 250px;
+    height: 75px;
+    display: inline-block;
+    margin: 0 0 15px 15px;
+    background: url('apple.png') no-repeat right top;
+    background-size: 100% auto;
+    text-indent: -9999px;
+    text-align: left;
+    vertical-align: top;
+}
+
+#footer .google-play {
+    background: url('google.png') no-repeat right top;
+    margin-bottom: 0;
+    background-size: 100% auto;
+}
+
+#footer > .container.copyright {
+    border-top: 1px solid #FFF;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#footer > .container.copyright,
+#footer > .container.copyright p {
+    @include font-size(16);
+    @include line-height(28);
+    color: $white;
+    margin-bottom: 0;
+    text-transform: uppercase;
+    a {
+        color: #FFF;
+    }
+}

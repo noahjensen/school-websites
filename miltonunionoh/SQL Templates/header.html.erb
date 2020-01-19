@@ -1,0 +1,259 @@
+<header id="header" class="clearfix">
+
+        <h1 class="logo"><a href="http://miltonunionoh.apptegy.us/">
+           <%= image_tag "apptegy_cms/themes/miltonunionoh/logo.png", alt: "Milton Union Exempted Village School District" %>Milton-Union Exempted Village School District <span>Home of the Bulldogs</span>
+         </a></h1>
+
+            <nav id="left-nav" class="nav" role="navigation">
+
+            <div class="menu-btn"><span>Menu</span>
+ <div class="menu-wrap">
+          <ul class="first-nav clearfix">
+
+<% if params[:org] == "central-office"  %>
+        <li class="live-feed">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+                <span class="slip button">
+<%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/feed-icon.png' %>
+</span>
+               Live Feed
+            </a>
+        </li>
+
+        <li class="news">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+                <span class="slip-red button">
+<%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/news-icon.png' %>
+ </span>
+                News
+            </a>
+        </li>
+            <li class="events">
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+                  <span class="slip button">
+<%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/events.png' %>
+</span>
+                    Events
+                </a>
+            </li>
+
+
+
+        <li class="staff">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+              <span class="slip-red button">
+ <%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/staff.png' %>
+</span>
+               Staff
+            </a>
+        </li>
+        <li class="documents">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                <span class="slip button">
+ <%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/documents.png' %>
+</span>
+                Documents
+            </a>
+        </li>
+
+
+        <% elsif params[:org] == ("high-school" || "middle-school" || "elementary-school") %>
+        <li class="live-feed">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+                <span class="slip button">
+<%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/feed-icon.png' %>
+</span>
+               Live Feed
+            </a>
+        </li>
+
+        <li class="news">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+                <span class="slip-red button">
+<%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/news-icon.png' %>
+ </span>
+                News
+            </a>
+        </li>
+            <li class="events">
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+                  <span class="slip button">
+<%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/events.png' %>
+</span>
+                    Events
+                </a>
+            </li>
+
+
+
+        <li class="staff">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+              <span class="slip-red button">
+ <%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/staff.png' %>
+</span>
+               Staff
+            </a>
+        </li>
+        <li class="documents">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                <span class="slip button">
+ <%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/documents.png' %>
+</span>
+                Documents
+            </a>
+        </li>
+
+        <li class="dining">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>
+                <span class="slip-red button">
+ <%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/dining.png' %>
+</span>
+                Dining
+            </a>
+        </li>
+
+
+
+        <% elsif params[:org] == ("athletics") %>
+        <li class="live-feed">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+                <span class="slip button">
+        <%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/feed-icon.png' %>
+        </span>
+               Live Feed
+            </a>
+        </li>
+
+        <li class="news">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+                <span class="slip-red button">
+        <%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/news-icon.png' %>
+        </span>
+                News
+            </a>
+        </li>
+            <li class="athletics">
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>
+                  <span class="slip button">
+        <%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/athletics.png' %>
+        </span>
+                    Athletics
+                </a>
+            </li>
+
+
+
+        <li class="staff">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+              <span class="slip-red button">
+        <%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/staff.png' %>
+        </span>
+               Staff
+            </a>
+        </li>
+        <li class="documents">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                <span class="slip button">
+        <%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/documents.png' %>
+        </span>
+                Documents
+            </a>
+        </li>
+<%else%>
+<li class="live-feed">
+    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+        <span class="slip button">
+<%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/feed-icon.png' %>
+</span>
+       Live Feed
+    </a>
+</li>
+
+<li class="news">
+    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+        <span class="slip-red button">
+<%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/news-icon.png' %>
+</span>
+        News
+    </a>
+</li>
+    <li class="events">
+        <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+          <span class="slip button">
+<%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/events.png' %>
+</span>
+            Events
+        </a>
+    </li>
+
+
+
+<li class="staff">
+    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+      <span class="slip-red button">
+<%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/staff.png' %>
+</span>
+       Staff
+    </a>
+</li>
+<li class="documents">
+    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+        <span class="slip button">
+<%= image_tag 'apptegy_cms/themes/miltonunionoh/menu/documents.png' %>
+</span>
+        Documents
+    </a>
+</li>
+      <% end %>
+
+
+
+          </ul>
+
+                    <ul class="second-nav clearfix">
+            <% current_pages.roots.navigation_pages.each do |page| %>
+                <li>
+
+                      <% if page.header? %>
+                        <%= page.name.upcase %>
+                      <% else %>
+                        <a href=<%= page.page_link? ? "#{page.url}" : "/#{page.slug}" %> >
+                          <%= page.name.upcase %>
+                      </a>
+                      <% end %>
+
+                    <% if page.children.any? %>
+                        <ul>
+                            <% page.children.order(:position).each do |subpage| %>
+                                <li>
+                                  <% if params[:org].present? %>
+                                    <a href=<%= subpage.page_link? ? "#{subpage.url}" : "/o/#{params[:org]}/page/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+                                  <% else %>
+                                    <a href=<%= subpage.page_link? ? "#{subpage.url}" : "/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+                                  <% end %>
+                                        <%= subpage.name %>
+                                    </a>
+                                </li>
+                            <% end %>
+                        </ul>
+                    <% end %>
+                </li>
+
+            <% end %>
+        </ul>
+</nav>
+<span class="search-icon"></span>
+
+<%= render 'apptegy_cms/shared/change_language_unstyled' %>
+
+       <nav id="right-nav" class="nav" role="navigation">
+           <div class="menu-btn"><span>Sites</span>
+               <div class="menu-wrap">
+                   <ul>
+                       <%= organizations_menu %>
+                   </ul>
+               </div>
+           </div>
+       </nav>
+   </header>
+<%= render 'apptegy_cms/shared/search' %>

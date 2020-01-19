@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html  class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sheridan Schools</title>
+     <%= include_gon %>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+<script src="https://use.typekit.net/wfp4tlr.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
+<%= favicon_link_tag "apptegy_cms/themes/sheridanar_redesign/favicon.ico" %>
+
+    <%= javascript_include_tag "apptegy_cms/themes/sheridanar_redesign/application" %>
+    <%= stylesheet_link_tag    "apptegy_cms/themes/sheridanar_redesign/application", :media => "all"  %>
+</head>
+
+
+<body class="cbp-spmenu-push homepage">
+
+ <%= render 'sheridanar_redesign/shared/header'  %>
+
+<!-- ======================== SLIDER ======================== -->
+
+
+<div id="slider" class="clearfix">
+	<div class="slider-container">
+		<% current_organization.photos.order(:position).each do |photo| %>
+                    <div class="slide">
+<img src="<%= photo.try(:url) %>" alt="<%= photo.try(:description) %>" >
+                    </div>
+<% end %>
+        </div>
+	<div class="slider-info">
+<%= raw current_organization.bulletin_board.try(:content) %>
+	</div>
+
+</div>
+
+<style>
+
+.slider-container img {
+    max-height: 600px !important;
+    height: 600px !important;
+}
+@media only screen and (max-width: 62.5em){
+.slider-container img {
+    max-height: 300px !important;
+    height: 300px !important;
+}
+}
+
+.menu-wrap{
+min-height: 100vh;
+}
+</style>
+
+<%= cms_slider_menu %>
+<div class="main" role="main">
+    <div class="container clearfix">
+       <%= render 'sheridanar_redesign/shared/section_boxes'  %>
+     </div>
+</div>
+
+<!-- ======================== FOOTER ======================== -->
+
+ <%= render 'sheridanar_redesign/shared/footer'  %>
+
+<!-- ======================== JAVASCRIPTS ======================== -->
+<script>
+$('#change_language_form .styledSelect').click(function () {
+     console.log('You did it!')
+  });</script>
+
+
+
+<script type="text/javascript">
+        $('.live-feeds-wrapper .right-content p a').dotdotdot({
+            watch: 'window'
+        });
+
+    </script>
+
+    <script>
+        $(document).ready(function() {
+            $('.menu-wrap ul.second-nav li ul').parent().addClass('has-child');
+
+            /* $('html').click(function() {
+                $(".menu-wrap").slideUp();
+                $("#left-nav").removeClass('active');
+
+            });
+            $('.menu-btn').click(function(e) {
+                e.stopPropagation();
+            });
+*/
+           $("#left-nav .menu-btn > span, .menu-close").click(function(e) {
+                $("#left-nav .menu-wrap").slideToggle();
+                $("#left-nav").toggleClass('active');
+
+                        var headerheight = $('#header').height();
+                        var windowheight = $(window).height();
+                        var imgheight = windowheight - headerheight;
+
+            });
+            $('#left-nav .schools-menu').click(function() {
+
+
+              if (!$(this).hasClass('active')) {
+                   $("#left-nav .menu-wrap").slideDown();
+					  $('.menu-wrap').addClass('school-wrap');
+                } else {
+                   $("#left-nav .menu-wrap").slideUp('slow', function() {
+							 $('.menu-wrap').removeClass('school-wrap');
+						  });
+
+                }
+                $('.menu-wrap ul.first-nav, .menu-wrap .second-nav').hide();
+                $('.menu-wrap .schools-nav').slideToggle();
+                $('#left-nav.active .first-menu').removeClass('active');
+                $(this).toggleClass('active');
+
+                $('#left-nav .menu-btn').toggleClass('school-active-btn');
+            });
+            $('#left-nav .first-menu').click(function() {
+
+              if (!$(this).hasClass('active')) {
+                   $("#left-nav .menu-wrap, .menu-wrap .first-nav, .menu-wrap .second-nav").slideDown();
+                } else {
+                   $("#left-nav .menu-wrap, .menu-wrap .first-nav, .menu-wrap .second-nav").slideUp();
+                }
+                $('.menu-wrap .schools-nav').hide();
+
+                $('#left-nav .schools-menu').removeClass('active');
+                $(this).toggleClass('active');
+                $('.menu-wrap').removeClass('school-wrap');
+                $('#left-nav .menu-btn').removeClass('school-active-btn');
+            });
+
+            if ($(window).width() > 980) {
+
+                $("ul.second-nav li.has-child").hover(
+                    function() {
+                        $(this).children('ul').stop().slideDown("slow");
+                        $(this).addClass("open");
+                    },
+                    function() {
+                        $(this).children('ul').stop().slideUp("slow");
+                        $(this).removeClass("open");
+                    }
+                );
+
+            }
+            $('ul.second-nav li.has-child span').click(function() {
+                $(this).next().slideToggle("slow");
+                $(this).parent().toggleClass("open");
+            });
+
+
+        });
+
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.slider-container').bxSlider({
+                mode: 'horizontal',
+                auto: true,
+                pause: 3500,
+                adaptiveHeight: true,
+                speed: 1500,
+                onSliderLoad: function() {
+                    if ($(window).width() > 1040) {
+                        var sliderheight = $('#slider').height();
+                        var headerheight = $('#header').height();
+                        var windowheight = $(window).height();
+                        var leftSliderHeight = $('#slider .slider-info').height();
+                        var imgheight = windowheight - headerheight - 10;
+                        $('.slider-container img, #slider,.slider-container  .bx-wrapper .bx-viewport').css("max-height", imgheight);
+                        $('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("min-height", leftSliderHeight + 60);
+                        //$('#left-nav .menu-wrap').css("height", imgheight);
+                    } else {
+                        $('.slider-container img, #slider,.slider-container  .bx-wrapper .bx-viewport').css("max-height", "100%");
+                        $('.slider-container img, #slider, .bx-wrapper .bx-viewport').css("min-height", 90);
+                        //$('#left-nav .menu-wrap').css("height", "auto");
+                    }
+                    $(window).resize(function() {
+                        if ($(window).width() > 1040) {
+                            var sliderheight = $('#slider').height();
+                            var headerheight = $('#header').height();
+                            var windowheight = $(window).height();
+                            var leftSliderHeight = $('#slider .slider-info').height();
+                            var imgheight = windowheight - headerheight - 10;
+                            $('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("max-height", imgheight);
+                            $('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("min-height", leftSliderHeight + 60);
+                            // $('#left-nav .menu-wrap').css("height", imgheight);
+                        } else {
+                            $('.slider-container img, #slider,.slider-container  .bx-wrapper .bx-viewport').css("max-height", "100%");
+                            $('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("min-height", 90);
+                            //$('#left-nav .menu-wrap').css("height", "auto");
+                        }
+                    });
+                }
+
+            });
+
+
+document.getElementById("cboxNext").setAttribute("aria-label", "Next Photo");
+document.getElementById("cboxPrevious").setAttribute("aria-label", "Previous Photo");
+document.getElementById("cboxSlideshow").setAttribute("aria-label", "Slide Show");
+        });
+
+    </script>
+
+
+
+  </body>
+</html>

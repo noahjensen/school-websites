@@ -1,0 +1,148 @@
+/*************************
+*
+*  FOOTER
+*
+*************************/
+
+#footer {
+  background: $footer-bg;
+}
+
+#footer > .container {
+  position : relative;
+  padding  : $footer-padding;
+  width    : 100%;
+  max-width: 1587px;
+}
+
+#footer .footer-col {
+  width             : 25%;
+  float             : left;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition   : all 0.5s ease-in-out;
+  -o-transition     : all 0.5s ease-in-out;
+  transition        : all 0.5s ease-in-out;
+}
+
+#footer .footer-col.oklahoma img {
+  max-width: 200px;
+}
+
+#footer .footer-col.last,
+#footer .footer-col:last-child {
+  width     : 16%;
+  text-align: right;
+}
+
+#footer .footer-col:last-child h5 {
+  width     : 100%;
+  max-width : 163px;
+  left      : auto;
+  right     : 0;
+  text-align: left;
+}
+
+#footer .footer-col.social-media {
+  width        : 20%;
+  padding-right: 15px;
+}
+
+#footer .footer-col ul {
+  margin: 0;
+}
+
+#footer .footer-col h5,
+#footer .footer-col li,
+#footer .footer-col li a,
+#footer .footer-col p {
+  @include font-size(16);
+  @include line-height(35);
+  color         : $white;
+  text-transform: uppercase;
+  @include first-font-family;
+}
+
+#footer .footer-col h5 {
+  @include font-size(18);
+  @include line-height(22);
+  color         : $footer-title-color;
+  margin        : 0 0 10px;
+  text-transform: uppercase;
+}
+
+#footer .footer-col.apps {
+  width     : 60%;
+  text-align: left;
+  font-size : 0;
+}
+
+#footer .footer-col.apps a {
+  display        : flex;
+  width          : 185px;
+  height         : 56px;
+  text-indent    : -9999px;
+  background     : url("google.png") no-repeat center;
+  background-size: contain;
+  margin         : 0 0 6px;
+}
+
+#footer .footer-col.apps a.appstore {
+  background     : url("apple.png") no-repeat center;
+  background-size: contain;
+}
+
+#footer .footer-col.last {
+  width        : 20%;
+  position     : relative;
+  text-align   : right;
+  padding-right: 0;
+}
+
+#footer .footer-col.last p {
+  color      : #FFF;
+  font-size  : 14px;
+  font-size  : 1.4rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+  margin     : 25px 0 0;
+  text-align : right;
+}
+
+#footer .social {
+  text-align   : right;
+  padding-right: 5px;
+  float        : left;
+}
+
+#footer .social a {
+  display      : block;
+  text-align   : left;
+  text-indent  : -9999px;
+  overflow     : hidden;
+  height       : 55px;
+  width        : 55px;
+  margin-bottom: 8px;
+}
+
+#footer .social a.fb {
+  background     : url("fb.png") no-repeat center center;
+  background-size: contain;
+}
+
+#footer .social a.tw {
+  background     : url("tw.png") no-repeat center center;
+  background-size: contain;
+}
+
+#footer > .container.copyright {
+  padding   : 30px 0;
+  text-align: center;
+  border-top: 1px solid #e1e1e1;
+}
+
+#footer > .container.copyright p {
+  color : #FFF;
+  @include font-size(14);
+  @include line-height(18);
+  margin: 0;
+}

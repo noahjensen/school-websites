@@ -1,0 +1,949 @@
+/**
+ * Responsive
+ */
+
+/********** Media Queries *****************************************************/
+
+@media only screen and (max-width: 1920px) and (min-width: 1000px) {
+  .cbp-spmenu-push-toright {
+    @function get-vw($target) {
+      $vw-context: (2400*.01) * 1px;
+      @return ($target/$vw-context) * 1vw;
+    }
+
+    #header {
+      min-height  : get-vw(115px);
+      padding-left: get-vw(35px);
+    }
+
+    .logo-back {
+      height: get-vw(165px);
+      width : get-vw(165px);
+      top   : get-vw(-10px);
+      left  : get-vw(10px);
+    }
+
+    .logo-back-second {
+      height: get-vw(165px);
+      width : get-vw(165px);
+      top   : get-vw(-10px);
+      left  : get-vw(10px);
+    }
+
+    #header .logo img {
+      height: get-vw(115px);
+      top   : get-vw(15px);
+    }
+
+    #left-nav .menu-wrap {
+      /*top: get-vw(126px);
+			top: 100%;*/
+      padding-top: get-vw(115px);
+    }
+
+    .menu-wrap .second-nav {
+      margin-top: get-vw(90px);
+    }
+
+    #right-nav .menu-wrap {
+      top  : get-vw(115px);
+      width: get-vw(306px);
+    }
+
+    .menu-wrap .second-nav ul {
+      padding: 0 get-vw(100px) get-vw(25px);
+    }
+
+    #left-nav .menu-btn,
+    #left-nav .menu-btn > span:first-child,
+    #right-nav .menu-btn > span {
+      height     : get-vw(115px);
+      line-height: get-vw(115px);
+      font-size  : get-vw(20px);
+    }
+
+    #right-nav .menu-wrap li {
+      line-height: get-vw(25px);
+      font-size  : get-vw(20px);
+    }
+
+    #header .search-icon {
+      height: get-vw(115px);
+      width : get-vw(89px);
+    }
+
+    #left-nav .menu-btn > span {
+      padding-right: get-vw(18px);
+    }
+
+    #header #change_language_form {
+      padding-right: get-vw(30px);
+      margin-left  : get-vw(40px);
+    }
+
+    #header #change_language_form .select {
+      height     : get-vw(115px);
+      line-height: get-vw(115px);
+    }
+
+    #header #change_language_form .styledSelect {
+      font-size: get-vw(20px);
+    }
+
+    #header #change_language_form .options {
+      top: get-vw(126px);
+    }
+
+    #header #change_language_form .options li {
+      font-size  : get-vw(25px);
+      line-height: get-vw(35px);
+    }
+
+    .menu-close {
+      right: get-vw(43px);
+      top  : get-vw(42px);
+    }
+
+    .menu-wrap .second-nav h5 {
+      font-size    : get-vw(30px);
+      line-height  : get-vw(32px);
+      margin-bottom: get-vw(30px);
+    }
+
+    #header .logo {
+      line-height : get-vw(115px);
+      padding-left: get-vw(165px);
+    }
+
+    #header:before {
+      bottom: get-vw(-64px);
+      width : get-vw(240px);
+      height: get-vw(64px);
+    }
+
+    .schools-nav li,
+    .second-nav li {
+      font-size    : get-vw(16px);
+      line-height  : get-vw(30px);
+      margin-bottom: get-vw(25px);
+    }
+
+    #header .logo {
+      h1 {
+        font-size  : get-vw(55px);
+        line-height: get-vw(49px);
+
+        span {
+          font-size  : get-vw(25px);
+          line-height: get-vw(29px);
+        }
+      }
+    }
+
+    #slider .slider-info h1 {
+      font-size  : get-vw(104px);
+      line-height: get-vw(108px);
+    }
+
+    #slider .slider-info h2 {
+      font-size  : get-vw(100px);
+      line-height: get-vw(103px);
+    }
+
+    #slider .slider-info h3 {
+      font-size  : get-vw(79px);
+      line-height: get-vw(84px);
+    }
+
+    #slider .slider-info h4 {
+      font-size  : get-vw(55px);
+      line-height: get-vw(58px);
+    }
+
+    #slider .slider-info h5 {
+      font-size  : get-vw(51px);
+      line-height: get-vw(55px);
+    }
+
+    #slider .slider-info h6 {
+      font-size  : get-vw(45px);
+      line-height: get-vw(49px);
+    }
+
+    #slider .slider-info p {
+      font-size  : get-vw(30px);
+      line-height: get-vw(46px);
+    }
+
+    ul.first-nav li {
+      margin: 0 get-vw(35px) get-vw(20px);
+    }
+
+    ul.first-nav li a {
+      font-size  : get-vw(32px);
+      line-height: get-vw(30px);
+    }
+
+    ul.first-nav li span {
+      width        : get-vw(118px);
+      height       : get-vw(118px);
+      margin-bottom: get-vw(20px);
+      line-height  : get-vw(118px);
+    }
+
+    .schools-nav li,
+    .second-nav li {
+      font-size  : get-vw(25px);
+      line-height: get-vw(30px);
+    }
+
+    .bx-wrapper .bx-pager {
+      bottom: get-vw(20px);
+      right : get-vw(40px);
+    }
+
+    .bx-wrapper .bx-pager.bx-default-pager a {
+      width : get-vw(18px);
+      height: get-vw(18px);
+    }
+
+    .bx-wrapper .bx-controls-direction a {
+      width     : get-vw(50px);
+      height    : get-vw(100px);
+      margin-top: get-vw(-50px);
+    }
+  }
+
+  #header {
+    min-height  : get-vw(128px);
+    padding-left: get-vw(35px);
+  }
+
+  .logo-back {
+    height: get-vw(165px);
+    width : get-vw(165px);
+    top   : get-vw(-10px);
+    left  : get-vw(10px);
+  }
+
+  .logo-back-second {
+    height: get-vw(165px);
+    width : get-vw(165px);
+    top   : get-vw(-10px);
+    left  : get-vw(10px);
+  }
+
+  #header .logo img {
+    height: get-vw(130px);
+    top   : get-vw(15px);
+    width : auto;
+  }
+
+  #left-nav .menu-wrap {
+    /*top: 100%;
+        top: get-vw(126px);*/
+    padding-top: get-vw(105px);
+  }
+
+  .menu-wrap .second-nav {
+    margin-top: get-vw(90px);
+  }
+
+  #right-nav .menu-wrap {
+    top  : get-vw(115px);
+    width: get-vw(306px);
+  }
+
+  .menu-wrap .second-nav ul {
+    padding: 0 get-vw(100px) get-vw(25px);
+  }
+
+  #left-nav .menu-btn,
+  #left-nav .menu-btn > span:first-child,
+  #right-nav .menu-btn > span {
+    height     : get-vw(115px);
+    line-height: get-vw(115px);
+    font-size  : get-vw(20px);
+  }
+
+  #right-nav .menu-wrap li {
+    line-height: get-vw(25px);
+    font-size  : get-vw(20px);
+  }
+
+  #header .search-icon {
+    height: get-vw(115px);
+    width : get-vw(89px);
+  }
+
+  #left-nav .menu-btn > span {
+    padding-left : get-vw(24px);
+    padding-right: get-vw(18px);
+  }
+
+  #header #change_language_form {
+    padding-right: get-vw(30px);
+    margin-left  : get-vw(40px);
+  }
+
+  #header #change_language_form .select {
+    height     : get-vw(115px);
+    line-height: get-vw(115px);
+  }
+
+  #header #change_language_form .styledSelect {
+    font-size: get-vw(20px);
+  }
+
+  #header #change_language_form .options {
+    top: get-vw(126px);
+  }
+
+  #header #change_language_form .options li {
+    font-size  : get-vw(25px);
+    line-height: get-vw(35px);
+  }
+
+  ul.first-nav li span img {
+    max-width : 100%;
+    max-height: 100%;
+  }
+
+  .menu-close {
+    right: get-vw(43px);
+    top  : get-vw(42px);
+  }
+
+  .menu-wrap .second-nav h5 {
+    font-size    : get-vw(30px);
+    line-height  : get-vw(32px);
+    margin-bottom: get-vw(30px);
+  }
+
+  #header .logo {
+    line-height : get-vw(115px);
+    padding-left: get-vw(165px);
+  }
+
+  #header:before {
+    bottom: get-vw(-64px);
+    width : get-vw(240px);
+    height: get-vw(64px);
+  }
+
+  .schools-nav li,
+  .second-nav li {
+    font-size    : get-vw(16px);
+    line-height  : get-vw(30px);
+    margin-bottom: get-vw(25px);
+  }
+
+  #header .logo {
+    h1 {
+      font-size  : get-vw(55px);
+      line-height: get-vw(49px);
+
+      span {
+        font-size  : get-vw(25px);
+        line-height: get-vw(29px);
+      }
+    }
+  }
+
+  #slider .slider-info h1 {
+    font-size  : get-vw(104px);
+    line-height: get-vw(108px);
+  }
+
+  #slider .slider-info h2 {
+    font-size  : get-vw(100px);
+    line-height: get-vw(103px);
+  }
+
+  #slider .slider-info h3 {
+    font-size  : get-vw(79px);
+    line-height: get-vw(84px);
+  }
+
+  #slider .slider-info h4 {
+    font-size  : get-vw(55px);
+    line-height: get-vw(58px);
+  }
+
+  #slider .slider-info h5 {
+    font-size  : get-vw(51px);
+    line-height: get-vw(55px);
+  }
+
+  #slider .slider-info h6 {
+    font-size  : get-vw(45px);
+    line-height: get-vw(49px);
+  }
+
+  #slider .slider-info p {
+    font-size  : get-vw(30px);
+    line-height: get-vw(46px);
+  }
+
+  ul.first-nav li {
+    margin: 0 get-vw(35px) get-vw(20px);
+  }
+
+  ul.first-nav li a {
+    font-size  : get-vw(32px);
+    line-height: get-vw(30px);
+  }
+
+  ul.first-nav li span {
+    width        : get-vw(118px);
+    height       : get-vw(118px);
+    margin-bottom: get-vw(20px);
+    line-height  : get-vw(118px);
+  }
+
+  .schools-nav li,
+  .second-nav li {
+    font-size  : get-vw(25px);
+    line-height: get-vw(30px);
+  }
+
+  .bx-wrapper .bx-pager {
+    bottom: get-vw(20px);
+    right : get-vw(40px);
+  }
+
+  .bx-wrapper .bx-controls-direction a {
+    width     : get-vw(50px);
+    height    : get-vw(100px);
+    margin-top: get-vw(-50px);
+  }
+}
+
+/* limit min-font-size */
+
+@media only screen and (max-width: 1200px) {
+  #header #change_language_form .options li,
+  #header #change_language_form .styledSelect,
+  #left-nav .menu-btn > span:first-child,
+  #right-nav .menu-btn > span,
+  #right-nav .menu-wrap li {
+    font-size: 13px;
+  }
+}
+
+/*Mobile and Tablet */
+
+@media only screen and (max-width: 1000px) {
+  #header:before {
+    display: none;
+  }
+
+  .logo-back,
+  .logo-back-container,
+  .logo-back-second {
+    display: none;
+  }
+
+  #header #change_language_form {
+    position: absolute;
+    margin  : 0;
+    left    : 20px;
+    top     : 15px;
+    padding : 0;
+    z-index : 99999;
+  }
+
+  #right-nav .menu-wrap {
+    width  : 100%;
+    top    : 222px;
+    padding: 20px 15px;
+  }
+
+  #right-nav .menu-wrap li {
+    font-size    : 17px;
+    line-height  : 22px;
+    margin-bottom: 10px;
+  }
+
+  #left-nav .menu-wrap {
+    top    : 246px;
+    padding: 35px 15px 15px;
+  }
+
+  #header #change_language_form .styledSelect {
+    font-size: 15px;
+  }
+
+  #header #change_language_form .select {
+    height     : 40px;
+    line-height: 40px;
+  }
+
+  #header .search-icon {
+    position: absolute;
+    right   : 0;
+    top     : 15px;
+    height  : 40px;
+    width   : 40px;
+    z-index : 9999;
+  }
+
+  #header .logo h1,
+  #header .logo h2 {
+    display   : block;
+    margin    : 0 0 15px;
+    text-align: center;
+
+    br {
+      display: none;
+    }
+  }
+
+  #header .logo img {
+    position   : absolute;
+    top        : 8px;
+    width      : 110px;
+    left       : 50%;
+    margin-left: -65px;
+  }
+
+  #header .logo h1 {
+    font-size     : 20px;
+    line-height   : 25px;
+    margin-bottom : 5px;
+    letter-spacing: normal;
+
+    span {
+      font-size     : 16px;
+      line-height   : 19px;
+      letter-spacing: normal;
+    }
+  }
+
+  #header .logo h2 {
+    font-size    : 15px;
+    line-height  : 20px;
+    margin-bottom: 10px;
+  }
+
+  #header .logo a {
+    padding-left: 0;
+    text-align  : center;
+    font-size   : 25px;
+    line-height : 28px;
+  }
+
+  #slider .slider-info {
+    padding   : 15px;
+    position  : relative;
+    background: #121b52;
+    margin    : 0;
+    bottom    : 0;
+  }
+
+  #header,
+  #header .logo {
+    padding   : 0;
+    text-align: center;
+  }
+
+  #left-nav .first-menu,
+  #left-nav .schools-menu {
+    text-align: center;
+    width     : 50%;
+  }
+
+  #left-nav,
+  #right-nav {
+    display       : inline-block;
+    vertical-align: top;
+    float         : none;
+    margin-bottom : 10px;
+  }
+
+  .bx-wrapper .bx-pager {
+    width: 100%;
+    right: 0;
+  }
+
+  .bx-wrapper .bx-viewport .slide:after {
+    height: 30%;
+  }
+
+  #slider .slider-info h1 {
+    @include font-size(40);
+    @include line-height(44);
+  }
+
+  #slider .slider-info h2 {
+    @include font-size(36);
+    @include line-height(40);
+  }
+
+  #slider .slider-info h3 {
+    @include font-size(32);
+    @include line-height(37);
+  }
+
+  #slider .slider-info h4 {
+    @include font-size(29);
+    @include line-height(33);
+  }
+
+  #slider .slider-info h5 {
+    @include font-size(25);
+    @include line-height(30);
+  }
+
+  #slider .slider-info h6 {
+    @include font-size(22);
+    @include line-height(26);
+  }
+
+  #slider .slider-info p {
+    color: #FFF;
+    @include font-size(18);
+    @include line-height(22);
+  }
+
+  .menu-wrap .second-nav ul {
+    padding      : 0 15px;
+    width        : 45%;
+    margin-bottom: 25px;
+  }
+
+  #header .logo,
+  .homepage #header .logo {
+    margin           : 0;
+    padding          : 125px 0 10px;
+    left             : 0;
+    position         : relative;
+    overflow         : hidden;
+    height           : auto;
+    display          : block;
+    margin-left      : auto;
+    margin-right     : auto;
+    width            : 100%;
+    -webkit-transform: translateX(0%);
+    -ms-transform    : translateX(0%);
+    transform        : translateX(0%);
+  }
+
+  #header .logo a img,
+  .homepage #header .logo a img {
+    width            : 90px;
+    position         : relative;
+    margin           : 10px auto;
+    display          : block;
+    -webkit-transform: translateY(0%);
+    -ms-transform    : translateY(0%);
+    transform        : translateY(0%);
+  }
+
+  #left-nav .menu-btn {
+    height    : 40px;
+    text-align: center;
+  }
+
+  #left-nav .first-menu,
+  #left-nav .menu-btn > span:first-child,
+  #left-nav .schools-menu,
+  #right-nav .menu-btn > span {
+    line-height: 40px;
+    font-size  : 18px;
+    height     : 40px;
+    text-align : center;
+    padding    : 0 20px;
+  }
+
+  #left-nav .first-menu,
+  #left-nav .schools-menu {
+    margin: 0;
+  }
+
+  .menu-close {
+    right          : 5px;
+    left           : auto;
+    top            : 7px;
+    width          : 25px;
+    height         : 25px;
+    background-size: 100% 100%;
+  }
+
+  .menu-wrap {
+    left          : 0;
+    padding-left  : 30px;
+    padding-top   : 50px;
+    width         : 100%;
+    top           : 135px;
+    padding-bottom: 30px;
+  }
+
+  #header #change_language_form .options {
+    top  : 40px;
+    right: auto;
+    left : 10px;
+    width: 180px;
+  }
+
+  #left-nav.active .menu-btn > span:first-child {
+    float: none;
+  }
+
+  #left-nav.active .menu-btn:hover .menu-close,
+  .active .menu-close {
+    left: auto;
+  }
+
+  #left-nav.active .menu-btn {
+    overflow: visible;
+    z-index : 105;
+  }
+
+  .menu-wrap .second-nav {
+    margin: 20px 0 0;
+    float : none;
+  }
+
+  .menu-wrap ul.first-nav {
+    float       : none;
+    width       : 100%;
+    padding-left: 0;
+    margin      : 0;
+  }
+
+  .menu-wrap ul.schools-nav {
+    float       : left;
+    margin-right: 0;
+    padding-top : 30px;
+  }
+
+  ul.first-nav li span img {
+    max-width : 100%;
+    max-height: 100%;
+  }
+
+  ul.first-nav li {
+    margin: 0 15px 20px;
+  }
+
+  #left-nav .first-menu:after,
+  #left-nav .schools-menu:after {
+    bottom: 40px;
+  }
+
+  .schools-nav li {
+    margin: 0 0 14px;
+  }
+
+  ul.first-nav li,
+  ul.first-nav li a {
+    font-size  : 17px;
+    line-height: 35px;
+  }
+
+  ul.first-nav li span {
+    margin-right: 15px;
+    width       : 75px;
+    height      : 75px;
+    line-height : 75px;
+  }
+
+  #slider + .main {
+    padding-top: 0;
+  }
+
+  .slider-container img {
+    max-width: 100%;
+    width    : 100%;
+  }
+
+  .slider-container img {
+    height: auto !important;
+  }
+
+  .menu-wrap .second-nav {
+    float        : none;
+    width        : 100%;
+    padding      : 0;
+    margin-bottom: 15px;
+  }
+
+  .menu-wrap .second-nav h5,
+  .schools-nav li,
+  .second-nav li {
+    font-size    : 17px;
+    line-height  : 22px;
+    margin-bottom: 10px;
+  }
+
+  .menu-wrap .second-nav h5 {
+    margin-bottom: 15px;
+  }
+
+  #left-nav.active .first-menu {
+    margin: 0;
+  }
+
+  #left-nav.active .menu-btn > span:first-child {
+    opacity   : 1;
+    visibility: visible;
+  }
+
+  .menu-wrap {
+    height: auto !important;
+  }
+
+  #slider {
+    height: auto !important;
+  }
+
+  #slider h2,
+  #slider p {
+    text-align   : center;
+    padding-right: 0;
+  }
+
+  .bx-wrapper {
+    width  : 100%;
+    float  : none;
+    padding: 0;
+  }
+
+  .container.subpage .left-sidebar + .right-content,
+  .main .container .left-sidebar + .right-content,
+  .main .container > .right-content,
+  .main .left-sidebar {
+    float             : none;
+    width             : 100%;
+    margin-top        : 0;
+    margin-bottom     : 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition   : all 0.5s ease-in-out;
+    -o-transition     : all 0.5s ease-in-out;
+    transition        : all 0.5s ease-in-out;
+  }
+
+  .main .container .right-content {
+    padding: 0 20px;
+  }
+
+  .container.subpage .left-sidebar + .right-content,
+  .main .container .left-sidebar + .right-content,
+  .main .left-content,
+  .main .left-sidebar {
+    padding: 25px 20px 0;
+  }
+
+  .images-grid {
+    margin-left : auto;
+    margin-right: auto;
+  }
+
+  .main .left-sidebar h1,
+  .right-content .right-links,
+  .right-content h3 {
+    text-align: left;
+  }
+
+  .right-content .right-links {
+    margin-bottom: 20px;
+  }
+
+  .right-content h3 {
+    line-height: 30px;
+    line-height: 3rem;
+  }
+
+  .dining-legal h5,
+  .dining-legal p {
+    padding: 0 15px;
+  }
+
+  .main .left-sidebar {
+    margin: 0;
+  }
+
+  .main .container {
+    padding: 0;
+  }
+
+  .breadcrumb li {
+    padding-left: 55px;
+  }
+
+  .breadcrumb li:first-child {
+    margin-left: 0;
+  }
+
+  .breadcrumb ol {
+    text-align: center;
+    padding   : 10px 0;
+  }
+
+  .left-sidebar .left-links li {
+    margin-left: 10px;
+  }
+
+  #right-nav .menu-wrap li,
+  #right-nav .menu-wrap ul {
+    display: block;
+    padding: 0;
+  }
+
+  .menu-wrap {
+    height: auto !important;
+    top   : 140px;
+  }
+
+  .bx-wrapper .bx-controls-direction a {
+    width     : 30px;
+    height    : 60px;
+    margin-top: -30px;
+  }
+}
+@media only screen and (max-width: 805px) {
+  .images-grid {
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 520px) {
+  .menu-wrap .second-nav ul {
+    width: 100%;
+  }
+
+  #header .logo h1 {
+    font-size  : 16px;
+    line-height: 19px;
+  }
+
+  #header .logo h2 {
+    font-size  : 13px;
+    line-height: 17px;
+  }
+}
+@media only screen and (max-width: 505px) {
+  .images-grid a {
+    width        : 100%;
+    padding-right: 0;
+  }
+
+}
+@media only screen and (max-width: 420px) {
+  #left-nav .menu-wrap,
+  #right-nav .menu-wrap {
+    top: 240px;
+  }
+
+  .bx-wrapper .bx-pager {
+    position  : relative;
+    padding   : 5px 0;
+    background: #333333;
+    bottom    : auto;
+  }
+
+  .bx-wrapper .bx-viewport .slide:after {
+    background: transparent;
+  }
+
+}

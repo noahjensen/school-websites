@@ -1,0 +1,420 @@
+/* ===== Header ========================================================== */
+
+#header {
+	padding: 0 0 0 40px;
+	min-height: $header-height;
+	line-height: $header-height;
+	background: $header-bg;
+	position: relative;
+	width: 100%;
+	-webkit-box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.71);
+	-moz-box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.71);
+	box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.71);
+	.logo {
+		position: relative;
+		float: left;
+		text-align: left;
+		margin: 0; 
+		z-index: 22;
+		text-decoration: none;
+		display: block;
+		font-size: 0;
+		h1 {
+			display: inline-block;
+			vertical-align: middle;
+			color: $logo-color;
+			@include responsive-property("font-size",$logo-title-font-size, 25px, $logo-title-font-size + 0px);
+			@include responsive-property("line-height",$logo-title-font-size + 3, 28px, $logo-title-font-size+3px);
+			margin: 0;
+			@include logo-title-font;
+			span {
+                letter-spacing: 3px;
+				@include responsive-property("font-size",$logo-subtitle-font-size, 16px, $logo-subtitle-font-size + 0px);
+			@include responsive-property("line-height",$logo-subtitle-font-size + 3, 19px, $logo-subtitle-font-size+3px);
+				display: block;
+				color: $logo-subtitle-color;
+				//margin-top: 5px;
+				@include logo-subtitle-font;
+				.dot {
+					display: inline-block;
+					vertical-align: middle;
+					width: 10px;
+					height: 9px;
+					background: $logo-subtitle-color;
+					margin: 0 6px;
+					@include border-radius (50%);
+				}
+			}
+		}
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			z-index: 2;
+			margin-right: $margin-between-logo-and-title;
+			position: relative;
+			height: auto;
+			max-height: $header-height - 20;
+			width: auto;
+		}
+		.image {
+			position: relative;
+			margin-right: $margin-between-logo-and-title;
+			display: inline-block;
+			vertical-align: middle;
+			img {
+				max-height: $header-height;
+				height: auto;
+				margin: 0;
+				position: relative;
+				overflow: hidden;
+			}
+		}
+	}
+}
+.homepage #header {
+	z-index: 2;
+}
+// menu buttons
+#header .nav {
+	float: right;
+	margin-right: 0;
+	height: $header-height;
+	line-height: $header-height;
+    background-color: #c61222;
+    padding: 0;
+	@include responsive-property("padding-left",80, 20px, 80px);
+	@include responsive-property("padding-right",40, 10px, 40px);
+	&#right-nav {
+		margin-right: 0;
+		position: relative;
+	}
+	.menu-btn {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+#left-nav .menu-btn > span,
+#right-nav .menu-btn > span {
+	@include responsive-property("font-size",$menu-btns-font-size, 15px, $menu-btns-font-size + 1px);
+	@include line-height(51);
+	height: 51px;
+	color: $menu-btn-txt-color;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+	padding-left: 30px;
+	position: relative;
+	background: $menu-btn-bg-color url('menu-icon.png') no-repeat 0 center;
+	@include menu-btn-font;
+}
+#left-nav.active .menu-btn > span {
+	background-color: $menu-active-btn-bg-color;
+	color: $menu-active-btn-txt-color;
+	@include responsive-property("font-size",$menu-btns-font-size, 15px, $menu-btns-font-size + 1px);
+}
+#right-nav .menu-btn > span {
+	background: $schools-menu-btn-bg-color url('arrow.png') no-repeat right 22px;
+	padding-left: 25px;
+	padding-right: 42px;
+	color: $schools-menu-btn-txt-color;
+}
+#right-nav .menu-btn > span.active {
+	background: $schools-menu-active-btn-bg-color url("arrow.png") no-repeat right -82px;
+	color: $schools-menu-active-btn-txt-color;
+}
+//search icon
+#header .search-icon {
+	float: right;
+	@include font-size($search-btn-font-size);
+	color: $search-txt-color;
+	height: $header-height;
+	line-height: $header-height;
+	width: 102px;
+	background: $search-bg-color url('search-icon.png') no-repeat center center;
+	margin: 0 0 0 0;
+	@include border-radius(0px);
+    background-color: #eb1528;
+	&:hover {
+		background-color: #eb1528;
+	}
+	&.no-bg-color {
+		background: url('search-icon.png') no-repeat center center;
+		margin-left: 0;
+	}
+	&.with-text {
+		width: auto;
+		padding: 0 60px 0 35px;
+		background-position: left center;
+		text-transform: uppercase;
+		margin-left: 40px;
+	}
+	&.no-icon {
+		background: transparent;
+		width: auto;
+		padding-right: 60px;
+		margin-left: 40px;
+	}
+}
+// Language dropdown
+#header #change_language_form {
+	float: right;
+	padding: 0;
+	@include responsive-property("padding-right",80, 20px, 80px);
+	@include responsive-property("padding-left",40, 10px, 40px);
+	text-align: center;
+	position: relative;
+	cursor: pointer;
+	background: $language-btn-bg;
+	form {
+		margin: 0;
+	}
+	select {
+		height: $header-height;
+		line-height: $header-height;
+		background: transparent;
+		font-size: 22px;
+		color: $language-btn-color;
+		position: relative;
+		left: -4px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+	.s-hidden {
+		position: absolute;
+		visibility: hidden;
+		padding-right: 10px;
+		width: 0px;
+		overflow: hidden;
+		height: 0px;
+	}
+	.select {
+		cursor: pointer;
+		display: block;
+		position: relative;
+		background-color: transparent;
+		margin: 0;
+		font-size: 0;
+		width: auto;
+		height: $header-height;
+		line-height: $header-height;
+		display: inline-block;
+		vertical-align: top;
+	}
+	&:hover {
+		.styledSelect {
+			color: $language-btn-color
+		}
+	}
+	.styledSelect {
+		position: relative;
+		display: inline-block;
+		@include font-size($language-btn-font-size);
+		padding-right: 25px;
+		text-transform: uppercase;
+		cursor: pointer;
+		color: $language-btn-color;
+		@include language-btn-font();
+	}
+	.styledSelect:after {
+		content: '';
+		position: absolute;
+		right: 0;
+		top: 50%;
+		margin-top: -2px;
+		width: 14px;
+		height: 9px;
+		background: url('language_arrow.png') no-repeat center top;
+	}
+	.styledSelect:active:after,
+	.styledSelect.active:after {
+		background-position: center bottom 2px;
+	}
+	.options {
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: -80px;
+		left: auto;
+		z-index: 999;
+		margin: 0 0;
+		padding: 20px 0;
+		list-style: none;
+		border: 0;
+		background-color: $language-dropdown-bg;
+		width: $language-dropdown-width;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.options li {
+		display: block;
+		margin-top: 5px;
+		@include font-size($language-options-font-size);
+		@include line-height($language-options-font-size + 4);
+		color: $language-options-color;
+		text-align: left;
+		padding: 5px 8px 5px 28px;
+		border-left: 10px solid transparent;
+        margin-left: 0;
+		text-decoration: none;
+		@include language-options-font;
+		&:first-child {
+			margin-top: 0;
+		}
+		&.selected {
+			border-left: 10px solid #eb1528;
+		}
+	}
+	.options li:hover {
+		border-left: 10px solid #eb1528;
+	}
+	.options li[rel="0"] {
+		display: none;
+	}
+}
+
+/**
+ * Responsive
+ */
+
+@media only screen and (max-width: 1000px) {
+	#header .search-icon.with-text {
+		padding: 0 15px;
+		margin-left: 0;
+	}
+	#header {
+		padding-left: 14px;
+	}
+	#header:after {
+		left: -20px
+	}
+	
+	#header {
+		padding-right: 20px;
+	}
+	#header .search-icon {
+		margin-right: -20px;
+        margin-left: 0;
+		
+	}
+	#header:before {
+		bottom: -45px;
+		width: 190px;
+		height: 45px;
+	}
+	#header .nav {
+		margin-right: 0;
+	}
+	#right-nav .menu-btn > span {
+		padding-left: 20px;
+	}
+	#header #change_language_form form {
+		margin: 0;
+	}
+	#header .search-icon.no-icon {
+		margin-left: 15px;
+	}
+	#left-nav .menu-btn > span,
+	#right-nav .menu-btn > span,
+	#header #change_language_form .styledSelect {
+		font-size: 18px;
+        margin: 0 10px;
+	}
+	#header #change_language_form .options li {
+		font-size: 15px;
+		line-height: 19px;
+	}
+	#header #change_language_form .options {
+		right: -10px;
+		width: 200px;
+	}
+}
+
+@media only screen and (max-width: 1050px) {
+	#header:before {
+		display: none;
+	}
+	
+	#header .nav .menu-btn {
+		display: block;
+	}
+	#header .search-icon {
+		width: 51px;
+		height: 51px;
+		line-height: 51px;
+		margin-right: -10px;
+		margin-left: 0;
+	}
+	#header .nav {
+		line-height: 51px;
+		height: 51px;
+	}
+	#header .logo {
+		float: none;
+		width: 100%;
+		text-align: center;
+		padding: 0;
+		top: 0;
+		font-size: 17px;
+		line-height: 20px;
+		margin-bottom: 20px;
+		img,
+		.image img {
+			position: relative;
+			height: auto;
+			left: 0;
+			margin: 0 auto 15px;
+			display: block;
+			top: 10px;
+		}
+	}
+	#header #left-nav {
+		float: left;
+		margin-left: 0;
+		padding-left: 10px;
+		padding-right: 0;
+	}
+	#header #change_language_form {
+		padding-left: 4px;
+		padding-right: 4px;
+	}
+	#left-nav {
+		margin-right: 0;
+		margin-left: 10px;
+	}
+ 
+	#header #change_language_form .select,
+	#header #change_language_form select,
+	#header #change_language_form, html #left-nav .menu-btn, html #left-nav .menu-btn > span:first-child {
+		height: 51px;
+		line-height: 51px;
+	}
+	#header #change_language_form .options {
+		top: 51px;
+	}
+    
+}
+@media only screen and (max-width: 450px) {
+	#left-nav .menu-btn > span,
+	#right-nav .menu-btn > span,
+	#header #change_language_form .styledSelect,
+	#header .search-icon.no-icon, html #left-nav .menu-btn > span:first-child, #right-nav .menu-btn > span {
+		font-size: 14px;
+	}
+	#right-nav .menu-btn > span {
+		padding-left: 5px;
+	}
+	#header #left-nav {
+		margin-left: 0;
+	}
+	#header .search-icon.no-icon {
+		margin-left: 0;
+		padding-right: 10px;
+	}
+	#header .logo h1 {
+		font-size: 16px;
+	}
+	html ul.static-links li {
+		width: 100%;
+		margin: 0 0 25px;
+	}
+}

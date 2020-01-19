@@ -1,0 +1,144 @@
+/**
+ * Global Reset of all HTML Elements
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-width: 0;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    @include first-font-family;
+    font-style: normal;
+    font-weight: 400;
+    @include font-size($paragraph-font-size);
+    @include line-height($paragraph-line-height);
+    background: $white;
+}
+p {
+    color: $text-color; 
+    @include font-size($paragraph-font-size);
+    @include line-height($paragraph-line-height);
+    @include first-font-family;
+    margin-bottom: 19px;
+   word-wrap: break-word; 
+}
+a {
+    color: $links-color;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal; 
+    text-transform: none;
+    @include second-font-family;
+   word-wrap: break-word; 
+}
+
+a:hover {
+    color: $links-color;
+    text-decoration: underline;
+}
+a:active,
+a:focus {
+    color: $links-color;
+}
+ol,
+ul {
+    list-style: none;
+}
+ul {
+    margin: 0 0 19px;
+}
+ul li {
+    list-style-type: none;
+    @include font-size(16);
+    @include line-height(19);
+   word-wrap: break-word; 
+}
+input:focus,
+textarea {
+    outline: none;
+}
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+}
+button,
+input {
+    line-height: normal;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
+select::-ms-expand {
+    display: none;
+}
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+}
+button,
+input {
+    line-height: normal;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+/*Remove button padding in FF*/
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    resize: none;
+    overflow: auto;
+}
+
+  
+body .fl_right {
+  float: right;
+}
+body .fl_left {
+  float: left;
+}

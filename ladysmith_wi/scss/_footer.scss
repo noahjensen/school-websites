@@ -1,0 +1,177 @@
+    /*************************
+*
+*  FOOTER
+*
+*************************/
+    
+    #footer {
+        background: $footer-bg;
+    }
+    
+    #footer>.container {
+        position: relative;
+        padding: $footer-padding;
+        width: 100%;
+        max-width: 1750px;
+        margin: 0 auto;
+    }
+    
+    #footer .footer-col {
+        width: 21%;
+        float: left;
+        padding-right: 15px;
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+    }
+    
+    //#footer .footer-col:first-child {
+    //    width: 32%;
+    //}
+    #footer .footer-col:last-child,
+    #footer .footer-col.last {
+        width: 36%;
+        text-align: right;
+        float: right;
+        padding-right: 0;
+        font-size: 0;
+    }
+    
+    #footer .footer-col ul {
+        margin: 0;
+    }
+    
+    #footer .footer-col p,
+    #footer .footer-col li,
+    #footer .footer-col li a,
+    #footer .footer-col h5,
+    #footer>.container.copyright p {
+        @include font-size(16);
+        @include line-height(41);
+        color: #FFF;
+        text-transform: uppercase;
+        @include second-font-family;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+    
+    #footer .footer-col h5 {
+        margin-bottom: 5px;
+        @include font-size(30);
+        @include line-height(75);
+        @include third-font-family;
+    }
+    
+    #footer .app-store,
+    #footer .google-play,
+    #footer .dept-of-ed,
+    #footer .title {
+        width: 100%;
+        max-width: 250px;
+        height: 75px;
+        display: inline-block;
+        margin: 0 0 19px;
+        background: url('apple.png') no-repeat right top;
+        background-size: 100% auto;
+        text-indent: -9999px;
+        text-align: left;
+        vertical-align: top;
+        margin-left: 18px;
+    }
+    
+    #footer .google-play {
+        background: url('google.png') no-repeat right top;
+        margin-bottom: 0;
+        background-size: 100% auto;
+    }
+    
+    #footer .dept-of-ed {
+        background: url('depart_of_ed.png') no-repeat right top;
+        margin-bottom: 0;
+        background-size: 100% auto;
+        max-width: 162px;
+        height: 86px;
+        margin-right: 25px;
+    }
+    
+    #footer .title {
+        background: url('title_I.png') no-repeat right top;
+        margin-bottom: 0;
+        background-size: 100% auto;
+        max-width: 162px;
+        height: 86px;
+        margin-right: 25px;
+    }
+    
+    #footer .container.bottom-footer {
+        padding: 30px 0 10px;
+        margin-top: 40px;
+        text-align: center;
+        max-width: 100%;
+        background: #000;
+    }
+    
+    #footer .container.copyright p {
+        @include font-size(16);
+        @include line-height(20);
+        color: $white;
+        text-transform: none;
+        @include first-font-family;
+        margin: 0;
+        text-align: center;
+    }
+    
+    #footer .container.bottom-footer p {
+        @include font-size(18);
+        @include line-height(20);
+        color: #FFF;
+        margin: 18px 0 10px;
+    }
+    
+    #footer .container.bottom-footer p.powered-by {
+        color: #3268b5;
+        margin: 0 0 5px;
+        a {
+            color: #009ddd;
+        }
+    }
+    
+    @media only screen and (max-width: 1920px) and (min-width: 1001px) {
+        #footer .footer-col p,
+        #footer .footer-col li,
+        #footer .footer-col li a,
+        #footer .footer-col h5,
+        #footer>.container.copyright p,
+        #footer .container.bottom-footer p {
+            font-size: get-vw(20px);
+            line-height: get-vw(41px);
+        }
+        #footer .footer-col h5 {
+            font-size: get-vw(38px);
+            line-height: get-vw(75px);
+        }
+        #footer>.container.copyright p {
+            line-height: get-vw(25px);
+        }
+        #footer .container.bottom-footer p {
+            line-height: get-vw(20px);
+        }
+        #footer .app-store,
+        #footer .google-play {
+            max-width: get-vw(250px);
+            height: get-vw(75px);
+            margin-bottom: get-vw(19px);
+        }
+        #footer .fb img,
+        #footer .tw img {
+            width: get-vw(74px);
+            height: auto;
+        }
+        #footer .dept-of-ed,
+        #footer .title {
+            max-width: get-vw(162px);
+            height: get-vw(86px);
+            margin-right: get-vw (25px);
+        }
+    }

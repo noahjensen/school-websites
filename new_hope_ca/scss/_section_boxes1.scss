@@ -1,0 +1,504 @@
+/**
+ * Main Content
+ */
+
+.main .col-item {
+  position          : relative;
+  float             : left;
+  margin            : 0;
+  overflow          : hidden;
+  @include transition;
+  -webkit-box-shadow: 1px 1px 21px 0 rgba(0, 0, 0, 0.33);
+  -moz-box-shadow   : 1px 1px 21px 0 rgba(0, 0, 0, 0.33);
+  box-shadow        : 1px 1px 21px 0 rgba(0, 0, 0, 0.33);
+
+  &.events-wrapper {
+    padding-top: 0;
+    @include responsive-property("padding-right",110, 40px, 150px);
+    @include responsive-property("padding-bottom",50, 15px, 70px);
+    @include responsive-property("padding-left",110, 40px, 150px);
+    width      : 100%;
+    float      : none;
+    clear      : both;
+    background : $events-wrapper-bg;
+    font-size  : 0;
+  }
+
+  &.news-wrapper {
+    width      : 66%;
+    padding-top: 0;
+    @include responsive-property("padding-right",20, 5px, 35px);
+    @include responsive-property("padding-bottom",65, 15px, 100px);
+    @include responsive-property("padding-left",35, 10px, 50px);
+    font-size  : 0;
+    background : $news-wrapper-bg;
+  }
+
+  &.live-feeds-wrapper {
+    width             : 34%;
+    padding-top       : 0;
+    @include responsive-property("padding-right",50, 15px, 70px);
+    @include responsive-property("padding-bottom",65, 20px, 100px);
+    @include responsive-property("padding-left",50, 15px, 70px);
+    background        : $live-feeds-wrapper-bg;
+    -webkit-box-shadow: 4px 4px 24px 0 rgba(0, 0, 0, 0.19);
+    -moz-box-shadow   : 4px 4px 24px 0 rgba(0, 0, 0, 0.19);
+    box-shadow        : 4px 4px 24px 0 rgba(0, 0, 0, 0.19);
+  }
+
+  .see-more {
+    position   : absolute;
+    display    : inline-block;
+    padding-top: 0;
+    @include responsive-property("padding-right",20, 15px, 30px);
+    @include responsive-property("padding-left",20, 15px, 30px);
+    width      : auto;
+    @include responsive-property("font-size",$see-all-btns-font-size, 14px, $see-all-btns-font-size + 1px);
+    @include responsive-property("line-height",42, 25px, 42px);
+    @include see-all-btns-font;
+    text-align : left;
+  }
+
+  &.events-wrapper .see-more {
+    right     : 0;
+    top       : 0;
+    background: $see-all-events-btn-bg;
+    color     : $see-all-events-btn-color;
+  }
+
+  &.news-wrapper .see-more {
+    @include responsive-property("right",35, 25px, 45px);
+    @include responsive-property("top",31, 21px, 41px);
+    background: $see-all-news-btn-bg;
+    color     : $see-all-news-btn-color;
+  }
+
+  &.live-feeds-wrapper .see-more {
+    @include responsive-property("right",50, 35px, 60px);
+    @include responsive-property("top",31, 21px, 41px);
+    background: $see-all-live-feeds-btn-bg;
+    color     : $see-all-live-feeds-btn-color;
+  }
+
+  h4 {
+    @include responsive-property("font-size",$sections-titles-font-size, 27px, $sections-titles-font-size + 1px);
+    @include responsive-property("line-height", 103, 65px, 120px);
+    padding   : 0;
+    text-align: left;
+    position  : relative;
+    @include responsive-property("margin-bottom", 27, 15px, 40px);
+    @include sections-titles-font;
+
+    span {
+      background: $see-all-news-btn-bg;
+      color     : $see-all-live-feeds-btn-color;
+      @include responsive-property("padding-right",20, 15px, 30px);
+      @include responsive-property("padding-left",20, 15px, 30px);
+    }
+  }
+
+  &.news-wrapper h4 {
+    color        : $news-title-color;
+    border-bottom: 2px solid $news-title-bg;
+    margin-left  : 15px;
+    margin-right : 15px;
+  }
+
+  &.live-feeds-wrapper h4 {
+    color        : $live-feed-title-color;
+    border-bottom: 2px solid $live-feed-title-bg;
+    @include responsive-property("margin-bottom",50,13px,50px);
+  }
+
+  &.events-wrapper h4 {
+    border-bottom: 2px solid $events-title-bg;
+    color        : $events-title-color;
+    margin-left  : 10px;
+    margin-right : 10px;
+    text-align   : center;
+  }
+
+  &.live-feeds-wrapper .avatar {
+    float     : left;
+    @include responsive-property("max-width", 80, 40px, 100px);
+    text-align: left;
+    @include responsive-property("margin-right", 19, 10px, 25px);
+  }
+
+  &.live-feeds-wrapper .live-feed {
+    margin  : 0;
+    @include responsive-property("margin-bottom", 33, 15px, 40px);
+    overflow: hidden;
+  }
+
+  &.live-feeds-wrapper .right-content {
+    overflow: hidden;
+  }
+
+  &.live-feeds-wrapper .right-content p {
+    @include responsive-property("font-size", $live-feed-text-font-size, 14px, $sections-titles-font-size + 1px);
+    @include responsive-property("line-height", $live-feed-text-font-size +4 , 18px, $sections-titles-font-size + 5px);
+    color : $live-feed-text-color;
+    margin: 0 0 5px;
+    @include live-feed-text-font;
+
+    a {
+      color: $live-feed-link-color;
+    }
+  }
+
+  &.live-feeds-wrapper .right-content .autor,
+  &.live-feeds-wrapper .right-content .autor a,
+  &.live-feeds-wrapper .right-content .time {
+    color : $live-feed-time-color;
+    @include responsive-property("font-size", $live-feed-author-font-size, 14px, $live-feed-author-font-size + 1px);
+    @include responsive-property("line-height", $live-feed-author-font-size + 4 , 17px, $live-feed-author-font-size + 5px);
+    margin: 0 3px 0 0;
+    float : left;
+    @include live-feed-author-font;
+  }
+
+  &.events-wrapper .event {
+    padding       : 0 10px;
+    margin        : 0 0 20px;
+    display       : inline-block;
+    width         : 20%;
+    vertical-align: top;
+    position      : relative;
+  }
+
+  .event .date {
+    @include responsive-property("font-size", $event-date-font-size, 14px, $event-date-font-size + 1px);
+    @include responsive-property("line-height", $event-date-font-size * 2, 25px, $event-date-font-size * 2px);
+    color            : #fff;
+    background       : $event-date-bg;
+    text-align       : center;
+    padding          : 0 5px;
+    @include responsive-property("min-width", 153 , 120px, 165px);
+    position         : absolute;
+    top              : 0;
+    left             : 50%;
+    z-index          : 1;
+    white-space      : nowrap;
+    -webkit-transform: translateX(-50%);
+    -ms-transform    : translateX(-50%);
+    transform        : translateX(-50%);
+    @include event-date-font;
+  }
+
+  .event .date span {
+    display: block;
+  }
+
+  &.events-wrapper .event .right-content,
+  &.events-wrapper.athletics .event:last-child .right-content {
+    display   : table;
+    background: #FFFFFF;
+    @include responsive-property("height", 118 , 90px, 130px);
+    @include responsive-property("min-height", 118 , 90px, 130px);
+    padding   : 28px 10px 10px;
+    position  : relative;
+    text-align: center;
+    width     : 100%;
+  }
+
+  &.events-wrapper .event:last-child .right-content {
+    padding-top: 10px;
+  }
+
+  &.events-wrapper .right-content p,
+  &.events-wrapper.athletics .event:last-child .right-content p {
+    display       : table-cell;
+    margin        : 0;
+    vertical-align: middle;
+  }
+
+  &.events-wrapper .right-content a,
+  &.events-wrapper .right-content p {
+    margin: 0;
+    @include responsive-property("font-size", $event-title-font-size, 16px, $event-title-font-size + 1px);
+    @include responsive-property("line-height", $event-title-font-size + 4, 20px, $event-title-font-size + 5px);
+    color : $event-title-color;
+    @include event-title-font;
+  }
+
+  &.events-wrapper.athletics .right-content {
+    display    : block;
+    padding-top: 47px;
+
+    p {
+      display      : block;
+      color        : $event-title-color;
+      margin-bottom: 5px;
+
+      &.type {
+        color: #646464;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      span {
+        margin-left: 15px;
+
+        &:first-child {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .sores-dropdown {
+      position  : absolute;
+      bottom    : 0;
+      left      : 0;
+      width     : 100%;
+      text-align: center;
+      background: #FFF;
+      @include responsive-property("height", 135, 90px, 150px);
+      z-index   : 7;
+      display   : block;
+      overflow  : hidden;
+      height    : 20px;
+
+      &:after {
+        cursor     : pointer;
+        content    : " ";
+        width      : 100%;
+        height     : 20px;
+        position   : absolute;
+        left       : 0;
+        margin-left: -10px;
+        bottom     : 0;
+        background : url("/images/dropdown-arrows.png") no-repeat center 5px;
+      }
+
+      p {
+        color         : $event-title-color;
+        display       : table-cell;
+        margin        : 0;
+        vertical-align: middle;
+        @include line-height(26);
+        opacity       : 0;
+        visibility    : hidden;
+      }
+
+      &.open {
+        display: table;
+        height : 135px;
+        bottom : -100%;
+
+        &:after {
+          background-position: center -120px;
+        }
+
+        p {
+          opacity   : 1;
+          visibility: visible;
+        }
+      }
+    }
+  }
+
+  &.events-wrapper .right-content a.see-more {
+    position      : relative;
+    top           : 0;
+    right         : 0;
+    padding       : 0;
+    @include responsive-property("padding-left", 30, 15px, 40px);
+    @include responsive-property("padding-right", 30, 15px, 40px);
+    color         : $see-all-events-btn-color;
+    @include responsive-property("height", 42, 25px, 60px);
+    @include responsive-property("line-height", 42, 25px, 60px);
+    text-transform: uppercase;
+  }
+
+  &.news-wrapper .news {
+    overflow      : hidden;
+    margin-bottom : 10px;
+    display       : block;
+    float         : left;
+    width         : 33.33%;
+    vertical-align: top;
+    padding-right : 15px;
+    padding-left  : 15px;
+  }
+
+  &.news-wrapper .avatar {
+    width     : 100%;
+    overflow  : hidden;
+    text-align: center;
+    font-size : 0;
+    border-top: 6px solid $second-news-border-top-color;
+    @include responsive-property("margin-bottom", 35, 25px, 50px);
+
+    img {
+      @include responsive-property("height", 217, 100px, 250px);
+      display   : inline-block;
+      max-width : 100%;
+      height    : auto;
+      object-fit: cover;
+    }
+  }
+
+  &.news-wrapper .news:first-of-type .avatar {
+    border-color: $first-news-border-top-color;
+  }
+
+  &.news-wrapper .news:last-of-type .avatar {
+    border-color: $third-news-border-top-color;
+  }
+
+  &.news-wrapper .right-content {
+    float  : none;
+    padding: 0;
+    display: block;
+    width  : 100%;
+  }
+
+  &.news-wrapper .right-content p {
+    @include responsive-property("font-size", $news-p-font-size, 14px, $news-p-font-size+1px);
+    @include responsive-property("line-height", $news-p-font-size +8, 20px, $news-p-font-size+5px);
+    color : $news-title-color;
+    margin: 0;
+    @include news-paragraph-font;
+  }
+
+  .news .right-content p a {
+    color: $news-title-color;
+  }
+
+  &.news-wrapper .right-content h3 {
+    @include responsive-property("font-size", $news-titles-font-size, 16px, $news-titles-font-size+1px);
+    @include responsive-property("line-height", $news-titles-font-size +4, 20px, $news-titles-font-size+5px);
+    color : $news-title-color;
+    margin: 0;
+    @include responsive-property("margin-bottom", 26, 14px, 35px);
+    @include news-titles-font;
+  }
+
+  &.news-wrapper .right-content h3 a {
+    color: $news-title-color;
+  }
+}
+
+/**
+ * Responsive
+ */
+
+@media only screen and (max-width: 1000px) {
+  #intro {
+    display: none;
+  }
+
+  .main .col-item.news-wrapper .right-content h3 {
+    margin-bottom: 10px;
+  }
+
+  .main .col-item h4 {
+    margin-left: 20px;
+  }
+
+  .main .col-item .see-more {
+    margin-left : 20px;
+    margin-right: 20px;
+  }
+
+  .main .col-item.news-wrapper .news {
+    width: auto;
+  }
+
+  .main .col-item .see-more,
+  .main .col-item.events-wrapper .see-more,
+  .main .col-item.live-feeds-wrapper .see-more,
+  .main .col-item.news-wrapper .see-more {
+    position  : relative;
+    display   : block;
+    text-align: center;
+    right     : 0;
+    top       : 0;
+    left      : 0;
+  }
+
+  .main .col-item.news-wrapper .news {
+    margin-bottom: 25px;
+    float        : none;
+  }
+
+  .main .col-item.events-wrapper .event .right-content,
+  .main .col-item.events-wrapper.athletics .event:last-child .right-content {
+    height: auto;
+  }
+
+  .main .col-item.events-wrapper .event {
+    width: 100%;
+  }
+
+  .main .col-item.events-wrapper .right-content a.see-more {
+    margin: 0 auto;
+  }
+
+  .main .col-item h4,
+  .main .col-item.events-wrapper h4,
+  .main .col-item.live-feeds-wrapper h4,
+  .main .col-item.news-wrapper h4 {
+    padding-left: 0;
+    text-align  : left;
+    margin-left : 20px;
+    margin-right: 20px;
+  }
+
+  .main .col-item.news-wrapper .avatar {
+    height: auto;
+  }
+
+  .main .col-item,
+  .main .col-item.events-wrapper,
+  .main .col-item.live-feeds-wrapper,
+  .main .col-item.news-wrapper {
+    padding           : 5px 0 20px;
+    width             : 100%;
+    height            : auto !important;
+    float             : none;
+    width             : 100%;
+    margin-top        : 0;
+    margin-bottom     : 0;
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition   : all 0.5s ease-in-out;
+    -o-transition     : all 0.5s ease-in-out;
+    transition        : all 0.5s ease-in-out;
+  }
+
+  .main .col-item.events-wrapper .event,
+  .main .col-item.live-feeds-wrapper .live-feed,
+  .main .col-item.news-wrapper .news {
+    padding: 0 20px;
+  }
+
+  .news-wrapper .bx-wrapper .bx-pager {
+    padding   : 5px 0;
+    right     : 0;
+    width     : 100%;
+    text-align: center;
+  }
+
+  .news .image img {
+    margin-left : auto;
+    margin-right: auto;
+  }
+
+  .col-item .news .right-content {
+    padding: 0 15px;
+  }
+
+  .col-item .news .right-content {
+    line-height: normal;
+    min-height : initial;
+  }
+
+  .main .col-item h4 {
+    margin-bottom: 25px;
+    position     : relative;
+
+  }
+}

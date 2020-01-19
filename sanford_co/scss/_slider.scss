@@ -1,0 +1,349 @@
+    /****************************
+*   SLIDER
+*
+*************************/
+    
+    .bx-wrapper {
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+        *zoom: 1;
+        float: right;
+        width: 100%;
+        padding-left: $leftSlider;
+    }
+    
+    .bx-wrapper img {
+        max-width: 100%;
+        display: block;
+    }
+    
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .bx-wrapper .bx-viewport {
+        /*fix other elements on the page moving (on Chrome)*/
+        -webkit-transform: translatez(0);
+        -moz-transform: translatez(0);
+        -ms-transform: translatez(0);
+        -o-transform: translatez(0);
+        transform: translatez(0);
+    }
+    
+    .bx-wrapper .bx-pager,
+    .bx-wrapper .bx-controls-auto {
+        position: absolute;
+        bottom: -30px;
+        width: 100%;
+    }
+    /* LOADER */
+    
+    .bx-wrapper .bx-loading {
+        min-height: 50px;
+        background: url(bx_loader.gif) center center no-repeat #fff;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2000;
+    }
+    /* PAGER */
+    
+    .bx-wrapper .bx-pager {
+        text-align: left;
+        position: absolute;
+        width: auto;
+        right: 15%;
+        bottom: 25px;
+        display: none;
+    }
+    
+    .bx-wrapper .bx-pager .bx-pager-item,
+    .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+        display: inline-block;
+        *zoom: 1;
+        *display: inline;
+    }
+    
+    .bx-wrapper .bx-pager.bx-default-pager a {
+        background: $white;
+        text-indent: -9999px;
+        display: block;
+        width: 13px;
+        height: 13px;
+        margin: 0;
+        outline: 0;
+        text-align: left;
+        overflow: hidden;
+        @include border-radius(50%);
+        margin-right: 5px;
+    }
+    
+    .bx-wrapper .bx-pager.bx-default-pager a:hover,
+    .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background: $links-color;
+    }
+    
+    .bx-wrapper .bx-controls-direction a {
+        position: absolute;
+        bottom: 35px;
+        outline: 0;
+        width: 45px;
+        height: 35px;
+        text-indent: -9999px;
+        z-index: 9999;
+    }
+    
+    .bx-wrapper .bx-controls-direction a.bx-prev {
+        right: 87px;
+        background: url('slider-arrows.png') no-repeat 10px center;
+    }
+    
+    .bx-wrapper .bx-controls-direction a.bx-next {
+        right: 35px;
+        background: url('slider-arrows.png') no-repeat -114px center;
+    }
+    
+    .bx-wrapper .bx-controls-direction a.disabled {
+        display: none;
+    }
+    /*** END DEFAULT SLIDER CODE  **/
+    
+    .bx-wrapper .bx-viewport:after {
+        content: ' ';
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: 60;
+    }
+    
+    .bx-wrapper .bx-viewport:before {
+        content: ' ';
+        width: 100%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        height: 100%;
+        z-index: 56;
+    }
+    
+    .text-logo {
+        position: absolute;
+        width: 100%;
+        height: 89px;
+        left: 0px;
+        bottom: 100px;
+        z-index: 66;
+        text-align: center;
+        h2 {
+            margin: 0;
+            @include first-font-family;
+            text-transform: none;
+            a {
+                @include font-size(66);
+                @include line-height(69);
+                margin: 0;
+                color: #FFF;
+                text-transform: uppercase;
+                font-style: normal;
+                letter-spacing: 25px;
+            }
+            strong {
+                @include font-size(90);
+                @include line-height(94);
+                text-transform: uppercase;
+                font-style: normal;
+                display: block;
+                @include second-font-family;
+                letter-spacing: 0px;
+            }
+        }
+    }
+    
+    #slider {
+        overflow: hidden;
+        background: $SliderBgColor;
+        position: relative;
+        z-index: 0;
+    }
+    
+    #slider .slider-info {
+        width: 100%;
+        max-width: 100%;
+        position: absolute;
+        height: auto;
+        bottom: 60px;
+        left: 0;
+        text-align: center;
+        z-index: 44;
+        padding: 0;
+    }
+    
+    #slider .slider-info .read-more {
+        position: absolute;
+        bottom: 0px;
+        left: 0;
+        @include font-size(18);
+        @include line-height(22);
+        margin: 0;
+        @include third-font-family;
+        text-transform: uppercase;
+        color: #FFF;
+        text-decoration: none;
+    }
+    
+    #slider .slider-info .read-more:after {
+        width: 15px;
+        height: 22px;
+        background: url("small-arrows.png") no-repeat center;
+        content: ' ';
+        position: absolute;
+        right: -22px;
+        top: 0;
+    }
+    
+    #slider .slider-info .read-more:hover:after {
+        -webkit-animation: arrowmove 0.7s infinite;
+        /* Chrome, Safari, Opera */
+        animation: arrowmove 0.7s infinite;
+    }
+    
+    @-webkit-keyframes arrowmove {
+        from {
+            right: -22px;
+        }
+        to {
+            right: -30px;
+        }
+    }
+    
+    @keyframes arrowmove {
+        from {
+            right: -22px;
+        }
+        to {
+            right: -30px;
+        }
+    }
+    
+    #slider .slider-info h1,
+    #slider .slider-info h2,
+    #slider .slider-info h3,
+    #slider .slider-info h4,
+    #slider .slider-info h5,
+    #slider .slider-info h6,
+    #slider .slider-info p {
+        color: $white;
+        margin: 0 0 15px;
+        text-transform: uppercase;
+        @include first-font-family;
+    }
+    
+    #slider .slider-info h1 {
+        @include font-size(60);
+        @include line-height(60);
+    }
+    
+    #slider .slider-info h2 {
+        @include font-size(50);
+        @include line-height(55);
+    }
+    
+    #slider .slider-info h3 {
+        @include font-size(45);
+        @include line-height(50);
+    }
+    
+    #slider .slider-info h4 {
+        @include font-size(40);
+        @include line-height(40);
+    }
+    
+    #slider .slider-info h5 {
+        @include font-size(30);
+        @include line-height(40);
+    }
+    
+    #slider .slider-info h6 {
+        @include font-size (25);
+        @include line-height (30);
+    }
+    
+    #slider .slider-info p {
+        @include font-size(22);
+        @include line-height(35);
+        text-transform: none;
+    }
+    
+    .slider-container {
+        float: left;
+    }
+    
+    #slider .slider-info.scroll-container p {
+        overflow: auto;
+        padding-bottom: 10px;
+    }
+    
+    .slider-container .slide {
+        float: left;
+        overflow: hidden;
+    }
+    
+    .slider-container img {
+        max-width: inherit;
+        width: 100%;
+        height: auto;
+    }
+    
+    @media only screen and (max-width: 1920px) and (min-width: 1000px) {
+        /*Changes for slider*/
+        #slider .slider-info h1 {
+            font-size: get-vw(60px);
+            line-height: get-vw(60px);
+        }
+        #slider .slider-info h2 {
+            font-size: get-vw(50px);
+            line-height: get-vw(55px);
+        }
+        #slider .slider-info h3 {
+            font-size: get-vw(45px);
+            line-height: get-vw(50px);
+        }
+        #slider .slider-info h4 {
+            font-size: get-vw(40px);
+            line-height: get-vw(40px);
+        }
+        #slider .slider-info h5 {
+            font-size: get-vw(30px);
+            line-height: get-vw(40px);
+        }
+        #slider .slider-info h6 {
+            font-size: get-vw(25px);
+            line-height: get-vw(30px);
+        }
+        #slider .slider-info p {
+            font-size: get-vw(22px);
+            line-height: get-vw(35px);
+        }
+        .slider-container img {
+            width: 100%;
+            -o-object-fit: cover;
+            object-fit: cover;
+        }
+    }
+    
+    #slider .bx-wrapper {
+        padding-left: 0;
+    }
+    
+    #slider,
+    .container {
+        max-width: 1607px;
+        margin-left: auto;
+        margin-right: auto;
+    }

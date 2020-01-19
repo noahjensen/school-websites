@@ -1,0 +1,197 @@
+/**
+ * Global Reset of all HTML Elements
+ */
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-width: 0;
+    -webkit-box-sizing: border-box;
+    /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;
+    /* Firefox, other Gecko */
+    box-sizing: border-box;
+    /* Opera/IE 8+ */
+}
+
+html {
+    font-size: 62.5%;
+}
+body {
+    @include first-font-family;
+    font-style: normal;
+    font-weight: 400;
+	@include responsive-property("font-size",$paragraph-font-size,15px,$paragraph-font-size + 10px);
+	@include responsive-property("line-height",$paragraph-line-height,23px,$paragraph-line-height + 10px);
+    background: $page-bg;
+}
+p {
+    color: $text-color; 
+    @include responsive-property("font-size",$paragraph-font-size,15px,$paragraph-font-size + 10px);
+	@include responsive-property("line-height",$paragraph-line-height,23px,$paragraph-line-height + 10px);
+    @include first-font-family;
+    @include responsive-property("font-size",20,8px,25px);
+   word-wrap: break-word;
+}
+a {
+    color: $links-color;
+    border: none;
+    outline: none;
+    text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal; 
+    text-transform: none;
+    @include second-font-family;
+   word-wrap: break-word;
+}
+
+a:hover {
+    color: $links-color;
+    text-decoration: underline;
+}
+a:active,
+a:focus {
+    color: $links-color;
+}
+ol,
+ul {
+    list-style: none;
+}
+ul {
+    margin: 0 0 19px;
+}
+ul li {
+    list-style-type: none;
+    @include responsive-property("font-size",19,14px,20px);
+    @include responsive-property("line-height",22,18px,23px);
+   word-wrap: break-word;
+}
+input:focus,
+textarea {
+    outline: none;
+}
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+   word-wrap: break-word;
+}
+button,
+input {
+    line-height: normal;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
+select::-ms-expand {
+    display: none;
+}
+textarea {
+    overflow: auto;
+    vertical-align: top;
+}
+button,
+input,
+select,
+textarea {
+    font-size: 100%;
+    margin: 0;
+}
+button,
+input {
+    line-height: normal;
+}
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer;
+}
+
+/*Remove button padding in FF*/
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+textarea {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    display: block;
+    resize: none;
+    overflow: auto;
+}
+
+  
+body .fl_right {
+  float: right;
+}
+body .fl_left {
+  float: left;
+}
+
+/*Styling for ADA Compliance*/
+
+div:focus, span:focus {
+	outline: none;
+}
+.screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000;
+}
+.screen-reader-only {
+    position: absolute !important;
+    height: 1px; width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+    clip: rect(1px, 1px, 1px, 1px);
+}
+button.search-icon {
+	padding: 0;
+}
+a[href^="tel"] {
+	color: inherit;
+	text-decoration: none;
+}

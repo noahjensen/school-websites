@@ -1,0 +1,74 @@
+// ===== Variables ========================================================== //
+
+// Colors 
+
+//Website color and background
+$first-color:				  #151515;   //very-dark-gray
+$second-color:                #006600;   //dark-red
+$third-color:				  #e4e4e4;   //light-gray
+$fourth-color:                #a1a1a1;   //gray
+$fifth-color:                 #646464;   //gray02
+$sixth-color:                 #8d8d8d;   //gray03
+
+$white:                       #FFFFFF;   //white
+$black:                       #000000;   //black
+$third-bg:                    #fdf2f3;   //light-pink
+$fourth-bg:                   #006600;   //verydark-red
+$fifth-bg:                    #393939;   //dark-gray
+
+$leftSliderColor:             #f2f2f2;
+$breadcrumbBg:                #f5f5f5;
+
+
+
+//Elements color and background
+$text-color:                        $first-color;
+$see-all-btn-bg:                    $second-color; 
+$see-all-news-btn-bg:               $first-color;  
+$see-all-events-btn-bg:             $second-color;  
+$see-all-live-feeds-btn-bg:         $second-color;  
+
+$see-all-btn-color:                 $white; 
+$see-all-news-btn-color:            $white;  
+$see-all-events-btn-color:          $white;  
+$see-all-live-feeds-btn-color:      $white;  
+
+$events-wrapper-bg:                 $third-bg;
+$footer-title-color:                $fifth-color;
+$live-feed-time-color:              $fourth-color;
+
+$events-title-color:                $white;
+$news-title-color:                  $white;
+$live-feed-title-color:             $white;
+
+$events-title-bg:                   $fourth-bg;
+$news-title-bg:                     $second-color;
+$live-feed-title-bg:                $first-color;
+
+$read-more-new-bg:                  $first-color;
+$read-more-new-color:               $white;
+$news-pager-active:                 $second-color;
+$news-pager:                        $third-color;        
+
+$live-feed-text:                    $fifth-color;
+$live-feed-h3:                      $second-color;
+$event-date:                        $fifth-color;
+$event-title:                       $fourth-bg;
+$new-feed-paragraph:                $fifth-color;
+$new-feed-h3:                       $second-color;
+
+$header-bg:                         $second-color;
+$footer-bg:                         $black;
+
+//Some padding and margin
+
+$colspadding:                       185px 10px 70px 60px;
+$footer-padding:                    55px 70px 20px 260px;
+
+
+$leftMarginRightContent:            95px;          
+$avatarWidth:                       76px;
+
+$leftSlider:                        610px;
+
+ 

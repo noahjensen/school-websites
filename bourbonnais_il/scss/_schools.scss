@@ -1,0 +1,230 @@
+   /*************************
+*
+*  Schools colors
+*
+*************************/
+   
+   // Upper Grade Center
+   .upper-grade-center-page {
+       #slider:after {
+           background: url(slider-bg-bugc.jpg) center center no-repeat #fff;
+           background-size: cover;
+       }
+       #header .search-icon {
+           background: #feb415 url(search-icon.png) no-repeat center center;
+       }
+       .main .col-item.events-wrapper {
+           background: rgba(254,180,21, 0.85);
+       }
+       ul.static-links li span {
+           background: #bf7f1d;
+       }
+       ul.static-links li:nth-child(even) span {
+           background: #feb415;
+       }
+       .generated-links li.has-child ul li:hover {
+           border-color: #feb415;
+       }
+       .generated-links li.has-child ul li.has-child ul {
+           border-color: #bf7f1d;
+       }
+       #right-nav .menu-wrap li a:hover {
+           border-color: #feb415;
+       }
+       #header #change_language_form .options li.selected {
+           border-color: #feb415;
+       }
+       .bx-wrapper .bx-pager.bx-default-pager a:hover,
+       .bx-wrapper .bx-pager.bx-default-pager a.active {
+           background: #feb415;
+       }
+   }
+
+
+
+// Liberty
+   .liberty-page {
+       #slider:after {
+           background: url(slider-bg-liberty.jpg) center center no-repeat #fff;
+           background-size: cover;
+       }
+       #header .search-icon {
+           background: #c01b17 url(search-icon.png) no-repeat center center;
+       }
+       #header #change_language_form,
+       #left-nav .menu-btn>span,
+       #right-nav .menu-btn>span {
+           background-color: #163175;
+       }
+       .main .col-item.events-wrapper {
+           background: rgba(192,27,23, 0.85);
+       }
+       .main .col-item.live-feeds-wrapper ,
+       .main .col-item.news-wrapper {
+           background: rgba(22,49,117, 0.85);
+       }
+       ul.static-links li span {
+           background: #163175;
+       }
+       ul.static-links li:nth-child(even) span {
+           background: #c01b17;
+       }
+       .generated-links li.has-child ul li:hover {
+           border-color: #151b55;
+       }
+       .generated-links li.has-child ul li.has-child ul {
+           border-color: #151b55;
+       }
+       #right-nav .menu-wrap li a:hover {
+           border-color: #151b55;
+       }
+       #header #change_language_form .options li.selected {
+           border-color: #151b55;
+       }
+       .bx-wrapper .bx-pager.bx-default-pager a:hover,
+       .bx-wrapper .bx-pager.bx-default-pager a.active {
+           background: #c01b17;
+       }
+   }
+   
+
+// Noel Levasseur
+   .noel-levasseur-page {
+       #slider .left-slider h3 span {
+           font-variant: small-caps;
+       }
+       #slider:after {
+           background: url(slider-bg-lev.jpg) center center no-repeat #fff;
+           background-size: cover;
+       }
+       #header .search-icon {
+           background: #5400d4 url(search-icon.png) no-repeat center center;
+       }
+       #header #change_language_form,
+       #left-nav .menu-btn>span,
+       #right-nav .menu-btn>span {
+           background-color: #9a9a9a;
+       }
+       .main .col-item.events-wrapper {
+           background: rgba(84,0,212, 0.85);
+       }
+       .main .col-item.live-feeds-wrapper ,
+       .main .col-item.news-wrapper {
+           background: rgba(154,154,154, 0.85);
+       }
+       ul.static-links li span {
+           background: #9a9a9a;
+       }
+       ul.static-links li:nth-child(even) span {
+           background: #2e2e2e;
+       }
+       .generated-links li.has-child ul li:hover {
+           border-color: #5f259f;
+       }
+       .generated-links li.has-child ul li.has-child ul {
+           border-color: #2e2e2e;
+       }
+       #right-nav .menu-wrap li a:hover {
+           border-color: #5400d4;
+       }
+       #header #change_language_form .options li.selected {
+           border-color: #5400d4;
+       }
+       .bx-wrapper .bx-pager.bx-default-pager a:hover,
+       .bx-wrapper .bx-pager.bx-default-pager a.active {
+           background: #5400d4;
+       }
+   }
+   
+
+
+// Shabbona
+   .shabbona-page {
+       #slider:after {
+           background: url(slider-bg-shab.jpg) center center no-repeat #fff;
+           background-size: cover;
+       }
+       #header .search-icon {
+           background: #b85111 url(search-icon.png) no-repeat center center;
+       }
+       #header #change_language_form,
+       #left-nav .menu-btn>span,
+       #right-nav .menu-btn>span {
+           background-color: #151b55;
+       }
+       .main .col-item.events-wrapper {
+           background: rgba(184,81,17, 0.85);
+       }
+       .main .col-item.live-feeds-wrapper ,
+       .main .col-item.news-wrapper {
+           background: rgba(21,27,85, 0.85);
+       }
+       ul.static-links li span {
+           background: #b85111;
+       }
+       ul.static-links li:nth-child(even) span {
+           background: #151b55;
+       }
+       .generated-links li.has-child ul li:hover {
+           border-color: #151b55;
+       }
+       .generated-links li.has-child ul li.has-child ul {
+           border-color: #151b55;
+       }
+       #right-nav .menu-wrap li a:hover {
+           border-color: #151b55;
+       }
+       #header #change_language_form .options li.selected {
+           border-color: #151b55;
+       }
+       .bx-wrapper .bx-pager.bx-default-pager a:hover,
+       .bx-wrapper .bx-pager.bx-default-pager a.active {
+           background: #b85111;
+       }
+   }
+   
+
+// Alan Shepard
+   .alan-shepard-page {
+       #slider:after {
+           background: url(slider-bg-shep.jpg) center center no-repeat #fff;
+           background-size: cover;
+       }
+       #header .search-icon {
+           background: #c01b17 url(search-icon.png) no-repeat center center;
+       }
+       #header #change_language_form,
+       #left-nav .menu-btn>span,
+       #right-nav .menu-btn>span {
+           background: #000000;
+       }
+       .main .col-item.events-wrapper {
+           background: rgba(192,27,23, 0.85);
+       }
+       .main .col-item.live-feeds-wrapper ,
+       .main .col-item.news-wrapper {
+           background: rgba(0,0,0, 0.85);
+       }
+       ul.static-links li span {
+           background: #c01b17;
+       }
+       ul.static-links li:nth-child(even) span {
+           background: #000000;
+       }
+       .generated-links li.has-child ul li:hover {
+           border-color: #c01b17;
+       }
+       .generated-links li.has-child ul li.has-child ul {
+           border-color: #000000;
+       }
+       #right-nav .menu-wrap li a:hover {
+           border-color: #c01b17;
+       }
+       #header #change_language_form .options li.selected {
+           border-color: #c01b17;
+       }
+       .bx-wrapper .bx-pager.bx-default-pager a:hover,
+       .bx-wrapper .bx-pager.bx-default-pager a.active {
+           background: #c01b17;
+       }
+   }

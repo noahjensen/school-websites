@@ -1,0 +1,52 @@
+<footer id="footer">
+  <div class="container clearfix">
+    <div class="footer-col">
+      <h5>Contact Us</h5>
+      <p><%= current_organization.try(:name)%>
+        <br><%= current_organization.try(:address) %>
+        <br><%="#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+        <br><%="PH: #{current_organization.try(:phone_number)}" %>
+        <br><%= "FAX #{current_organization.try(:fax_number)}" %></p>
+    </div>
+    <div class="footer-col">
+      <h5>Quicklinks</h5>
+      <ul class="footer-links">
+        <li class="live-feed">
+          <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed" %>>Live Feed</a>
+        </li>
+        <li class="news">
+          <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news" %>>News</a>
+        </li>
+        <li class="events">
+          <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events" %>>Events</a>
+        </li>
+        <li class="dining">
+          <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff" %>>Directories</a>
+        </li>
+        <li class="staff">
+          <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining" %>>Dining</a>
+        </li>
+        <li class="documents">
+          <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents" %>>Documents</a>
+        </li>
+        <li class="athletics">
+          <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/documents" %>>Athletics</a>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-col last">
+      <% if current_organization[:facebook_link].present? %>
+      <a href="<%= current_organization.try(:facebook_link) %>" class="fb">Facebook
+        <%= image_tag "apptegy_cms/themes/placervilleca/facebook-icon.png", alt: "Hope Leadership Academy Charter School Facebook" %></a><% end %>
+      <a href="" class="app-store">Download on the App Store</a>
+      <br>
+      <% if current_organization[:twitter_link].present? %>
+      <a href="<%= current_organization.try(:twitter_link) %>" class="tw">Twitter
+        <%= image_tag "apptegy_cms/themes/placervilleca/twitter.png", alt: "Hope Leadership Academy Charter School Twitter" %></a><% end %>
+      <a href="" class="google-play">Get it on Google play</a>
+    </div>
+  </div>
+  <div class="container copyright">
+    <p>Copyright &copy; 2017 Hope Leadership Academy Charter School. All rights reserved.</p>
+  </div>
+</footer>

@@ -1,0 +1,203 @@
+    /****************************
+*   SLIDER
+*
+*************************/
+
+.bx-wrapper {
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+    *zoom: 1;
+    float: right;
+    width: 100%;
+    padding-left: $leftSlider;
+}
+.bx-wrapper img {
+    max-width: 100%;
+    display: block;
+}
+img {
+    max-width: 100%;
+    height: auto;
+}
+.bx-wrapper .bx-viewport {
+    /*fix other elements on the page moving (on Chrome)*/
+    -webkit-transform: translatez(0);
+    -moz-transform: translatez(0);
+    -ms-transform: translatez(0);
+    -o-transform: translatez(0);
+    transform: translatez(0);
+}
+.bx-wrapper .bx-pager,
+.bx-wrapper .bx-controls-auto {
+    position: absolute;
+    bottom: -30px;
+    width: 100%;
+}
+
+/* LOADER */
+
+.bx-wrapper .bx-loading {
+    min-height: 50px;
+    background: url(bx_loader.gif) center center no-repeat #fff;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2000;
+}
+
+/* PAGER */
+
+.bx-wrapper .bx-pager {
+    text-align: left;
+    position: absolute;
+    width: auto;
+    right: 15%;
+    bottom: 25px;
+}
+.bx-wrapper .bx-pager .bx-pager-item,
+.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+    display: inline-block;
+    *zoom: 1;
+    *display: inline;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: $white;
+    text-indent: -9999px;
+    display: block;
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    outline: 0;
+    text-align: left;
+    overflow: hidden;
+    @include border-radius(50%);
+    margin-right: 5px;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: $links-color;
+}
+.bx-wrapper .bx-controls-direction a {
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    outline: 0;
+    width: 32px;
+    height: 32px;
+    text-indent: -9999px;
+    z-index: 9999;
+}
+.bx-wrapper .bx-controls-direction a.disabled {
+    display: none;
+}
+.bx-wrapper .bx-viewport:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url('slider-mask.png') repeat-x;
+    width: 100%;
+    z-index: 999999;
+    height: 294px;
+}
+
+/*** END DEFAULT SLIDER CODE  **/
+
+#slider {
+    overflow: hidden;
+    background: $SliderBgColor;
+    position: relative;
+   z-index: 2;
+}
+#slider .slider-info {
+    width: 100%;
+    max-width: 1570px;
+    height: auto;
+    bottom: 0px;
+    text-align: left;
+    z-index: 44;
+    margin: 0 0 65px;
+    text-align:center;
+    @extend %horizontal-align;
+}
+#slider .slider-info h2 {
+    @include font-size(90);
+    @include line-height(94);
+    color: $white;
+    margin: 0 0 20px;
+    text-transform: none;
+    @include first-font-family;
+}
+#slider .slider-info h4 {
+    @include font-size(45);
+    @include line-height(48);
+    color: $white;
+    margin: 0 ;
+    text-transform: none;
+    @include first-font-family;
+}
+#slider .slider-info p {
+    color: $white;
+    @include font-size(40);
+    @include line-height(43);
+    margin: 0;
+    @include first-font-family;
+}
+
+.slider-container {
+    float: left;
+}
+#slider .slider-info.scroll-container p {
+    overflow: auto;
+    padding-bottom: 10px;
+}
+.slider-container .slide {
+    float: left;
+    /*max-height: 724px;*/
+    overflow: hidden;
+}
+.slider-container img {
+    max-width: inherit;
+    width: 100%;
+    height: 70vh;
+    max-height: 799px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+@media only screen and (max-width: 1920px) and (min-width: 1000px) {
+    /*Changes for slider*/
+    #slider .slider-info h2 {
+        font-size: get-vw(54px);
+        line-height: 1.2;
+    }
+    #slider p {
+        font-size: get-vw(18px);
+        line-height: 1.5;
+    }
+    .slider-container img {
+        width: 100%;
+        height: 70vh;
+        max-height: 799px;
+        -o-object-fit: cover;
+        object-fit: cover;
+    }    
+}
+
+@media only screen and (max-width: 1350px) {
+    #slider p {
+        font-size: 15px;
+        font-size: 1.5rem;
+        line-height: 21px;
+        line-height: 2.1rem;
+    }
+}
+#slider .bx-wrapper {
+    padding-left: 0;
+}
+ 
+
+#header, #slider, .container { max-width: 1920px; margin-left: auto; margin-right: auto; }

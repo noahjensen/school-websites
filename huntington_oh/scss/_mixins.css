@@ -1,0 +1,7 @@
+/* line 23, C:/Users/Ciprian/Google Drive/Websites Code and PSD/Powers-Lake/HTML/scss/_mixins.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*# sourceMappingURL=_mixins.css.map */

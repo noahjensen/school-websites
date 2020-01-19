@@ -1,0 +1,262 @@
+// ===== Variables ========================================================== //
+
+//Website color and background
+
+$white: #FFFFFF;
+//white
+$black: #000000;
+//black
+
+$breadcrumbBg: #3b3a3a;
+$breadcrumbColor: #FFF;
+
+//Elements color and background
+$page-bg: #FFF;
+$text-color: #151515;
+$paragraph-font-size: 16;
+$paragraph-line-height: 26;
+$links-color: #ddad0d;
+$logo-color: $black;
+$menu-txt-color: #fff;
+$menu-btn-txt-color: #333333;
+$menu-btn-bg: #FFF;
+$menu-wrap-bg: $black;
+$right-menu-wrap-bg: rgba(0, 0, 0, 0.85);
+$right-submenu-color: #FFF;
+$submenu-bg: #FFF;
+$pager-slider: #FFF;
+$pager-slider-active: #ffae00;
+$SliderBgColor: transparent;
+$leftSlider: 0;
+$pager-slider-bg: #f7c315;
+$active-pager-slider-bg: #f7c315;
+$slider-arrow-width: 20px;
+$slider-arrow-height: 20px;
+
+$separator-bg: #FFF;
+$left-sidebar: $black;
+
+$see-all-btn-bg: transparent;
+$see-all-news-btn-bg: transparent;
+$see-all-events-btn-bg: transparent;
+$see-all-live-feeds-btn-bg: transparent;
+
+$see-all-btn-color: #fff;
+$see-all-news-btn-color: #fff;
+$see-all-events-btn-color: #fff;
+$see-all-live-feeds-btn-color: #fff;
+
+$events-wrapper-bg: #FFF;
+$news-wrapper-bg: #fff;
+$footer-title-color: #fff;
+$live-feed-time-color: #FFF;
+
+$events-title-color: #FFF;
+$news-title-color: #FFF;
+$live-feed-title-color: #FFF;
+
+$events-title-bg: transparent;
+$news-title-bg: transparent;
+$live-feed-title-bg: transparent;
+
+$read-more-new-bg: #2b3272;
+$read-more-new-color: #fff;
+$news-pager-active: #911b24;
+$news-pager: #2b3272;
+
+$live-feed-text: #FFF;
+$live-feed-h3: #FFF;
+$event-date: #FFF;
+$event-title: #FFF;
+$new-feed-paragraph: #FFF;
+$new-feed-h3: #FFF;
+
+$header-bg: #FFF;
+$footer-bg: url("chalkboard-footer.png");
+$footer-text: #fff;
+
+// FOOTER
+$footer-container-max-width: 1745px;
+$footer-bg: #0d0d0d;
+$footer-bottom-part-bg: #191919;
+
+$footer-col-width: 22%;
+
+$footer-text-color: #FFF;
+$footer-text-font-size: 19;
+@mixin footer-text-font {
+  @include fifth-font-family;
+  text-transform: uppercase;
+}
+
+$footer-title-color: #fff;
+$footer-title-font-size: 27px;
+@mixin footer-title-font {
+  @include sixth-font-family;
+  text-transform: uppercase;
+}
+
+$footer-copyright-font-size: 17px;
+@mixin footer-copyright-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+$footer-pb-txt-color: #fff;
+// footer power by text color
+$footer-pb-link-color: #fff; // footer power by links color
+
+//Some padding and margin
+
+$colspadding: 140px 50px 50px 63px;
+$footer-padding: 50px 0 50px;
+
+$avatarWidth: 84px;
+
+$subpage-one-col-width: 90%;
+$subpage-sidebar-width: 30%;
+$subpage-column-two: 60%;
+$subpage-cols-margin: 50px;
+
+//bulletin board
+$bb-text-color: #FFF;
+$bb-h1-font-size: 66px;
+@mixin bb-h1-font {
+  @include third-font-family;
+  text-transform: uppercase;
+}
+
+$bb-p-font-size: 23px;
+@mixin bb-p-font {
+  @include first-font-family;
+  text-transform: uppercase;
+  font-style    : italic;
+}
+
+// for _slider1.scss
+$bb-first-text-bg: rgba(189, 3, 35, 0.85);
+$bb-second-text-bg: rgba(32, 63, 139, 0.85);
+
+//SECTION BOXES HOMEPAGE
+
+$events-wrapper-bg: transparent;
+$news-wrapper-bg: #f6f6f6;
+$live-feeds-wrapper-bg: transparent;
+
+$see-all-btns-font-size: 19px;
+@mixin see-all-btns-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+$see-all-news-btn-color: #313131;
+$see-all-events-btn-color: #313131;
+$see-all-live-feeds-btn-color: #313131;
+
+$see-all-news-btn-bg: rgba(0,0,0, 0);
+$see-all-events-btn-bg: rgba(0,0,0, 0);
+$see-all-live-feeds-btn-bg: rgba(0,0,0, 0);
+
+$sections-titles-font-size: 50px;
+
+@mixin sections-titles-font {
+  @include third-font-family;
+  text-transform: uppercase;
+}
+
+$sections-titles-border-color: #f7c315;
+// for _section_boxes3.scss, _section_boxes4.scss, _section_boxes6.scss
+
+$events-title-color: #000; // section title
+$news-title-color: #000; // section title
+$live-feed-title-color: #000;
+// section title
+
+// for template that have diagonal stripes lines at sections titles
+$events-diagonal-stripes-color: #22428f;
+$news-diagonal-stripes-color: #a4bbec;
+$live-feed-diagonal-stripes-color: #bd0323;
+
+$events-title-bg: rgba(0,0,0, 0);
+$news-title-bg: rgba(0,0,0, 0);
+$live-feed-title-bg: rgba(0,0,0, 0);
+
+// for _section_boxes1.scss
+$first-news-border-top-color: #203f8b;
+$second-news-border-top-color: #f0a81e;
+$third-news-border-top-color: #bd0323;
+
+$news-paragraph-color: #000;
+$news-p-font-size: 19px;
+@mixin news-paragraph-font {
+  @include first-font-family;
+  text-transform: none;
+}
+
+$news-titles-color: #000;
+$news-titles-font-size: 25px;
+@mixin news-titles-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+$news-date-color: #545454;
+$news-date-font-size: 15px;
+@mixin news-date-font {
+  @include first-font-family;
+  text-transform: none;
+}
+
+// if the news section is a slider
+$read-more-new-bg: rgba(0,0,0, 0);
+$read-more-new-color: #000;
+$read-more-new-font-size: 16;
+@mixin read-more-new-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+$news-pager: #191919;
+$news-pager-active: $black;
+
+$news-text-background: rgba(189, 3, 35, 0.85);
+// for _section_boxes3.scss
+$lh-title-color: #bd0323;
+// Latest Headlines from News section
+
+$live-feed-text-color: #000;
+$live-feed-link-color: $black;
+$live-feed-text-font-size: 17px;
+@mixin live-feed-text-font {
+  @include first-font-family;
+  text-transform: none;
+}
+
+$live-feed-author-color: $black;
+$live-feed-author-font-size: 23px;
+@mixin live-feed-author-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+$live-feed-time-color: #636363;
+$live-feed-time-font-size: 14px;
+@mixin live-feed-time-font {
+  @include first-font-family;
+  text-transform: none;
+}
+
+$event-date-color: #333333;
+$event-date-font-size: 17px;
+$event-date-bg: rgba(0,0,0, 0);
+@mixin event-date-font {
+  @include first-font-family;
+  text-transform: none;
+}
+
+$event-title-color: $black;
+$event-title-font-size: 25px;
+@mixin event-title-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}

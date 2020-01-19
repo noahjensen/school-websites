@@ -1,0 +1,64 @@
+<footer id="footer">
+    <div class="container clearfix">
+      <div class="footer-col">
+         <h5>Contact US</h5>
+         <p><%= current_organization.try(:name) %>
+<br><%= current_organization.try(:address) %>
+             <br><%= "#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+             <br><%= "Ph #{current_organization.try(:phone_number)}" %>
+             <br><%= "Fax #{current_organization.try(:fax_number)}" %></p>
+     </div>
+
+     <div class="footer-col">
+        <h5>Schools</h5>
+        <ul>
+          <li><a>District Office</a></li>
+          <li><a>Sullivan Elementary</a></li>
+          <li><a>Sullivan Middle</a></li>
+          <li><a>Sullivan High</a></li>
+        </p>
+     </div>
+
+
+     <div class="footer-col quicklinks">
+        <h5>quicklinks</h5>
+        <ul class="footer-links">
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>  Live Feed </a></li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>> News </a> </li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>  Events </a></li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>  Athletics </a></li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>  Dining </a></li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Staff </a> </li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+</ul>
+  </div>
+
+
+
+  <div class="footer-col last">
+            <h5>Connect</h5>
+            <div class="sm-links-first">
+      <div class="social">
+        <a href="#"><%= image_tag "apptegy_cms/themes/sullivanil/fb.png", alt: "Sullivan CUSD #300", class:"fb" %></a>
+        <a href="#"><%= image_tag "apptegy_cms/themes/sullivanil/tw.png", alt: "Sullivan CUSD #300", class:"tw" %></a>
+        <a href="#"><%= image_tag "apptegy_cms/themes/sullivanil/apple.png", alt: "Sullivan CUSD #300", class:"appstore" %></a>
+    </div>
+  </div>
+
+    <div class="sm-links-second">
+
+      <div class="social">
+        <a href="#"><%= image_tag "apptegy_cms/themes/sullivanil/instagram.png", alt: "Sullivan CUSD #300", class:"fb" %></a>
+        <a href="#"><%= image_tag "apptegy_cms/themes/sullivanil/the-cube.png", alt: "Sullivan CUSD #300", class:"tw" %></a>
+        <a href="#"><%= image_tag "apptegy_cms/themes/sullivanil/google.png", alt: "Sullivan CUSD #300", class:"appstore" %></a>
+    </div>
+
+
+</div>
+
+
+</div>
+    </div>
+
+     <div class="container copyright"><p>Copyright &copy; Sullivan CUSD #300 2017. All rights reserved. Powered by <a href="http://apptegy.com/" target="_blank">apptegy</a></p></div>
+</footer>

@@ -1,0 +1,54 @@
+<footer id="footer">
+        <div class="container clearfix">
+         <div class="footer-col">
+            <h5><%= current_organization.try(:name) %></h5>
+            <p><%= current_organization.try(:address) %>
+               <br><%= "#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+               <br><%= "Ph #{current_organization.try(:phone_number)}" %>
+               <br><%= "Fax #{current_organization.try(:fax_number)}" %>
+            </p>
+         </div>
+
+         <div class="footer-col">
+             <h5>DeKalb High/Middle</h5>
+             <p>702 Main Street
+                 <br>DeKalb, MO 64440
+                 <br>Ph 816-685-3211
+                 <br>Fax 816-685-3156 </p>
+         </div>
+
+         <div class="footer-col">
+             <h5>Rushville Elementary</h5>
+             <p>8681 SW State Route 116
+                 <br>Rushville, Missouri
+                 <br>Ph 816-688-7777
+                 <br>Fax 816-688-7775</p>
+         </div>
+
+            <div class="footer-col sri-logo">
+                <%= link_to image_tag("apptegy_cms/themes/buchananrivmo/mshsaa.png.png", alt: "Buchanan County R-IV School District"), "#", class:"mshsaa" %>
+                <%= link_to image_tag("apptegy_cms/themes/buchananrivmo/logo-sri.png", alt: "Buchanan County R-IV School District"), "#" %>
+            </div>
+
+            <div class="footer-col last">
+              <a href="/" class="app-store" target="_blank">Download on the App Store</a>
+              <br>
+
+              <a href="/" target="_blank" class="google-play">Get it on Google play</a>
+
+              <% if current_organization[:facebook_link].present? %>
+                <a href="<%=current_organization.try(:facebook_link) %>" target="_blank" class="fb"><%= image_tag "apptegy_cms/themes/buchananrivmo/fb.png", alt: " "%></a>
+               <% end %>
+
+              <% if current_organization[:twitter_link].present? %>
+                <a href="<%= current_organization.try(:facebook_link) %>" class="tw" target="_blank"><%= image_tag "apptegy_cms/themes/buchananrivmo/tw.png", alt: " "%></a>
+           <% end %>
+
+            </div>
+        </div>
+        <div class="container copyright">
+            <p>Copyright &copy; BUCHANAN COUNTY R-IV School District 2017. All rights reserved. Powered by <a href="http://www.apptegy.com">apptegy</a></p>
+
+        </div>
+<%= render 'apptegy_cms/shared/search' %>
+    </footer>

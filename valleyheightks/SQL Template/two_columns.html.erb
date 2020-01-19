@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html  class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valley Heights USD #498</title>
+     <%= include_gon %>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+<%= favicon_link_tag "apptegy_cms/themes/valleyheightsks/favicon.ico" %>
+
+    <%= javascript_include_tag "apptegy_cms/themes/valleyheightsks/application" %>
+    <%= stylesheet_link_tag    "apptegy_cms/themes/valleyheightsks/application", :media => "all"  %>
+</head>
+
+<body class="cbp-spmenu-push">
+
+ <%= render 'valleyheightsks/shared/header'  %>
+
+<!-- ======================== BREADCRUMB ======================== -->
+	<div class="breadcrumb">
+		<ol>
+		  <li><a href="/"><%= current_pages.home_page.first.name %></a></li>
+		  <li class="active"><%= current_page.try(:name) %></li>
+		</ol>
+	</div>
+
+<!-- ======================== MAIN CONTENT ======================== -->
+<%= cms_slider_menu %>
+	<div class="main two-cols" role="main">
+		<div class="container subpage clearfix">
+			<div class="left-sidebar">
+                                <%= yield :left_sidebar %>
+                         </div>
+                         <div class="right-content">
+                                <%= yield :main_container %>
+                         </div>
+		</div>
+	</div>
+
+<!-- ======================== FOOTER ======================== -->
+
+ <%= render 'valleyheightsks/shared/footer'  %>
+
+<!-- ======================== JAVASCRIPTS ======================== -->
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+       if($('.group1').is(':visible')) {
+                $(".group1").colorbox({
+                    rel: 'group1'
+                });
+            }
+
+   	    $.DrLazyload(); //Yes! that's it!
+	});
+
+</script>
+  </body>
+</html>

@@ -1,0 +1,398 @@
+/**
+ * Main Content
+ */
+html .homepage .main .container {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+.main .col-item {
+	position: relative;
+	float: left;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	@include transition;
+
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		-webkit-filter: blur(0);
+		-moz-filter: blur(0);
+		-o-filter: blur(0);
+		-ms-filter: blur(0);
+		-ms-filter: blur(0);
+		filter: blur(0);
+		@include transition();
+	}
+
+	&:hover:after {
+		-webkit-transform: scale(1.33);
+		-webkit-transform-origin: 50% 50%;
+		-moz-transform: scale(1.33);
+		-moz-transform-origin: 50% 50%;
+		transform: scale(1.33);
+		-transform-origin: 50% 50%;
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		filter: blur(5px);
+	}
+
+	&.events-wrapper {
+		background: rgba(180,146,73, 0.85);
+		width: 33.33%;
+
+		&:after {
+			background: $events-wrapper-bg url('events-bg.jpg') no-repeat center center;
+			background-size: cover;
+		}
+	}
+
+	&.news-wrapper {
+		width: 33.33%;
+		background: rgba(22,22,22, 0.85);
+
+		&:after {
+			background: $news-wrapper-bg url('news-bg.jpg') no-repeat center center;
+			background-size: cover;
+		}
+	}
+
+	&.live-feeds-wrapper {
+		background: rgba(22,22,22, 0.85);
+		width: 33.33%;
+
+		&:after {
+			background: $live-feeds-wrapper-bg url('lf-bg.jpg') no-repeat center center;
+			background-size: cover;
+		}
+	}
+
+	.see-more {
+		position: absolute;
+		z-index: 6;
+		display: inline-block;
+		padding: 0;
+		width: auto;
+		@include responsive-property("font-size",$see-all-btns-font-size, 14px, $see-all-btns-font-size +1px);
+		@include responsive-property("line-height",31, 25px, 31px);
+		text-align: left;
+		@include responsive-property("right",80, 20px, 80px);
+		@include responsive-property("bottom",30, 10px, 30px);
+		@include see-all-btns-font;
+		@include opacity(0);
+	}
+
+	&:hover .see-more {
+		@include opacity(1);
+		@include transition();
+	}
+
+	.see-more:hover {
+		text-decoration: none;
+		@include opacity(0.9);
+	}
+
+	&.events-wrapper .see-more {
+		background: transparent;
+		color: $see-all-events-btn-color;
+	}
+
+	&.news-wrapper .see-more {
+		background: transparent;
+		color: $see-all-news-btn-color;
+	}
+
+	&.live-feeds-wrapper .see-more {
+		background: transparent;
+		color: $see-all-live-feeds-btn-color;
+	}
+
+	h4 {
+		@include responsive-property("font-size",75, 20px, 75px);
+		@include responsive-property("line-height",80, 25px, 80px);
+		padding: 0;
+		display: block;
+		text-align: center;
+		@include sections-titles-font;
+		position: absolute;
+		@include responsive-property("left",80, 20px, 80px);
+		@include responsive-property("right",80, 20px, 80px);
+		z-index: 1;
+		@extend %vertical-align;
+		@include transition();
+
+		&:after {
+			position: relative;
+			display: block;
+			margin: 0 auto;
+			width: 0;
+			@include responsive-property("height", 6, 3px, 6px);
+			@include responsive-property("bottom", -6, -3px, -6px);
+			background: $news-title-color;
+			left: 0;
+			right: 0;
+			content: ' ';
+			@include opacity(0);
+			@include transition();
+		}
+	}
+
+	&.news-wrapper h4 {
+		color: $news-title-color;
+		background: transparent;
+		border-color: $news-title-color;
+	}
+
+	&.live-feeds-wrapper h4 {
+		color: $live-feed-title-color;
+		border-color: $live-feed-title-color;
+		background: transparent;
+	}
+
+	&.events-wrapper h4 {
+		background: transparent;
+		color: $events-title-color;
+		border-color: $events-title-color;
+	}
+
+	&.live-feeds-wrapper .avatar {
+		float: left;
+		@include responsive-property("max-width", 90, 35px, 90px);
+		text-align: left;
+		@include responsive-property("margin-right", 19, 15px, 25px);
+
+		img {
+			max-width: 100%;
+		}
+	}
+
+	&.live-feeds-wrapper .live-feed {
+		margin: 0;
+		@include responsive-property("margin-bottom", 25, 10px, 25px);
+		overflow: hidden;
+		position: relative;
+		z-index: 1;
+	}
+
+	&.live-feeds-wrapper .right-content {
+		overflow: hidden;
+	}
+
+	&.live-feeds-wrapper .right-content p {
+		@include responsive-property("font-size", $live-feed-text-font-size, 13px, $live-feed-text-font-size+1px);
+		@include responsive-property("line-height", $live-feed-text-font-size +4, 16px, $live-feed-text-font-size+5x);
+		color: $live-feed-text-color;
+		margin: 10px 0 0;
+		@include live-feed-text-font;
+
+		a {
+			color: $live-feed-link-color;
+		}
+	}
+
+	&.live-feeds-wrapper .right-content .time {
+		@include responsive-property("font-size",$live-feed-time-font-size, 13px, $live-feed-time-font-size+1px);
+		@include responsive-property("line-height", $live-feed-text-font-size +4, 16px, $live-feed-time-font-size+5px);
+		color: $live-feed-time-color;
+		@include live-feed-time-font;
+	}
+
+	&.live-feeds-wrapper .autor {
+		@include responsive-property("font-size", $live-feed-author-font-size, 15px, $live-feed-author-font-size +10px);
+		@include responsive-property("line-height", $live-feed-author-font-size +4, 19px, $live-feed-author-font-size +14px);
+		color: $live-feed-author-color;
+		margin: 0;
+		@include live-feed-author-font;
+	}
+
+	&.live-feeds-wrapper .right-content h3,
+	&.live-feeds-wrapper .right-content h3 a {
+		color: $live-feed-author-color;
+		@include responsive-property("font-size",$live-feed-author-font-size, 15px, $live-feed-author-font-size+1px);
+		@include responsive-property("line-height", $live-feed-author-font-size +4, 18px, $live-feed-author-font-size+5px);
+		margin: 0;
+		@include live-feed-author-font;
+		text-decoration: none;
+	}
+
+	&.events-wrapper .event {
+		padding: 0;
+		@include responsive-property("margin-bottom", 35, 15px, 35px);
+		position: relative;
+		z-index: 1;
+	}
+
+	.event .date {
+		@include responsive-property("font-size",$event-date-font-size, 13px, $event-date-font-size+1px);
+		@include responsive-property("line-height",$event-date-font-size +4, 17px, $event-date-font-size+5px);
+		color: $event-date-color;
+		background: transparent;
+		@include event-date-font;
+	}
+
+	.event .date span {
+		display: block;
+	}
+
+	&.events-wrapper .event a,
+	&.events-wrapper .event p {
+		margin: 0 0 10px;
+		@include responsive-property("font-size",$event-title-font-size, 14px, $event-title-font-size+1px);
+		@include responsive-property("line-height",$event-title-font-size +4, 18px, $event-title-font-size+5px);
+		color: $event-title-color;
+		@include event-title-font;
+		text-decoration: none;
+	}
+
+	&.news-wrapper .news {
+		@include responsive-property("margin-bottom", 35, 10px, 55px);
+	}
+
+	&.news-wrapper .news h3 {
+		@include responsive-property("font-size",$news-titles-font-size, 17px, $news-titles-font-size + 1px);
+		@include responsive-property("line-height",$news-titles-font-size + 4, 21px, $news-titles-font-size + 5px);
+		color: $news-titles-color;
+		margin: 0 0 10px;
+		@include news-titles-font;
+	}
+
+	.news .date-autor {
+		@include responsive-property("font-size", $news-p-font-size, 14px, $news-p-font-size +10px);
+		@include responsive-property("line-height", $news-p-font-size +4, 18px, $news-p-font-size +14px);
+		color: $news-paragraph-color;
+		margin: 0;
+		display: block;
+		@include news-paragraph-font;
+	}
+
+	&.news-wrapper p {
+		@include responsive-property("font-size", $news-titles-font-size, 16px, $news-titles-font-size +10px);
+		@include responsive-property("line-height", $news-titles-font-size +8, 20px, $news-titles-font-size +18px);
+		color: $news-paragraph-color;
+		margin: 0 0 5px;
+		@include responsive-property("max-width", 400, 120px, 600px);
+		@include news-paragraph-font;
+		//max-height: 73px;
+		overflow: hidden;
+		text-transform: uppercase;
+
+		a {
+			color: $news-paragraph-color;
+		}
+	}
+
+	.hover-content {
+		@include opacity(0);
+		position: relative;
+		z-index: 1;
+		padding: 140px 80px 60px;
+		@include responsive-property("padding-top",140, 55px, 140px);
+		@include responsive-property("padding-left",80, 20px, 80px);
+		@include responsive-property("padding-bottom",70, 25px, 70px);
+		@include responsive-property("padding-right",80, 20px, 80px);
+	}
+
+	&:hover {
+		.hover-content {
+			@include opacity(1);
+			@include transition();
+			-webkit-transition-delay: 0.4s;
+			transition-delay: 0.4s;
+		}
+
+		h4 {
+			height: auto;
+			@include responsive-property("top",53, 15px, 53px);
+			padding: 0;
+			@include responsive-property("font-size",$sections-titles-font-size, 20px, $sections-titles-font-size+10px);
+			@include responsive-property("line-height",$sections-titles-font-size + 20, 40px, $sections-titles-font-size+30px);
+			@include transition();
+
+			&:after {
+				width: 100%;
+				@include opacity(1);
+				@include transition();
+			}
+		}
+	}
+}
+/**
+ * Responsive
+ */
+@media only screen and (max-width: 1000px) {
+	html .homepage .main .container {
+		display: block;
+	}
+
+	.main .col-item .hover-content,
+	.main .col-item .see-more,
+	.main .col-item h4:after,
+	.main .col-item:hover h4:after {
+		opacity: 1;
+		filter: alpha(opacity=100);
+	}
+
+	.main .col-item h4:after {
+		width: 100%;
+	}
+
+	.main .col-item .see-more,
+	.main .col-item.events-wrapper .see-more,
+	.main .col-item.news-wrapper .see-more {
+		position: relative;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		padding-left: 20px;
+		text-align: left;
+		display: block;
+		font-size: 16px;
+		margin-bottom: 20px;
+	}
+
+	.main .container .col-item {
+		padding: 0;
+		float: none;
+		width: 100%;
+		margin-top: 0;
+		height: auto !important;
+	}
+
+	.main .col-item h4,
+	.main .col-item.live-feeds-wrapper h4,
+	.main .col-item.live-feeds-wrapper:hover h4,
+	.main .col-item.news-wrapper h4,
+	.main .col-item.news-wrapper:hover h4,
+	.main .col-item:hover h4 {
+		height: auto;
+		-webkit-transform: translateY(0%);
+		-ms-transform: translateY(0%);
+		transform: translateY(0%);
+		text-align: left;
+		padding: 0;
+		top: 15px;
+		left: 20px;
+		font-size: 22px;
+		line-height: 26px;
+		background: transparent;
+	}
+
+	.main .col-item .hover-content {
+		padding-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}

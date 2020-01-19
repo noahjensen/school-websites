@@ -1,0 +1,74 @@
+// ===== Variables ========================================================== //
+
+// Colors 
+
+//Website color and background
+$first-color:				  #151515;   //very-dark-gray
+$second-color:                #660000;   //dark-red
+$third-color:				  #e4e4e4;   //light-gray
+$fourth-color:                #a1a1a1;   //gray
+$fifth-color:                 #6e6e6e;   //gray02
+$sixth-color:                 #8d8d8d;   //gray03
+
+$white:                       #FFFFFF;   //white
+$black:                       #000000;   //black
+$third-bg:                    #f9f9f9;   //light-pink
+$fourth-bg:                   #330000;   //verydark-red
+$fifth-bg:                    #393939;   //dark-gray
+
+$leftSliderColor:             #f2f2f2;
+$breadcrumbBg:                #f5f5f5;
+
+
+
+//Elements color and background
+$text-color:                        $first-color;
+$see-all-btn-bg:                    #f2f2f2; 
+$see-all-news-btn-bg:               #f2f2f2;
+$see-all-events-btn-bg:             #FFF;
+$see-all-live-feeds-btn-bg:         #f2f2f2;
+
+$see-all-btn-color:                 #660000; 
+$see-all-news-btn-color:            #660000; 
+$see-all-events-btn-color:          #660000; 
+$see-all-live-feeds-btn-color:      #660000; 
+
+$events-wrapper-bg:                 $third-bg;
+$footer-title-color:                #8d8d8d;
+$live-feed-time-color:              $fourth-color;
+
+$events-title-color:                $white;
+$news-title-color:                  $white;
+$live-feed-title-color:             $white;
+
+$events-title-bg:                   $fourth-bg;
+$news-title-bg:                     $second-color;
+$live-feed-title-bg:                $fifth-color;
+
+$read-more-new-bg:                  #660000;
+$read-more-new-color:               $white;
+$news-pager-active:                 $second-color;
+$news-pager:                        $third-color;        
+
+$live-feed-text:                    $fifth-color;
+$live-feed-h3:                      $second-color;
+$event-date:                        $fifth-color;
+$event-title:                       $second-color;
+$new-feed-paragraph:                #646464;
+$new-feed-h3:                       $second-color;
+
+$header-bg:                         $second-color;
+$footer-bg:                         #2c2c2c;
+
+//Some padding and margin
+
+$colspadding:                       185px 10px 90px 60px;
+$footer-padding:                    55px 70px 20px 260px;
+
+
+$leftMarginRightContent:            95px;          
+$avatarWidth:                       70px;
+
+$leftSlider:                        610px;
+
+ 

@@ -1,0 +1,103 @@
+<div class="col-item news-wrapper">
+      <h4>News</h4>
+      <%=  image_tag 'apptegy_cms/themes/valleyheightsks/news-bg.jpg' %>
+      <div class="hover-content">
+            <% current_organization.articles.limit(6).each do |article|  %>
+            <div class="news">
+               <p><a href=<%="/article/#{article.id}"%>><%= translate(article.title) %></%a></p>
+                  <span class="date-autor"><%= article.published_on.strftime("%d %B %Y") %>, posted by <%= article.author_name %></span>
+
+            </div>
+            <% end %>
+
+      </div>
+         <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"  %> class="see-more"><span>SEE ALL NEWS</span></a>
+   </div>
+
+
+  <div class="col-item events-wrapper">
+   <!-- Athletics -->
+   <% if params[:org] == "athletics" %>
+   <h4>Schedules</h4>
+   <%= image_tag 'apptegy_cms/themes/valleyheightsks/calendar-bg.jpg' %>
+   <div class="hover-content">
+      <% current_organization.custom_sections.find{|s| s.with_feature(:scores_schedules)}.scores_schedules.upcoming.limit(5).each do |sport| %>
+      <% if sport.section_filters.any? %>
+      <div class="event">
+         <%= "#{sport.adate.try(:strftime, '%d')}" %><%= "#{sport.adate.try(:strftime, '%^b')}" %>
+      <div class="right-content <%= 'tournament' if sport.score_lines.any? && sport.multi_line?  %> ">
+         <p class="type"><%= sport.section_filters.try(:first).try(:name) %></p>
+         <p  class="<%=  'teams' if sport.score_lines.any? && sport.multi_line? %>">
+            <% if sport.versus? %>
+            <%= sport.away_team %>
+            <% if sport.multi_line? %>
+            <span>at</span>
+            <% else %>
+            <span class="score">
+            &nbsp;&nbsp;&nbsp;&nbsp;
+            </span>
+            <% end %>
+            <%= sport.home_team %>
+            <% else %>
+            <%= link_to sport.try(:title), "/o/athletics/athletics?filter=#{sport.section_filters.try(:first).try(:id)}"  %>
+            <% end %>
+         </p>
+         <span class="time"><%= "#{sport.atime.try(:strftime, ' %l:%M %p')}" %></span>
+      </div>
+      </div>
+      <% end %>
+      <% end %>
+   </div>
+
+   <a href=<%= params[:org].present? ? "/o/athletics/athletics" : "/o/athletics"  %> class="see-more events-btn"><span>See all schedules</span></a>
+</div>
+
+<% else %>
+<!-- Events -->
+<h4>Calendar</h4>
+<%= image_tag 'apptegy_cms/themes/valleyheightsks/calendar-bg.jpg' %>
+<div class="hover-content">
+   <% current_organization.events.limit(6).each do |event| %>
+   <div class="event">
+
+<p><%= link_to event.title, params[:org].present? ? "/o/#{params[:org]}/events" : "/events" %></p>
+       <div class="date"><%= "#{event.start_date.try(:strftime, '%b %e')} #{event.start_time.try(:strftime, 'at %l:%M %p')}" %>
+         <% if event.end_date.present? %>
+         to
+         <% end %>
+         <%= "#{event.end_date.try(:strftime, '%b %e')} #{event.end_time.try(:strftime, 'at %l:%M %p')}" %>
+      </div>
+
+   </div>
+   <% end %>
+</div>
+<a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"  %> class="see-more events-btn"><span>See all events</span></a>
+<% end %>
+</div>
+
+
+   <div class="col-item live-feeds-wrapper">
+      <h4>Live Feed</h4>
+      <%= image_tag 'apptegy_cms/themes/valleyheightsks/live-feed-bg.jpg' %>
+      <div class="hover-content">
+         <% current_organization.live_feeds.limit(4).each do |post| %>
+         <div class="live-feed">
+            <div class="avatar">
+                <% if post.avatar == 'http://www.apptegy.com/default.png' %>
+                    <%= image_tag 'apptegy_cms/default_avatar.png', alt: post.author_name, size: '60x60', class: 'avatar-section' %>
+                <% else %>
+                    <%= image_tag post.avatar, alt: post.author_name, size: '60x60', class: 'avatar-section' %>
+                <% end %>
+            </div>
+            <div class="right-content">
+                <div class="autor"><%= "#{post.author_name} " %></div>
+                <div class="time"><%= "#{time_ago_in_words(post.created_at)} ago" %></div>
+
+               <p><%= translate(raw post.linkify) %>
+                         <%= link_to 'View Image', post.image_large, target: '_blank' if post.image_large? %>
+               </p>
+            </div></div>
+         <% end %>
+      </div>
+      <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"  %> class="see-more"><span>SEE ALL posts</span></a>
+   </div>

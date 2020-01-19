@@ -1,0 +1,171 @@
+// District Mixins and Variables
+
+.district {
+
+.school-color{
+  color: $district-color1;
+}
+
+  #left-nav,
+  #right-nav {
+    background: $nav-background-district;
+  }
+
+  #header #change_language_form {
+    background: $nav-background-district;
+  }
+
+#right-nav .menu-wrap li:hover {
+  border: $district-firstlevelhover;
+}
+
+  // Menu Icons
+  #header .search-icon {
+    background: url("search-icon-district.png") no-repeat center center !important;
+  }
+
+  #header .header-logo {
+    background: url("logo.png") no-repeat center center !important;
+    height: 85px;
+    position: absolute;
+    width: 112px;
+    top: 0;
+    left: -32px;
+  }
+
+  ul.static-links li:nth-child(odd) span {
+    background: $district-menu-icon1;
+  }
+
+  ul.static-links li span {
+    background: $district-menu-icon2;
+  }
+  // First Level Dropdown
+  .second-nav li.has-child ul {
+    background: $district-submenu-bg;
+  }
+
+  ul.first-nav li a {
+    color: $district-menu-text;
+  }
+
+  .second-nav li ul li:hover {
+    a {
+      border-left: 15px solid $district-header-lefthover;
+    }
+  }
+  // Second Level Dropdown
+  ul.second-nav li ul li.has-child ul {
+    background: $district-color1;
+  }
+
+  ul.second-nav li ul li.has-child ul li a {
+    border-left: 15px solid $district-color1;
+    color: $white;
+  }
+
+  ul.second-nav li ul li.has-child ul li:hover {
+    a {
+      border-left: 15px solid $white;
+    }
+  }
+  // School Menu
+  #right-nav .menu-wrap li:hover {
+    border-left: 15px solid $district-header-lefthover;
+  }
+  // Language Menu
+  #header #change_language_form {
+    .options li.selected {
+      border-color: $district-header-lefthover;
+    }
+
+    .options li:hover {
+      border-left: 15px solid $district-header-lefthover;
+    }
+  }
+
+  .main .col-item {
+    &.news-wrapper:before {
+      background: $district-news;
+    }
+
+    &.events-wrapper:before {
+      background: $district-events;
+    }
+
+    &.live-feeds-wrapper:before {
+      background: $district-live-feed;
+    }
+  }
+  // Subpage
+  .left-sidebar h3 {
+    background: $district-sidebar;
+  }
+
+  .right-content h2,
+  .right-content h3,
+  .right-content h4,
+  .right-content h5,
+  .right-content h6,
+  .subpage h2,
+  .subpage h3,
+  .subpage h4,
+  .subpage h5,
+  .subpage h6 {
+    color: $district-subpage-links;
+  }
+
+  blockquote {
+    border-left: 5px solid $district-subpage-links;
+  }
+
+  .right-content > a {
+    color: $district-subpage-links;
+  }
+  // Slider
+  #slider:after {
+    background: url("slider-bg-district.jpg") center center no-repeat #fff;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    content: "";
+    background-size: cover;
+    z-index: 0;
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a.active,
+  .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: $district-slider !important;
+  }
+}
+@media only screen and (max-width: 950px) {
+  #slider .left-slider {
+    background: $district-color2;
+  }
+
+  #header {
+    background: $nav-background-district;
+  }
+
+  #left-nav,
+  #right-nav {
+    background: $nav-background-district;
+  }
+
+  #header #change_language_form {
+    background: $nav-background-district;
+  }
+
+  #slider .slider-info {
+    background: $district-subpage-links;
+  }
+
+  .district #header .header-logo {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+  }
+}

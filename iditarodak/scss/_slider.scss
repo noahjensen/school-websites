@@ -1,0 +1,210 @@
+    /****************************
+*   SLIDER
+*
+*************************/
+
+    .bx-wrapper {
+       position: relative;
+       margin: 0 auto;
+       padding: 0;
+       *zoom: 1;
+       float: none;
+       overflow: hidden;
+       width: 100%;
+       padding-left: $leftSlider;
+    }
+    .bx-wrapper img {
+       max-width: 100%;
+       display: block;
+    }
+    img {
+       max-width: 100%;
+       height: auto;
+    }
+    .bx-wrapper .bx-viewport {
+       overflow: hidden;
+       /*fix other elements on the page moving (on Chrome)*/
+       -webkit-transform: translatez(0);
+       -moz-transform: translatez(0);
+       -ms-transform: translatez(0);
+       -o-transform: translatez(0);
+       transform: translatez(0);
+    }
+    .bx-wrapper .bx-pager,
+    .bx-wrapper .bx-controls-auto {
+       position: absolute;
+       bottom: -50px;
+       width: 100%;
+    }
+    /* LOADER */
+
+    .bx-wrapper .bx-loading {
+       min-height: 50px;
+       background: url(bx_loader.gif) center center no-repeat #fff;
+       height: 100%;
+       width: 100%;
+       position: absolute;
+       top: 0;
+       left: 0;
+       z-index: 2000;
+    }
+    /* PAGER */
+
+    .bx-wrapper .bx-pager {
+       text-align: center;
+       position: absolute;
+       width: auto;
+       right: 40px;
+       bottom: 20px;
+    }
+    .bx-wrapper .bx-pager .bx-pager-item,
+    .bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+       display: inline-block;
+       *zoom: 1;
+       *display: inline;
+    }
+    .bx-wrapper .bx-pager.bx-default-pager a {
+       background: #e2e2e2;
+       text-indent: -9999px;
+       display: block;
+       width: 18px;
+       height: 18px;
+       margin: 0;
+       outline: 0;
+       text-align: left;
+       overflow: hidden;
+       @include border-radius(50%);
+       margin-right: 5px;
+    }
+    .bx-wrapper .bx-pager.bx-default-pager a:hover,
+    .bx-wrapper .bx-pager.bx-default-pager a.active {
+       background: $iditarodyellow;
+       border-color: $iditarodyellow;
+    }
+    .bx-wrapper .bx-controls-direction a {
+       position: absolute;
+       top: 50%;
+       margin-top: -50px;
+       outline: 0;
+       width: 50px;
+       height: 100px;
+       text-indent: -9999px;
+       z-index: 9999;
+       background: #fff url('back.png') no-repeat center;
+       @include opacity(0);
+       @include transition;
+    }
+#slider:hover {
+   .bx-wrapper .bx-controls-direction a {
+      @include opacity(1);
+   }
+}
+    .bx-wrapper .bx-controls-direction a.bx-next {
+       right: 0;
+       background: #fff url('next.png') no-repeat center;
+    }
+    .bx-wrapper .bx-controls-direction a.disabled {
+       display: none;
+    }
+    .bx-wrapper .bx-viewport .slide:after {
+       content: '';
+       position: absolute;
+       left: 0;
+       bottom: 0;
+       background: url('slider-mask.png') repeat-x;
+       width: 100%;
+       z-index: 999999;
+       height: 666px;
+       opacity: 0.6;
+    }
+    /*** END DEFAULT SLIDER CODE  **/
+
+    #slider {
+       //overflow: hidden;
+       position: relative;
+       z-index: 1;
+    }
+    .homepage  .main {
+       padding-top: 60px;
+    }
+    #slider .slider-info {
+       width: 100%;
+       position: absolute;
+       left: 0;
+       bottom: 20px;
+       padding: 0 20px;
+       margin: 220px 0 30px;
+       z-index: 9;
+       text-align: center;
+    }
+    #slider .slider-info h1,
+    #slider .slider-info h2,
+    #slider .slider-info h3,
+    #slider .slider-info h4,
+    #slider .slider-info h5,
+    #slider .slider-info h6 {
+       @include font-size(95);
+       @include line-height(99);
+       color: #FFF;
+       margin: 0 auto 10px;
+       text-transform: uppercase;
+       @include second-font-family;
+       max-width: 1360px;
+    }
+    #slider .slider-info h2 {
+       @include font-size(91);
+       @include line-height(94);
+    }
+    #slider .slider-info h3 {
+       @include font-size(85);
+       @include line-height(89);
+    }
+    #slider .slider-info h4 {
+       @include font-size(46);
+       @include line-height(49);
+    }
+    #slider .slider-info h5 {
+       @include first-font-family;
+       @include font-size(42);
+       @include line-height(46);
+    }
+    #slider .slider-info h6 {
+       @include first-font-family;
+       @include font-size(38);
+       @include line-height(42);
+    }
+    #slider .slider-info p {
+       color: #FFF;
+       @include font-size(33);
+       @include line-height(41);
+       margin: 0 auto 8px;
+       @include second-font-family;
+       text-transform: uppercase;
+       max-width: 1005px;
+    }
+    #slider .slider-info *:last-child {
+       margin-bottom: 0;
+    }
+    .slider-container {
+       float: left;
+    }
+    .slider-container .slide {
+       float: left;
+       /*max-height: 724px;*/
+       overflow: hidden;
+    }
+    .slider-container img {
+       max-width: inherit;
+       width: auto;
+       height: auto;
+    }
+    .slider-container img {
+       width: 100%;
+       max-height: 100vh;
+       -o-object-fit: cover;
+       object-fit: cover;
+    }
+    #slider .bx-wrapper {
+       padding-left: 0;
+    }
+    /*Changes for slider*/

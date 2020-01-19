@@ -1,0 +1,464 @@
+/* ===== Header ========================================================== */
+
+html #header {
+    max-width: 100%;
+}
+html #slider {
+    max-width: 100%;
+}
+#header {
+    padding: 0 0 0 35px;
+    @include responsive-property("min-height", $header-height, 50px, $header-height + 0px);
+    background: $header-bg;
+    position: relative;
+    width: 100%;
+    -webkit-box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 45px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    //border-bottom: 14px solid #6e3667;
+    @include responsive-property("border-width", 14, 4px, 14px);
+    &.active {
+        z-index: 3;
+    }
+    .logo {
+        width: auto;
+        @include responsive-property("line-height", $header-height, 50px, $header-height + 0px);
+        position: absolute;
+        left: 10px;
+        top: 0;
+        margin: 0;
+        z-index: 2;
+        overflow: visible;
+        text-decoration: none;
+        white-space: nowrap;
+        font-size: 0;
+        img {
+            display: inline-block;
+            vertical-align: middle;
+            position: relative;
+            z-index: 1;
+            
+        }
+       
+        .image {
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            font-size: 0;
+            @include responsive-property("height", $header-height + 37, 50px, $header-height + 37px);
+            @include responsive-property("line-height", $header-height + 37, 50px, $header-height + 37px);
+            width: auto;
+            @include responsive-property("padding-left", 20, 8px, 20px);
+            @include responsive-property("padding-right", 30, 8px, 30px);
+            text-align: center;
+            //padding-top: 10px;
+            &:before {
+				content: '';
+				position: absolute;
+				bottom: 0;
+				@include responsive-property("left",8,0,8px);
+				@include responsive-property("height",144,58px,144px);
+				@include responsive-property("width",144,58px,144px);
+				background: $header-bg;
+				
+		      
+				@include border-radius(50%);
+				z-index: 0;
+                top: 0;
+			}
+			&:after {
+				content: '';
+				position: absolute;
+				background: $header-bg;
+				top: 0;	
+				@include responsive-property("left",-55,-10px,-55px);	
+				@include responsive-property("right",-55,-10px,-55px);	
+				@include responsive-property("height",$header-height,50px,$header-height + 0px);
+				//border-bottom: 14px solid #6e3667;
+	         @include responsive-property("border-width",14,4px,14px);
+				z-index: -1;
+			}
+            img {
+                @include responsive-property("max-height", 120, 50px, 120);
+            }
+        }
+        h1,
+        h2 {
+            @include logo-title-font;
+            @include responsive-property("font-size", $logo-title-font-size, 22px, $logo-title-font-size + 0px);
+            @include responsive-property("line-height", $logo-title-font-size + 3, 25px, $logo-title-font-size + 3px);
+            color: $logo-color;
+            display: inline-block;
+            vertical-align: middle;
+            margin: 0;
+            @include logo-title-font;
+            letter-spacing: 1px;
+            text-align: left;
+            position: relative;
+            z-index: 1;
+            span {
+                @include responsive-property("font-size", $logo-subtitle-font-size, 15px, $logo-subtitle-font-size + 0px);
+                @include responsive-property("line-height", $logo-subtitle-font-size + 3, 17px, $logo-subtitle-font-size + 3px);
+                @include logo-subtitle-font;
+                display: block;
+                @include responsive-property("letter-spacing", 2, 0px, 2px);
+                color: $logo-subtitle-color;
+                 .dot {
+                        display: inline-block;
+                        vertical-align: middle;
+                        @include responsive-property("width", 5, 3px, 5px);
+                        @include responsive-property("height", 5, 3px, 5px);
+                        background: $logo-subtitle-color;
+                        margin: 0 6px;
+                        @include border-radius (50%);
+                    }
+            }
+        }
+        h2 {
+            @include responsive-property("font-size", 27, 17px, 27px);
+            @include responsive-property("line-height", 30, 20px, 30px);
+            color: #fff;
+            @include responsive-property("letter-spacing", 2, 0px, 2px);
+            @include fourth-font-family;
+            margin: 0;
+            text-transform: uppercase;
+        }
+    }
+}
+#header.active .logo {
+    z-index: 9999;
+}
+
+/* ===== Menu ========================================================== */
+
+#left-nav {
+    float: right;
+    margin-right: 25px;
+    margin-top: 0;
+    //position: relative;
+}
+#right-nav {
+    float: right;
+    @include responsive-property("margin-right", 25, 8px, 25px);
+}
+#left-nav .menu-btn {
+    background: $menu-btn-bg-color url('menu-icon.png') no-repeat left center;
+    //width: 365px;
+    @include responsive-property("height",
+    $header-height,
+    50px,
+    $header-height + 0px);
+    overflow: hidden;
+    @include transition();
+}
+#left-nav .menu-btn>span:first-child,
+#right-nav .menu-btn>span {
+    @include responsive-property("font-size",
+    $menu-btns-font-size,
+    15px,
+    $menu-btns-font-size + 0px);
+    @include responsive-property("line-height",
+    $header-height,
+    50px,
+    $header-height + 0px);
+    color: $menu-btn-txt-color;
+    padding-left: 24px;
+    padding-right: 0;
+    background: transparent;
+    text-align: left;
+    display: block;
+    cursor: pointer;
+    @include menu-btn-font;
+}
+#right-nav .menu-btn>span {
+    padding-left: 10px;
+    padding-right: 25px;
+    position: relative;
+    &:after {
+        display: inline-block;
+        position: absolute;
+        z-index: 30;
+        right: 0;
+        top: 50%;
+        margin-top: -6px;
+        content: " ";
+        overflow: hidden;
+        width: 12px;
+        height: 12px;
+        background: url('arrow-icon.png') no-repeat center center;
+        @include transition();
+    }
+}
+#right-nav .menu-btn>span.active {
+    &:after {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+}
+
+/* new css code for search and language  */
+
+#header .search-icon {
+    float: right;
+    @include responsive-property("width",
+    90,
+    45px,
+    90px);
+    @include responsive-property("height",
+    $header-height,
+    50px,
+    $header-height + 0px);
+    cursor: pointer;
+    background: url("search-icon.png") no-repeat center center;
+    display: block;
+    margin: 0;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    border-radius: 0px;
+}
+// Language button
+#header #change_language_form {
+    float: right;
+    padding: 0 7px;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    background: $language-btn-bg;
+    form {
+        margin: 0;
+        
+    }
+    select {
+        @include responsive-property("height",
+        $header-height,
+        50px,
+        $header-height + 0px);
+        @include responsive-property("line-height",
+        $header-height,
+        50px,
+        $header-height + 0px);
+        background: transparent;
+        font-size: 22px;
+        color: $language-btn-color;
+        position: relative;
+        left: -4px;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+    .s-hidden {
+        position: absolute;
+        visibility: hidden;
+        padding-right: 10px;
+        width: 0px;
+        overflow: hidden;
+        height: 0px;
+    }
+    .select {
+        cursor: pointer;
+        display: block;
+        position: relative;
+        background-color: transparent;
+        margin: 0;
+        font-size: 0;
+        width: auto;
+        @include responsive-property("height",
+        $header-height,
+        50px,
+        $header-height + 0px);
+        @include responsive-property("line-height",
+        $header-height,
+        50px,
+        $header-height + 0px);
+        display: inline-block;
+        vertical-align: top;
+    }
+    &:hover {
+        .styledSelect {
+            color: $language-btn-color
+        }
+    }
+    .styledSelect {
+        position: relative;
+        display: inline-block;
+        @include responsive-property("font-size",
+        $language-btn-font-size,
+        13px,
+        $language-btn-font-size + 10px);
+        padding-right: 25px;
+        text-transform: uppercase;
+        cursor: pointer;
+        color: $language-btn-color;
+        @include language-btn-font();
+    }
+    .styledSelect:after {
+        display: inline-block;
+        position: absolute;
+        z-index: 30;
+        right: 0;
+        top: 50%;
+        margin-top: -6px;
+        content: " ";
+        overflow: hidden;
+        width: 12px;
+        height: 12px;
+        background: url('arrow-icon.png') no-repeat center center;
+        @include transition();
+    }
+    .styledSelect:active:after,
+    .styledSelect.active:after {
+        -webkit-transform: rotate(-180deg);
+        -moz-transform: rotate(-180deg);
+        -ms-transform: rotate(-180deg);
+        -o-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+    .options {
+        display: none;
+        position: absolute;
+        top: 100%;
+        @include responsive-property("right",
+        -52,
+        -5px,
+        -52px);
+        left: auto;
+        z-index: 999;
+        margin: 0 0;
+        padding: 20px 30px 20px 0;
+        list-style: none;
+        border: 0;
+        background-color: $language-dropdown-bg;
+        width: auto;
+        overflow-x: hidden;
+        overflow-y: auto;
+    }
+    .options li {
+        display: block;
+        margin-top: 5px;
+        @include responsive-property("font-size",
+        $language-options-font-size,
+        15px,
+        $language-options-font-size+0px);
+        @include responsive-property("line-height",
+        $language-options-font-size+4,
+        19px,
+        $language-options-font-size+4px);
+        color: $language-options-color;
+        text-align: left;
+        text-decoration: none;
+        @include language-options-font;
+        border-left: 15px transparent solid;
+        @include responsive-property("border-width",
+        16,
+        6px,
+        16px);
+        padding: 5px 0 5px 22px;
+        @include responsive-property("padding-left",
+        22,
+        8px,
+        22px);
+        &:first-child {
+            margin-top: 0;
+        }
+        &.selected {
+            border-color: #5a0f10;
+        }
+        &:hover {
+            border-color: #5a0f10;
+        }
+    }
+    .options li:hover {
+        color: $language-options-color-hover;
+        background: $language-options-bg-hover;
+    }
+    .options li[rel="0"] {
+        display: none;
+    }
+}
+@media only screen and (max-width: 1275px){
+    #header .logo h1 span, #header .logo h2 span {
+        white-space: normal;
+    }
+    
+    
+    #header .logo:before {
+        display: none;
+    }
+    #header .logo .image:before {
+        display: none;
+    }
+    #header .nav .menu-btn {
+        display: block;
+    }
+    #header .logo,
+    #header .logo .image {
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding: 0;
+        top: 0;
+        margin: 0;
+        position: relative;
+        img,
+        .image img {
+            position: relative;
+            height: auto;
+            left: 0;
+            height: 85px;
+            max-width: 100%;
+            object-fit: contain;
+            margin: 0 auto 8px;
+            display: block;
+            top: 0px;
+        }
+    }
+    #header {
+        padding: 0 10px;
+    }
+    #header .logo {
+        margin-bottom: 5px;
+        position: relative;
+        padding-top: 15px;
+        left: 0;
+        -webkit-transform: translateX(0%);
+        -ms-transform: translateX(0%);
+        transform: translateX(0%);
+    }
+    #header .logo h1,
+    #header .logo h2 {
+        display: block;
+        letter-spacing: 0;
+        width: 100%;
+        text-align: center;
+    }
+    #header .logo .image:after {
+        display: none;
+    }
+    #header #left-nav {
+        float: left;
+        margin-left: 15px;
+    }
+    #left-nav .menu-wrap {
+        top: 100%;
+    }
+}
+@media only screen and (max-width: 420px) {
+    #header #change_language_form {
+        padding-left: 10px;
+        float: right;
+    }
+    #header .search-icon {
+        clear: both;
+    }
+    #header .nav#right-nav {
+        float: left;
+    }
+    #header #change_language_form .options {
+        left: auto;
+        right: 0px;
+    }
+}

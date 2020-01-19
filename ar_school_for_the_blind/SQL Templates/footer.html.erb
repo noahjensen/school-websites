@@ -1,0 +1,43 @@
+<footer id="footer">
+		<div class="container clearfix">
+			<div class="footer-col">
+				<h5>Physical Address</h5>
+				<p><%= current_organization.try(:name) %>
+					<br><%= current_organization.try(:address) %>
+					<br><%= "#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %></p>
+		</div>
+
+		<div class="footer-col">
+			<h5>Contact US</h5>
+			<p>
+				<br><%= "Ph #{current_organization.try(:phone_number)}" %></p>
+	</div>
+
+						<div class="footer-col">
+				 <h5>Quicklinks</h5>
+				 <ul>
+				<li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>Athletics</a></li>
+				 <li><a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>Documents</a></li>
+			</ul>
+	 </div>
+
+
+
+						<div class="footer-col last">
+											 <% if current_organization.try(:facebook_link).present? %>
+											 <a href="<%= current_organization.try(:facebook_link) %>" class="social" target="_blank"><%= image_tag "apptegy_cms/themes/crestridgemo/fb.png", alt: " "%></a><br>
+											<% end %>
+											<a href="#" class="app-store"><%= image_tag "apptegy_cms/themes/crestridgemo/apple.png", alt: " "%></a>
+											<% if current_organization.try(:twitter_link).present? %>
+											 <a href="<%= current_organization.try(:twitter_link) %>" class="social" target="_blank"><%= image_tag "apptegy_cms/themes/miltonunionoh/tw.png", alt: " "%></a>
+											 <% end %>
+
+											<a href="#" class="google-play"><%= image_tag "apptegy_cms/themes/crestridgemo/google.png", alt: " "%></a>
+							 </div>
+
+		</div>
+		<div class="container bottom-footer">
+			<p>Copyright &copy; Arkansas School for the Blind 2017. All rights reserved.&nbsp;</p>
+			<p class="powered-by">Powered by <a href="http://apptegy.com/" target="_blank">Apptegy</a></p>
+		</div>
+	</footer>

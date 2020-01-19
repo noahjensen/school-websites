@@ -1,0 +1,203 @@
+// ===== Variables  &  Mixins ========================================================== //
+// FONT FAMILY
+@mixin first-font-family {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+}
+@mixin second-font-family {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+@mixin third-font-family {
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+}
+@mixin fourth-font-family {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+}
+$white: #FFFFFF;
+$black: #000000;
+$paragraph-font-size: 16;
+$paragraph-line-height: 28; //Main colors
+$page-bg: #FFF;
+$text-color: #646464;
+$links-color: #36477F; // HEADER +  MENU
+$header-height: 123px;
+$margin-between-logo-and-title: 20px;
+$h1-font-size: 41;
+$menu-btns-font-size: 21;
+$menu-btns-line-height: 51;
+$header-bg: #FFF;
+$logo-color: #36477F;
+$menu-btn-bg-color: #FFF;
+$menu-active-btn-bg-color: transparent;
+$menu-btn-txt-color: #000000;
+$menu-active-btn-txt-color: #000000;
+$menu-wrap-bg: rgba(0,0,0, 0.9);
+$menu-dropdown-level-2-bg: #414141; //search icon
+$search-bg-color: #7f7f7f;
+$search-bg-hover-color: darken($search-bg-color,15%);
+$search-txt-color: #000;
+$search-btn-font-size: 22; //language dropdown
+$language-btn-color: #000000;
+$language-btn-font-size: 21;
+$language-dropdown-bg: rgba(0, 0, 0, 0.9);
+$language-dropdown-width: 226px;
+$language-options-font-size: 25;
+$language-options-line-height: 29;
+$language-options-color: #FFF;
+$static-links-color: #fff;
+$static-links-font-size: 24;
+$static-links-line-height: 27;
+$static-links-icons-width: 122px;
+@mixin static-links-font {
+  @include fourth-font-family;
+  text-transform: uppercase;
+}
+$static-links-lf-bg: #36477F;
+$static-links-staff-bg: #36477F;
+$static-links-news-bg: #BB922E;
+$static-links-events-bg: #36477F;
+$static-links-dining-bg: #BB922E;
+$static-links-documents-bg: #BB922E;
+$static-links-athletics-bg: #36477F;
+$generated-links-color: #fff;
+$generated-links-font-size: 25;
+$generated-links-line-height: 29;
+$generated-links-width: 33.33%;
+@mixin generated-links-font {
+  @include fourth-font-family;
+  text-transform: uppercase;
+}
+$schools-menu-btn-bg-color: #fff;
+$schools-menu-active-btn-bg-color: #fff;
+$schools-menu-btn-txt-color: #000;
+$schools-menu-active-btn-txt-color: #000;
+$schools-menu-width: 518px;
+$schools-menu-padding: 30px 0 30px 0;
+$schools-menu-bg: rgba(0, 0, 0, 0.9);
+$schools-menu-links-color: #FFF;
+$schools-menu-links-font-size: 25;
+$schools-menu-links-line-height: 28; // SLIDER GALLERY
+@mixin schools-menu-links-font {
+  @include fourth-font-family;
+  text-transform: uppercase;
+}
+$slider-padding: 0;
+$pager-slider: #FFF;
+$active-pager-slider: #36477F;
+$SliderBgColor: #f2f2f2;
+$slider-arrow-bg: rgba(221,0,0, 0.85);
+$slider-arrow-width: 43px;
+$slider-arrow-height: 126px;
+$slider-arrow-margin-top: $slider-arrow-height/2;
+@mixin slider-pager-position {
+  left  : 135px;
+  bottom: 27px;
+}
+//for _slider2.scss
+$left-slider-width: 0;
+$left-slider-bg: #36477F; //bulletin board
+$bb-text-color: #FFF;
+$bb-h1-font-size: 71;
+$bb-p-font-size: 31;
+@mixin bulletin-board-position {
+  bottom: 50px;
+  left  : 0;
+}
+$bb-first-text-bg: transparent;
+$bb-second-text-bg: transparent; //SECTION BOXES HOMEPAGE
+$events-wrapper-width: 100%;
+$news-wrapper-width: 66%;
+$live-feed-wrapper-width: 34%;
+$events-colspadding: 28px 110px 90px 110px;
+$news-colspadding: 28px 20px 65px 35px;
+$live-feed-colspadding: 28px 50px 65px 50px;
+$events-wrapper-bg: #36477F;
+$news-wrapper-bg: #FFF;
+$live-feeds-wrapper-bg: #f7f5f5;
+$see-all-btns-font-size: 18;
+$see-all-btns-line-height: 42;
+@mixin see-all-news-btn-position {
+  right: 35px;
+  top  : 60px;
+}
+@mixin see-all-events-btn-position {
+  right: 0;
+  top  : 0;
+}
+@mixin see-all-live-feeds-btn-position {
+  right: 50px;
+  top  : 60px;
+}
+$see-all-news-btn-bg: transparent;
+$see-all-events-btn-bg: #333333;
+$see-all-live-feeds-btn-bg: transparent;
+$see-all-news-btn-color: #515151;
+$see-all-events-btn-color: #FFF;
+$see-all-live-feeds-btn-color: #515151;
+$sections-titles-font-size: 45;
+$sections-titles-line-height: 103;
+$events-title-color: #FFF;
+$news-title-color: #515151;
+$live-feed-title-color: #515151;
+$events-title-bg: #36477F;
+$news-title-bg: #cccccc;
+$live-feed-title-bg: #c6c4c4;
+$live-feed-avatarWidth: 62px; // for Arkadelphia theme
+$first-news-border-top-color: #36477F;
+$second-news-border-top-color: #36477F;
+$third-news-border-top-color: #36477F;
+$news-paragraph-color: #333333;
+$news-title-color: #36477F;
+$news-p-font-size: 16;
+$news-title-font-size: 17;
+$read-more-new-bg: #070707;
+$read-more-new-color: #fff;
+$news-pager: #e4e4e4;
+$news-pager-active: #36477F;
+$live-feed-text-color: #36477F;
+$live-feed-link-color: #36477F;
+$live-feed-h3-color: #36477F;
+$live-feed-time-color: #333;
+$live-feed-text-font-size: 17;
+$live-feed-h3-font-size: 17;
+$live-feed-time-font-size: 15;
+$event-date-color: #FFF;
+$event-date-bg: #333333;
+$event-title-color: #515151;
+$event-date-font-size: 17;
+$event-date-line-height: 31;
+$event-title-font-size: 20; // FOOTER
+$footer-container-width: 1600px;
+$footer-bg: #36477F;
+$footer-bottom-part-bg: #383838;
+$footer-padding: 40px 0 0;
+$footer-col-width: 20%;
+$footer-text-color: #FFF;
+$footer-title-color: #FFF;
+$footer-pb-txt-color: #FFF;
+$footer-pb-link-color: #FFF;
+$footer-text-font-size: 17;
+$footer-text-line-height: 35;
+$footer-title-font-size: 35;
+$footer-title-line-height: 26;
+$footer-copyright-font-size: 21;
+$footer-app-btns-width: 265px;
+$footer-app-btns-height: 79px; //SUBPAGES
+$breadcrumb-height: 45px;
+$breadcrumb-bg: #000;
+$breadcrumb-color: #FFF;
+$breadcrumb-font-size: 20;
+$subpage-one-col-width: 90%;
+$subpage-sidebar-width: 30%;
+$subpage-column-two: 65%;
+$subpage-cols-margin: 50px;
+$subpage-sidebar-title-bg: #BB922E;
+$subpage-sidebar-title-color: #FFF;
+$subpage-h1-font-size: 45;
+@mixin subpage-h1-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}

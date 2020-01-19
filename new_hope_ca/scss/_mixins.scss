@@ -1,0 +1,278 @@
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+  width: 0;
+  height: 0
+}
+
+@mixin hidden {
+  display: none;
+  visibility: hidden;
+}
+
+%hidden-text {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+
+%center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+%vertical-align {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+%horizontal-align {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+@mixin font-size($fontPx){
+	font-size: 1px * $fontPx; 
+	font-size: 1rem * ($fontPx/10);
+}
+
+@mixin line-height($lhPx){
+	line-height: 1px * $lhPx; 
+	line-height: 1rem * ($lhPx/10);
+}
+
+@function get-vw($target) {
+  $vw-context: (1920*.01);
+  @return ($target/$vw-context) * 1vw;
+}
+
+@mixin border-radius ($radius: 5px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius:    $radius;
+	border-radius:         $radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+
+@mixin transition ($property: all, $duration: .5s) {
+  -webkit-transition: $property $duration ease-in-out;
+  -moz-transition: $property $duration ease-in-out;
+  -o-transition: $property $duration ease-in-out;
+  transition: $property $duration ease-in-out;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie);
+}
+
+@mixin responsive-property($property, $CSSvalue, $min, $max: false) {
+	$CSSvalue2: get-vw($CSSvalue);
+	$responsive-unitless: $CSSvalue2 / ($CSSvalue2 - $CSSvalue2 + 1);
+	$dimension: if(unit($CSSvalue2)=='vh', 'height', 'width');
+	$min-breakpoint: $min / $responsive-unitless * 100;
+	@media (max-#{$dimension}: #{$min-breakpoint}) {
+		#{$property}: $min;
+	}
+	@if $max {
+		$max-breakpoint: $max / $responsive-unitless * 100;
+		@media (min-#{$dimension}: #{$max-breakpoint}) {
+			#{$property}: $max;
+		}
+	}
+	$fallback: $CSSvalue+px;
+	#{$property}: $fallback;
+	#{$property}: $CSSvalue2;
+}
+
+@mixin logo-title-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+@mixin logo-subtitle-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: capitalize;
+  font-style: italic;
+}
+
+@mixin menu-btn-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+@mixin schools-menu-btn-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+@mixin language-btn-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+@mixin static-links-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin generated-links-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+@mixin schools-menu-links-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin language-options-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin slider-gradient {
+  background: -moz-linear-gradient(top, rgba(32, 58, 129, 0) 0%, rgba(32, 58, 129, 1) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(32, 58, 129, 0)), color-stop(100%, rgba(32, 58, 129, 1)));
+  background: -webkit-linear-gradient(top, rgba(32, 58, 129, 0) 0%, rgba(32, 58, 129, 1) 100%);
+  background: -o-linear-gradient(top, rgba(32, 58, 129, 0) 0%, rgba(32, 58, 129, 1) 100%);
+  background: -ms-linear-gradient(top, rgba(32, 58, 129, 0) 0%, rgba(32, 58, 129, 1) 100%);
+  background: linear-gradient(to bottom, rgba(32, 58, 129, 0) 0%, rgba(32, 58, 129, 1) 100%);
+}
+
+@mixin bb-h1-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin bb-p-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin see-all-btns-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+@mixin sections-titles-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin news-paragraph-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin news-titles-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin news-date-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin read-more-new-font {
+  @include second-font-family;
+  text-transform: none;
+}
+
+@mixin live-feed-text-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin live-feed-author-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin live-feed-time-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin event-date-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin event-title-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin footer-text-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin footer-title-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+@mixin footer-copyright-font {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  text-transform: none;
+}
+
+@mixin subpage-h1-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}
+
+@mixin first-font-family {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+
+@mixin second-font-family {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+
+@mixin third-font-family {
+  font-family: 'Lato', sans-serif, Arial;
+  font-weight: 300;
+}

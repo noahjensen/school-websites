@@ -1,0 +1,54 @@
+<footer id="footer">
+   <div class="container clearfix">
+      <div class="footer-col first">
+         <h5>Contact Us</h5>
+         <p>Bald Eagle Area Schools
+            <br> 751 S Eagle Valley Road
+            <br> Wingate, PA 16823
+            <br> PH (814)355-4860
+            <br> FAX (814)355-1028 </p>
+      </div>
+
+
+      <div class="footer-col">
+         <h5>Sites</h5>
+         <ul class="footer-links">
+            <li><a href="#">District Office</a></li>
+            <li><a href="#">Bald Eagle Area High School</a></li>
+            <li><a href="#">Bald Eagle Area Middle School</a></li>
+            <li><a href="#">Howard Elementary</a></li>
+            <li><a href="#">Mountaintop Elementary</a></li>
+         </ul>
+      </div>
+      <div class="footer-col">
+         <h5 class="mobile-hide">&nbsp</h5>
+         <ul class="footer-links">
+            <li><a href="#">Port Matilda</a></li>
+            <li><a href="#">Wingate Elementary</a></li>
+            <li><a href="#">Bald Eagle Area Cyber Academy</a></li>
+            <li><a href="#">Bald Eagle Area Athletics</a></li>
+         </ul>
+      </div>
+
+      <div class="footer-col">
+         <h5>Quicklinks</h5>
+         <ul class="footer-links">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Apply</a></li>
+            <li><a href="#">Parents</a></li>
+            <li><a href="#">Students</a></li>
+             <li><a href="#">Employment</a></li>
+         </ul>
+      </div>
+      <div class="footer-col last">
+        <a href="<%= current_organization.try(:facebook_link) %>" class="social_media"><%= image_tag "apptegy_cms/themes/baldeaglepa/fb.png", alt: " "%></a>
+             <a href="https://itunes.apple.com/us/app/vilonia-public-schools-ar/id1208567138?ls=1&mt=8" class="app-store">Download on the App Store</a><br>
+             <a href="<%= current_organization.try(:twitter_link)%>" class="social_media"><%= image_tag "apptegy_cms/themes/baldeaglepa/tw.png", alt: "Link to Twitter"%> </a>
+             <a href="https://play.google.com/store/apps/details?id=com.apptegy.vilonia" class="google-play">Get it on Google play</a>
+     <img src="css/ed-logo.png" alt="">
+       </div>
+   </div>
+   <div class="container bottom-footer">
+      <p>Copyright &copy; 2017 Bald Eagle Area School District. All rights reserved. Powered by<a href="">Apptegy</a> </p>
+   </div>
+</footer>

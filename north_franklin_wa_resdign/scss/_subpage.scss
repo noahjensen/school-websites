@@ -1,0 +1,411 @@
+/*************************
+*
+*  SUBPAGE
+*
+*************************/
+.container {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+.container.subpage { text-align: center; }
+.breadcrumb {
+    width: 100%;
+    min-width: 100%;
+    background: $breadcrumbBg;
+    min-height: 47px;
+}
+.breadcrumb ol {
+    padding: 10px 5% 10px;
+    list-style: none;
+    left: 0;
+    position: relative;
+    margin: 0 auto;
+}
+.breadcrumb li {
+    display: inline-block;
+    @include font-size(20);
+    @include line-height(24);
+    text-transform: uppercase;
+    color: $white;
+    padding-left: 45px;
+    position: relative;
+}
+.breadcrumb li:first-child {
+    padding: 0;
+    background: none;
+    margin-left: 15px;
+}
+.breadcrumb li a {
+    color: $white;
+}
+.breadcrumb ol>li+li:before {
+    position: absolute;
+    top: 2px;
+    left: 16px;
+    width: 24px;
+    height: 18px;
+    color: $white;
+    content: " //";
+    @include font-size(20);
+    @include line-height(24);
+}
+.sub .main {
+    padding-bottom: 70px;
+}
+.sub .main .container,
+.container.subpage,
+.main.main-content .container {
+   background: $white;
+   max-width: 1522px;
+   padding: 20px 20px 40px;
+   text-align: center;
+}
+.homepage .main .container {
+   background: transparent;
+   max-width: 1920px;
+   max-width: 1920px;
+	padding: 0 70px 0;
+   text-align: left;
+}
+.main .container > .right-content,
+.container.subpage .right-content {
+   width: $subpage-one-col-width;
+   min-height: 500px;
+   margin: 0 auto;
+   text-align: left;
+}
+.main .container > .right-content p,
+.container.subpage p {
+   color: $text-color;
+   margin-bottom: 25px;
+   @include font-size($paragraph-font-size);
+   @include line-height($paragraph-line-height);
+}
+.main .container> .right-content p a,
+.main .container> .right-content a,
+.main .container> .left-sidebar p a,
+.subpage p a,
+.subpage a {
+   color: $links-color;
+	text-decoration: underline;
+}
+.left-sidebar {
+   display: inline-block;
+   width: $subpage-sidebar-width;
+   vertical-align: top;
+   padding-right: $subpage-cols-margin;
+   text-align: left;
+	ul {
+		margin-left: 25px;
+		list-style-type: none;
+		li {
+			padding-bottom: 15px;
+			a {
+				text-decoration: none;
+			}
+		}
+	}
+}
+.subpage .left-sidebar ul li {
+	list-style-type: none;
+}
+.main .container .left-sidebar + .right-content,
+.container.subpage .left-sidebar + .right-content {
+   display: inline-block;
+   vertical-align: top;
+   width: $subpage-column-two;
+}
+.images-grid {
+    width: 735px;
+    overflow: hidden;
+    font-size: 0;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+.images-grid a {
+    width: 50%;
+    padding: 0 10px 0 0;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.images-grid a img {
+    width: 100%;
+    height: auto;
+}
+.images-grid.photos-1 a {
+    width: 100%;
+}
+.images-grid.photos-3 a + a + a {
+    width: 100%;
+    clear: both;
+}
+img.image-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Custom popup scroll */
+
+.scrollable {
+    position: relative;
+}
+.scrollable:focus {
+    outline: 0;
+}
+.scrollable .viewport {
+    position: relative;
+    overflow: hidden;
+}
+.scrollable .viewport .overview {
+    position: absolute;
+}
+.scrollable .scroll-bar {
+    display: none;
+}
+.scrollable .scroll-bar.vertical {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+.scrollable .scroll-bar.horizontal {
+    position: relative;
+    width: 100%;
+}
+.scrollable .scroll-bar .thumb {
+    position: absolute;
+}
+.scrollable .scroll-bar.vertical .thumb {
+    width: 100%;
+    min-height: 10px;
+}
+.scrollable .scroll-bar.horizontal .thumb {
+    height: 100%;
+    min-width: 5px;
+    left: 0;
+}
+.not-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*Default skin*/
+
+#slider p.scrollable.default-skin {
+    padding-right: 30px;
+    padding-bottom: 6px;
+    margin-right: 15px;
+}
+.scrollable.default-skin .scroll-bar.vertical {
+    width: 5px;
+    background-color: #a9bad8;
+}
+.scrollable.default-skin .scroll-bar.horizontal {
+    height: 11px;
+    background: #f7f7f7;
+}
+.scrollable.default-skin .scroll-bar .thumb {
+    background-color: #738bb7;
+    cursor: pointer;
+}
+.scrollable.default-skin .scroll-bar:hover .thumb {
+    background-color: #42629c;
+}
+
+/* General subpage elements */
+
+table {
+   width: 100%;
+   max-width: 100%;
+   margin-bottom: 20px;
+   border-spacing: 0;
+   border-collapse: collapse;
+   border: 1px solid #ddd;
+}
+table tr>th,
+table>tbody>tr>td {
+   padding: 8px;
+   line-height: 1.42857143;
+   vertical-align: top;
+   border-top: 1px solid #ddd;
+   text-align: left;
+}
+table>thead>tr>th {
+   vertical-align: bottom;
+   border-bottom: 2px solid #ddd;
+}
+table>thead:first-child>tr:first-child>th {
+   border-top: 0;
+}
+table>tbody>tr:nth-of-type(odd) {
+   background-color: #f9f9f9;
+}
+.right-content ul,
+.right-content ol,
+.subpage ul,
+.subpage ol,
+.article-page ol,
+.article-page ul {
+   margin-bottom: 15px;
+   list-style-position: inside;
+}
+.subpage ul li,
+.right-content ul li,
+.subpage ol li,
+.right-content ol li left-content ul li,
+table,
+.article-page ol li,
+.article-page ul li {
+   color: #333;
+   @include font-size(19);
+   @include line-height(30);
+   @include first-font-family;
+}
+.right-content > a {
+   margin-bottom: 15px;
+   display: block;
+}
+.subpage ul li,
+.right-content ul li,
+left-content ul li,
+.article-page ul li {
+   list-style-type: disc;
+}
+.subpage ol li,
+.right-content ol li,
+left-content ol li,
+.article-page ol li {
+   list-style-type: decimal;
+}
+
+
+.subpage h1,
+.right-content h1,
+left-content h1 {
+   @include font-size(34);
+   @include line-height(39);
+   text-transform: uppercase;
+   color: #333333;
+   @include second-font-family;
+}
+.subpage h2,
+.right-content h2,
+left-content h2 {
+   @include font-size(30);
+   @include line-height(34);
+   color: $links-color;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h3,
+.right-content h3,
+left-content h3 {
+   @include font-size(26);
+   @include line-height(30);
+   color: $links-color;
+  @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h4,
+.right-content h4,
+left-content h4 {
+   @include font-size(22);
+   @include line-height(28);
+   color: $links-color;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h5,
+.right-content h5,
+left-content h5 {
+   @include font-size(18);
+   @include line-height(22);
+   color: $links-color;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+.subpage h6,
+.right-content h6,
+left-content h6 {
+   @include font-size(14);
+   @include line-height(20);
+   color: $links-color;
+   @include second-font-family;
+   margin: 0 0 10px;
+   text-transform: uppercase;
+}
+blockquote {
+   padding: 10px 20px;
+   margin: 0 0 20px;
+   @include font-size(17);
+   @include line-height(21);
+   border-left: 5px solid #74519b;
+}
+  .main .container > .right-content blockquote p, .container.subpage blockquote p {
+	  margin-bottom: 0px;
+	  margin-top: 25px;
+  }  
+  .main .container > .right-content blockquote p:first-child, .container.subpage blockquote p:first-child {
+	  margin-top: 0px;
+  }
+.main .sport-event .right-details .team {
+   overflow: hidden;
+}
+.main .sport-event .right-details .team span {
+   display: block;
+   float: left;
+   text-align: center;
+}
+.main .sport-event .right-details .team span.first-team {
+   text-align: left;
+}
+ul.first-nav li.dining {
+   padding: 0;
+   border: 0;
+}
+.subpage .left-content {
+   padding-top: 30px;
+   padding-bottom: 30px;
+}
+body .subpage .bx-wrapper .bx-viewport:before,
+body .subpage .bx-wrapper .bx-viewport:after {
+   display: none;
+}
+ 
+.left-sidebar h3 {
+    font-size: 26px;   
+    line-height: 30px;
+    margin: 0 0 35px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 20px 15px;
+    text-align: center;
+    background: #6c6c6c;
+    @include first-font-family;
+}
+/* Subpages styling */
+
+.main .container.subpage {
+   padding-top: 50px;
+}
+@media only screen and (max-width: 1600px) {
+    .sub .main .container, .container.subpage, .main.main-content .container, .main .container {
+        max-width: 1200px;
+    }
+    
+}
+
+#cbp-spmenu-s1 {z-index: 3; }

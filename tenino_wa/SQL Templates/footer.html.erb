@@ -1,0 +1,120 @@
+<footer id="footer">
+      <div class="container clearfix">
+        <div class="footer-col">
+            <h5>Tenino School District</h5>
+            <p>Old Highway 99 N, P.O. Box 4024
+                <br>Tenino, WA 98589
+                <br>PH (360) 264-3400
+                <br>FAX (360) 264-3438</p>
+        </div>
+        <div class="footer-col">
+            <h5>quicklinks</h5>
+            <ul class="footer-links">
+
+<% if params[:org] == "tenino"  %>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>  Live Feed </a></li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>> News </a> </li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>  Events </a></li>
+</ul>
+
+       </div>
+
+<div class="footer-col">
+           <h5>&nbsp</h5>
+           <ul class="footer-links">
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>  Dining </a></li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Staff </a> </li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+</ul>
+       </div>
+ <% elsif params[:org] == "high-school" %>
+ <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>  Live Feed </a></li>
+ <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>> News </a> </li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>  Events </a></li>
+</ul>
+
+        </div>
+
+<div class="footer-col">
+            <h5>&nbsp</h5>
+            <ul class="footer-links">
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>  Athletics </a></li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Staff </a> </li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+</ul>
+        </div>
+   <% elsif params[:org] == "middle-school" %>
+   <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>  Live Feed </a></li>
+   <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>> News </a> </li>
+  <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>  Events </a></li>
+  <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>  Athletics </a></li>
+  </ul>
+
+          </div>
+
+  <div class="footer-col">
+              <h5>&nbsp</h5>
+              <ul class="footer-links">
+  <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>  Dining </a></li>
+  <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Staff </a> </li>
+  <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+  </ul>
+          </div>
+
+     <% elsif params[:org] == ("tenino-elementary" || "parkside-elementary") %>
+     <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>  Live Feed </a></li>
+     <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>> News </a> </li>
+    <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>  Events </a></li>
+    </ul>
+
+            </div>
+
+    <div class="footer-col">
+                <h5>&nbsp</h5>
+                <ul class="footer-links">
+    <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>  Dining </a></li>
+    <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Staff </a> </li>
+    <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+    </ul>
+            </div>
+
+     <%else%>
+     <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>  Live Feed </a></li>
+     <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>> News </a> </li>
+     <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>  Events </a></li>
+     </ul>
+
+            </div>
+
+     <div class="footer-col">
+                <h5>&nbsp</h5>
+                <ul class="footer-links">
+     <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>  Dining </a></li>
+     <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Staff </a> </li>
+     <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+     </ul>
+            </div>
+     <%end%>
+
+
+
+
+
+
+
+         <div class="footer-col last">
+          <% if current_organization[:facebook_link].present? %>
+             <a href="<%= current_organization[:facebook_link] %>" class="fb" target="_blank"><%= image_tag "apptegy_cms/themes/teninowa/fb-icon.png", alt: " "%></a>
+          <% end %>
+           <a href="https://itunes.apple.com/us/app/tenino-school-district-wa/id1216740455?mt=8" class="app-store" target="_blank">Download on the App Store</a><br>
+               <% if current_organization[:twitter_link].present? %>
+                <a href="<%= current_organization[:twitter_link] %>" class="tw" target="_blank"><%= image_tag "apptegy_cms/themes/teninowa/tw-icon.png", alt: " "%></a>
+           <% end %>
+           <a href="https://play.google.com/store/apps/details?id=com.apptegy.tenino&hl=en" class="google-play" target="_blank">Get it on Google play</a>
+            </div>
+      </div>
+      <div class="container copyright">
+         <p> Copyright © Tenino Schools District 2017a. All Rights Reserved. Powered by  <a href="http://www.apptegy.com/" target="_blank">Apptegy</a> </p>
+      </div>
+
+   </footer>

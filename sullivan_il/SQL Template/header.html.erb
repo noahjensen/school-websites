@@ -1,0 +1,154 @@
+<header id="header" class="clearfix">
+<a class="logo" href="/">
+         <%= image_tag "apptegy_cms/themes/sullivanil/logo.png", alt: "The School District of Howards Grove" %>
+         <h1><span>Sullivan CUSD #300</span><%= translate("The School District of") %> </h1>
+
+      </a>
+      <span class="search-icon" ></span>
+<%= render 'apptegy_cms/shared/search' %>
+
+            <nav id="left-nav" class="nav" role="navigation">
+
+            <div class="menu-btn"><span>Menu</span></div>
+
+ <div class="menu-wrap">
+          <ul class="first-nav clearfix">
+
+
+        <li class="live-feed">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+                <span><%= image_tag 'apptegy_cms/themes/sullivanil/menu/feed-icon.png' %></span>
+               Live Feed
+            </a>
+        </li>
+
+        <li class="news">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+                <span><%= image_tag 'apptegy_cms/themes/sullivanil/menu/news-icon.png' %> </span>
+                News
+            </a>
+        </li>
+
+            <li class="events">
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+                  <span>  <%= image_tag 'apptegy_cms/themes/sullivanil/menu/events.png' %> </span>
+                    Events
+                </a>
+            </li>
+
+<li class="dining">
+        <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>
+                   <span> <%= image_tag 'apptegy_cms/themes/sullivanil/menu/dining.png' %> </span>
+                    Menu
+                </a>
+        </li>
+
+
+        <li class="staff">
+                   <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+                     <span>  <%= image_tag 'apptegy_cms/themes/sullivanil/menu/staff.png' %> </span>
+                      Staff
+                   </a>
+               </li>
+
+
+               <li class="documents">
+                   <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                       <span> <%= image_tag 'apptegy_cms/themes/sullivanil/menu/documents.png' %> </span>
+                       Documents
+                   </a>
+               </li>
+
+
+         <li class="athletics">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>
+                <span> <%= image_tag 'apptegy_cms/themes/sullivanil/menu/athletics.png' %> </span>
+                Athletics
+            </a>
+        </li>
+
+          </ul>
+
+        <ul class="second-nav clearfix">
+             <% current_pages.roots.navigation_pages.each do |page| %>
+          <li class="item">
+
+              <% if page.header? %>
+               <span> <%= page.name.upcase %> </span>
+              <% else %>
+                <a href=<%= page.page_link? ? "#{page.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{page.slug}" %> target=<%= '_blank' if page.page_link? %>>
+                  <%= page.name %>
+                </a>
+              <% end %>
+
+            <% if page.children.any? %>
+              <ul>
+                <% page.children.order(:position).each do |subpage| %>
+                <% if subpage.children.any? %>
+<li>
+
+              <% if subpage.header? %>
+               <span> <%= subpage.name %></span>
+              <% else %>
+                <span><a href=<%= subpage.page_link? ? "#{subpage.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+                  <%= subpage.name %>
+                </a></span>
+              <% end %>
+
+                  <ul>
+                    <% subpage.children.order(:position).each do |subpage2| %>
+                      <li>
+                      <a href=<%= subpage2.page_link? ? "#{subpage2.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage2.slug}" %> target=<%= '_blank' if subpage2.page_link? %> >
+                        <%= subpage2.name %>
+                      </a>
+                      </li>
+                      <% end %>
+                    </ul>
+</li>
+                  <% else %>
+                  <li>
+                    <a href=<%= subpage.page_link? ? "#{subpage.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+                        <%= subpage.name %>
+                    </a>
+                  </li>
+                  <% end %>
+                <% end %>
+              </ul>
+            <% end %>
+          </li>
+        <% end %>
+          </ul>
+        <span class="menu-close"></span>
+</div>
+
+
+            </nav>
+            <nav id="right-nav" class="nav" role="navigation" style="padding-right: 0px !important;">
+                  <div class="menu-btn"><span>Schools</span>
+                      <div class="menu-wrap">
+                                 <ul>
+<% current_site.secondary_organizations.order(:position).each do |org| %>
+<li>
+<a style="font-weight: bold;" href=<%= "/o/#{org.organization_alias.try(:parameterize)}" %>>
+<%= org.name %>
+</a>
+</li>
+<% end %>
+                    </ul>
+                      </div>
+                  </div>
+              </nav>
+<%= render 'apptegy_cms/shared/change_language_unstyled' %>
+
+    </header>
+
+
+<style>
+.second-nav li span {
+    margin-bottom: 30px;
+display: block;
+}
+.second-nav li.has-child ul {
+min-width: 290px;
+}
+</style>

@@ -1,0 +1,466 @@
+/**
+ * Main Content
+ */
+
+body {
+    background: url('content-bg.png');
+}
+.main {
+    padding-bottom: 70px;
+}
+.main .container {
+    max-width: 1920px;
+    padding-left: 70px;
+    padding-right: 70px;
+}
+.main .col-item {
+    width: 100%;
+    float: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    position: relative;
+    height: 457px;
+    background: $white;
+    
+    &.date-wrapper {
+         
+        background-color: #061654;
+    }
+    &.gallery-wrapper {
+        width: 46.3%;
+    }
+    .see-more {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        display: inline-block;
+        padding: 0 45px;
+        height: 52px;
+        background: $see-all-btn-bg;
+        @include font-size(18);
+        @include line-height(52);
+        color: $see-all-btn-color;
+        @include first-font-family;
+        text-transform: uppercase;
+        z-index: 5;
+        @include opacity(1);
+    }
+     
+    &.news-wrapper .see-more {
+        background: $see-all-news-btn-bg;
+        color: $see-all-news-btn-color;
+    }
+    &.events-wrapper .see-more {
+        background: $see-all-events-btn-bg;
+        color: $see-all-events-btn-color;
+    }
+    &.live-feeds-wrapper .see-more {
+        background: $see-all-live-feeds-btn-bg;
+        color: $see-all-live-feeds-btn-color;
+    }
+    .see-more:hover {
+        text-decoration: none;
+        background-color: #da8b02;
+    }
+    &:before {
+        content: '';
+        @include opacity(0.8);
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+    }
+    &.news-wrapper:before {
+        background: #d8dcf0;
+    }
+    
+    
+    
+    &.live-feeds-wrapper:before
+     {
+        background: rgb(216, 220, 240);
+        /* Old browsers */
+        background: -moz-linear-gradient(left, rgb(216, 220, 240) 0%, rgb(255, 255, 255) 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgb(216, 220, 240)), color-stop(100%, rgb(255, 255, 255)));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left, rgb(216, 220, 240) 0%, rgb(255, 255, 255) 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left, rgb(216, 220, 240) 0%, rgb(255, 255, 255) 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(left, rgb(216, 220, 240) 0%, rgb(255, 255, 255) 100%);
+        /* IE10+ */
+        background: linear-gradient(to right, rgb(216, 220, 240) 0%, rgb(255, 255, 255) 100%);
+        /* W3C */
+    }
+    &.events-wrapper:before {
+        background: rgb(246, 247, 252);
+        /* Old browsers */
+        background: -moz-linear-gradient(left, rgb(246, 247, 252) 0%, rgb(255, 255, 255) 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgb(246, 247, 252)), color-stop(100%, rgb(255, 255, 255)));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left, rgb(246, 247, 252) 0%, rgb(255, 255, 255) 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left, rgb(246, 247, 252) 0%, rgb(255, 255, 255) 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(left, rgb(246, 247, 252) 0%, rgb(255, 255, 255) 100%);
+        /* IE10+ */
+        background: linear-gradient(to right, rgb(246, 247, 252) 0%, rgb(255, 255, 255) 100%);
+        /* W3C */
+    }
+    &.date-wrapper:before {
+        @include opacity(0.4);
+        background: rgb(169, 174, 216);
+        @include transition();
+        /* Old browsers */
+        background: -moz-linear-gradient(left, rgb(169, 174, 216) 0%, rgb(255, 255, 255) 100%);
+        /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, right top, color-stop(0%, rgb(169, 174, 216)), color-stop(100%, rgb(255, 255, 255)));
+        /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(left, rgb(169, 174, 216) 0%, rgb(255, 255, 255) 100%);
+        /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(left, rgb(169, 174, 216) 0%, rgb(255, 255, 255) 100%);
+        /* Opera 11.10+ */
+        background: -ms-linear-gradient(left, rgb(169, 174, 216) 0%, rgb(255, 255, 255) 100%);
+        /* IE10+ */
+        background: linear-gradient(to right, rgb(169, 174, 216) 0%, rgb(255, 255, 255) 100%);
+        /* W3C */
+    }
+    &.date-wrapper:before {
+        @include opacity(0.4);
+    }
+    h4 {
+        @include font-size(36);
+        @include line-height(40);
+        color: $events-title-color;
+        padding: 80px 0 0;
+        @include second-font-family;
+        text-align: center;
+        text-transform: uppercase;
+        width: 100%;
+        background: $events-title-bg;
+        position: absolute;
+        @extend %vertical-align;
+        z-index: 4;
+        @include first-font-family;
+    }
+    &.news-wrapper h4 {
+        color: $news-title-color;
+        background: $news-title-bg;
+    }
+    &.live-feeds-wrapper h4 {
+        color: $live-feed-title-color;
+        background: $live-feed-title-bg;
+    }
+    &.athletics-wrapper h4 {
+        color: $live-feed-title-color;
+        background: $athletics-title-bg;
+        height: 1px;
+        overflow: hidden;
+    }
+    &.athletics-wrapper h5 {
+        color: #545454;
+        @include font-size(18);
+        @include line-height(22);
+        margin: 0 0 8px;
+        text-transform: uppercase;
+    }
+    &.athletics-wrapper .team {
+        color: $second-color;
+        @include font-size(30);
+        @include line-height(35);
+        overflow: hidden;
+    }
+    &.athletics-wrapper .team .first-team,
+    &.athletics-wrapper .team .second-team {
+        float: left;
+    }
+    &.athletics-wrapper .sport-event > span {
+        color: #545454;
+        @include font-size(18);
+        @include line-height(22);
+        display: block;
+        margin: 10px 0;
+    }
+    &.athletics-wrapper .team .score {
+        float: right;
+    }
+    &.gallery-wrapper h4 {
+        color: $white;
+        background: $gallery-title-bg;
+    }
+    &.date-wrapper p {
+        position: absolute;
+        @extend %vertical-align;
+        left: 0;
+        margin: 0;
+        z-index: 4;
+        width: 100%;
+    }
+    &.date-wrapper span {
+        color: $white;
+        @include font-size(36);
+        @include line-height(40);
+        text-transform: uppercase;
+        display: block;
+        text-align: center;
+        position: relative;
+        z-index: 5;
+    }
+    &.date-wrapper span.number {
+        @include font-size(215);
+        @include line-height(219);
+    }
+    &.date-wrapper span.day {
+        margin-bottom: 47px;
+    }
+    &.gallery-wrapper h4 {
+        color: $white;
+        background: $gallery-title-bg;
+    }
+    .hover-content {
+        @include opacity(0);
+        position: relative;
+        z-index: 5;
+        padding-top: 120px;
+        padding-left: 70px;
+        padding-right: 55px;
+    }
+    &.gallery-wrapper .hover-content {
+        position: absolute;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        @include transition();
+    }
+    & > img,
+    &.gallery-wrapper .hover-content img {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        z-index: 0;
+        -webkit-transition: all 2s ease;
+        -moz-transition: all 2s ease;
+        -o-transition: all 2s ease;
+        -ms-transition: all 2s ease;
+        transition: all 2s ease;
+        -webkit-filter: blur(0);
+        -moz-filter: blur(0);
+        -o-filter: blur(0);
+        -ms-filter: blur(0);
+        -ms-filter: blur(0);
+        filter: blur(0);
+        //filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='0');
+    }
+    & > img {
+        -webkit-transform: scale(1.33);
+        -webkit-transform-origin: 50% 50%;
+        -moz-transform: scale(1.33);
+        -moz-transform-origin: 50% 50%;
+        transform: scale(1.33);
+        -transform-origin: 50% 50%;
+        -webkit-filter: blur(5px);
+        -moz-filter: blur(5px);
+        -o-filter: blur(5px);
+        -ms-filter: blur(5px);
+        filter: blur(5px);
+        //filter: progid: DXImageTransform.Microsoft.Blur(PixelRadius='5');
+    }
+    &.live-feeds-wrapper .live-feed {
+        margin: 0 0 24px;
+        overflow: hidden;
+    }
+    &.live-feeds-wrapper .right-content p {
+        @include font-size(18);
+        @include line-height(22);
+        color: $live-feed-text;
+        margin: 0 0 8px;
+        @include first-font-family;
+    }
+    &.live-feeds-wrapper .right-content p a {
+        color: $second-color;
+        @include second-font-family;
+        max-height: 48px;
+        display: block;
+    }
+    &.live-feeds-wrapper .right-content .time,
+    &.live-feeds-wrapper .right-content .autor {
+        display: inline-block;
+        vertical-align: top;
+        @include font-size(14);
+        @include line-height(14);
+        color: #384a8f;
+        @include second-font-family;
+        padding: 0 9px;
+    }
+    &.live-feeds-wrapper .right-content .time {
+        padding-left: 0;
+    }
+    &.live-feeds-wrapper .right-content .autor {
+        border-left: 2px solid #384a8f;
+    }
+    &.events-wrapper .event {
+        padding: 0;
+        margin: 0 0 45px;
+        text-align: center;
+    }
+    .event .date {
+        @include font-size(18);
+        @include line-height(22);
+        color: $event-date;
+    }
+    &.events-wrapper .right-content p,
+    &.events-wrapper .right-content a {
+        margin: 10px 0 0;
+        @include first-font-family;
+        @include font-size(24);
+        @include line-height(29);
+        color: $event-title;
+    }
+    &.news-wrapper .right-content {
+        width: 100%;
+        float: none;
+        padding: 0;
+    }
+    &.news-wrapper .right-content p {
+        @include font-size(24);
+        @include line-height(29);
+        color: $new-feed-paragraph;
+        margin: 0 0 8px;
+        @include first-font-family;
+    }
+    .news {
+        margin-bottom: 40px;
+    }
+    .news .right-content p a {
+        color: $second-color;
+    }
+    .news .right-content .autor,
+    .news .right-content .date {
+        color: #545454;
+        display: inline-block;
+        vertical-align: top;
+        @include font-size(18);
+        @include line-height(18);
+        @include first-font-family;
+        padding: 0 14px;
+    }
+    .news .right-content .autor {
+        padding-left: 0;
+    }
+    .news .right-content .date {
+        border-left: 2px solid #545454;
+    }
+}
+.main .col-item .hover-content {
+    @include opacity(1);
+    @include transition();
+}
+.main .col-item h4,
+.main .col-item.news-wrapper h4,
+.main .col-item.live-feeds-wrapper h4,
+.main .col-item.athletics-wrapper h4,
+.main .col-item.gallery-wrapper h4 {
+    height: auto;
+    top: 55px;
+    left: 70px;
+    -webkit-transform: translateY(0%);
+    -ms-transform: translateY(0%);
+    transform: translateY(0%);
+    text-align: left;
+    padding: 0;
+    background: transparent;
+}
+  
+
+#header,
+#slider {
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
+}
+@keyframes linear {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 200px 0;
+    }
+}
+@keyframes repeating {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 0 85px;
+    }
+}
+.main .col-item .see-more {
+    padding: 1px;
+}
+.main .col-item .see-more span {
+    display: block;
+    position: relative;
+    z-index: 2;
+    background: $see-all-btn-bg;
+    padding: 0 45px;
+    height: 50px;
+    line-height: 50px;
+}
+.main .col-item .see-more:hover:before {
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+    //transform: scale( 1.02, 1.08 );
+    position: absolute;
+    background: #d98a00;
+    background: linear-gradient( 90deg, #fafafa, #fafafa, #d98a00, #fafafa, #fafafa);
+    background-position: 55px 0;
+    top: 0;
+    animation: linear 1s infinite linear;
+    left: 0;
+    z-index: -1;
+    background: repeating-linear-gradient( -45deg, #fafafa, #fafafa 30px, #d98a00 30px, #d98a00 60px) fixed;
+    animation: repeating 1s infinite linear;
+}
+.first-col { float: left; width: 46.5%; }
+.second-col { float: left; width: 22.5%; }
+.main .col-item.events-wrapper { float: left; width: 31%; height: 914px; }
+.main .col-item.athletics-wrapper h4 { opacity: 0; }
+.main .col-item.athletics-wrapper .hover-content {
+    padding: 0; position: absolute; width: 100%;
+     @extend %vertical-align;
+    text-align: center;
+}
+.main .col-item.athletics-wrapper .hover-content .view-more {
+    @include font-size(30);
+        @include line-height(35);
+    color: $second-color;
+    padding-right: 33px;
+    
+    position: relative;
+}
+.main .col-item.athletics-wrapper .hover-content .view-more:after {
+    content: '';
+    width: 26px;
+    height: 35px;
+    background: url('link-icon.png') no-repeat right center;
+    position: absolute;
+    right: 0; top: 0;
+    background-size: 100% auto;
+}
+.main .col-item.athletics-wrapper .hover-content .view-more:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}

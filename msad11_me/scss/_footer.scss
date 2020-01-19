@@ -1,0 +1,125 @@
+/*************************
+*
+*  FOOTER
+*
+*************************/
+
+#footer {
+    background: $footer-bg;
+    
+}
+#footer > .container {
+    position: relative;
+    padding: $footer-padding;
+    width: 100%;
+    max-width: 1587px;
+    margin: 0 auto;
+}
+#footer .footer-col {
+    width: 25%;
+    float: left;
+    padding-right: 15px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+}
+//#footer .footer-col:first-child {
+//    width: 32%;
+//}
+#footer .footer-col:last-child,
+#footer .footer-col.last {
+    width: 25%;
+    text-align: left;
+    float: right;
+    padding-right: 0;
+    font-size: 0;
+    margin-top: 5vh;
+}
+
+
+
+#footer .footer-col ul {
+    margin: 0;
+}
+#footer .footer-col p,
+#footer .footer-col li,
+#footer .footer-col li a,
+#footer .footer-col h5,
+#footer > .container.copyright p {
+    @include font-size(21);
+    @include line-height(41);
+    color: #FFF;
+    text-transform: uppercase;
+    @include second-font-family;
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+#footer .footer-col h5 {
+    margin-bottom: 5px;
+    font-size: 25px;
+}
+ #footer .app-store,
+ #footer .google-play {
+     width: 100%;
+     max-width: 250px;
+     height: 75px;
+     display: inline;
+     margin: 0 0 19px;
+     background: url('apple.png') no-repeat right top;
+     background-size: 100% auto;
+     text-indent: -9999px;
+     text-align: left;
+     vertical-align: top;
+     margin-left: 18px;
+ }
+ #footer .google-play {
+     background: url('google.png') no-repeat right top;
+     margin-bottom: 0;
+     background-size: 100% auto;
+ }
+
+
+#footer > .container.copyright {
+    padding: 20px 0;
+    text-align: center;
+    background: #d94f00;
+    max-width: 100%;
+    p {
+        @include second-font-family;
+        @include line-height(25);
+        margin-bottom: 0;
+        a {
+            color: #FFF;
+        }
+    }
+}
+@media only screen and (max-width: 1920px) and (min-width: 1001px) {
+    #footer .footer-col p,
+    #footer .footer-col li,
+    #footer .footer-col li a,
+    #footer .footer-col h5,
+    #footer > .container.copyright p {
+        font-size: get-vw(21px);
+        line-height: get-vw(41px);
+    }
+    #footer .footer-col h5 {
+        font-size: get-vw(25px);
+    }
+    #footer > .container.copyright p {
+        line-height: get-vw(25px);
+    }
+    #footer .app-store,
+    #footer .google-play {
+        max-width: get-vw(250px);
+        height: get-vw(75px);
+        margin-bottom: get-vw(19px);
+    }
+    #footer .fb img,
+    #footer .tw img {
+        width: get-vw(75px);
+        height: auto;
+    }
+
+      
+}

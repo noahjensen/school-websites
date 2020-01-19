@@ -1,0 +1,76 @@
+// ===== Variables ========================================================== //
+
+// Colors 
+
+//Website color and background
+$first-color:				  #151515;   //very-dark-gray
+$second-color:                #fe0000;   //dark-red
+$third-color:				  #cfd3ec;   //light-blue
+$fourth-color:                #a1a1a1;   //gray
+$fifth-color:                 #646464;   //gray02
+$sixth-color:                 #8d8d8d;   //gray03
+
+$white:                       #FFFFFF;   //white
+$black:                       #000000;   //black
+$third-bg:                    #ffffff;   //light-purple
+$fourth-bg:                   #fe0000;   //red
+$fifth-bg:                    #393939;   //dark-gray
+
+$leftSliderColor:             #f2f2f2;
+$breadcrumbBg:                #f5f5f5;
+
+
+
+//Elements color and background
+$text-color:                        $first-color;
+$see-all-btn-bg:                    $fourth-bg; 
+$see-all-news-btn-bg:               $fourth-bg;  
+$see-all-events-btn-bg:             $fourth-bg;  
+$see-all-live-feeds-btn-bg:         $fourth-bg;  
+
+$see-all-btn-color:                 $white; 
+$see-all-news-btn-color:            $white;  
+$see-all-events-btn-color:          $white;  
+$see-all-live-feeds-btn-color:      $white;  
+
+$events-wrapper-bg:                 $third-bg;
+$footer-title-color:                #fe0000;
+$live-feed-time-color:              $fourth-color;
+
+$events-title-color:                $second-color;
+$news-title-color:                  $second-color;
+$live-feed-title-color:             $second-color;
+
+$events-title-bg:                   url('calendar-icon.png') no-repeat center top;
+$news-title-bg:                     url('news-icon.png') no-repeat center top;
+$live-feed-title-bg:                url('live-feed-icon.png') no-repeat center top;
+$athletics-title-bg:                url('athletics-logo.png') no-repeat center top;
+$gallery-title-bg:                url('gallery-icon.png') no-repeat center 10px;
+
+$read-more-new-bg:                  $first-color;
+$read-more-new-color:               $white;
+$news-pager-active:                 $second-color;
+$news-pager:                        $third-color;        
+
+$live-feed-text:                    $fifth-color;
+$live-feed-h3:                      $second-color;
+$event-date:                        #545454;
+$event-title:                       $second-color;
+$new-feed-paragraph:                $second-color;
+$new-feed-h3:                       $second-color;
+
+$header-bg:                         $white;
+$footer-bg:                         #000000;
+
+//Some padding and margin
+
+$colspadding:                       0;
+$footer-padding:                    40px 0 30px;
+
+
+$leftMarginRightContent:            95px;          
+$avatarWidth:                       68px;
+
+$leftSlider:                        0;
+
+ 

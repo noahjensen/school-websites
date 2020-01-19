@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="no-js <%= current_organization.organization_alias.parameterize%>" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% if params[:org] == "district" %>
+        <title>Pleasant Valley School District</title>
+     <% elsif params[:org] == "camarillo-heights" %>
+         <title>Camarillo Heights STEM Academy</title>
+
+      <% elsif params[:org] == "dos-caminos" %>
+          <title>Dos Caminos Elementary School</title>
+
+       <% elsif params[:org] == "la-mariposa" %>
+           <title>La Mariposa School</title>
+
+        <% elsif params[:org] == "las-colinas" %>
+            <title>Las Colinas Schools</title>
+
+         <% elsif params[:org] == "las-posas" %>
+             <title>Las Posas Elementary </title>
+
+          <% elsif params[:org] == "lpssa" %>
+        <title>Los Primeros School of Science and Arts</title>
+
+           <% elsif params[:org] == "monte-vista" %>
+               <title>Monte Vista Middle School</title>
+
+            <% elsif params[:org] == "pvsea" %>
+                <title>Pleasant Valley School of Engineering and Arts</title>
+
+             <% elsif params[:org] == "rancho-rosal" %>
+                 <title>Rancho Rosal Elementary School</title>
+
+              <% elsif params[:org] == "srtms" %>
+                  <title>Santa Rosa Technology Magnet School</title>
+
+               <% elsif params[:org] == "tierra-linda" %>
+                   <title>Tierra Linda Elementary School</title>
+
+
+
+     <% else %>
+         <title>Pleasant Valley School District</title>
+
+     <% end %>
+    <%= include_gon %>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Martel" rel="stylesheet">
+    <script src="https://use.typekit.net/kre5hze.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+    <% if params[:org] == "district" %>
+    <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-district.ico" %>
+
+    <% elsif params[:org] == "camarillo-heights" %>
+     <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-camarillo-heights.ico" %>
+
+    <% elsif params[:org] == "dos-caminos" %>
+       <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-dos-caminos.ico" %>
+
+    <% elsif params[:org] == "la-mariposa" %>
+        <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-la-mariposa.ico" %>
+
+    <% elsif params[:org] == "las-colinas" %>
+         <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-las-colinas.ico" %>
+
+     <% elsif params[:org] == "las-posas" %>
+          <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-las-posas.ico" %>
+
+      <% elsif params[:org] == "lpssa" %>
+           <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-lpssa.ico" %>
+
+       <% elsif params[:org] == "monte-vista" %>
+            <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-monte-vista.ico" %>
+
+        <% elsif params[:org] == "pvsea" %>
+             <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-pvsea.ico" %>
+
+         <% elsif params[:org] == "rancho-rosal" %>
+              <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-rancho-rosal.ico" %>
+
+          <% elsif params[:org] == "srtms" %>
+               <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-srtms.ico" %>
+
+           <% elsif params[:org] == "tierra-linda" %>
+                <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-tierra-linda.ico" %>
+
+
+
+    <% else %>
+     <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-district.ico" %>
+
+    <% end %>
+
+        <%= javascript_include_tag "apptegy_cms/themes/pleasantvalleyca/application" %>
+          <%= stylesheet_link_tag    "apptegy_cms/themes/pleasantvalleyca/application", :media => "all"  %>
+
+    <script src="js/modernizr.custom.js"></script>
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <!--[if (gte IE 6)&(lte IE 8)]>
+      <script src="http://s3.amazonaws.com/nwapi/nwmatcher/nwmatcher-1.2.4-min.js"></script>
+      <script type="text/javascript" src="js/selectivizr-min.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+      <script src="http://ie7-js.googlecode.com/svn/version/2.1(beta4)/IE8.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="cbp-spmenu-push sub <%= current_organization.organization_alias.parameterize%>">
+
+<%=  page_header %>
+
+<!-- ======================== BREADCRUMB ======================== -->
+    <div class="breadcrumb">
+        <ol>
+          <li><a href="/"><%= current_pages.home_page.first.name %></a></li>
+          <li class="active"><%= current_page.try(:name) %></li>
+        </ol>
+    </div>
+
+<!-- ======================== MAIN CONTENT ======================== -->
+<%= cms_slider_menu %>
+    <div class="main" role="main">
+        <div class="container clearfix">
+                       <div class="left-sidebar">
+                                <%= yield :left_container %>
+                       </div>
+            <div class="right-content">
+                                <%= yield :main_container %>
+                         </div>
+        </div>
+    </div>
+<!-- ======================== FOOTER ======================== -->
+<%= page_footer %>
+
+            <!-- ======================== JAVASCRIPTS ======================== -->
+
+ <script>
+        $(document).ready(function() {
+
+            if($('.group1').is(':visible')) {
+                $(".group1").colorbox({
+                    rel: 'group1'
+                });
+            }
+
+        });
+
+    </script>
+
+
+
+
+</body>
+
+</html>

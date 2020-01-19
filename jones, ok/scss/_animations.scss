@@ -1,0 +1,108 @@
+/**
+ * Main Content
+ */
+
+.js .homepage {
+	#slider .container {
+		/*top: 50%;
+    @include transition;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);*/
+	}
+	#slider .container {
+		height: 0;
+		width: 50%;
+		overflow: hidden;
+		min-height: 0;
+		top: 50%;
+		bottom: 50%;
+		@include transition;
+	}
+	#slider.active .container {
+		top: 35px;
+		bottom: 25px;
+	}
+	.col-item > * {
+		opacity: 0;
+		&.active {
+			opacity: 1;
+			@include transition;
+		}
+	}
+	.first-logo {
+		top: 220%;
+		@include opacity(0);
+		@include transition;
+		&.active {
+			top: 50%;
+			@include opacity(1);
+			@include transition;
+			-webkit-transition-duration: 2s;
+			-moz-transition-duration: 2s;
+			-o-transition-duration: 2s;
+			transition-duration: 2s;
+		}
+	}
+	#change_language_form {
+		right: -200px;
+		@include transition;
+		&.active {
+			right: 110px;
+			@include transition;
+			-webkit-transition-duration: 2s;
+			-moz-transition-duration: 2s;
+			-o-transition-duration: 2s;
+			transition-duration: 2s;
+		}
+	}
+	#left-nav .menu-btn {
+		left: -200px;
+		&.active {
+			left: 40px;
+			@include transition;
+			-webkit-transition-duration: 2s;
+			-moz-transition-duration: 2s;
+			-o-transition-duration: 2s;
+			transition-duration: 2s;
+		}
+	}
+	#right-nav .menu-btn {
+		left: -200px;
+		&.active {
+			left: 225px;
+			@include transition;
+			-webkit-transition-duration: 2s;
+			-moz-transition-duration: 2s;
+			-o-transition-duration: 2s;
+			transition-duration: 2s;
+		}
+	}
+	#slider .search-icon {
+		right: -400px;
+		&.active {
+			right: 30px;
+			@include transition;
+			-webkit-transition-duration: 2s;
+			-moz-transition-duration: 2s;
+			-o-transition-duration: 2s;
+			transition-duration: 2s;
+		}
+	}
+}
+.main .col-item.events-wrapper .event:hover {
+	transform: scale(1.1);
+}
+.homepage #slider.active {
+	overflow: visible;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+	.js .homepage #slider.active .container {
+		top: 0;
+		bottom: auto;
+	}
+	
+}

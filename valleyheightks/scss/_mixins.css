@@ -1,0 +1,7 @@
+/* line 20, C:/xampp/htdocs/Jeston/FloodWood/scss/_mixins.scss */
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*# sourceMappingURL=_mixins.css.map */

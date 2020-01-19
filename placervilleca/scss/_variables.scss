@@ -1,0 +1,133 @@
+// ===== Variables ========================================================== //
+//Website color and background
+$white: #FFFFFF; //white
+$black: #000000; //black
+$breadcrumbBg: #f5f5f5;
+$breadcrumbColor: #111111;
+//Elements color and background
+$page-bg: #FFF;
+$text-color: #111111;
+$links-color: #047e3b;
+$logo-color: #fff;
+$menu-txt-color: #fff;
+$menu-btn-txt-color: #fff;
+$menu-btn-bg: #047e3b;
+//$menu-wrap-bg: rgba(0,0,0,0.9);
+$right-menu-wrap-bg: rgba(0, 0, 0, 0.9);
+$right-submenu-color: $black;
+$submenu-bg: #464646;
+$pager-slider: #FFF;
+$SliderBgColor: transparent;
+$leftSlider: 0;
+$separator-bg: #FFF;
+$left-sidebar: #047e3b;
+$see-all-btn-bg: transparent;
+$see-all-news-btn-bg: transparent;
+$see-all-events-btn-bg: transparent;
+$see-all-live-feeds-btn-bg: transparent;
+$see-all-btn-color: #fff;
+$see-all-news-btn-color: #fff;
+$see-all-events-btn-color: #fff;
+$see-all-live-feeds-btn-color: #fff;
+$events-wrapper-bg: #FFF;
+$news-wrapper-bg: #fff;
+$footer-title-color: #fff;
+$live-feed-time-color: #FFF;
+$events-title-color: #FFF;
+$news-title-color: #FFF;
+$live-feed-title-color: #FFF;
+$events-title-bg: transparent;
+$news-title-bg: transparent;
+$live-feed-title-bg: transparent;
+$read-more-new-bg: #047e3b;
+$read-more-new-color: #fff;
+$news-pager-active: #330000;
+$news-pager: #047e3b;
+$live-feed-text: #FFF;
+$live-feed-h3: #FFF;
+$event-date: #FFF;
+$event-title: #FFF;
+$new-feed-paragraph: #FFF;
+$new-feed-h3: #FFF;
+$header-bg: $black;
+$footer-bg: #111111;
+$footer-text: #fff;
+//Some padding and margin
+$colspadding : 140px 50px 50px 63px;
+$footer-padding : 50px 0 25px;
+$avatarWidth : 82px;
+$subpage-one-col-width : 80%;
+$subpage-sidebar-width : 30%;
+$subpage-column-two : 65%;
+$subpage-cols-margin : 50px;
+
+
+
+//District Colors- Alias District
+$pusd-color1: #2D6E2D;
+$pusd-blue1: #204C8A;
+$pusd-darkblue: #0A2E69;
+$pusd-header-lefthover: $pusd-blue1;
+$pusd-menu-text: #204703;
+$pusd-menu-icon1: $pusd-darkblue;
+$pusd-menu-icon2: $pusd-darkblue;
+$pusd-submenu-bg: #185B18;
+$pusd-firstlevelhover: #041D45;
+$pusd-news: #0D370D;
+$pusd-events: #041D45;
+$pusd-live-feed: #0D370D;
+$pusd-sidebar: #264E8F;
+$pusd-subpage-links: #2D6E2D;
+$pusd-slider: $pusd-darkblue;
+
+//Sierra Colors- Alias Sierra
+$sierra-color1: #2D6E2D;
+$sierra-green1: #204703;
+$sierra-bright-green: #33C864;
+$sierra-yellow: #E6EE4A;
+$sierra-header-lefthover: $sierra-bright-green;
+$sierra-menu-text: $sierra-green1;
+$sierra-menu-icon1: $sierra-green1;
+$sierra-menu-icon2: $sierra-bright-green;
+$sierra-submenu-bg: #185B18;
+$sierra-firstlevelhover: $sierra-bright-green;
+$sierra-news: $sierra-green1;
+$sierra-events: #288736;
+$sierra-live-feed: $sierra-green1;
+$sierra-sidebar: $sierra-green1;
+$sierra-subpage-links: $sierra-bright-green;
+$sierra-slider: $sierra-yellow;
+
+//Edwin Markham Middle School Colors- Alias Emms
+$emms-red1: #D6063A;
+$emms-red2: #BD002F;
+$darkgray: #4F4F4F;
+$emms-header-lefthover: $emms-red1;
+$emms-menu-text: $darkgray;
+$emms-menu-icon1: $emms-red2;
+$emms-menu-icon2: $darkgray;
+$emms-submenu-bg: $emms-red2;
+$emms-firstlevelhover: $emms-red2;
+$emms-news: $emms-red2;
+$emms-events: $darkgray;
+$emms-live-feed: $emms-red2;
+$emms-sidebar: $emms-red2;
+$emms-subpage-links: $emms-red2;
+$emms-slider: $emms-red1;
+
+//Lousiana Schnell- Alias lses
+$lses-light-blue:#497CC3;
+$lses-dark-blue:#204C8A;
+$lses-yellow: #E6EE4A;
+$lses-header-lefthover: $lses-yellow;
+$lses-menu-text: $black;
+$lses-menu-icon1: $lses-dark-blue;
+$lses-menu-icon2: $lses-light-blue;
+$lses-submenu-bg: $lses-light-blue;
+$lses-firstlevelhover: $white;
+$lses-news: $lses-dark-blue;
+$lses-events: $lses-light-blue;
+$lses-live-feed: $lses-dark-blue;
+$lses-sidebar:  $lses-dark-blue;
+$lses-subpage-links: $lses-light-blue;
+$lses-slider: $lses-yellow;

@@ -1,0 +1,602 @@
+/* ===== Header ========================================================== */
+
+html #header {
+	max-width: 100%;
+	
+	.container {
+		max-width: 100%;
+		@include responsive-property("padding-right",58,10px,58px);
+		@include responsive-property("padding-left",35,10px,50px);
+	}
+}
+html #slider {
+	max-width: 100%;
+}
+#header {
+	padding: 0;
+	@include responsive-property("min-height",$header-height,50px,$header-height + 40px);
+	@include responsive-property("line-height",$header-height,50px,$header-height + 40px);	
+	background: $header-bg;
+	position: fixed;
+	z-index: 2;
+	top: 0;
+	width: 100%;
+	-webkit-box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.71);
+	-moz-box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.71);
+	box-shadow: 1px 1px 21px 0px rgba(0, 0, 0, 0.71);
+	
+	.logo {
+		position: relative;
+		float: left;
+		text-align: left;
+		margin: 0;
+		z-index: 22;
+		text-decoration: none;
+		display: block;
+		font-size: 0;
+		h1 {
+			display: inline-block;
+			vertical-align: middle;
+			text-align: left;
+			color: $logo-color;
+			@include responsive-property("font-size",$logo-title-font-size,17px,$logo-title-font-size + 10px);
+			@include responsive-property("line-height",$logo-title-font-size - 7,10px,$logo-title-font-size + 3px);
+			margin: 0;
+			@include logo-title-font;
+			span {
+				@include responsive-property("font-size",$logo-subtitle-font-size,17px,$logo-subtitle-font-size + 10px);
+			   @include responsive-property("line-height",$logo-subtitle-font-size - 7,10px,$logo-subtitle-font-size + 3px);
+				@include responsive-property("padding-left",10,5px,10px);
+				display: block;
+				color: $logo-subtitle-color;
+				margin-top: 0px;
+				@include logo-subtitle-font;
+				
+				.dot {
+					display: inline-block;
+					vertical-align: middle;
+					width: 10px;
+					height: 9px;
+					background: $logo-subtitle-color;
+					margin: 0 6px;
+					@include border-radius (50%);
+				}
+			}
+		}
+		img {
+			display: inline-block;
+			vertical-align: middle;
+			z-index: 2;
+			@include responsive-property("margin-right",$margin-between-logo-and-title,7px,$margin-between-logo-and-title + 10px);	
+			position: relative;
+			height: auto;
+			@include responsive-property("height",$header-height - 20,50px,$header-height - 20px);
+			width: auto;
+		}
+		.image {
+			position: relative;
+			@include responsive-property("margin-right",$margin-between-logo-and-title,7px,$margin-between-logo-and-title + 10px);	
+			display: inline-block;
+			vertical-align: middle;
+			img {
+				@include responsive-property("top",15,0px, 15px);	
+				@include responsive-property("max-height",$header-height,50px,$header-height + 50px);
+				height: auto;
+				margin: 0;
+				position: relative;
+				overflow: hidden;
+			}
+			&:before {
+				content: '';
+				position: absolute;
+				@include responsive-property("bottom",-40,0px,-40px);	
+				@include responsive-property("left",-30,0px,-30px);	
+				@include responsive-property("right",-30,0px,-30px);	
+				@include responsive-property("height",$header-height + 60, 50px, $header-height + 90px);
+				background: #FFF;
+				@include border-radius(50%);
+				z-index: -1;
+			}
+		}
+	}
+}
+.homepage #header {
+	z-index: 2;
+}
+
+// Sticky Nav
+
+#header,
+#header.sticky,
+#header #left-nav,
+#header #right-nav,
+#header .search-icon,
+#header .menu-wrap,
+#header.sticky:after,
+#header #change_language_form .select,
+#header .search-icon:before,
+#header.sticky+* {
+    -webkit-transition: all 2s linear;
+    -moz-transition: all 2s linear;
+    -o-transition: all 2s linear;
+    transition: all 2s linear;
+	-webkit-transition: line-height .05s linear;
+    -moz-transition: line-height .05s linear;
+    -o-transition: line-height .05s linear;
+	transition: line-height .05s linear;
+}
+#header .logo,
+#header .logo h1,
+#header .logo span,
+#header .logo img {
+	-webkit-transition: all 0.1s linear;
+    -moz-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+#header.sticky {
+	height: 74px;
+	line-height: 74px;
+	min-height: 74px;
+	.logo {
+		img {
+			height: 58px;
+		}
+		h1 {
+			font-size: 42px;
+			line-height: 35px;
+			span {
+				font-size: 17px;
+				line-height: 17px;
+			}
+		}
+	}
+	.nav, .search-icon, .search-icon:before, #change_language_form .select {
+		height: 74px;
+		line-height: 74px;
+	}
+}
+
+
+// menu buttons
+#header .nav {
+	float: right;
+	margin-right: 50px;
+	@include responsive-property("margin-right",50, 10px, 80px);
+	@include responsive-property("height",$header-height,50px,$header-height + 50px);
+	@include responsive-property("line-height",$header-height,50px,$header-height + 50px);
+	&#right-nav {
+		margin-right: 0;
+		position: relative;
+	}
+	.menu-btn {
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+#left-nav .menu-btn > span,
+#right-nav .menu-btn > span {
+	@include responsive-property("font-size",$menu-btns-font-size, 13px, $menu-btns-font-size + 10px);
+	@include responsive-property("line-height",51, 50px, 60px);
+	color: $menu-btn-txt-color;
+	text-align: center;
+	display: block;
+	cursor: pointer;
+   padding-left: 30px;
+	position: relative;
+	z-index: 25;
+	@include menu-btn-font;
+}
+#left-nav.active .menu-btn > span {
+	background-color: $menu-active-btn-bg-color;
+	color: $menu-active-btn-txt-color;
+}
+#right-nav .menu-btn > span {
+	background: $schools-menu-btn-bg-color;	
+	@include responsive-property("padding-left",25,10px,30px);
+	padding-right: 40px;
+	color: $schools-menu-btn-txt-color;
+	position: relative;
+	
+	&:after {
+		position: absolute;
+		top: 50%;
+		right: 8px;
+		content: '';
+		width: 28px;
+		height: 10px;
+		margin-top: -5px;
+		background: url('arrow.png') no-repeat right top;
+	}
+}
+#right-nav .menu-btn > span.active {
+	background: $schools-menu-active-btn-bg-color;
+	color: $schools-menu-active-btn-txt-color;
+	
+	&:after {
+		background: url("arrow.png") no-repeat right bottom;
+	}
+}
+//search icon
+#header .search-icon {
+	float: right;
+	@include responsive-property("font-size",$search-btn-font-size,13px,$search-btn-font-size + 10px);
+	color: $search-txt-color;
+	@include responsive-property("height",$header-height,50px,$header-height + 50px);
+	@include responsive-property("line-height",$header-height,50px,$header-height + 50px);
+	@include responsive-property("width",102,50px,110px);
+	@include responsive-property("margin-right",-58,10px,-58px);
+	@include responsive-property("margin-left",35,10px,40px);
+	margin-top: 0;
+	@include border-radius(0px);
+	position: relative;
+	z-index: 25;
+	background: $search-bg-color;
+	&:before {
+		position: absolute;
+		top: 0;
+		right: 0;
+		@include responsive-property("height",$header-height,50px,$header-height + 50px);
+		@include responsive-property("line-height",$header-height,50px,$header-height + 50px);
+		@include responsive-property("width",102,50px,110px);
+		text-align: center;
+		font-family: 'appticon';
+		font-size: 20px;
+		color: #fff;
+		content: "\e80c";
+	}
+	&.with-text {
+		width: auto;
+		padding: 0;
+		@include responsive-property("padding-right",60,10px,70px);
+		@include responsive-property("padding-left",35,30px,40px);
+		background-position: left center;
+		text-transform: uppercase;
+		@include responsive-property("margin-left",40,10px,50px);
+	}
+	&.no-icon {
+		background: transparent;
+		width: auto;
+		@include responsive-property("padding-right",60,10px,70px);
+		@include responsive-property("margin-left",40,10px,50px);
+	}
+}
+// Language dropdown
+#header #change_language_form {
+	float: right;
+	padding: 0 7px;
+	text-align: center;
+	position: relative;
+	z-index: 25;
+	cursor: pointer;
+	background: $language-btn-bg;
+	form {
+		margin: 0;
+		@include responsive-property("margin-left",40,10px,50px);
+	}
+	select {
+		@include responsive-property("height",$header-height,50px,$header-height + 50px);
+		@include responsive-property("line-height",$header-height,50px,$header-height + 50px);
+		background: transparent;
+		font-size: 22px;
+		color: $language-btn-color;
+		position: relative;
+		left: -4px;
+		text-transform: uppercase;
+		cursor: pointer;
+	}
+	.s-hidden {
+		position: absolute;
+		visibility: hidden;
+		padding-right: 10px;
+		width: 0px;
+		overflow: hidden;
+		height: 0px;
+	}
+	.select {
+		cursor: pointer;
+		display: block;
+		position: relative;
+		background-color: transparent;
+		margin: 0;
+		font-size: 0;
+		width: auto;
+		@include responsive-property("height",$header-height,50px,$header-height + 50px);
+		@include responsive-property("line-height",$header-height,50px,$header-height + 50px);
+		display: inline-block;
+		vertical-align: middle;
+	}
+	&:hover {
+		.styledSelect {
+			color: $language-btn-color
+		}
+	}
+	.styledSelect {
+		position: relative;
+		display: inline-block;
+		@include responsive-property("font-size",$language-btn-font-size, 13px, $language-btn-font-size + 10px);
+		padding-right: 25px;
+		text-transform: uppercase;
+		cursor: pointer;
+		color: $language-btn-color;
+		@include language-btn-font();
+	}
+	.styledSelect:after {
+		content: '';
+        display: inline-block;
+        margin-left: 5px;
+		position: relative;
+		bottom: 5px;
+		border-left: 5px solid transparent;
+		border-right: 5px solid transparent;
+		border-top: 5px solid #fff;
+	}
+	.styledSelect:active:after,
+	.styledSelect.active:after {
+        border-top: 0;
+        border-bottom: 5px solid #fff;
+	}
+	.options {
+		display: none;
+		position: absolute;
+		top: 100%;
+		right: -30px;
+		left: auto;
+		z-index: 999;
+		margin: 0 0;
+		padding: 20px 0;
+		list-style: none;
+		border: 0;
+		background: rgb(111,0,2);
+		background: -moz-linear-gradient(-45deg, rgba(111,0,2,1) 0%, rgba(200,0,0,1) 100%);
+		background: -webkit-linear-gradient(-45deg, rgba(111,0,2,1) 0%,rgba(200,0,0,1) 100%);
+		background: linear-gradient(135deg, rgba(111,0,2,1) 0%,rgba(200,0,0,1) 100%);
+		width: $language-dropdown-width;
+		overflow-x: hidden;
+		overflow-y: auto;
+	}
+	.options li {
+		display: block;
+		margin-top: 5px;
+		@include responsive-property("font-size",$language-options-font-size, 13px, $language-options-font-size + 10px);
+		@include responsive-property("line-height",$language-options-font-size + 4, 17px, $language-btn-font-size + 14px);		 
+		color: $language-options-color;
+		text-align: left;
+		padding: 5px 8px 5px 30px;
+		@include responsive-property("padding-left",30, 6px, 40px);	
+		border-left: 10px solid transparent;
+		text-decoration: none;
+		@include language-options-font;
+		&:first-child {
+			margin-top: 0;
+		}
+		&.selected {
+			border-color: #fff;
+		}
+        &:hover {
+            border-color: #fff;
+        }
+	}
+	
+	.options li[rel="0"] {
+		display: none;
+	}
+}
+.screen-reader {
+	position: absolute;
+	left:-10000px;
+	top:auto;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+/**
+ * Responsive
+ */
+
+@media only screen and (max-width: 1000px) {
+	#header:after {
+		left: -20px
+	}
+	#header:before {
+		bottom: -45px;
+		width: 190px;
+		height: 45px;
+	}
+	#header .nav {
+		margin-right: 0;
+	}
+	#right-nav .menu-btn > span {
+		padding-left: 20px;
+	}
+    #header #change_language_form {
+        padding-left: 30px;
+    }
+    #header #change_language_form .styledSelect:after {
+        bottom: 2px;
+    }
+	#header #change_language_form form {
+		margin: 0;
+	}
+	#header .search-icon.no-icon {
+		margin-left: 15px;
+		position: relative;
+		z-index: 499;
+	}
+	
+	#header #change_language_form .options li {
+		font-size: 15px;
+		line-height: 19px;
+	}
+	#header #change_language_form .options {
+		right: -10px;
+		width: 200px;
+	}
+}
+@media only screen and (max-width: 900px) {
+	html #header .container {
+		padding: 0;
+	}
+	#header:before {
+		display: none;
+	}
+	#header .nav .menu-btn {
+		display: block;
+	}
+	#header .search-icon {
+		width: 51px;
+		height: 51px;
+		line-height: 51px;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	#header .nav {
+		line-height: 51px;
+		height: 51px;
+	}
+	#header .logo {
+		float: none;
+		//width: 100%;
+		text-align: center;
+		padding: 0;
+		top: 0;
+		margin-bottom: 20px;
+		margin-top: 15px;
+		h1 {	
+			//font-size: 55px;
+			//line-height: 50px;
+			@include responsive-property("font-size",$logo-title-font-size + 30,25px,$logo-title-font-size + 25px);
+			@include responsive-property("line-height",$logo-title-font-size + 18,10px,$logo-title-font-size + 18px);
+			padding-top: 5px;
+			span {
+				@include responsive-property("font-size",$logo-subtitle-font-size + 15,17px,$logo-subtitle-font-size + 15px);
+			    @include responsive-property("line-height",$logo-subtitle-font-size,10px,$logo-subtitle-font-size + 8px);
+				@include responsive-property("padding-left",5,5px,5px);
+			}
+		}
+		img,
+		.image img {
+			position: relative;
+			//height: 70px;
+			@include responsive-property("height",$header-height + 30,50px,$header-height + 30);
+			//left: 0;
+			margin: 0 10px 0 0;
+		}
+	}
+	#header.sticky {
+		
+	}
+	#header #left-nav {
+		float: left;
+	}
+	#left-nav {
+		margin-right: 0;
+		margin-left: 15px;
+	}
+	#left-nav .menu-btn > span {
+		padding-left: 0;
+	}
+	#header #change_language_form .select,
+	#header #change_language_form select,
+	#header #change_language_form {
+		height: 51px;
+		line-height: 51px;
+	}
+	/*#header #change_language_form .options {
+		top: 51px;
+	}*/
+	
+	#header.sticky {
+		height: 74px;
+		line-height: 74px;
+		min-height: 74px;
+		.logo {
+			margin: 0;
+			img {
+				height: 58px;
+			}
+			h1 {
+				@include responsive-property("font-size",$logo-title-font-size + 30,25px,$logo-title-font-size + 25px);
+				@include responsive-property("line-height",$logo-title-font-size + 18,10px,$logo-title-font-size + 18px);
+				span {
+					@include responsive-property("font-size",$logo-subtitle-font-size + 15,17px,$logo-subtitle-font-size + 15px);
+					@include responsive-property("line-height",$logo-subtitle-font-size,10px,$logo-subtitle-font-size + 8px);
+				}
+			}
+		}
+		.nav, .search-icon, .search-icon:before, #change_language_form .select {
+			height: 74px;
+			line-height: 74px;
+		}
+		.nav{
+			margin-top: -60px;
+		}
+		#change_language_form .select {
+			margin-top: -120px;
+		}
+		.search-icon {
+			margin-top: -70px;
+		}
+	}
+}
+@media only screen and (max-width: 600px) {
+	#header.sticky {
+		height: auto;
+		line-height: normal;
+		//min-height: 100px;
+		
+		.logo {
+			margin: 10px 0 5px;
+		}
+		.logo img, .logo .image img {
+			height: 50px;
+		}
+		.logo h1 span {
+			line-height: 10px;
+		}
+		.logo h1 {
+			line-height: 1.2;
+		}
+		.nav, .search-icon,
+		.search-icon:before,
+		#left-nav .menu-btn > span,
+		#change_language_form .select,
+		#change_language_form select,
+		#change_language_form {
+			height: 24px;
+			line-height: 24px;
+		}
+		.nav {
+			margin-top: 0px;
+		}
+		#change_language_form .select {
+			margin-top: 0px;
+			vertical-align: top;
+		}
+		.search-icon {
+			margin-top: 0px;
+			&:before {
+				font-size: 15px;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 480px) {
+	#left-nav .menu-btn > span,
+	#right-nav .menu-btn > span,
+	#header #change_language_form .styledSelect,
+	#header .search-icon.no-icon {
+		font-size: 14px;
+	}
+	#right-nav .menu-btn > span {
+		padding-left: 5px;
+	}
+	#header .search-icon.no-icon {
+		margin-left: 0;
+		padding-right: 10px;
+	}
+	#header .search-icon.with-text {
+		text-indent: -9999px;
+	}
+}

@@ -1,0 +1,443 @@
+/*************************
+*
+*  SUBPAGE
+*
+*************************/
+
+.container {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.main {
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.homepage .main {
+    max-width: 100%;
+}
+
+.container.subpage {
+    text-align: center;
+}
+
+.container.subpage > * {
+    text-align: left;
+}
+
+.breadcrumb {
+    width: 100%;
+    background: #333;
+    min-height: 47px;
+    margin: 0 auto;
+    padding: 20px 15px 20px 180px;
+}
+
+.breadcrumb ol {
+    padding: 0;
+    list-style: none;
+    left: 0;
+    position: relative;
+    margin: 0 auto;
+}
+
+.breadcrumb li {
+    display: inline-block;
+    @include font-size(16);
+    @include line-height(19);
+    @include first-font-family;
+    text-transform: none;
+    color: $breadcrumbColor;
+    padding-left: 41px;
+    position: relative;
+}
+
+.breadcrumb li:first-child {
+    padding: 0;
+    background: none;
+}
+
+.breadcrumb li a {
+    color: #FFF;
+    @include first-font-family;
+}
+
+.breadcrumb ol>li+li:before {
+    position: absolute;
+    top: 2px;
+    left: 13px;
+    width: 24px;
+    height: 18px;
+    color: $breadcrumbColor;
+    content: " //";
+    @include font-size(16);
+    @include line-height(19);
+}
+
+.breadcrumb + .main .container,
+.container.subpage,
+.main.main-content .container,
+.main .container {
+    background: $white;
+    max-width: 1100px;
+    padding: 20px 20px 40px;
+    text-align: center;
+}
+
+.main .docs-container {
+    text-align: left;
+}
+
+.homepage .main .container {
+    background: transparent;
+    max-width: 1920px;
+    padding: 0;
+    text-align: left;
+}
+
+.main .container > .right-content {
+    width: 921px;
+    min-height: 500px;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 10px;
+    & > .partial-container {
+        padding-top: 10px;
+    }
+}
+
+.main .container > .right-content p,
+.main .container.subpage p,
+.main.main-content .container p {
+    color: #333333;
+    margin-bottom: 10px;
+    @include font-size(20);
+    @include line-height(26);
+    word-wrap: break-word;
+}
+
+.main * {
+    word-wrap: break-word;
+}
+
+.live-feed-section .status {
+    @include line-height(30);
+}
+
+.main .container> .right-content p a,
+.main .container.subpage p a {
+    color: $text-color;
+}
+
+.left-sidebar {
+    display: inline-block;
+    width: 263px;
+    vertical-align: top;
+    margin-right: 55px;
+    text-align: left;
+}
+
+.main .container .left-sidebar + .right-content {
+    display: inline-block;
+    vertical-align: top;
+    width: 730px;
+}
+
+.left-sidebar .left-links {
+    margin: 0 0 53px;
+    padding-left: 27px;
+    padding-right: 10px;
+}
+
+.left-sidebar .left-links li {
+    @include font-size(16);
+    @include line-height(21);
+    padding: 5px 0;
+}
+
+.left-sidebar .left-links li:first-child {
+    padding-top: 0;
+}
+
+.left-sidebar .left-links li a {
+    color: $links-color;
+}
+
+.images-grid {
+    width: 735px;
+    max-width: 100%;
+    overflow: hidden;
+    font-size: 0;
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.images-grid a {
+    width: 50%;
+    padding: 0 10px 0 0;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 10px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.images-grid a img {
+    width: 100%;
+    height: auto;
+}
+
+.images-grid.photos-1 a {
+    width: 100%;
+}
+
+.images-grid.photos-3 a + a + a {
+    width: 100%;
+    clear: both;
+}
+
+img.image-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* Custom popup scroll */
+
+.scrollable {
+    position: relative;
+}
+
+.scrollable:focus {
+    outline: 0;
+}
+
+.scrollable .viewport {
+    position: relative;
+    overflow: hidden;
+}
+
+.scrollable .viewport .overview {
+    position: absolute;
+}
+
+.scrollable .scroll-bar {
+    display: none;
+}
+
+.scrollable .scroll-bar.vertical {
+    position: absolute;
+    right: 0;
+    height: 100%;
+}
+
+.scrollable .scroll-bar.horizontal {
+    position: relative;
+    width: 100%;
+}
+
+.scrollable .scroll-bar .thumb {
+    position: absolute;
+}
+
+.scrollable .scroll-bar.vertical .thumb {
+    width: 100%;
+    min-height: 10px;
+}
+
+.scrollable .scroll-bar.horizontal .thumb {
+    height: 100%;
+    min-width: 5px;
+    left: 0;
+}
+
+.not-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/*Default skin*/
+
+#slider p.scrollable.default-skin {
+    padding-right: 30px;
+    padding-bottom: 6px;
+    margin-right: 15px;
+}
+
+.scrollable.default-skin .scroll-bar.vertical {
+    width: 5px;
+    background-color: #a9bad8;
+}
+
+.scrollable.default-skin .scroll-bar.horizontal {
+    height: 11px;
+    background: #f7f7f7;
+}
+
+.scrollable.default-skin .scroll-bar .thumb {
+    background-color: #738bb7;
+    cursor: pointer;
+}
+
+.scrollable.default-skin .scroll-bar:hover .thumb {
+    background-color: #42629c;
+}
+
+
+/* General subpage elements */
+
+table {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border-spacing: 0;
+    border-collapse: collapse;
+    border: 1px solid #ddd;
+}
+
+table tr>th,
+table>tbody>tr>td {
+    padding: 8px;
+    line-height: 1.42857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    text-align: left;
+}
+
+table>thead>tr>th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #ddd;
+}
+
+table>thead:first-child>tr:first-child>th {
+    border-top: 0;
+}
+
+table>tbody>tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.right-content ul,
+.right-content ol,
+.subpage ul,
+.subpage ol {
+    margin-bottom: 15px;
+    list-style-position: inside;
+}
+
+.right-content ul li,
+.subpage ul li,
+table,
+ol li {
+    color: $text-color;
+    @include font-size(18);
+    @include line-height(30);
+    @include first-font-family;
+    margin-bottom: 20px;
+}
+
+.breadcrumb ol li {
+    margin-bottom: 0px;
+}
+
+.right-content > a,
+.subpage > a {
+    margin-bottom: 15px;
+    display: block;
+}
+
+.right-content ul li,
+.subpage ul li {
+    list-style-type: disc;
+}
+
+.right-content ol li,
+.subpage ol li {
+    list-style-type: decimal;
+}
+
+.right-content h1,
+.subpage h1 {
+    @include font-size(45);
+    @include line-height(49);
+    color: #333333;
+    @include second-font-family;
+    margin: 0 0 35px;
+    text-transform: uppercase;
+}
+
+.right-content h2,
+.subpage h2 {
+    @include font-size(40);
+    @include line-height(45);
+    color: #647084;
+    @include first-font-family;
+    margin: 0 0 35px;
+    text-transform: uppercase;
+}
+
+.right-content h3,
+.subpage h3 {
+    @include font-size(35);
+    @include line-height(40);
+    color: #647084;
+    @include first-font-family;
+    margin: 0 0 30px;
+    text-transform: uppercase;
+}
+
+.right-content h4,
+.subpage h4 {
+    @include font-size(30);
+    @include line-height(35);
+    color: #647084;
+    @include first-font-family;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+}
+
+.right-content h5,
+.subpage h5 {
+    @include font-size(25);
+    @include line-height(30);
+    color: #647084;
+    @include first-font-family;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+}
+
+.right-content h6,
+.subpage h6 {
+    @include font-size(20);
+    @include line-height(25);
+    color: #647084;
+    @include first-font-family;
+    margin: 0 0 15px;
+    text-transform: uppercase;
+}
+
+blockquote {
+    padding: 10px 20px;
+    margin: 0 0 20px;
+    @include font-size(30);
+    @include line-height(35);
+    border-left: 5px solid #647084;
+}
+
+
+/* Subpages styling */
+body:not(.homepage) {
+.bx-wrapper .bx-controls-direction {
+    display: none;
+    }
+}

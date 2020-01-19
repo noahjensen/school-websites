@@ -1,0 +1,53 @@
+<footer id="footer">
+    <div class="container clearfix">
+      <div class="footer-col">
+         <h5><%= current_organization.try(:name) %></h5>
+         <p><%= current_organization.try(:address) %>
+             <br><%= "#{current_organization.try(:city)}, #{current_organization.try(:state)[-2..-1]} #{current_organization.try(:zip)}" %>
+             <br><%= "Ph #{current_organization.try(:phone_number)}" %>
+             <br><%= "Fax #{current_organization.try(:fax_number)}" %></p>
+     </div>
+
+        <div class="footer-col quicklinks-col1">
+        <h5>Quicklinks</h5>
+        <ul class="footer-links">
+          <li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>  Live Feed </a></li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>> News </a> </li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>  Events </a></li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>  Athletics </a></li>
+</ul>
+
+  </div>
+<div class="footer-col quicklinks-col2">
+    <h5>&nbsp</h5>
+
+    <ul class="footer-links">
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>  Dining </a></li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>> Faculty & Staff </a> </li>
+<li> <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>> Documents  </a></li>
+</ul>
+</div>
+
+<div class="footer-col quicklinks-depted">
+    <h5>&nbsp;</h5>
+  <%= image_tag "apptegy_cms/themes/chattcoga/dept-ed-logo.png", alt: " "%>
+</div>
+
+        <div class="footer-col last">
+          <a href="https://itunes.apple.com/us/app/silex-r-i-school-district-mo/id1089257686?mt=8" class="app-store" target="_blank">Download on the App Store</a>
+         <br>
+
+         <a href="https://play.google.com/store/apps/details?id=com.apptegy.chattahoochee&hl=en" class="google-play" target="_blank">Get it on Google play</a> </div>
+
+            <% if current_organization.try(:facebook_link).present? %>
+            <a href="<%= current_organization.try(:facebook_link) %>" class="fb" target="_blank"><%= image_tag "apptegy_cms/themes/chattcoga/facebook-icon.png", alt: " "%></a>
+           <% end %>
+
+
+           <% if current_organization.try(:twitter_link).present? %>
+            <a href="<%= current_organization.try(:twitter_link) %>" class="tw" target="_blank"><%= image_tag "apptegy_cms/themes/chattcoga/twitter.png", alt: " "%></a>
+         <% end %>
+
+    </div>
+     <div class="container copyright">Copyright &copy; Chattahoochee County School District 2017. All rights reserved. Powered by <a href="http://apptegy.com/" target="_blank">apptegy</a>.</div>
+</footer>

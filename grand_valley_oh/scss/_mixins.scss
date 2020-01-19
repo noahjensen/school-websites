@@ -1,0 +1,120 @@
+//  SASS Mixins & Extend & Placeholder Selectors
+  
+// Clearfix
+// ----------------------------------
+
+
+.clearfix:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+    width: 0;
+    height: 0
+}
+
+
+@mixin hidden {
+  display: none;
+  visibility: hidden;
+}
+%hidden-text {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+ 
+ 
+
+// Center-align a block level element
+// ----------------------------------
+%center-block {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+%vertical-align {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+%horizontal-align {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+//*//////////////*/
+//*//// REMS ////*/
+//*//////////////*/
+
+@mixin font-size($fontPx){
+	font-size: 1px * $fontPx; 
+	font-size: 1rem * ($fontPx/10);
+}
+@mixin line-height($lhPx){
+	line-height: 1px * $lhPx; 
+	line-height: 1rem * ($lhPx/10);
+}
+// px too vw
+ @function get-vw($target) {
+     $vw-context: (1920*.01);
+     @return ($target/$vw-context) * 1vw;
+ }
+
+@mixin border-radius ($radius: 5px) {
+	-webkit-border-radius: $radius;
+	-moz-border-radius:    $radius;
+	border-radius:         $radius;
+
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+@mixin transition ($property: all, $duration: .5s) {
+    -webkit-transition: $property $duration ease-in-out;
+    -moz-transition: $property $duration ease-in-out;
+    -o-transition: $property $duration ease-in-out;
+    transition: $property $duration ease-in-out;
+}
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+
+//Generate vw/vh, min and max values
+/// @example scss - 50px font size (with 50px fallback), 
+///                 minumum of 35px and maximum (optional) of 150px,
+///  @include responsive-property("font-size",50, 35px, 150px); 
+///
+@mixin responsive-property($property, $CSSvalue, $min, $max: false) {	 
+	$CSSvalue2: get-vw($CSSvalue);
+	$responsive-unitless: $CSSvalue2 / ($CSSvalue2 - $CSSvalue2 + 1);
+	$dimension: if(unit($CSSvalue2)=='vh', 'height', 'width');
+	$min-breakpoint: $min / $responsive-unitless * 100;
+	@media (max-#{$dimension}: #{$min-breakpoint}) {
+		#{$property}: $min;
+	}
+	@if $max {
+		$max-breakpoint: $max / $responsive-unitless * 100;
+		@media (min-#{$dimension}: #{$max-breakpoint}) {
+			#{$property}: $max;
+		}
+	}
+	$fallback: $CSSvalue+px;
+	#{$property}: $fallback;
+	#{$property}: $CSSvalue2;
+}

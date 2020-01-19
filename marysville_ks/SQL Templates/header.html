@@ -1,0 +1,101 @@
+	<header id="header" class="clearfix">
+		<div class="container">
+			<a href="/" class="logo">
+				<%= image_tag "apptegy_cms/themes/marysville364ks/logo.svg", alt: "Marysville USD 364" %>
+				<h1><span>usd 364</span>arysville schools</h1>
+			</a>
+			<span class="search-icon"><span class="screen-reader">Search</span></span>
+			<%= render 'apptegy_cms/shared/change_language_unstyled' %>
+				<nav id="left-nav" class="nav" role="navigation">
+				  <div class="menu-btn"><span><i class="icon-menu" aria-hidden="true"></i> MENU</span></div>
+					<div class="menu-wrap">
+					  <ul class="static-links clearfix">
+						<li class="live-feed">
+						  <a href=<%=params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+							<span><i class="menu-icon icon-live-feed" aria-hidden="true"></i></span>
+							Live Feed
+						  </a>
+						</li>
+						<li class="news">
+						  <a href=<%=params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+							<span><i class="menu-icon icon-news" aria-hidden="true"></i></span>
+							NEWS
+						  </a>
+						</li>
+						<li class="events">
+						  <a href=<%=params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+							<span><i class="menu-icon icon-events" aria-hidden="true"></i></span>
+							EVENTS
+						  </a> </li>
+						<li class="dining">
+						  <a href=<%=params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>
+							<span><i class="menu-icon icon-dining" aria-hidden="true"></i></span>
+							Lunch Menu
+						  </a>
+						</li>
+						<li class="staff">
+						  <a href=<%=params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+							<span><i class="menu-icon icon-staff" aria-hidden="true"></i></span>
+							Directory
+						  </a>
+						</li>
+						<li class="documents">
+						  <a href=<%=params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+							<span><i class="menu-icon icon-documents" aria-hidden="true"></i></span>
+							DOCUMENTS
+						  </a>
+						</li>
+						<li class="athletics">
+						  <a href=<%=params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>
+							<span><i class="menu-icon icon-athletics" aria-hidden="true"></i></span>
+							Athletics
+						  </a>
+						</li>
+					  </ul>
+					  <div class="generated-links clearfix" data-columns>
+					   
+						   <% current_pages.roots.navigation_pages.each do |page| %>
+							   <ul>
+								<% if page.header? %>
+									<li><h5><%= page.name.upcase %></h5></li>
+								<% else %>
+									<li><h5><a href=<%= page.page_link? ? "#{page.url}" : "#{ '/o/'.concat(current_organization.organization_alias.parameterize).concat('/page') if params[:org] }/#{page.slug}" %> target=<%= '_blank' if page.page_link? %>><%= page.name %></a></h5></li>
+								<% end %>
+								<% if page.children.any? %>
+								<% page.children.order(:position).each do |subpage| %>
+								<% if subpage.children.any? %>
+									<li>
+										<% if subpage.header? %>
+										<span><%= subpage.name %></span>
+										<% else %>
+										<a href=<%= subpage.page_link? ? "#{subpage.url}" : "#{ '/o/'.concat(current_organization.organization_alias.parameterize).concat('/page') if params[:org] }/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> ><%= subpage.name %></a>
+										<% end %>
+
+										<ul>
+											<% subpage.children.order(:position).each do |subpage2| %>
+											<li>
+												<a href=<%= subpage2.page_link? ? "#{subpage2.url}" : "#{ '/o/'.concat(current_organization.organization_alias.parameterize).concat('/page') if params[:org] }/#{subpage2.slug}" %> target=<%= '_blank' if subpage2.page_link? %> ><%= subpage2.name %></a>
+											</li>
+											<% end %>
+										</ul>
+									</li>
+									<% else %>
+									<li>
+										<a href=<%= subpage.page_link? ? "#{subpage.url}" : "#{ '/o/'.concat(current_organization.organization_alias.parameterize).concat('/page') if params[:org] }/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> ><%= subpage.name %></a>
+									</li>
+								<% end %>
+								<% end %>
+								<% end %>
+							   </ul>
+						   <% end %>
+						   
+					  </div>
+					  <span class="menu-close"><span class="screen-reader">Close Menu</span></span>
+					</div>
+				  </div>
+				</nav>
+		</div>
+
+
+	</header>
+	<%= render 'apptegy_cms/shared/search' %>

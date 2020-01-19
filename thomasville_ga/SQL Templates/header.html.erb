@@ -1,0 +1,117 @@
+<header id="header" class="clearfix">
+  <div class="container">
+    <a class="logo" href="/">
+
+         <h1><%= image_tag "apptegy_cms/themes/thomasvillega/logo2.png", alt: "Thomasville City Schools District" %>  </h1>
+      </a>
+
+           <span class="search-icon"></span>
+
+           <%= render 'apptegy_cms/shared/change_language' %>
+
+           <nav id="right-nav" class="nav" role="navigation">
+                <div class="menu-btn"><span>Sites</span>
+                    <div class="menu-wrap">
+                        <ul>
+<% current_site.secondary_organizations.order(:position).each do |org| %>
+<li>
+<a href=<%= "/o/#{org.organization_alias.try(:parameterize)}" %>>
+<%= org.name %>
+</a>
+</li>
+<% end %>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <nav id="left-nav" class="nav" role="navigation">
+
+            <div class="menu-btn"><span>Menu</span></div>
+
+ <div class="menu-wrap">
+          <ul class="first-nav clearfix">
+
+        <li class="live-feed">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+                <span><%= image_tag 'apptegy_cms/themes/thomasvillega/menu/feed-icon.png' %></span>
+               Live Feed
+            </a>
+        </li>
+        <li class="news">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+                <span><%= image_tag 'apptegy_cms/themes/thomasvillega/menu/news-icon.png' %> </span>
+                News
+            </a>
+        </li>
+
+
+
+            <li class="events">
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+                  <span>  <%= image_tag 'apptegy_cms/themes/thomasvillega/menu/events.png' %> </span>
+                    Events
+                </a>
+            </li>
+
+
+ <li class="staff">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+              <span>  <%= image_tag 'apptegy_cms/themes/thomasvillega/menu/staff.png' %> </span>
+               Staff
+            </a>
+        </li>
+        <li class="documents">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                <span> <%= image_tag 'apptegy_cms/themes/thomasvillega/menu/documents.png' %> </span>
+                Documents
+            </a>
+        </li>
+<% if params[:org] == "hillsboro-high-school" %>
+         <li class="athletics">
+            <a href='<%= "/o/#{params[:org]}/athletics"%>'>
+                <span> <%= image_tag 'apptegy_cms/themes/thomasvillega/menu/athletics.png' %> </span>
+                Athletics
+            </a>
+        </li>
+<% end %>
+
+<% if params[:org] == "hillsboro-junior-high" %>
+         <li class="athletics">
+            <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>
+                <span> <%= image_tag 'apptegy_cms/themes/thomasvillega/menu/athletics.png' %> </span>
+                Acitvities
+            </a>
+        </li>
+<% end %>
+
+
+          </ul>
+          <div class="second-nav clearfix">
+               <% current_pages.roots.navigation_pages.each do |page| %>
+               <ul>
+               <% if page.header? %>
+               <h5><%= page.name.upcase %></h5>
+               <% else %>
+               <% end %>
+               <% if page.children.any? %>
+               <% page.children.order(:position).each do |subpage| %>
+               <li>
+               <a href=<%=subpage.page_link? ? "#{subpage.url}" : "/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+               <%= subpage.name %>
+               </a>
+               </li>
+               <% end %>
+               <% end %>
+               </ul>
+               <% end %>
+         </div>
+        <span class="menu-close"></span>
+                </div>
+            </nav>
+
+
+</div>
+    </header>
+
+<%= render 'apptegy_cms/shared/search' %>

@@ -1,0 +1,388 @@
+/* ===== Header ========================================================== */
+
+#header {
+    padding: 0;
+    min-height: 119px;
+    background: $header-bg;
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    @include first-font-family;
+    .logo {
+        width: 308px;
+        position: relative;
+        float: right;
+        margin: 13px 0 0 0;
+        a {
+            color: $white;
+            text-decoration: none;
+        }
+    }
+}
+
+/* ===== Menu ========================================================== */
+
+#left-nav {
+    float: left;
+    margin-right: 0;
+    margin-top: 0;
+    position: relative;
+}
+#right-nav {
+    float: right;
+    margin-right: 0;
+    margin-top: 65px;
+}
+#left-nav .menu-btn {
+    background-color: $second-color;
+    //width: 365px;
+    position: relative;
+    height: 119px;
+    overflow: hidden;
+    @include transition();
+}
+
+#left-nav .first-menu,
+#left-nav .schools-menu  {    
+    opacity: 0;
+}
+#left-nav .menu-btn > span:first-child,
+#right-nav .menu-btn > span {
+    @include font-size(30);
+    @include line-height(119);
+    color: $third-color;
+    text-transform: uppercase;
+    padding-right: 24px;
+    padding-left: 70px;
+    background: transparent;
+    text-align: left;
+    display: block;
+    cursor: pointer;
+    height: 119px;
+    @include first-font-family;
+}
+#right-nav .menu-btn > span {
+    background: url('arrow.png') no-repeat right 9px;
+    padding-left: 0;
+    padding-right: 25px;
+}
+.menu-wrap {
+    z-index: 100;
+    background: $second-color;
+    position: absolute;
+    width: 100%;
+    display: none;
+    left: 70px;
+    top: 119px;
+    padding-top: 0;
+    overflow: visible;
+    width: 1075px;
+    padding-left: 70px;
+    padding-top: 50px;
+    padding-bottom: 138px;
+    overflow: hidden;
+}
+.menu-wrap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+    float: left;
+}
+.menu-wrap ul.second-nav {
+    text-align: center;
+    margin-top: 18px;
+    float: left;
+    margin-right: 45px;
+}
+.menu-wrap ul.first-nav {
+    margin-top: 0px;
+    text-align: right;
+    padding-right: 80px;
+    float: left;
+}
+ul.first-nav li {
+    display: block;
+    font-size: 24px;
+    color: $black;
+    text-transform: uppercase;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    margin-bottom: 20px;
+    text-align: left;
+}
+ul.first-nav li a {
+    font-size: 24px;
+    display: block;
+    color: $white;
+    line-height: 65px;
+    -webkit-transition: color 0.2s;
+    transition: color 0.2s;
+}
+ul.first-nav li span {
+    width: 65px;
+    height: 65px;
+    line-height: 65px;
+    text-align: center;
+    display: block;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    background: #238ee8;
+    margin: 0 35px 0 0;
+    float: left;
+    line-height: 65px; 
+    font-size: 0;
+}
+ul.first-nav li.live-feed span {
+    background: #2869e0;
+}
+ul.first-nav li.staff span {
+    background: #2ccdc4;
+}
+ul.first-nav li.news span {
+    background: #2ccd43;
+}
+ul.first-nav li.events span {
+    background: #9a3de8;
+}
+ul.first-nav li.dining span {
+    background: #e53552;
+}
+ul.first-nav li.documents span {
+    background: #18b955;
+}
+ul.first-nav li.athletics span {
+    background: #e8b836;
+}
+ul.first-nav li span img {
+    vertical-align: middle;
+    display: inline-block;
+}
+ul.first-nav li a:hover {
+    text-decoration: none;
+    color: #f4d500;    
+}
+ul.second-nav li, .schools-nav li {
+    @include font-size(18);
+    @include line-height(21);
+    color: $white;
+    margin: 0 0 18px;
+    text-transform: uppercase;
+    text-align: left;
+}
+ul.second-nav li.has-child {
+    position: relative;
+    cursor: pointer;
+    /* min-width: 210px; */
+    text-align: left;
+}
+ul.second-nav li.has-child span {
+    position: relative;
+    display: inline-block;
+    padding-right: 28px;
+}
+ul.second-nav li.has-child span:after {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 2px;
+    content: " ";
+    background: url('submenu-arrow.png') no-repeat right 6px;
+    height: 22px;
+    width: 20px;
+    overflow: hidden;
+}
+ul.second-nav li.has-child.open span:after {
+    background: url('submenu-arrow.png') no-repeat right -101px;
+}
+ul.second-nav li.has-child ul {
+    position: absolute;
+    left: 72px;
+    top: 25px;
+    background: $third-bg;
+    padding: 20px 10px 30px 25px;
+    width: auto;
+    z-index: 999999;
+    min-width: 180px;
+}
+ul.second-nav li.has-child ul {
+    display: none;
+}
+ul.second-nav li.has-child ul li {
+    float: none;
+    width: auto;
+    margin: 15px 0 0;
+    white-space: nowrap;
+}
+ul.second-nav li > ul > li {
+    display: block;
+    @include font-size(14);
+    @include line-height(18);
+    text-transform: none;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 15px;
+}
+ul.second-nav li.has-child ul li a {
+    color: $black;
+}
+ul.second-nav li a, .schools-nav li a {
+    color: $white;
+    text-decoration: none;
+}
+ul.second-nav li a:hover, .schools-nav li a:hover {
+    color: #f4d500;    
+}
+ul.second-nav li.has-child ul li:first-child {
+    margin: 0;
+}
+.menu-close {
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 300px;
+    top: 42px;
+    overflow: hidden;
+    border: none;
+    background: url(plus.png) no-repeat center;
+    text-indent: 200%;
+    color: transparent;
+    outline: none;
+    z-index: 100;
+    cursor: pointer;   
+    -webkit-animation-delay: 22s; /* Chrome, Safari, Opera */
+    animation-delay: 22s;
+    @include transition();
+    
+}
+ #left-nav .menu-btn:hover .menu-close {
+     -ms-transform: rotate(90deg); /* IE 9 */
+    -webkit-transform: rotate(90deg); /* Safari */
+    transform: rotate(90deg);
+}
+.active .menu-close,  #left-nav.active .menu-btn:hover .menu-close  {
+    
+    @include transition();
+    -webkit-transition-delay: 0.2s; /* Safari */
+    transition-delay: 0.2s;
+     -ms-transform: rotate(315deg); /* IE 9 */
+    -webkit-transform: rotate(315deg); /* Safari */
+    transform: rotate(315deg);
+    left: 891px
+}
+#right-nav .menu-wrap {
+    width: 321px;
+    background: $second-color;
+    padding: 45px 10px 45px 40px;
+    left: auto;
+    right: 68px;
+    top: 94px;
+    border-top: 7px solid #000;
+    height: auto;
+}
+#right-nav .menu-wrap ul {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+#right-nav .menu-wrap li {
+    font-size: 18px;
+    color: $white;
+    line-height: 22px;
+    margin-bottom: 15px;
+}
+#right-nav .menu-wrap li a {
+    color: $white;
+}
+#right-nav .menu-btn > span.active {
+    background-position: right -45px;
+}
+.menu-wrap ul.schools-nav {
+    display: none;
+}
+#left-nav { 
+    @include transition();
+    width: 365px;
+}
+#left-nav.active {
+    width: 455px;
+    @include transition();
+}
+#left-nav.active .menu-btn > span:first-child {
+    float: left;
+    background: transparent;
+}
+#left-nav.active .menu-btn {
+    overflow: hidden;
+    width: 100%;
+}
+#left-nav  .first-menu,
+#left-nav  .schools-menu {
+    display: block;
+    float: left;
+    font-size: 24px;
+    line-height: 27px;
+    color: #FFF;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-left: 90px;
+    line-height: 119px;
+    line-height: 11.9rem;
+    cursor: pointer;
+    @include transition();
+}
+#left-nav.active .menu-btn .active, #left-nav .first-menu span:hover,
+#left-nav .schools-menu span:hover {
+    color: #f4d500;
+}
+#left-nav.active .menu-close {
+    display: block;
+}
+#left-nav.active  .first-menu,
+#left-nav.active .schools-menu {
+    opacity: 1;
+    @include transition();
+     -webkit-transition-delay: 0.4s; /* Safari */
+    transition-delay: 0.4s;
+}
+.homepage .main { overflow: hidden; width: 100%; }
+
+#header .search-icon {
+   float: right;
+   width: 100px;
+   height: 119px;
+   cursor: pointer;
+   background: #323b7c url(search-white-icon.png) no-repeat center center;
+   display: block;
+   margin: 0;
+   margin-left: 40px;
+   -webkit-border-radius: 0px;
+   -moz-border-radius: 0px;
+   border-radius: 0px;  
+}
+@media only screen and (max-width: 1920px) and (min-width: 1000px) {
+   #header .search-icon {
+      height: 6.19vw;
+      width: 6vw;
+   }
+}
+@media only screen and (max-width: 62.5em) {
+   #header .search-icon {
+      width: 50px;
+      height: 40px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 3;
+      background-color: #323b7c;   
+   }
+}
+@media only screen and (max-width: 480px) {
+   #header .logo img {
+      width: 215px;
+      height: auto;
+   }
+}

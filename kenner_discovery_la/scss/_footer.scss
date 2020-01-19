@@ -1,0 +1,172 @@
+/*************************
+*
+*  FOOTER
+*
+*************************/
+#footer {
+  background: $footer-bg;
+}
+
+#footer > .container {
+  position: relative;
+  padding: $footer-padding;
+  width: 100%;
+}
+
+#footer .footer-col {
+  width: 25%;
+  float: left;
+  padding-right: 10px;
+}
+
+#footer .footer-col:first-child {
+  width: 25%;
+}
+
+#footer .footer-col.last,
+#footer .footer-col:last-child {
+  width: 25%;
+  text-align: right;
+  float: right;
+  padding-right: 0;
+}
+
+#footer .footer-col.last h5,
+#footer .footer-col:last-child h5 {
+  width: 170px;
+  float: right;
+  text-align: left;
+  clear: both;
+  margin-bottom: 30px;
+}
+
+#footer .footer-col.social-icons {
+  margin: 0;
+  width: 22%;
+  font-size: 0;
+  padding-left: 60px;
+
+  h5 {
+    margin-bottom: 30px;
+  }
+
+  a {
+    margin: 0 8px 0 0;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+}
+
+#footer .footer-col ul {
+  margin: 0;
+}
+
+#footer .footer-col h5,
+#footer .footer-col li,
+#footer .footer-col li a,
+#footer .footer-col p {
+  @include font-size(20);
+  @include line-height(35);
+  color: $white;
+  text-transform: uppercase;
+  @include first-font-family;
+}
+
+#footer .footer-col h5 {
+  color: #fff;
+  //@include line-height(30);
+  //margin: 0 0 25px;
+  @include font-size(22);
+  font-weight: 900;
+}
+
+#footer .footer-col h5,
+#footer .footer-col li a {
+  text-transform: uppercase;
+}
+
+#footer .footer-col.apps {
+  width: 79%;
+  text-align: left;
+  font-size: 0;
+}
+
+#footer .footer-col.apps a {
+  display: flex;
+  width: 265px;
+  height: 80px;
+  text-indent: -9999px;
+  background: url('google.png') no-repeat center;
+  background-size: contain;
+  margin: 0 0 6px;
+}
+
+#footer .footer-col.apps a.appstore {
+  background: url('apple.png') no-repeat center;
+  background-size: contain;
+}
+
+#footer .footer-col.last {
+  width: 25%;
+  position: relative;
+  text-align: right;
+  padding-right: 0;
+}
+
+#footer .footer-col.last p {
+  color: #FFF;
+  font-size: 14px;
+  font-size: 1.4rem;
+  line-height: 18px;
+  line-height: 1.8rem;
+  margin: 25px 0 0;
+  text-align: right;
+}
+
+#footer .social {
+  text-align: right;
+  padding-right: 5px;
+  float: left;
+}
+
+#footer .social a {
+  display: block;
+  text-align: left;
+  text-indent: -9999px;
+  overflow: hidden;
+  height: 78px;
+  width: 78px;
+  margin-bottom: 8px;
+}
+
+#footer .social a.fb {
+  background: url('facebook_logo.png') no-repeat center center;
+  background-size: contain;
+}
+
+#footer .social a.tw {
+  background: url('twitter.png') no-repeat center center;
+  background-size: contain;
+}
+
+#footer > .container.copyright {
+  padding: 35px 0;
+  text-align: center;
+  border-top: 2px solid #fff;
+
+  p {
+    font-size: 14px;
+    line-height: 18px;
+    text-align: center;
+    margin: 0;
+    color: #FFF;
+    text-transform: uppercase;
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+    }
+  }
+}

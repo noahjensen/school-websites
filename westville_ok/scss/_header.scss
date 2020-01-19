@@ -1,0 +1,442 @@
+/* ===== Header ========================================================== */
+
+#header {
+    padding: 0 58px 0 46px;
+    min-height: 124px;
+    background: $header-bg;
+    position: relative;
+    z-index: 99;
+    width: 100%;
+    .logo {
+        position: relative;
+        top: 15px;
+        float: left;
+        text-align: left;
+        padding: 0;
+        margin: 0;
+        @include font-size(60);
+        text-transform: uppercase;
+        @include line-height(45);
+        @include fourth-font-family;
+        span {
+            @include font-size(32);
+            text-transform: uppercase;
+            @include second-font-family;
+            @include line-height(0);
+        }
+        a {
+            display: block;
+            color: $logo-color;
+            text-decoration: none;
+            padding-left: 120px;
+        }
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+    }
+}
+
+
+/* ===== Menu ========================================================== */
+
+#left-nav,
+#right-nav {
+    float: right;
+    margin-right: 0;
+    margin-top: 33px;
+}
+
+#left-nav {
+    margin-right: 40px;
+}
+
+#left-nav .menu-btn > span,
+#right-nav .menu-btn > span {
+    @include font-size(18);
+    @include line-height(62);
+    height: 62px;
+    color: $menu-btn-txt-color;
+    text-transform: uppercase;
+    text-align: center;
+    display: block;
+    cursor: pointer;
+    @include first-font-family;
+    padding-left: 72px;
+    padding-right: 43px;
+    position: relative;
+    background: #571b7e url('menu-icon.png') no-repeat 18px center;
+}
+
+#left-nav.active .menu-btn > span {
+    background: #fdd017 url('close.png') no-repeat 18px center;
+    color: #571b7e;
+}
+
+.menu-wrap {
+    z-index: 100;
+    background: $menu-wrap-bg;
+    position: absolute;
+    width: 478px;
+    height: 661px;
+    display: none;
+    left: 0;
+    top: 124px;
+    padding-top: 0;
+    overflow: visible;
+}
+
+#left-nav .menu-wrap {
+    width: 100%;
+    left: 0;
+    min-height: 630px;
+}
+
+.menu-wrap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: block;
+    position: relative;
+    //float: left;
+    width: 100%;
+}
+
+.menu-wrap .second-nav {
+    text-align: center;
+    margin-top: 40px;
+    padding-left: 50px;
+    padding-right: 50px;
+    overflow: visible;
+    max-width: 1300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.menu-wrap ul.first-nav {
+    margin-top: 40px;
+    text-align: center;
+    padding-right: 0;
+}
+
+ul.first-nav li {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 25px;
+    @include first-font-family;
+    color: #fdd017;
+    text-transform: uppercase;
+    margin-bottom: 35px;
+    text-align: center;
+    padding: 0;
+    overflow: visible;
+    width: 150px;
+}
+
+ul.first-nav li:hover span {
+    -webkit-animation: mymove 3s infinite;
+    animation: mymove 3s infinite;
+}
+
+@-webkit-keyframes mymove {
+    from {
+        -webkit-transform: rotateY(0deg);
+    }
+    to {
+        -webkit-transform: rotateY(360deg);
+    }
+}
+
+@keyframes mymove {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+}
+
+ul.first-nav li a {
+    display: block;
+    color: $white;
+    white-space: nowrap;
+    -webkit-transition: color 0.2s;
+    -moz-transition: color 0.2s;
+    transition: color 0.2s;
+}
+
+ul.first-nav li span {
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    text-align: center;
+    display: block;
+    background: #fdd017;
+    margin: 0 auto 20px;
+    font-size: 0;
+    @include border-radius(50%);
+}
+
+ul.first-nav li span img {
+    vertical-align: middle;
+}
+
+
+/*
+ul.first-nav li.live-feed span {
+    background: #232323;
+}
+ul.first-nav li.staff span {
+    background: #2ccdc4;
+}
+ul.first-nav li.news span {
+    background: #2ccd43;
+}
+ul.first-nav li.events span {
+    background: #1ac482;
+}
+ul.first-nav li.dining span {
+    background: #be060a;
+}
+ul.first-nav li.documents span {
+    background: #18b955;
+}
+*/
+
+ul.first-nav li span img {
+    vertical-align: middle;
+    display: inline-block;
+}
+
+ul.first-nav li a:hover {
+    text-decoration: none;
+}
+
+.second-nav li {
+    @include font-size(20);
+    @include line-height(24);
+    color: #fff;
+    margin: 0 0 20px;
+    text-align: left;
+    width: 25%;
+    padding: 0 5px;
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+    position: relative;
+    text-transform: none;
+    @include first-font-family;
+}
+
+.second-nav li.has-child {
+    position: relative;
+    cursor: pointer;
+    /* min-width: 210px; */
+    text-align: left;
+}
+
+.second-nav li.has-child span {
+    position: relative;
+    display: inline-block;
+    padding-right: 28px;
+}
+
+.second-nav li.has-child span:after {
+    display: block;
+    position: absolute;
+    z-index: 9;
+    right: 0;
+    top: 2px;
+    content: " ";
+    background: url('submenu-arrow.png') no-repeat right 6px;
+    height: 22px;
+    width: 20px;
+    overflow: hidden;
+}
+
+.second-nav li.has-child.open span:after {
+    background: url('submenu-arrow.png') no-repeat right -101px;
+}
+
+.second-nav li.has-child ul {
+    position: absolute;
+    left: 0px;
+    top: 35px;
+    background: $submenu-bg;
+    padding: 15px 4px 15px 10px;
+    width: auto;
+    z-index: 99;
+    min-width: 183px;
+    background: #fdd017;
+}
+
+.second-nav li.has-child ul {
+    display: none;
+}
+
+.second-nav li.has-child ul li {
+    float: none;
+    width: auto;
+    margin: 15px 0 0;
+}
+
+.second-nav li > ul > li,
+.second-nav ul h5 {
+    display: block;
+    @include font-size(18);
+    @include line-height(22);
+    text-transform: none;
+    text-align: left;
+    margin-left: 0;
+    margin-bottom: 10px;
+}
+
+.second-nav li.has-child ul li a {
+    color: #571b7e;
+}
+
+.second-nav li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.second-nav li.has-child ul li:first-child {
+    margin: 0;
+}
+
+//3rd layer of dropdowns to menu
+ul.second-nav li.has-child {
+    position: relative;
+    cursor: pointer;
+    /* min-width: 210px; */
+    text-align: left;
+}
+
+ul.second-nav li.has-child span {
+    position: relative;
+    display: inline-block;
+    padding-right: 28px;
+}
+
+ul.second-nav li.has-child > span:after,
+ul.second-nav li.has-child > a:after {
+    display: block;
+    position: absolute;
+    z-index: 999;
+    right: 0;
+    top: 2px;
+    content: " ";
+    background: url("submenu-arrow.png") no-repeat right 6px;
+    height: 22px;
+    width: 20px;
+    overflow: hidden;
+}
+
+ul.second-nav li.has-child.open > span:after,
+ul.second-nav li.has-child.open > a:after {
+    background: url("submenu-arrow.png") no-repeat right -101px;
+}
+
+ul.second-nav li ul li.has-child > span:after,
+ul.second-nav li ul li.has-child > a:after {
+    background: url("purple-submenu-arrow.png") no-repeat right 6px;
+}
+
+ul.second-nav li ul li.has-child.open > span:after,
+ul.second-nav li ul li.has-child.open > a:after {
+    background: url("purple-submenu-arrow.png") no-repeat right -104px;
+}
+
+ul.second-nav li.has-child ul {
+    position: absolute;
+    left: 32px;
+    top: 25px;
+    background: #fdd017;
+    padding: 20px 10px 30px 25px;
+    width: auto;
+    z-index: 999999;
+    min-width: 285px;
+}
+
+ul.second-nav li ul li.has-child ul {
+    background: #FFF;
+    border: 1px solid #5e2b8a;
+    left: 20px;
+    a {
+        color: #5e2b8a;
+    }
+}
+
+ul.second-nav li.has-child ul {
+    display: none;
+}
+
+ul.second-nav li.has-child ul li {
+    float: none;
+    width: auto;
+    margin: 15px 0 0;
+    white-space: nowrap;
+}
+
+ul.second-nav li.has-child ul li a {
+    color: #571b7e;
+}
+
+ul.second-nav li.has-child ul li:first-child {
+    margin: 0;
+}
+
+//.menu-wrap .menu-close {
+//    width: 35px;
+//    height: 35px;
+//    position: absolute;
+//    right: 110px;
+//    top: 26px;
+//    overflow: hidden;
+//    border: none;
+//    background: url(close.png) no-repeat center;
+//    text-indent: 200%;
+//    color: transparent;
+//    outline: none;
+//    z-index: 100;
+//    cursor: pointer;
+//} 
+#right-nav .menu-wrap {
+    width: 374px;
+    background: $right-menu-wrap-bg;
+    padding: 45px 10px 55px 72px;
+    left: auto;
+    right: 58px;
+    top: 106px;
+    height: auto;
+}
+
+#right-nav .menu-wrap ul {
+    margin: 0;
+    text-align: left;
+    width: 100%;
+}
+
+#right-nav .menu-wrap li {
+    font-size: 18px;
+    color: $white;
+    line-height: 22px;
+    margin-top: 20px;
+    @include first-font-family;
+}
+
+#right-nav .menu-wrap li:first-child {
+    margin-top: 0;
+}
+
+#right-nav .menu-wrap li a {
+    color: $white;
+    display: block;
+    text-decoration: none;
+}
+
+#right-nav .menu-btn > span.active {
+    background: #000000 url("close.png") no-repeat 19px center;
+}

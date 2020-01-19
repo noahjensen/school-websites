@@ -1,0 +1,145 @@
+/*************************
+*
+*  FOOTER
+*
+*************************/
+
+#footer {
+    background: $footer-bg 100% 100%;
+}
+
+#footer>.container {
+    position: relative;
+    padding: $footer-padding;
+    width: 100%;
+}
+
+#footer .footer-col {
+    width: 20%;
+    float: left;
+    padding-right: 10px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -o-transition: all .5s ease-in-out;
+    text-align: left;
+    transition: all .5s ease-in-out;
+}
+
+#footer .footer-col:last-child,
+#footer .footer-col.last {
+    width: 20%;
+    text-align: right;
+    float: right;
+}
+
+.social-icons {
+    overflow: auto;
+}
+
+.social-icons a {
+    width: 57px;
+    height: 57px;
+    display: inline-block;
+    //border: 1px solid #FFF;
+    line-height: 60px;
+    float: left;
+    margin: 15px 3px;
+    text-align: center;
+    font-size: 0;
+}
+
+.social-icons a:first-child {
+    margin-left: 0;
+}
+
+.social-icons a img {
+    display: inline-block;
+    line-height: 60px;
+    vertical-align: middle;
+}
+
+.social-icons a:hover {
+    -webkit-animation: mymove 3s infinite;
+    animation: mymove 3s infinite;
+}
+
+#footer .footer-col.social-icons {
+    margin: 0;
+    width: 10%;
+    font-size: 0;
+    h5 {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+    a {
+        margin: 0 8px 0 0;
+        &:last-child {
+            margin: 0;
+        }
+    }
+}
+
+#footer .footer-col.missouri-logo {
+    padding: 33px 0 0 0;
+}
+
+#footer .footer-col ul {
+    margin: 0;
+}
+
+#footer .footer-col p,
+#footer .footer-col li,
+#footer .footer-col li a,
+#footer .footer-col h5 {
+    @include font-size(14);
+    @include line-height(35);
+    color: $white;
+    text-transform: uppercase;
+    @include first-font-family;
+}
+
+#footer .footer-col h5 {
+    color: $footer-title-color;
+    margin: 0;
+    text-align: left;
+}
+
+#footer .footer-col.logo-sri img {
+    max-width: get-vw(150px);
+    height: auto;
+}
+
+#footer .app-store,
+#footer .google-play {
+    width: 100%;
+    max-width: 250px;
+    height: 74px;
+    display: inline-block;
+    margin: 0 0 19px;
+    background: url('apple.png') no-repeat right top;
+    background-size: 100% auto;
+    text-indent: -9999px;
+    text-align: left;
+    vertical-align: top;
+    float: left;
+}
+
+#footer .google-play {
+    background: url('google.png') no-repeat right top;
+    margin: 0;
+    background-size: 100% auto;
+}
+
+#footer>.container.copyright {
+    padding: 35px 0;
+    text-align: center;
+    border-top: 2px solid #8490aa;
+    p {
+        font-size: 14px;
+        line-height: 18px;
+        text-align: center;
+        margin: 0;
+        color: #FFF;
+        text-transform: uppercase;
+    }
+}

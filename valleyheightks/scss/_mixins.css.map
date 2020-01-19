@@ -1,0 +1,10 @@
+{
+  "version": 3,
+  "file": "_mixins.css",
+  "sources": [
+    "_mixins.scss"
+  ],
+  "sourcesContent": [],
+  "mappings": ";AAmBG,SAAS,AAAA,MAAM,CAAR;EACN,OAAO,EAAE,EAAG;EACZ,OAAO,EAAE,KAAM;EACf,KAAK,EAAE,IAAK,GAHL",
+  "names": []
+}

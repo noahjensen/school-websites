@@ -1,0 +1,165 @@
+// ses Mixins and Variables
+
+.ses {
+
+  .school-color{
+    color: $ses-color1;
+  }
+
+  #left-nav,
+  #right-nav {
+    background: $nav-background-ses;
+  }
+
+  #header #change_language_form {
+    background: $nav-background-ses;
+  }
+
+  #right-nav .menu-wrap li:hover {
+    border: $ses-firstlevelhover;
+  }
+
+
+  // Menu Icons
+  #header .search-icon {
+    background: url("search-icon-ses.png") no-repeat center center !important;
+  }
+
+  #header .header-logo {
+    background: url("logo.png") no-repeat center center !important;
+    height: 85px;
+    position: absolute;
+    width: 112px;
+    top: 0;
+    left: -32px;
+  }
+
+  ul.static-links li:nth-child(odd) span {
+    background: $ses-menu-icon1;
+  }
+
+  ul.static-links li span {
+    background: $ses-menu-icon2;
+  }
+  // First Level Dropdown
+  .second-nav li.has-child ul {
+    background: $ses-submenu-bg;
+  }
+
+  ul.first-nav li a {
+    color: $ses-menu-text;
+  }
+
+  .second-nav li ul li:hover {
+    a {
+      border-left: 15px solid $ses-header-lefthover;
+    }
+  }
+  // Second Level Dropdown
+  ul.second-nav li ul li.has-child ul {
+    background: $ses-color1;
+  }
+
+  ul.second-nav li ul li.has-child ul li a {
+    border-left: 15px solid $ses-color1;
+    color: $white;
+  }
+
+  ul.second-nav li ul li.has-child ul li:hover {
+    a {
+      border-left: 15px solid $white;
+    }
+  }
+  // School Menu
+  #right-nav .menu-wrap li:hover {
+    border-left: 15px solid $ses-header-lefthover;
+  }
+  // Language Menu
+  #header #change_language_form {
+    .options li.selected {
+      border-color: $ses-header-lefthover;
+    }
+
+    .options li:hover {
+      border-left: 15px solid $ses-header-lefthover;
+    }
+  }
+
+  .main .col-item {
+    &.news-wrapper:before {
+      background: $ses-news;
+    }
+
+    &.events-wrapper:before {
+      background: $ses-events;
+    }
+
+    &.live-feeds-wrapper:before {
+      background: $ses-live-feed;
+    }
+  }
+  // Subpage
+  .left-sidebar h3 {
+    background: $ses-sidebar;
+  }
+
+  .right-content h2,
+  .right-content h3,
+  .right-content h4,
+  .right-content h5,
+  .right-content h6,
+  .subpage h2,
+  .subpage h3,
+  .subpage h4,
+  .subpage h5,
+  .subpage h6 {
+    color: $ses-subpage-links;
+  }
+
+  blockquote {
+    border-left: 5px solid $ses-subpage-links;
+  }
+
+  .right-content > a {
+    color: $ses-subpage-links;
+  }
+  // Slider
+  #slider:after {
+    background: url("slider-bg-ses.jpg") center center no-repeat #fff;
+    width: 40%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    content: "";
+    background-size: cover;
+    z-index: 0;
+  }
+
+  .bx-wrapper .bx-pager.bx-default-pager a.active,
+  .bx-wrapper .bx-pager.bx-default-pager a:hover {
+    background: $ses-slider !important;
+  }
+}
+@media only screen and (max-width: 950px) {
+    .ses{
+  #slider .left-slider{
+    background: $ses-color1;
+  }
+
+  #header {
+    background: url("navbackground-ses.png");
+  }
+
+  #slider .slider-info {
+    background: $ses-subpage-links;
+  }
+
+#header .header-logo {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+  }
+}
+}

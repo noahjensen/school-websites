@@ -1,0 +1,97 @@
+// ===== Variables ========================================================== //
+
+//Website color and background
+
+$white: #FFFFFF;
+//white
+$black: #000000;
+//black
+
+$breadcrumbBg: #FFF;
+$breadcrumbColor: #254407;
+$breadcrumbActiveColor: #282829;
+
+//Elements color and background
+$page-bg: #FFF;
+$text-color: #282828;
+$links-color: #4f7728;
+$logo-color: #254407;
+$menu-txt-color: #fff;
+$menu-btn-txt-color: #254407;
+$menu-wrap-bg: url("wrap-menu-bg.png");
+$right-menu-wrap-bg: #FFF;
+$right-submenu-color: #FFF;
+$submenu-bg: #FFF;
+$pager-slider: #FFF;
+$SliderBgColor: transparent;
+$leftSlider: 0;
+
+$separator-bg: #FFF;
+$left-sidebar: #254407;
+
+$see-all-btn-bg: #254407;
+$see-all-news-btn-bg: $black;
+$see-all-events-btn-bg: #254407;
+$see-all-live-feeds-btn-bg: #4f7728;
+
+$see-all-btn-color: #FFF;
+$see-all-news-btn-color: #FFF;
+$see-all-events-btn-color: #FFF;
+$see-all-live-feeds-btn-color: #FFF;
+
+$events-wrapper-bg: #FFF;
+$news-wrapper-bg: #fff;
+$footer-title-color: $white;
+$live-feed-time-color: #4f7728;
+
+$events-title-color: $black;
+$news-title-color: $black;
+$live-feed-title-color: $black;
+
+$events-title-bg: #fff;
+$news-title-bg: #fff;
+$live-feed-title-bg: #fff;
+
+$read-more-new-bg: $black;
+$read-more-new-color: #fff;
+$news-pager-active: $black;
+$news-pager: $black;
+
+$live-feed-text: $black;
+$live-feed-h3: #4f7728;
+$event-date: $white;
+$event-title: #191917;
+$new-feed-paragraph: #FFF;
+$new-feed-h3: #FFF;
+
+$header-bg: transparent;
+$footer-bg: transparent;
+$footer-text: #fff;
+
+//Some padding and margin
+
+$colspadding: 140px 50px 50px 63px;
+$footer-padding: 35px 0 45px;
+
+$avatarWidth: 78px;
+
+//SUBPAGES
+$breadcrumb-height: 45px;
+$breadcrumb-bg: #282828;
+$breadcrumb-color: #fff;
+$breadcrumb-font-size: 20;
+
+$subpage-one-col-width: 90%;
+
+$subpage-sidebar-width: 30%;
+$subpage-column-two: 65%;
+
+$subpage-sidebar-title-bg: #4f7728;
+$subpage-sidebar-title-color: #FFF;
+
+$subpage-h1-font-size: 28;
+
+@mixin subpage-h1-font {
+  @include second-font-family;
+  text-transform: uppercase;
+}

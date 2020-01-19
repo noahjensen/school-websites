@@ -1,0 +1,347 @@
+/*************************
+*
+*  FOOTER
+*
+*************************/
+#footer {
+  background: $footer-bg;
+  //padding: 0 70px;
+}
+
+#footer > .container {
+  position : relative;
+  padding  : $footer-padding;
+  width    : 100%;
+  max-width: 1587px;
+}
+
+#footer .footer-col {
+  width             : 20%;
+  float             : left;
+  -webkit-transition: all .5s ease-in-out;
+  -moz-transition   : all .5s ease-in-out;
+  -o-transition     : all .5s ease-in-out;
+  transition        : all .5s ease-in-out;
+}
+
+#footer .footer-col:first-child {
+  padding-left: 0;
+}
+
+#footer .footer-col.last,
+#footer .footer-col:last-child {
+  width     : 20%;
+  text-align: center;
+  padding   : 0;
+  float     : right;
+  font-size : 0;
+}
+
+#footer .footer-col.last h5,
+#footer .footer-col:last-child h5 {
+  text-align: center;
+  max-width : 430px;
+  display   : block;
+  float     : right;
+  width     : 100%;
+}
+
+#footer .footer-col ul {
+  margin: 0;
+
+  &.two-cols {
+    display: inline-table;
+
+    li {
+      vertical-align: top;
+      padding-right : 10px;
+    }
+  }
+}
+
+#footer .footer-col h5,
+#footer .footer-col li,
+#footer .footer-col li a,
+#footer .footer-col p {
+  @include font-size(14);
+  @include line-height(40);
+  color         : $white;
+  text-transform: uppercase;
+  @include first-font-family;
+}
+
+#footer .footer-col h5 {
+  color        : $footer-title-color;
+  @include fourth-font-family;
+  margin-bottom: 5px;
+  @include font-size(24);
+  @include line-height(32);
+  font-weight  : 900;
+}
+
+#footer .app-store,
+#footer .google-play,
+#footer .logo-sri {
+  width          : 100%;
+  max-width      : 200px;
+  height         : 45px;
+  display        : inline-block;
+  //margin         : 0 0 15px;
+  background     : url("apple.png") no-repeat center top;
+  background-size: auto auto;
+  background-size: contain;
+  text-indent    : -9999px;
+  text-align     : left;
+  vertical-align : top;
+}
+
+#footer .google-play {
+  background     : url("google.png") no-repeat center top;
+  background-size: contain;
+}
+
+#footer .logo-sri {
+  background     : url("logo-sri.png") no-repeat center top;
+  background-size: contain;
+  margin-bottom  : 0;
+}
+
+#footer .footer-col.momentum {
+  width     : 20%;
+  text-align: center;
+
+  img {
+    width : 85%;
+    height: auto;
+  }
+}
+
+#footer > .container.copyright {
+  border-top: 1px solid #FFF;
+  text-align: center;
+  padding   : 20px 0;
+}
+
+#footer > .container.copyright,
+#footer > .container.copyright p {
+  @include font-size(18);
+  @include line-height(28);
+  color         : $white;
+  margin-bottom : 0;
+  text-transform: uppercase;
+
+  a {
+    color: #FFF;
+  }
+}
+
+#footer .fb img,
+#footer .in img,
+#footer .tw img,
+#footer .yt img {
+  margin-right: 10px;
+  max-height  : 45px;
+}
+
+#footer .container.bottom-footer {
+  padding   : 5px 0 10px;
+  text-align: center;
+  max-width : 100%;
+  background: #000;
+}
+
+#footer .container.bottom-footer a {
+  color: #fff;
+}
+
+#footer .container.bottom-footer p {
+  font-size     : 18px;
+  line-height   : 28px;
+  color         : #FFF;
+  margin        : 18px 0 10px;
+  text-transform: uppercase;
+}
+
+#footer .container.bottom-footer p.powered-by {
+  color : #3268b5;
+  margin: 0 0 5px;
+
+  a {
+    color: #009ddd;
+  }
+}
+/**
+ * Responsive
+ */
+@media only screen and (max-width: 1920px) and (min-width: 1000px) {
+  #footer {
+    //padding: 0 get-vw(70px);
+  }
+
+  #footer > .container {
+    max-width: get-vw(1587);
+    padding  : get-vw(15) 0;
+  }
+
+  #footer .container.bottom-footer p {
+    font-size  : get-vw(18);
+    line-height: get-vw(28);
+  }
+
+  #footer .footer-col h5,
+  #footer .footer-col li,
+  #footer .footer-col li a,
+  #footer .footer-col p {
+    font-size  : get-vw(14);
+    line-height: get-vw(40);
+  }
+
+  #footer .footer-col h5 {
+    font-size  : get-vw(24);
+    line-height: get-vw(32);
+  }
+
+  #footer > .container.copyright {
+    padding: get-vw(25) 0;
+  }
+
+  #footer .app-store,
+  #footer .google-play,
+  #footer .logo-sri {
+    max-width    : get-vw(200);
+    height       : get-vw(45);
+    min-height   : 30px;
+    margin-bottom: get-vw(15);
+  }
+
+  #footer .fb img,
+  #footer .in img,
+  #footer .tw img,
+  #footer .yt img {
+    width       : get-vw(45);
+    min-width   : 30px;
+    height      : auto;
+    margin-right: get-vw(15);
+  }
+
+  #footer > .container.copyright,
+  #footer > .container.copyright p {
+    font-size  : get-vw(18);
+    line-height: get-vw(28);
+  }
+
+  #footer .footer-col p {
+    margin-bottom: get-vw(19);
+  }
+
+  #footer .footer-col h5 {
+    line-height: get-vw(28);
+    margin     : get-vw(10) 0 get-vw(15);
+  }
+}
+@media only screen and (max-width: 1200px) {
+  #footer .footer-col h5,
+  #footer .footer-col li,
+  #footer .footer-col li a,
+  #footer .footer-col p,
+  #footer > .container.copyright,
+  #footer > .container.copyright p {
+    font-size  : 12px;
+    line-height: 28px;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  #footer .footer-col:first-child {
+    padding: 0;
+  }
+
+  #footer .footer-col.last h5,
+  #footer .footer-col:last-child h5 {
+    text-align: center;
+    display   : block;
+    max-width : 100%;
+    float     : none;
+  }
+
+  #footer .footer-col.sri-logo {
+    padding: 20px 0 0;
+  }
+
+  #footer .footer-col {
+    padding-right: 0;
+  }
+
+  #footer .footer-col h5,
+  #footer .footer-col li,
+  #footer .footer-col li a,
+  #footer .footer-col p,
+  #footer > .container.copyright,
+  #footer > .container.copyright p {
+    font-size  : 17px;
+    line-height: 29px;
+  }
+
+  #footer .footer-col ul.two-cols {
+    display  : block;
+    width    : 100%;
+    font-size: 16px;
+  }
+
+  #footer .footer-col h5 {
+    font-size: 23px;
+  }
+
+  #footer .footer-col .fb img,
+  #footer .footer-col .in img,
+  #footer .footer-col .tw img,
+  #footer .footer-col .yt img {
+    height: 55px;
+    width : auto;
+  }
+
+  #footer .footer-col.momentum img {
+    width : 225px;
+    height: auto;
+  }
+
+  #footer > .container {
+    padding   : 20px 0;
+    text-align: center;
+  }
+
+  #footer > .container.copyright {
+    padding: 10px 0;
+  }
+
+  #footer .app-store,
+  #footer .google-play,
+  #footer .logo-sri {
+    background-position: center top;
+  }
+
+  #footer .footer-col {
+    width             : 100% !important;
+    float             : none;
+    margin-bottom     : 40px;
+    -webkit-transition: all .5s ease-in-out;
+    -moz-transition   : all .5s ease-in-out;
+    -o-transition     : all .5s ease-in-out;
+    transition        : all .5s ease-in-out;
+  }
+
+  #footer .footer-col,
+  #footer .footer-col.last,
+  #footer .footer-col:last-child {
+    text-align: center;
+  }
+
+  .footer-links {
+    width: 100%;
+  }
+
+  #footer .footer-col.last span {
+    display : block;
+    right   : auto;
+    position: relative;
+  }
+}

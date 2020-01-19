@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html  class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cossatot River School District</title>
+     <%= include_gon %>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href="https://fonts.googleapis.com/css?family=Tinos:400,400i,700,700i" rel="stylesheet">
+<%= favicon_link_tag "apptegy_cms/themes/cossatotar/favicon.ico" %>
+
+    <%= javascript_include_tag "apptegy_cms/themes/cossatotar/application" %>
+    <%= stylesheet_link_tag "apptegy_cms/themes/cossatotar/application", :media => "all"  %>
+</head>
+
+<body class="homepage cbp-spmenu-push">
+
+ <%= render 'cossatotar/shared/header'  %>
+
+<!-- ======================== SLIDER ======================== -->
+
+
+<div id="slider" class="clearfix">
+	<div class="slider-container">
+		<% current_organization.photos.order(:position).each do |photo| %>
+                    <div class="slide">
+<img src="<%= photo.try(:url) %>" alt="<%= photo.try(:description) %>">
+                    </div>
+<% end %>
+        </div>
+	<div class="slider-info">
+<%= raw current_organization.bulletin_board.try(:content) %>
+	</div>
+
+</div>
+
+<!-- ======================== MAIN CONTENT ======================== -->
+
+<%= cms_slider_menu %>
+
+<div class="main" role="main">
+    <div class="container clearfix">
+       <%= render 'cossatotar/shared/section_boxes'  %>
+     </div>
+</div>
+
+<!-- ======================== FOOTER ======================== -->
+
+ <%= render 'cossatotar/shared/footer'  %>
+
+<!-- ======================== JAVASCRIPTS ======================== -->
+
+    <script type="text/javascript">
+        $('.live-feeds-wrapper .live-feed, .events-wrapper .event, .news-wrapper .news').dotdotdot({
+            watch: 'window'
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.slider-container').bxSlider({
+                mode: 'horizontal'
+                , auto: true
+                , pause: 3500
+                , adaptiveHeight: true
+                , speed: 1500
+                , onSliderLoad: function () {
+                    if ($(window).width() > 1040) {
+                        var sliderheight = $('#slider').height();
+                        var headerheight = $('#header').height();
+                        var windowheight = $(window).height();
+                        var leftSliderHeight = $('#slider .slider-info').height();
+                        var imgheight = windowheight - headerheight - 10;
+                        $('.slider-container img, #slider,.slider-container  .bx-wrapper .bx-viewport').css("max-height", imgheight);
+                        $('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("min-height", leftSliderHeight + 60);
+                        //$('#left-nav .menu-wrap').css("height", imgheight);
+                    }
+                    else {
+                        $('.slider-container img, #slider,.slider-container  .bx-wrapper .bx-viewport').css("max-height", "100%");
+                        $('.slider-container img, #slider, .bx-wrapper .bx-viewport').css("min-height", 90);
+                        //$('#left-nav .menu-wrap').css("height", "auto");
+                    }
+                    $(window).resize(function () {
+                        if ($(window).width() > 1040) {
+                            var sliderheight = $('#slider').height();
+                            var headerheight = $('#header').height();
+                            var windowheight = $(window).height();
+                            var leftSliderHeight = $('#slider .slider-info').height();
+                            var imgheight = windowheight - headerheight - 10;
+                            $('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("max-height", imgheight);
+                            $('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("min-height", leftSliderHeight + 60);
+                            // $('#left-nav .menu-wrap').css("height", imgheight);
+                        }
+                        else {
+                            $('.slider-container img, #slider,.slider-container  .bx-wrapper .bx-viewport').css("max-height", "100%");
+                            $('.slider-container img, #slider, .slider-container  .bx-wrapper .bx-viewport').css("min-height", 90);
+                            //$('#left-nav .menu-wrap').css("height", "auto");
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+  </body>
+</html>

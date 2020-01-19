@@ -1,0 +1,173 @@
+// lses STEM Academy Mixins and Variables
+
+
+.lses{
+// Header
+  #header .logo img {
+    left: -5px;
+    top: 5px;
+    z-index: 22;
+    width: 62px;
+  }
+
+  #header .logo {
+    padding: 10px 0px 0 60px;
+  }
+
+
+// Menu Icons
+  ul.first-nav li:nth-child(odd) span {
+      background: $lses-menu-icon1;
+  }
+
+ul.first-nav li span {
+  background: $lses-menu-icon2;
+}
+
+// First Level Dropdown
+.second-nav li.has-child ul {
+  background: $lses-submenu-bg;
+}
+
+ul.first-nav li a {
+  color: $lses-menu-text;
+}
+
+  .second-nav li ul li a:hover{
+          border-left: 15px solid $white;
+          color: #fff;
+      }
+
+
+
+// Second Level Dropdown
+  ul.second-nav li ul li.has-child ul {
+      background: $white;
+    }
+
+      ul.second-nav li ul li.has-child ul li,    ul.second-nav li ul li.has-child ul li a{
+        color: $black;
+      }
+
+    ul.second-nav li ul li.has-child ul li:hover {
+        a {
+          border-left: 15px solid $lses-header-lefthover;
+          color: $black;
+        }
+    }
+
+
+// School Menu
+#right-nav .menu-wrap li:hover {
+    border-left: 15px solid $lses-header-lefthover;
+}
+
+
+
+// Language Menu
+#header #change_language_form {
+    .options li.selected {
+            border-color: $lses-header-lefthover;
+        }
+
+    .options li:hover {
+      border-left: 15px solid $lses-header-lefthover;
+    }
+}
+
+.main .col-item {
+  &.news-wrapper:before {
+     background: $lses-news;
+  }
+  &.events-wrapper:before {
+     background: $lses-events;
+  }
+  &.live-feeds-wrapper:before {
+     background: $lses-live-feed;
+  }
+
+}
+
+// Subpage
+.left-sidebar h3 {
+    background: $lses-sidebar;
+}
+
+.right-content h2, .subpage h2, .right-content h3, .subpage h3,
+.right-content h4, .subpage h4, .right-content h5, .subpage h5,
+.right-content h6, .subpage h6{
+      color: $lses-subpage-links;
+}
+
+blockquote {
+      border-left: 5px solid $lses-subpage-links;
+}
+
+.right-content > a {
+
+    color: $lses-subpage-links;
+;
+}
+
+// Slider
+.bx-wrapper .bx-pager.bx-default-pager a:hover,
+.bx-wrapper .bx-pager.bx-default-pager a.active {
+    background: $lses-slider !important;
+}
+}
+
+
+
+
+@media only screen and (max-width: 1500px) and (min-width: 1090px){
+.lses #header .logo {
+  font-size: get-vw(60px);
+  line-height: get-vw(70px);
+  padding-top: 5px;
+}}
+
+@media only screen and (max-width: 1090px) and (min-width: 950px){
+.lses #header .logo {
+  font-size: get-vw(55px);
+  line-height: get-vw(75px);
+}
+}
+
+@media only screen and (max-width: 950px){
+
+  .lses #header .logo {
+    font-size: 35px;
+  }
+
+  .lses #header .logo span {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+  .lses #left-nav .menu-wrap {
+    top: 33px;
+        width: 108vw;
+}
+
+
+}
+
+
+
+@media only screen and (max-width: 670px){
+  .lses #header .logo {
+      font-size: 28px;
+  }
+}
+
+@media only screen and (max-width: 500px){
+.lses #header .logo {
+    padding: 10px 0px 0 0px;
+    font-size: get-vw(100px);
+
+    &.logo img{
+      left: 0px;
+      width: 66px;
+    }
+    }
+}

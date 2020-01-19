@@ -1,0 +1,377 @@
+/**
+ * Main Content
+ */
+
+html .homepage .main .container {	
+	display: -webkit-box;      
+  display: -moz-box;       
+  display: -ms-flexbox;     
+  display: -webkit-flex;     
+  display: flex;           
+}
+.main .col-item {
+   position: relative;
+   float: left;
+   margin: 0;
+   overflow: hidden;
+   position: relative;
+   @include transition;
+	@include responsive-property("padding-top",170, 55px, 170px);
+	@include responsive-property("padding-left",65, 30px, 65px);
+	@include responsive-property("padding-bottom",60, 30px, 70px);
+	@include responsive-property("padding-right",65, 30px, 65px);
+   
+   &.events-wrapper {
+		background: $events-wrapper-bg;		
+		background-size: contain;
+      width: 33.33%;
+   }
+   &.news-wrapper {
+      width: 33.33%;
+      background: $news-wrapper-bg;
+		background-size: contain;
+   }
+   &.live-feeds-wrapper {
+		background: $live-feeds-wrapper-bg;
+		background-size: contain;
+      width: 33.33%;
+   }
+   .see-more {
+      position: absolute;
+      z-index: 1;
+      display: inline-block;
+      padding: 0;
+		@include responsive-property("padding-left",20, 10px, 30px);
+       @include responsive-property("padding-right",20, 10px, 30px);
+      width: auto;
+      @include responsive-property("font-size",$see-all-btns-font-size, 14px, $see-all-btns-font-size +1px);
+       @include responsive-property("line-height",31, 25px, 31px);  
+      text-align: left;
+	   right: 10px;
+      @include responsive-property("bottom",30, 10px, 30px);
+	   @include see-all-btns-font;
+      
+      &:after {
+         display: inline-block;
+         content: '';
+         width: 0px;
+         height: 0px;
+         border-top: 4px solid transparent;
+         border-bottom: 4px solid transparent;
+         border-left: 4px solid $see-all-events-btn-color;         
+         margin-left: 5px;
+      }
+   }
+   &.events-wrapper .see-more {
+      background: transparent;
+      color: $see-all-events-btn-color;
+   }
+   &.news-wrapper .see-more {
+      background:  transparent;
+      color: $see-all-news-btn-color;
+   }
+   &.live-feeds-wrapper .see-more {
+      background:  transparent;
+      color: $see-all-live-feeds-btn-color;
+   }
+   h4 {
+      @include responsive-property("font-size",$sections-titles-font-size, 20px, $sections-titles-font-size+10px);
+      @include responsive-property("line-height",124, 40px, 124px);
+      padding: 0 10px;
+      display: block;
+	   text-align: center;
+	   @include sections-titles-font;
+      position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+      z-index: 1;
+   }
+   &.news-wrapper h4 {
+      color: $news-title-color;
+      background: $news-title-bg;
+   }
+   &.live-feeds-wrapper h4 {
+      color: $live-feed-title-color;
+      background: $live-feed-title-bg;
+   }
+   &.events-wrapper h4 {
+      background: $events-title-bg;
+      color: $events-title-color;
+   }
+   &.live-feeds-wrapper .avatar {
+      float: left;
+      @include responsive-property("max-width", 90, 35px, 90px);
+      text-align: left;
+       @include responsive-property("margin-right", 19, 15px, 25px);
+   }
+   &.live-feeds-wrapper .live-feed {
+      margin: 0;
+      @include responsive-property("margin-bottom", 25, 10px, 25px);
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+   }
+   &.live-feeds-wrapper .right-content {
+      overflow: hidden;
+   }
+   &.live-feeds-wrapper .right-content p {
+      @include responsive-property("font-size", $live-feed-text-font-size, 13px, $live-feed-text-font-size+1px);
+       @include responsive-property("line-height", $live-feed-text-font-size +4, 16px, $live-feed-text-font-size+5x);
+      color: $live-feed-text-color;
+      margin: 5px 0 0;
+      @include live-feed-text-font;
+      a {
+         color: $live-feed-link-color;
+      }
+   }
+   &.live-feeds-wrapper .right-content .time {
+      @include responsive-property("font-size",$live-feed-time-font-size, 13px, $live-feed-time-font-size+1px);
+       @include responsive-property("line-height", $live-feed-text-font-size +4, 16px, $live-feed-time-font-size+5px);
+      color: $live-feed-time-color;
+		margin-top: 5px;
+      @include live-feed-time-font;
+   }
+   &.live-feeds-wrapper .right-content h3,
+   &.live-feeds-wrapper .right-content h3 a {
+      color: $live-feed-author-color;
+      @include responsive-property("font-size",$live-feed-author-font-size, 15px, $live-feed-author-font-size+1px);
+       @include responsive-property("line-height", $live-feed-author-font-size +4, 18px, $live-feed-author-font-size+5px);
+      margin: 0;
+      @include live-feed-author-font;
+      text-decoration: none;
+   }
+   &.events-wrapper .right-content {
+		overflow: hidden;
+	}
+   &.events-wrapper .event {
+      padding: 0;
+      @include responsive-property("margin-bottom", 35, 15px, 35px);
+      position: relative;
+      z-index: 1;
+   }
+   .event .date {
+      @include responsive-property("font-size",$event-date-font-size, 13px, $event-date-font-size+1px);
+       @include responsive-property("line-height",$event-date-font-size +4, 17px, $event-date-font-size+5px);
+      color: $event-date-color;
+      background: $event-date-bg;
+      @include event-date-font;
+   }
+	.event .time {
+		float: left;
+		text-align: center;
+		padding-top: 2px;
+		@include responsive-property("margin-right",30, 15px, 30px);
+      @include responsive-property("font-size",$event-date-font-size - 2, 11px, $event-date-font-size - 2px);
+       @include responsive-property("line-height",$event-date-font-size, 13px, $event-date-font-size+0px);
+      color: $event-date-color;
+      background: $event-date-bg;
+      @include event-title-font;
+		
+		span {
+			display: block;
+			@include responsive-property("font-size",26, 17px, 26px);
+         @include responsive-property("line-height",29, 19px, 29px);
+		}
+   }
+   .event .date span {
+      display: block;
+   }
+   &.events-wrapper .right-content p,
+   &.events-wrapper .right-content a {
+      margin: 0 0 5px;
+      @include responsive-property("font-size",$event-title-font-size, 14px, $event-title-font-size+1px);
+       @include responsive-property("line-height",$event-title-font-size +4, 18px, $event-title-font-size+5px);
+      color: $event-title-color;
+	   @include event-title-font;
+      text-decoration: none;
+   }
+   &.news-wrapper .right-content {
+      width: 100%;
+      float: none;
+      padding: 35px 0 5px;
+		height: 240px;
+      @include responsive-property("padding-right",70, 10px, 70px);
+   }
+   &.news-wrapper .right-content p {
+		@include responsive-property("font-size",$news-p-font-size, 13px, $news-p-font-size+1px);
+       @include responsive-property("line-height",$news-p-font-size +8, 21px, $news-p-font-size+9px);
+      color: $news-paragraph-color;
+      margin: 0;
+       @include responsive-property("margin-bottom",30, 10px, 40px);
+      @include news-paragraph-font;
+		max-height: 84px;
+		overflow: hidden;
+		
+      a {
+         color: $news-paragraph-color;
+      }
+   }
+   &.news-wrapper .right-content h3 {
+		@include responsive-property("font-size",$news-titles-font-size, 17px, $news-titles-font-size + 1px);
+		@include responsive-property("line-height",$news-titles-font-size + 4, 21px, $news-titles-font-size + 5px);
+      color: $news-titles-color;
+      margin: 0 0 10px;
+      @include news-titles-font;
+   }
+   .news .image img {
+      margin: 0 auto 10px;
+       width: 100%;
+      max-height: 365px;
+      object-fit: cover;
+   }
+   &.news-wrapper .right-content a.read-more {      
+      color: $read-more-new-color;
+      display: inline-block;
+		@include responsive-property("font-size",$read-more-new-font-size, 13px, $read-more-new-font-size + 1px);
+		@include responsive-property("line-height",31, 25px, 31px);
+      background: $read-more-new-bg;
+      padding: 0 10px;
+		@include read-more-new-font;
+   }
+	&.news-wrapper {
+			.bx-wrapper {
+				position: relative;
+				margin: 0 auto;
+				padding: 0;
+				*zoom: 1;
+				width: 100%;
+				padding-left: 0;
+				float: none;
+			}
+			.bx-wrapper img {
+				max-width: 100%;
+				display: block;
+			}
+			.bx-wrapper .bx-viewport {
+				-webkit-transform: translatez(0);
+				-moz-transform: translatez(0);
+				-ms-transform: translatez(0);
+				-o-transform: translatez(0);
+				transform: translatez(0);
+			}
+			.bx-wrapper .bx-pager,
+			.bx-wrapper .bx-controls-auto {
+				position: absolute;
+				width: 100%;
+			}
+
+			/* LOADER */
+
+			.bx-wrapper .bx-loading {
+				min-height: 50px;
+				background: url(bx_loader.gif) center center no-repeat #fff;
+				height: 100%;
+				width: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 2000;
+			}
+
+			/* PAGER */
+
+			.bx-wrapper .bx-pager {
+				text-align: right;
+				position: absolute;
+				width: auto;
+				bottom: 193px;
+				left: auto;
+				right: 0px;
+				padding-right: 0;
+				 white-space: nowrap;
+			}
+			.bx-wrapper .bx-pager .bx-pager-item,
+			.bx-wrapper .bx-controls-auto .bx-controls-auto-item {
+				display: inline-block;
+				*zoom: 1;
+				*display: inline;
+			}
+			.bx-wrapper .bx-pager.bx-default-pager a {
+				text-indent: -9999px;
+				display: block;
+				background: $news-pager;
+				@include responsive-property("width",14, 9px, 14px);
+				@include responsive-property("height",14, 9px, 14px);
+				margin: 0;
+				outline: 0;
+				text-align: left;
+				overflow: hidden;
+				margin-left: 5px;
+				@include border-radius (50%);
+			}
+			.bx-wrapper .bx-pager.bx-default-pager a:hover,
+			.bx-wrapper .bx-pager.bx-default-pager a.active {
+				background: $news-pager-active;
+		}
+			.bx-wrapper .bx-pager .bx-pager-item:first-child {
+				margin: 0;
+			}
+			.bx-wrapper .bx-controls-direction {
+				display: none;
+			}
+			.bx-wrapper .bx-controls-direction a.disabled {
+				display: none;
+			}
+	}
+   img {
+      display: block;
+      height: auto;
+      max-width: 100%;
+   }
+}
+
+/**
+ * Responsive
+ */
+
+
+@media only screen and (max-width: 1000px) {
+	.main .col-item.news-wrapper .bx-wrapper .bx-pager {
+		background: transparent;
+		top: auto;
+	}
+	html .homepage .main .container {
+	display: block;
+	}
+    .main .col-item.news-wrapper .right-content p {
+		max-height: inherit;
+	}
+	.main .col-item.news-wrapper .right-content {
+		height: auto;
+	}
+   .main .container .col-item.news-wrapper h4 {
+      margin-bottom: 41px;
+   }
+   .main .container .col-item .see-more {
+      position: relative;
+      display: block;
+      text-align: center;
+      right: 0;
+      top: 0;
+       padding: 0;
+   }
+    #slider .bx-wrapper .bx-controls {
+        padding-left: 0;
+    }
+	 
+    
+   .main .container .col-item {      
+      float: none;
+      width: 100%;
+      height: auto !important;
+   }
+    
+   .news .image img {
+      margin-left: auto;
+      margin-right: auto;
+   }
+   .col-item .news .right-content {
+      padding: 0 15px;
+   }
+   .col-item .news .right-content {
+      line-height: normal;
+      min-height: initial;
+   }
+   
+}

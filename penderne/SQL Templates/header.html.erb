@@ -1,0 +1,128 @@
+<header id="header" class="clearfix">
+        <div class="container">
+    <a class="logo" href="/">
+         <%= image_tag "apptegy_cms/themes/cromwellct/logo.png", alt: "Pender Public Schools" %>
+         <h1>Pender Public Schools <span>Home of the Pendragons</span></h1>
+      </a>
+
+           <span class="search-icon"></span>
+
+           <%= render 'apptegy_cms/shared/change_language' %>
+           <nav id="right-nav" class="nav" role="navigation">
+                           <div class="menu-btn"><span>Schools</span>
+                               <div class="menu-wrap">
+                                   <ul>
+           <% current_site.secondary_organizations.order(:position).each do |org| %>
+           <li>
+           <a href=<%= "/o/#{org.organization_alias.try(:parameterize)}" %>>
+           <%= org.name %>
+           </a>
+           </li>
+           <% end %>
+                                   </ul>
+                               </div>
+                           </div>
+                       </nav>
+
+            <nav id="left-nav" class="nav" role="navigation">
+
+            <div class="menu-btn"><span>Menu</span></div>
+
+ <div class="menu-wrap">
+          <ul class="first-nav clearfix">
+
+
+<li class="live-feed">
+    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+        <span><%= image_tag 'apptegy_cms/themes/cromwellct/menu/feed-icon.png' %></span>
+       Live Feed
+    </a>
+</li>
+
+<li class="news">
+    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+        <span><%= image_tag 'apptegy_cms/themes/cromwellct/menu/news-icon.png' %> </span>
+        News
+    </a>
+</li>
+
+    <li class="events">
+        <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+          <span>  <%= image_tag 'apptegy_cms/themes/cromwellct/menu/events.png' %> </span>
+            Events
+        </a>
+    </li>
+
+
+<li class="documents">
+    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+        <span> <%= image_tag 'apptegy_cms/themes/cromwellct/menu/documents.png' %> </span>
+        Documents
+    </a>
+</li>
+
+
+
+
+
+
+
+  </ul>
+                   <ul class="second-nav clearfix">
+             <% current_pages.roots.navigation_pages.each do |page| %>
+          <li>
+
+              <% if page.header? %>
+               <span> <%= page.name %> </span>
+              <% else %>
+                <a href=<%= page.page_link? ? "#{page.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{page.slug}" %> target=<%= '_blank' if page.page_link? %>>
+                  <%= page.name %>
+                </a>
+              <% end %>
+
+            <% if page.children.any? %>
+              <ul>
+                <% page.children.order(:position).each do |subpage| %>
+                <% if subpage.children.any? %>
+<li>
+
+              <% if subpage.header? %>
+               <span> <%= subpage.name %></span>
+              <% else %>
+                <a href=<%= subpage.page_link? ? "#{subpage.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+                  <%= subpage.name %>
+                </a>
+              <% end %>
+
+                  <ul>
+                    <% subpage.children.order(:position).each do |subpage2| %>
+                      <li>
+                      <a href=<%= subpage2.page_link? ? "#{subpage2.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage2.slug}" %> target=<%= '_blank' if subpage2.page_link? %> >
+                        <%= subpage2.name %>
+                      </a>
+                      </li>
+                      <% end %>
+                    </ul>
+</li>
+                  <% else %>
+                  <li>
+                    <a href=<%= subpage.page_link? ? "#{subpage.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %> >
+                        <%= subpage.name %>
+                    </a>
+                  </li>
+                  <% end %>
+                <% end %>
+              </ul>
+            <% end %>
+          </li>
+        <% end %>
+          </ul>
+        <span class="menu-close"></span>
+                </div>
+            </nav>
+
+
+</div>
+    </header>
+
+<%= render 'apptegy_cms/shared/search' %>

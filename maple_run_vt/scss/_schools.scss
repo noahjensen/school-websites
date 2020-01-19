@@ -1,0 +1,194 @@
+.blue {
+    //HEADER//
+    ul.first-nav li span {
+        background: #00009c
+    }
+    ul.first-nav li span &:nth-child(odd) span {
+        background: #00009c;
+    }
+    //ul.first-nav li a:hover {
+    //    color: #00009c;
+    //}
+    //ul.first-nav li:nth-child(odd) a:hover {
+    //    color: #00009c;
+    //}
+    .second-nav li.has-child ul li {
+        &:hover {
+            border-left: 8px solid #00009c;
+        }
+    }
+    .second-nav li.has-child ul li a {
+        &:hover {
+            border-left: 8px solid #00009c;
+        }
+    }
+    .second-nav li a:hover,
+    .schools-nav li a:hover {
+        color: #00009c;
+    }
+    #right-nav .menu-wrap li a {
+        &:hover {
+            border-left: 8px solid #00009c;
+        }
+    }
+    #right-nav .menu-wrap li.active a {
+        border-left: 8px solid #00009c;
+    }
+    #header #change_language_form .options li.selected {
+        border-color: #00009c;
+    }
+    //SLIDER//
+    .bx-wrapper .bx-pager.bx-default-pager a:hover,
+    .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background: #00009c;
+        border-color: #00009c;
+    }
+    //CONTENT//
+    .main .col-item {
+        &.news-wrapper:before {
+            background: #000066;
+        }
+        &.live-feeds-wrapper:before {
+            background: #000066;
+        }
+        &.events-wrapper:before {
+            background: #1616b1;
+        }
+    }
+    //FOOTER//
+    @media only screen and (max-width: 1000px) {
+        #slider .slider-info {
+            background: #00009c;
+        }
+    }
+    //SUBPAGES//
+    blockquote {
+        border-left: 5px solid #00009c;
+    }
+    .left-sidebar .left-links li a {
+        color: #00009c;
+    }
+    .subpage h2,
+    .right-content h2,
+    .left-content h2 {
+        color: #00009c;
+    }
+    .subpage h3,
+    .right-content h3,
+    .left-content h3 {
+        color: #00009c;
+    }
+    .subpage h4,
+    .right-content h4,
+    .left-content h4 {
+        color: #00009c;
+    }
+    .subpage h5,
+    .right-content h5,
+    .left-content h5 {
+        color: #00009c;
+    }
+    .subpage h6,
+    .right-content h6,
+    .left-content h6 {
+        color: #00009c;
+    }
+}
+
+/////////////////////////////////////////////////////////////////////////////////////////
+.red {
+    //HEADER//
+    ul.first-nav li span {
+        background: #cc0000
+    }
+    ul.first-nav li span &:nth-child(odd) span {
+        background: #cc0000;
+    }
+    //ul.first-nav li a:hover {
+    //    color: #cc0000;
+    //}
+    //ul.first-nav li:nth-child(odd) a:hover {
+    //    color: #cc0000;
+    //}
+    .second-nav li.has-child ul li {
+        &:hover {
+            border-left: 8px solid #cc0000;
+        }
+    }
+    .second-nav li.has-child ul li a {
+        &:hover {
+            border-left: 8px solid #cc0000;
+        }
+    }
+    .second-nav li a:hover,
+    .schools-nav li a:hover {
+        color: #cc0000;
+    }
+    #right-nav .menu-wrap li a {
+        &:hover {
+            border-left: 8px solid #cc0000;
+        }
+    }
+    #right-nav .menu-wrap li.active a {
+        border-left: 8px solid #cc0000;
+    }
+    #header #change_language_form .options li.selected {
+        border-color: #cc0000;
+    }
+    //SLIDER//
+    .bx-wrapper .bx-pager.bx-default-pager a:hover,
+    .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background: #cc0000;
+        border-color: #cc0000;
+    }
+    //CONTENT//
+    .main .col-item {
+        &.news-wrapper:before {
+            background: #890000;
+        }
+        &.live-feeds-wrapper:before {
+            background: #890000;
+        }
+        &.events-wrapper:before {
+            background: #b90000;
+        }
+    }
+    //FOOTER//
+    @media only screen and (max-width: 1000px) {
+        #slider .slider-info {
+            background: #cc0000;
+        }
+    }
+    //SUBPAGES//
+    blockquote {
+        border-left: 5px solid #cc0000;
+    }
+    .left-sidebar .left-links li a {
+        color: #cc0000;
+    }
+    .subpage h2,
+    .right-content h2,
+    .left-content h2 {
+        color: #cc0000;
+    }
+    .subpage h3,
+    .right-content h3,
+    .left-content h3 {
+        color: #cc0000;
+    }
+    .subpage h4,
+    .right-content h4,
+    .left-content h4 {
+        color: #cc0000;
+    }
+    .subpage h5,
+    .right-content h5,
+    .left-content h5 {
+        color: #cc0000;
+    }
+    .subpage h6,
+    .right-content h6,
+    .left-content h6 {
+        color: #cc0000;
+    }
+}

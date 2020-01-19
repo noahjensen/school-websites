@@ -1,0 +1,177 @@
+// ===== Variables ========================================================== //
+//Website color and background
+$white: #FFFFFF; //white
+$black: #000000; //black
+$breadcrumbBg: #808079;
+$breadcrumbColor: #fff;
+//Elements color and background
+$page-bg: #FFF;
+$text-color: #111111;
+$links-color: #047e3b;
+$logo-color: $black;
+$menu-txt-color: #fff;
+$menu-btn-txt-color: #fff;
+$menu-btn-bg: #047e3b;
+$menu-wrap-bg: rgba(54, 54,54,0.9);
+$nav-background-green: green;
+$right-menu-wrap-bg: rgba(0, 0, 0, 0.9);
+$right-submenu-color: $black;
+$submenu-bg: #464646;
+$pager-slider: #FFF;
+$SliderBgColor: transparent;
+$leftSlider: 0;
+$separator-bg: #FFF;
+$left-sidebar: #047e3b;
+$see-all-btn-bg: transparent;
+$see-all-news-btn-bg: transparent;
+$see-all-events-btn-bg: transparent;
+$see-all-live-feeds-btn-bg: transparent;
+$see-all-btn-color: #fff;
+$see-all-news-btn-color: #fff;
+$see-all-events-btn-color: #fff;
+$see-all-live-feeds-btn-color: #fff;
+$events-wrapper-bg: #FFF;
+$news-wrapper-bg: #fff;
+$footer-title-color: #fff;
+$live-feed-time-color: #FFF;
+$events-title-color: #FFF;
+$news-title-color: #FFF;
+$live-feed-title-color: #FFF;
+$events-title-bg: transparent;
+$news-title-bg: transparent;
+$live-feed-title-bg: transparent;
+$read-more-new-bg: #047e3b;
+$read-more-new-color: #fff;
+$news-pager-active: #330000;
+$news-pager: #047e3b;
+$live-feed-text: #FFF;
+$live-feed-h3: #FFF;
+$event-date: #FFF;
+$event-title: #FFF;
+$new-feed-paragraph: #FFF;
+$new-feed-h3: #FFF;
+$header-bg: $white;
+$footer-bg: #111111;
+$footer-text: #fff;
+//Some padding and margin
+$colspadding : 140px 50px 50px 63px;
+$footer-padding : 50px 0 25px;
+$avatarWidth : 82px;
+$subpage-one-col-width : 80%;
+$subpage-sidebar-width : 30%;
+$subpage-column-two : 65%;
+$subpage-cols-margin : 50px;
+$static-links-icons-width: 90px;
+
+
+
+//District Colors- Alias District
+$nav-background-district: url('navbackground-district.png');
+$district-color1: #649766;
+$district-color2: #666666;
+$district-blue1: #015a81;
+$district-blue2: #2f88af;
+$district-darkblue: #0A2E69;
+$district-header-lefthover: $district-blue1;
+$district-menu-text: #204703;
+$district-menu-icon1: $district-blue2;
+$district-menu-icon2: #666666;
+$district-submenu-bg: $white;
+$district-firstlevelhover: $district-blue1;
+$district-news: $district-color1;
+$district-events: $district-blue1;
+$district-live-feed: $district-color1;
+$district-sidebar: $district-blue1;
+$district-subpage-links: $district-blue2;
+$district-slider: $district-blue1;
+
+//ses Colors- Alias ses
+$nav-background-ses: url('navbackground-ses.png');
+$ses-color1: #649766;
+$ses-blue1: #015a81;
+$ses-blue2: #2f88af;
+$ses-darkblue: #0A2E69;
+$ses-header-lefthover: $ses-blue1;
+$ses-menu-text: #204703;
+$ses-menu-icon1: $ses-blue2;
+$ses-menu-icon2: #666666;
+$ses-submenu-bg: $white;
+$ses-firstlevelhover: $ses-blue1;
+$ses-news: $ses-color1;
+$ses-events: $ses-blue1;
+$ses-live-feed: $ses-color1;
+$ses-sidebar: $ses-blue1;
+$ses-subpage-links: $ses-blue2;
+$ses-slider: $ses-blue1;
+
+//Chelsea Elementary School- Alias ces
+$nav-background-ces: url('navbackground-ces.png');
+$ces-color1: #01823f;
+$ces-color2: #666666;
+$ces-header-lefthover: $white;
+$ces-menu-text: #204703;
+$ces-menu-icon1: $ces-color1;
+$ces-menu-icon2: $ces-color2;
+$ces-submenu-bg: $white;
+$ces-firstlevelhover: $ces-color1;
+$ces-header-lefthover: $ces-color1;
+$ces-news: $ces-color1;
+$ces-events: $ces-color2;
+$ces-live-feed: $ces-color1;
+$ces-sidebar: $ces-color1;
+$ces-subpage-links: $ces-color1;
+$ces-slider: $ces-color2;
+
+
+//Palermo Consolidated School Alias pcs
+$nav-background-pcs: url('navbackground-pcs.png');
+$pcs-color1: #22418a;
+$pcs-color2: #666666;
+$pcs-header-lefthover: $white;
+$pcs-menu-icon1: $pcs-color1;
+$pcs-menu-icon2: $pcs-color2;
+$pcs-submenu-bg: $white;
+$pcs-firstlevelhover: $pcs-color1;
+$pcs-header-lefthover: $pcs-color1;
+$pcs-news: $pcs-color1;
+$pcs-events: $pcs-color2;
+$pcs-live-feed: $pcs-color1;
+$pcs-sidebar: $pcs-color1;
+$pcs-subpage-links: $pcs-color1;
+$pcs-slider: $ces-color2;
+
+//Windsor Elementary School- Alias windsor
+$nav-background-windsor: url('navbackground-windsor.png');
+$windsor-color1: #22418a;
+$windsor-color2: #666666;
+$windsor-header-lefthover: $white;
+$windsor-menu-icon1: $windsor-color1;
+$windsor-menu-icon2: $windsor-color2;
+$windsor-submenu-bg: $white;
+$windsor-firstlevelhover: $windsor-color1;
+$windsor-header-lefthover: $windsor-color1;
+$windsor-news: $windsor-color1;
+$windsor-events: $windsor-color2;
+$windsor-live-feed: $windsor-color1;
+$windsor-sidebar: $windsor-color1;
+$windsor-subpage-links: $windsor-color1;
+$windsor-slider: $ces-color2;
+
+
+
+//Whitefield Elementary School- Alias whes
+$nav-background-whes: url('navbackground-whes.png');
+$whes-color1: #c42026;
+$whes-color2: #666666;
+$whes-header-lefthover: $white;
+$whes-menu-icon1: $whes-color1;
+$whes-menu-icon2: $whes-color2;
+$whes-submenu-bg: $white;
+$whes-firstlevelhover: $whes-color1;
+$whes-header-lefthover: $whes-color1;
+$whes-news: $whes-color1;
+$whes-events: $whes-color2;
+$whes-live-feed: $whes-color1;
+$whes-sidebar: $whes-color1;
+$whes-subpage-links: $whes-color1;
+$whes-slider: $ces-color2;

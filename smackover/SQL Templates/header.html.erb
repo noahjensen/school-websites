@@ -1,0 +1,211 @@
+<!-- ======================== HEADER ======================== -->
+<header id="header" class="clearfix">
+    <span class="search-icon"></span>
+    <h1 class="logo">
+        <a href="/">
+            <%= image_tag "apptegy_cms/themes/smsdar/logo.png", alt: "Smackover Norphlet School District" %>
+
+        </a>
+    </h1>
+
+    <nav id="left-nav" class="nav active" role="navigation">
+
+        <div class="menu-btn">
+
+            <div class="first-menu">
+                <span>MENU</span>
+            </div>
+            <div class="schools-menu">
+                <span>Schools</span>
+            </div>
+
+        </div>
+        <div class="menu-wrap">
+            <ul class="first-nav clearfix">
+
+                <li class="live-feed">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/live_feed" : "/live_feed"%>>
+                        <span><%= image_tag 'apptegy_cms/themes/smsdar/menu/feed-icon.png' %></span>
+                        Live Feed
+                    </a>
+                </li>
+
+                <li class="news">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/news" : "/news"%>>
+                        <span><%= image_tag 'apptegy_cms/themes/smsdar/menu/news-icon.png' %>
+                        </span>
+                        News
+                    </a>
+                </li>
+
+                <li class="events">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/events" : "/events"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/smsdar/menu/events.png' %>
+                        </span>
+                        Events
+                    </a>
+                </li>
+
+                <% if params[:org] == "central-office" %>
+                <li class="staff">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/smsdar/menu/staff.png' %>
+                        </span>
+                        Staff Directory
+                    </a>
+                </li>
+
+                <li class="documents">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/smsdar/menu/documents.png' %>
+                        </span>
+                        Documents
+                    </a>
+                </li>
+
+
+
+
+
+
+                <% elsif params[:org] == "smackover-preschool" %>
+                <li class="staff">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/smsdar/menu/staff.png' %>
+                        </span>
+                        Staff Directory
+                    </a>
+                </li>
+
+                <li class="documents">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/smsdar/menu/documents.png' %>
+                        </span>
+                        Documents
+                    </a>
+                </li>
+
+                <li class="dining">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>
+                        <span><%= image_tag 'apptegy_cms/themes/smsdar/menu/dining.png' %>
+                        </span>
+                        News
+                    </a>
+                </li>
+
+                <li class="documents">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/smsdar/menu/documents.png' %>
+                        </span>
+                        Documents
+                    </a>
+                </li>
+
+
+
+
+
+
+                <% elsif params[:org] != "smackover-preschool" && params[:org] != "central-office"%>
+                <li class="staff">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/smsdar/menu/staff.png' %>
+                        </span>
+                        Staff Directory
+                    </a>
+                </li>
+
+                <li class="dining">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/dining" : "/dining"%>>
+                        <span><%= image_tag 'apptegy_cms/themes/smsdar/menu/dining.png' %>
+                        </span>
+                        News
+                    </a>
+                </li>
+
+                <li class="documents">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/smsdar/menu/documents.png' %>
+                        </span>
+                        Documents
+                    </a>
+                </li>
+
+                <li class="athletics">
+                    <a href=<%= params[:org].present? ? "/o/#{params[:org]}/athletics" : "/athletics"%>>
+                        <span>
+                            <%= image_tag 'apptegy_cms/themes/smsdar/menu/athletics.png' %>
+                        </span>
+                        Schedules
+                    </a>
+                </li>
+
+
+            <% else%>
+
+            <li class="staff">
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/staff" : "/staff"%>>
+                    <span>
+                        <%= image_tag 'apptegy_cms/themes/smsdar/menu/staff.png' %>
+                    </span>
+                    Staff Directory
+                </a>
+            </li>
+
+            <li class="documents">
+                <a href=<%= params[:org].present? ? "/o/#{params[:org]}/documents" : "/documents"%>>
+                    <span>
+                        <%= image_tag 'apptegy_cms/themes/smsdar/menu/documents.png' %>
+                    </span>
+                    Documents
+                </a>
+            </li>
+
+                <%end%>
+
+
+
+            </ul>
+            <ul class="second-nav clearfix">
+                <% current_pages.roots.navigation_pages.each do |page| %>
+                <li>
+                    <span>
+                        <% if page.header? %>
+                        <%= page.name.upcase %>
+                    <% else %>
+                        <a href=<%= page.page_link? ? "#{page.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{page.slug}" %>>
+                            <%= page.name.upcase %>
+                        </a>
+                        <% end %>
+                    </span>
+                    <% if page.children.any? %>
+                    <ul>
+                        <% page.children.order(:position).each do |subpage| %>
+                        <li>
+                            <a href=<%= subpage.page_link? ? "#{subpage.url}" : "#{ '/o/'.concat(params[:org]).concat('/page') if params[:org] }/#{subpage.slug}" %> target=<%= '_blank' if subpage.page_link? %>>
+                                <%= subpage.name %>
+                            </a>
+                        </li>
+                        <% end %>
+                    </ul>
+                    <% end %>
+                </li>
+                <% end %>
+            </ul>
+
+            <ul class="schools-nav clearfix">
+                <%= organizations_menu %>
+            </ul>
+
+        </div>
+    </nav>
+    <%= render 'apptegy_cms/shared/search' %>
+</header>

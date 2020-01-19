@@ -1,0 +1,66 @@
+// ===== Variables ========================================================== //
+// Colors
+//Website color and background
+$first-color                     : #151515;
+//very-dark-gray
+$second-color                    : #0b406b;
+//dark-blue
+$third-color                     : #cfd3ec;
+//light-blue
+$fourth-color                    : #a1a1a1;
+//gray
+$fifth-color                     : #646464;
+//gray02
+$sixth-color                     : #8d8d8d;
+//gray03
+$white                           : #FFFFFF;
+//white
+$black                           : #000000;
+//black
+$third-bg                        : #a4abd6;
+//light-purple
+$fourth-bg                       : #0b406b;
+//yellow
+$fifth-bg                        : #393939;
+//dark-gray
+$leftSliderColor                 : #f2f2f2;
+$breadcrumbBg                    : #f5f5f5;
+//Elements color and background
+$text-color                      : $black;
+$see-all-btn-bg                  : #fb8001;
+$see-all-news-btn-bg             : #fb8001;
+$see-all-events-btn-bg           : #fb8001;
+$see-all-live-feeds-btn-bg       : #fb8001;
+$see-all-btn-color               : $white;
+$see-all-news-btn-color          : $white;
+$see-all-events-btn-color        : $white;
+$see-all-live-feeds-btn-color    : $white;
+$events-wrapper-bg               : $third-bg;
+$footer-title-color              : #FE8A16;
+$live-feed-time-color            : #fb8001;
+$events-title-color              : $fourth-bg;
+$news-title-color                : $fourth-bg;
+$live-feed-title-color           : $fourth-bg;
+$athletics-title-bg              : url("athletics-logo.png") no-repeat center top;
+$athletics-middle-school-title-bg: url("athletics-new-logo.png") no-repeat center top;
+$events-title-bg                 : url("calendar-icon.png") no-repeat center top;
+$news-title-bg                   : url("news-icon.png") no-repeat center top;
+$live-feed-title-bg              : url("live-feed-icon.png") no-repeat center top;
+$read-more-new-bg                : #fb8001;
+$read-more-new-color             : $white;
+$news-pager-active               : $second-color;
+$news-pager                      : $third-color;
+$live-feed-text                  : #0b406b;
+$live-feed-h3                    : #fb8001;
+$event-date                      : #fb8001;
+$event-title                     : #0b406b;
+$new-feed-paragraph              : #0b406b;
+$new-feed-h3                     : #fb8001;
+$header-bg                       : $white;
+$footer-bg                       : $fourth-bg;
+//Some padding and margin
+$colspadding                     : 0;
+$footer-padding                  : 40px 0 30px;
+$leftMarginRightContent          : 95px;
+$avatarWidth                     : 68px;
+$leftSlider                      : 0;

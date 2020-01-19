@@ -1,0 +1,376 @@
+// ===== Variables  &  Mixins ========================================================== //
+
+// FONT FAMILY
+@mixin first-font-family { 
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+}
+@mixin second-font-family {
+  font-family: 'Lato', sans-serif;
+  font-weight: 700;
+}
+@mixin third-font-family {
+    font-family: 'Futura PT W01 Medium', sans-serif, Arial;
+    font-weight: 400;
+}
+@mixin fourth-font-family {
+    font-family: 'Futura PT W01 Demi', sans-serif, Arial;
+    font-weight: 400;
+}
+
+
+
+$white:                              #FFFFFF;   
+$black:                              #000000;  
+$paragraph-font-size:                20;
+$paragraph-line-height:                30;
+
+
+//Main colors
+$page-bg:                            #FFF;
+$text-color:                         #333333;
+$links-color:                        #092b4a;
+
+
+// HEADER
+$header-bg:                         #FFF;
+$header-height:                      128;
+$margin-between-logo-and-title:      15;
+$logo-title-font-size:                48; 
+$logo-color:                        #000;
+@mixin logo-title-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+$logo-subtitle-font-size:             28; 
+$logo-subtitle-color:               #000;
+@mixin logo-subtitle-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+$menu-btns-font-size:                25;
+
+$menu-btn-bg-color:                  #FFF;
+$menu-active-btn-bg-color:           rgba(0,0,0, 0);
+
+$menu-btn-txt-color:                 #000;
+$menu-active-btn-txt-color:          #000;
+
+@mixin menu-btn-font {
+   @include second-font-family;
+   text-transform: uppercase;
+}
+
+$schools-menu-btn-bg-color:          #fff;
+$schools-menu-active-btn-bg-color:   #fff;
+
+$schools-menu-btn-txt-color:          #000;
+$schools-menu-active-btn-txt-color:   #000;
+
+@mixin schools-menu-btn-font {
+   @include second-font-family;
+   text-transform: uppercase;
+}
+
+
+$language-btn-bg:                    rgba(0,0,0, 0);
+$language-btn-color:                 #000;
+$language-btn-font-size:             25;
+
+@mixin language-btn-font {
+   @include second-font-family;
+   text-transform: uppercase;
+}
+
+
+//MENU DROPDOWNS
+
+$menu-wrap-bg:                       #3c3c3c;
+$menu-dropdown-level-2-bg:           #fff;
+
+$static-links-color:                 #fff;
+$static-links-color-hover:           #fff;
+$static-links-font-size:             30;
+$static-links-icons-width:           70;
+@mixin static-links-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+$static-links-lf-bg:                 #092b4a;
+$static-links-staff-bg:              #092b4a;
+$static-links-news-bg:               #32608b;
+$static-links-events-bg:             #092b4a;
+$static-links-dining-bg:             #32608b;
+$static-links-documents-bg:          #32608b;
+$static-links-athletics-bg:          #092b4a;
+
+
+
+$generated-links-color:              #fff;
+$generated-links-color-hover:        #fff;
+$generated-links-font-size:          25;
+@mixin generated-links-font {
+   @include first-font-family;
+   text-transform: uppercase;
+}
+
+$generated-links-color-level2:             #000;
+$generated-links-color-level2-hover:       #000;
+$generated-links-bg-level2-hover:          rgba(0,0,0, 0);
+
+$generated-links-width:              32.33%;  //when are multiple columns number
+
+
+//Schools MENU Dropdown
+
+$schools-menu-width:                  261px;
+$schools-menu-bg:                     #173754;
+$schools-menu-links-color:            #FFF;
+$schools-menu-links-color-hover:       #FFF;
+$schools-menu-links-bg-hover:           rgba(0,0,0, 0);
+$schools-menu-links-font-size:        25;
+
+@mixin schools-menu-links-font {
+   @include first-font-family;
+   text-transform: none;
+}
+
+
+//language dropdown
+$language-dropdown-bg:               #173754;
+$language-dropdown-width:            200px;
+$language-options-font-size:         25;
+$language-options-color:             #FFF;
+$language-options-color-hover:       #FFF;
+$language-options-bg-hover:          rgba(0,0,0, 0);
+
+@mixin language-options-font {
+   @include second-font-family;
+   text-transform: uppercase;
+}
+
+
+//search icon
+$search-bg-color:                    #fff;
+$search-bg-hover-color:              darken($search-bg-color,5%);
+$search-txt-color:                   #fff;
+$search-btn-font-size:               20;
+
+
+
+// SLIDER GALLERY 
+
+$pager-slider-bg:                    #fff;
+$active-pager-slider-bg:             #989898;
+
+$slider-arrow-bg:                 rgba(189,3,35, 0.85);
+$slider-arrow-width:              43;
+$slider-arrow-height:             126;
+
+//for _slider2.scss
+$left-slider-bg:                  #052745;
+
+
+//bulletin board
+$bb-text-color:     #FFF;
+$bb-h1-font-size:     66;
+@mixin bb-h1-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+$bb-p-font-size:     20;
+@mixin bb-p-font {
+   @include first-font-family;
+   text-transform: uppercase;
+}
+
+// for _slider1.scss
+$bb-first-text-bg:            rgba(189, 3, 35, 0.85);  
+$bb-second-text-bg:           rgba(32, 63, 139, 0.85);
+
+
+
+//SECTION BOXES HOMEPAGE
+
+$events-wrapper-bg:                  #f1f1f1;
+$news-wrapper-bg:                    #FFF;
+$live-feeds-wrapper-bg:              #f8f7f8;
+
+$see-all-btns-font-size:              19;
+@mixin see-all-btns-font {
+   @include second-font-family;
+   text-transform: uppercase;
+}
+
+$see-all-news-btn-color:            #313131;
+$see-all-events-btn-color:          #313131;
+$see-all-live-feeds-btn-color:      #313131;
+
+$see-all-news-btn-bg:               rgba(0,0,0, 0);
+$see-all-events-btn-bg:             rgba(0,0,0, 0);
+$see-all-live-feeds-btn-bg:         rgba(0,0,0, 0);
+
+
+$sections-titles-font-size:         54;
+
+@mixin sections-titles-font {
+   @include fourth-font-family;
+   text-transform: uppercase;
+}
+
+$sections-titles-border-color:      #092b4a;   // for _section_boxes3.scss, _section_boxes4.scss, _section_boxes6.scss
+
+$events-title-color:                #000; // section title
+$news-title-color:                  #000; // section title
+$live-feed-title-color:             #000;  // section title
+
+// for template that have diagonal stripes lines at sections titles
+$events-diagonal-stripes-color:               #22428f;
+$news-diagonal-stripes-color:                 #a4bbec;
+$live-feed-diagonal-stripes-color:            #bd0323;
+
+$events-title-bg:                   rgba(0,0,0, 0);
+$news-title-bg:                     rgba(0,0,0, 0);
+$live-feed-title-bg:                rgba(0,0,0, 0);
+
+
+// for _section_boxes1.scss
+$first-news-border-top-color:       #203f8b;
+$second-news-border-top-color:      #f0a81e;
+$third-news-border-top-color:       #bd0323;
+
+
+$news-paragraph-color:              #000;
+$news-p-font-size:                  19;
+@mixin news-paragraph-font {
+   @include first-font-family;
+   text-transform: none;
+}
+
+$news-titles-color:                 #989898;
+$news-titles-font-size:             25;
+@mixin news-titles-font {
+   @include second-font-family;
+   text-transform: uppercase;
+}
+
+$news-date-color:                   #545454;
+$news-date-font-size:               15;
+@mixin news-date-font {
+   @include first-font-family;
+   text-transform: none;
+}
+
+// if the news section is a slider
+$read-more-new-bg:                  rgba(0,0,0, 0);
+$read-more-new-color:               #000;
+$read-more-new-font-size:             16;
+@mixin read-more-new-font {
+   @include second-font-family;
+   text-transform: uppercase;
+}
+
+$news-pager:                        #191919;
+$news-pager-active:                 #989898;
+
+
+$news-text-background:              rgba(189, 3, 35, 0.85);  // for _section_boxes3.scss 
+$lh-title-color:                    #bd0323;                 // Latest Headlines from News section
+
+
+$live-feed-text-color:              #000;
+$live-feed-link-color:              #233e99;
+$live-feed-text-font-size:          17;
+@mixin live-feed-text-font {
+   @include first-font-family;
+   text-transform: none;
+}
+
+$live-feed-author-color:                #092b4a;
+$live-feed-author-font-size:            23;
+@mixin live-feed-author-font {
+   @include second-font-family;
+   text-transform: uppercase;
+}
+
+$live-feed-time-color:              #636363;
+$live-feed-time-font-size:          14;
+@mixin live-feed-time-font {
+   @include first-font-family;
+   text-transform: none;
+}
+
+$event-date-color:                  #333333;
+$event-date-font-size:              17;
+$event-date-bg:                     rgba(0,0,0, 0);
+@mixin event-date-font {
+   @include first-font-family;
+   text-transform: none;
+} 
+
+$event-title-color:                 #092b4a;
+$event-title-font-size:             25;
+@mixin event-title-font {
+   @include second-font-family;
+   text-transform: uppercase;
+}
+
+
+
+// FOOTER
+$footer-container-max-width:        1545;
+$footer-bg:                         #212121;
+$footer-bottom-part-bg:             #000000;
+
+$footer-col-width:                  25%;
+
+$footer-text-color:                 #FFF;
+$footer-text-font-size:                 19;
+@mixin footer-text-font {
+   @include third-font-family;
+   text-transform: uppercase;
+}
+
+$footer-title-color:                #fff;
+$footer-title-font-size:                27;
+@mixin footer-title-font {
+   @include fourth-font-family;
+   text-transform: uppercase;
+}
+
+$footer-copyright-font-size:            17;
+@mixin footer-copyright-font {
+   @include second-font-family;
+   text-transform: uppercase;
+}
+
+$footer-pb-txt-color:               #fff;    // footer power by text color
+$footer-pb-link-color:              #fff; // footer power by links color
+
+
+
+//SUBPAGES
+$breadcrumb-height:            45px;
+$breadcrumb-bg:                #202020;
+$breadcrumb-color:             #fff;
+$breadcrumb-font-size:         20;
+
+$subpage-one-col-width:  90%; 
+
+$subpage-sidebar-width:  30%;
+$subpage-column-two:     65%;
+
+$subpage-sidebar-title-bg: #173754;
+$subpage-sidebar-title-color: #FFF;
+
+
+$subpage-h1-font-size:    28;
+
+@mixin subpage-h1-font {
+   @include first-font-family;
+   text-transform: uppercase;
+}

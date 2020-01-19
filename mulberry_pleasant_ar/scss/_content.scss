@@ -1,0 +1,191 @@
+/**
+ * Main Content
+ */
+
+.main .col-item {
+    position: relative;
+    width: 65%;
+    padding: 0;
+    float: left;
+    overflow: hidden;
+    padding: $colspadding;
+    position: relative;
+    @include transition;
+    margin-top: 40px;
+    margin-bottom: 35px;
+    
+    &.events-wrapper {
+        width: 35%;
+        background: $events-wrapper-bg;
+    }
+    &.news-wrapper {
+        background: #ffffff;
+        border-right: 2px solid #d8d8d8;
+        padding-right: 75px;
+    }
+    &:first-child {
+        padding-left: 45px;
+        padding-right: 75px;
+    }
+    &:last-child {
+        padding-right: 40px;
+        padding-left: 55px;
+    }
+    .see-more {
+        position: absolute;
+        top: -13px;
+        right: 40px;
+        display: inline-block;
+        padding: 0;
+        height: 85px;
+        background: $see-all-btn-bg;
+        @include font-size(18);
+        @include line-height(85);
+        color: $see-all-btn-color;
+        @include first-font-family;
+        text-transform: uppercase;
+    }
+    &.news-wrapper .see-more {
+        background: #ffffff;
+        color: #f2be13;
+        right: 75px;
+    }
+    &.events-wrapper .see-more {
+        background: $see-all-events-btn-bg;
+        color: #5d8b11;
+    }
+    h4 {
+        @include font-size(24);
+        @include line-height(85);
+        height: 85px;
+        color: #5d8b11;
+        padding: 0 0 0 55px;
+        @include first-font-family;
+        text-align: left;
+        text-transform: uppercase;
+        position: absolute;
+        left: 0;
+        top: -13px;
+        width: 100%;
+        background:#ffffff;
+    }
+    &.news-wrapper h4 {
+        color: #f2be13;
+        background: $news-title-bg;
+        padding-left: 45px;
+    }
+    &.events-wrapper .event {
+        padding: 0;
+        margin: 0 0 35px;
+        
+        &:last-of-type {
+            margin-bottom: 10px;
+        }
+    }
+    .event .date {
+        @include font-size(18);
+        @include line-height(22);
+        color: #585858;
+        text-transform: uppercase;
+        @include third-font-family;
+    }
+    &.events-wrapper p,
+    &.events-wrapper p a {
+        margin: 0;
+        @include second-font-family;
+        @include font-size(22);
+        @include line-height(25);
+        color: #5d8b11;
+    }
+    &.news-wrapper .news {
+        display: table;
+    }
+    &.news-wrapper .image {
+        display: table-cell;
+        padding-right: 55px;
+        width: 35%;
+        vertical-align: middle;
+    }
+    &.news-wrapper .right-content {
+        overflow: hidden;
+        float: none;
+        padding: 0;
+        display: table-cell;
+        vertical-align: middle;
+        width: 65%;
+    }
+    &.news-wrapper .right-content p {
+        @include font-size(18);
+        @include line-height(22);
+        color: $new-feed-paragraph;
+        margin: 0;
+        @include third-font-family;
+    }
+    .news .right-content h3 {
+        @include font-size(24);
+        @include line-height(29);
+        color: #f2be13;
+        @include second-font-family;
+        margin: 0 0 11px;
+        text-transform: none;
+    }
+    .news .right-content .author-time {
+        @include font-size(18);
+        @include line-height(20);
+        margin-bottom: 20px;
+        display: block;
+        color: #646464;
+        @include third-font-family;
+        
+        span {
+            display: inline-block;
+            vertical-align: top;
+            border-left: 1px solid #646464;
+            padding: 0 15px;
+            
+            &:first-child {
+                padding-left: 0;
+                border: 0;
+            }
+        }
+    }
+    .news .right-content p a {
+        color: $links-color;
+    }
+     
+
+    &.news-wrapper .bx-wrapper {
+        position: relative;
+        margin: 0 auto;
+        padding: 0;
+        width: 100%;
+        float: none;
+    }
+    &.news-wrapper .bx-wrapper .bx-viewport:after {
+        display: none;
+    }
+    &.news-wrapper .bx-wrapper .bx-pager {
+        text-align: right;
+        position: absolute;
+        width: auto;
+        bottom: -50px;
+        
+        left: auto;
+        right: 0;
+    }
+    &.news-wrapper .bx-wrapper .bx-pager.bx-default-pager a {
+        background: $news-pager;
+        @include border-radius (50%);
+        width: 14px;
+        height: 14px;
+    }
+    &.news-wrapper .bx-wrapper .bx-pager.bx-default-pager a:hover,
+    &.news-wrapper .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background: $news-pager-active;
+    }
+    img {
+        display: block;
+        height: auto;
+        max-width: 100%;
+    }
+}

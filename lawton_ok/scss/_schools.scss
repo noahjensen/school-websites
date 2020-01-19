@@ -1,0 +1,3888 @@
+// LPS PreK
+.lps-prek {
+  #header {
+    .first-logo {
+      h1 {
+        color: $LPS;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $LPS url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $LPS;
+  }
+
+  #right-nav .menu-wrap {
+    background: $LPS;
+  }
+  
+  #footer .footer-col a {
+    color: $LPS;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $LPS;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $LPS;
+    }
+    &.news-wrapper .see-more {
+      color: $LPS;
+    }
+    &.events-wrapper .see-more {
+      color: $LPS;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $LPS;
+    }
+    h4 {
+      border-bottom: 3px solid $LPS;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $LPS;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $LPS;
+          border-color: $LPS;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $LPS;
+      }
+    }
+    &.events-wrapper p {
+      color: $LPS;
+    }
+    .news .right-content h3 {
+      color: $LPS;
+    }
+    .news .right-content p a {
+      color: $LPS;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $LPS;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $LPS;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $LPS;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $LPS;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $LPS;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $LPS;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $LPS;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $LPS;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $LPS;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $LPS;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $LPS;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $LPS url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $LPS;
+    }
+  }
+
+}
+
+
+// John Adams El
+.adams {
+  #header {
+    .first-logo {
+      h1 {
+        color: $JAE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $JAE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $JAE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $JAE;
+  }
+  
+  #footer .footer-col a {
+    color: #FFF;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $JAE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $JAE;
+    }
+    &.news-wrapper .see-more {
+      color: $JAE;
+    }
+    &.events-wrapper .see-more {
+      color: $JAE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $JAE;
+    }
+    h4 {
+      border-bottom: 3px solid $JAE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $JAE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $JAE;
+          border-color: $JAE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $JAE;
+      }
+    }
+    &.events-wrapper p {
+      color: $JAE;
+    }
+    .news .right-content h3 {
+      color: $JAE;
+    }
+    .news .right-content p a {
+      color: $JAE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $JAE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $JAE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $JAE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $JAE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $JAE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $JAE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $JAE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $JAE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $JAE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $JAE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $JAE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $JAE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $JAE;
+    }
+  }
+    
+}
+
+
+
+//Almor West El
+.almor-west {
+  #header {
+    .first-logo {
+      h1 {
+        color: $AWE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $AWE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $AWE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $AWE;
+  }
+  
+  #footer .footer-col a {
+    color: $AWE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $AWE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $AWE;
+    }
+    &.news-wrapper .see-more {
+      color: $AWE;
+    }
+    &.events-wrapper .see-more {
+      color: $AWE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $AWE;
+    }
+    h4 {
+      border-bottom: 3px solid $AWE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $AWE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $AWE;
+          border-color: $AWE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $AWE;
+      }
+    }
+    &.events-wrapper p {
+      color: $AWE;
+    }
+    .news .right-content h3 {
+      color: $AWE;
+    }
+    .news .right-content p a {
+      color: $AWE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $AWE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $AWE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $AWE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $AWE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $AWE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $AWE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $AWE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $AWE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $AWE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $AWE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $AWE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $AWE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $AWE;
+    }
+  }
+    
+}
+
+
+//Gateway Success Center
+.gateway {
+  #header {
+    .first-logo {
+      h1 {
+        color: $GSC;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $GSC url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $GSC;
+  }
+
+  #right-nav .menu-wrap {
+    background: $GSC;
+  }
+  
+  #footer .footer-col a {
+    color: $GSC;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $GSC;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $GSC;
+    }
+    &.news-wrapper .see-more {
+      color: $GSC;
+    }
+    &.events-wrapper .see-more {
+      color: $GSC;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $GSC;
+    }
+    h4 {
+      border-bottom: 3px solid $GSC;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $GSC;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $GSC;
+          border-color: $GSC;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $GSC;
+      }
+    }
+    &.events-wrapper p {
+      color: $GSC;
+    }
+    .news .right-content h3 {
+      color: $GSC;
+    }
+    .news .right-content p a {
+      color: $GSC;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $GSC;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $GSC;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $GSC;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $GSC;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $GSC;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $GSC;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $GSC;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $GSC;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $GSC;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $GSC;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $GSC;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $GSC url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $GSC;
+    }
+  }
+    
+}
+
+
+//Beginnings Academy
+.beginnings-academy {
+    // district colors
+}
+
+
+//Carriage Hills El
+.carriage-hills {
+    #header {
+    .first-logo {
+      h1 {
+        color: $CHE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $CHE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $CHE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $CHE;
+  }
+  
+  #footer .footer-col a {
+    color: $CHE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $CHE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $CHE;
+    }
+    &.news-wrapper .see-more {
+      color: $CHE;
+    }
+    &.events-wrapper .see-more {
+      color: $CHE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $CHE;
+    }
+    h4 {
+      border-bottom: 3px solid $CHE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $CHE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $CHE;
+          border-color: $CHE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $CHE;
+      }
+    }
+    &.events-wrapper p {
+      color: $CHE;
+    }
+    .news .right-content h3 {
+      color: $CHE;
+    }
+    .news .right-content p a {
+      color: $CHE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $CHE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $CHE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $CHE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $CHE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $CHE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $CHE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $CHE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $CHE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $CHE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $CHE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $CHE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $CHE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $CHE;
+    }
+  }
+}
+
+
+//Central Middle
+.central-middle {
+    #header {
+    .first-logo {
+      h1 {
+        color: $CM;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $CM url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $CM;
+  }
+
+  #right-nav .menu-wrap {
+    background: $CM;
+  }
+  
+  #footer .footer-col a {
+    color: $CM;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $CM;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $CM;
+    }
+    &.news-wrapper .see-more {
+      color: $CM;
+    }
+    &.events-wrapper .see-more {
+      color: $CM;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $CM;
+    }
+    h4 {
+      border-bottom: 3px solid $CM;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $CM;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $CM;
+          border-color: $CM;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $CM;
+      }
+    }
+    &.events-wrapper p {
+      color: $CM;
+    }
+    .news .right-content h3 {
+      color: $CM;
+    }
+    .news .right-content p a {
+      color: $CM;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $CM;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $CM;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $CM;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $CM;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $CM;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $CM;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $CM;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $CM;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $CM;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $CM;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $CM;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $CM url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $CM;
+    }
+  }
+}
+
+
+//Cleveland El
+.cleveland {
+    #header {
+    .first-logo {
+      h1 {
+        color: $CE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $CE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $CE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $CE;
+  }
+  
+  #footer .footer-col a {
+    color: $CE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $CE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $CE;
+    }
+    &.news-wrapper .see-more {
+      color: $CE;
+    }
+    &.events-wrapper .see-more {
+      color: $CE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $CE;
+    }
+    h4 {
+      border-bottom: 3px solid $CE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $CE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $CE;
+          border-color: $CE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $CE;
+      }
+    }
+    &.events-wrapper p {
+      color: $CE;
+    }
+    .news .right-content h3 {
+      color: $CE;
+    }
+    .news .right-content p a {
+      color: $CE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $CE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $CE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $CE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $CE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $CE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $CE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $CE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $CE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $CE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $CE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $CE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $CE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $CE;
+    }
+  }
+}
+
+
+//Eisenhower Middle
+.eisenhower-middle {
+    #header {
+    .first-logo {
+      h1 {
+        color: $EM;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $EM url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $EM;
+  }
+
+  #right-nav .menu-wrap {
+    background: $EM;
+  }
+  
+  #footer .footer-col a {
+    color: $EM;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $EM;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $EM;
+    }
+    &.news-wrapper .see-more {
+      color: $EM;
+    }
+    &.events-wrapper .see-more {
+      color: $EM;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $EM;
+    }
+    h4 {
+      border-bottom: 3px solid $EM;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $EM;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $EM;
+          border-color: $EM;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $EM;
+      }
+    }
+    &.events-wrapper p {
+      color: $EM;
+    }
+    .news .right-content h3 {
+      color: $EM;
+    }
+    .news .right-content p a {
+      color: $EM;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $EM;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $EM;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $EM;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $EM;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $EM;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $EM;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $EM;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $EM;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $EM;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $EM;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $EM;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $EM url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $EM;
+    }
+  }
+}
+
+
+//Crosby Park El
+.crosby-park {
+    #header {
+    .first-logo {
+      h1 {
+        color: $CPE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $CPE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $CPE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $CPE;
+  }
+  
+  #footer .footer-col a {
+    color: $CPE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $CPE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $CPE;
+    }
+    &.news-wrapper .see-more {
+      color: $CPE;
+    }
+    &.events-wrapper .see-more {
+      color: $CPE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $CPE;
+    }
+    h4 {
+      border-bottom: 3px solid $CPE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $CPE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $CPE;
+          border-color: $CPE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $CPE;
+      }
+    }
+    &.events-wrapper p {
+      color: $CPE;
+    }
+    .news .right-content h3 {
+      color: $CPE;
+    }
+    .news .right-content p a {
+      color: $CPE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $CPE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $CPE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $CPE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $CPE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $CPE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $CPE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $CPE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $CPE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $CPE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $CPE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $CPE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $CPE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $CPE;
+    }
+  }
+}
+
+
+//MacArthur Middle
+.macarthur-middle {
+    #header {
+    .first-logo {
+      h1 {
+        color: $MM;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $MM url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $MM;
+  }
+
+  #right-nav .menu-wrap {
+    background: $MM;
+  }
+  
+  #footer .footer-col a {
+    color: $MM;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $MM;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $MM;
+    }
+    &.news-wrapper .see-more {
+      color: $MM;
+    }
+    &.events-wrapper .see-more {
+      color: $MM;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $MM;
+    }
+    h4 {
+      border-bottom: 3px solid $MM;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $MM;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $MM;
+          border-color: $MM;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $MM;
+      }
+    }
+    &.events-wrapper p {
+      color: $MM;
+    }
+    .news .right-content h3 {
+      color: $MM;
+    }
+    .news .right-content p a {
+      color: $MM;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $MM;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $MM;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $MM;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $MM;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $MM;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $MM;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $MM;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $MM;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $MM;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $MM;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $MM;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $MM url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $MM;
+    }
+  }
+}
+
+
+//Tomlinson Middle
+.tomlinson-middle {
+    #header {
+    .first-logo {
+      h1 {
+        color: $TM;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $TM url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $TM;
+  }
+
+  #right-nav .menu-wrap {
+    background: $TM;
+  }
+  
+  #footer .footer-col a {
+    color: $TM;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $TM;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $TM;
+    }
+    &.news-wrapper .see-more {
+      color: $TM;
+    }
+    &.events-wrapper .see-more {
+      color: $TM;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $TM;
+    }
+    h4 {
+      border-bottom: 3px solid $TM;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $TM;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $TM;
+          border-color: $TM;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $TM;
+      }
+    }
+    &.events-wrapper p {
+      color: $TM;
+    }
+    .news .right-content h3 {
+      color: $TM;
+    }
+    .news .right-content p a {
+      color: $TM;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $TM;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $TM;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $TM;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $TM;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $TM;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $TM;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $TM;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $TM;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $TM;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $TM;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $TM;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $TM url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $TM;
+    }
+  }
+}
+
+
+//Douglass LC
+.douglass-learning-center {
+    //district colors
+}
+
+
+//Edison El
+.edison {
+    #header {
+    .first-logo {
+      h1 {
+        color: $EdE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $EdE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $EdE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $EdE;
+  }
+  
+  #footer .footer-col a {
+    color: $EdE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $EdE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $EdE;
+    }
+    &.news-wrapper .see-more {
+      color: $EdE;
+    }
+    &.events-wrapper .see-more {
+      color: $EdE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $EdE;
+    }
+    h4 {
+      border-bottom: 3px solid $EdE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $EdE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $EdE;
+          border-color: $EdE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $EdE;
+      }
+    }
+    &.events-wrapper p {
+      color: $EdE;
+    }
+    .news .right-content h3 {
+      color: $EdE;
+    }
+    .news .right-content p a {
+      color: $EdE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $EdE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $EdE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $EdE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $EdE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $EdE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $EdE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $EdE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $EdE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $EdE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $EdE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $EdE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $EdE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $EdE;
+    }
+  }
+}
+
+
+//Woodland Hills El
+.woodland-hills {
+    #header {
+    .first-logo {
+      h1 {
+        color: $WHE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $WHE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $WHE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $WHE;
+  }
+  
+  #footer .footer-col a {
+    color: $WHE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $WHE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $WHE;
+    }
+    &.news-wrapper .see-more {
+      color: $WHE;
+    }
+    &.events-wrapper .see-more {
+      color: $WHE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $WHE;
+    }
+    h4 {
+      border-bottom: 3px solid $WHE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $WHE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $WHE;
+          border-color: $WHE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $WHE;
+      }
+    }
+    &.events-wrapper p {
+      color: $WHE;
+    }
+    .news .right-content h3 {
+      color: $WHE;
+    }
+    .news .right-content p a {
+      color: $WHE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $WHE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $WHE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $WHE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $WHE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $WHE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $WHE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $WHE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $WHE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $WHE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $WHE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $WHE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $WHE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $WHE;
+    }
+  }
+}
+
+
+//Eisenhower El
+.eisenhower {
+    #header {
+    .first-logo {
+      h1 {
+        color: $EhE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $EhE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $EhE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $EhE;
+  }
+  
+  #footer .footer-col a {
+    color: $EhE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $EhE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $EhE;
+    }
+    &.news-wrapper .see-more {
+      color: $EhE;
+    }
+    &.events-wrapper .see-more {
+      color: $EhE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $EhE;
+    }
+    h4 {
+      border-bottom: 3px solid $EhE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $EhE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $EhE;
+          border-color: $EhE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $EhE;
+      }
+    }
+    &.events-wrapper p {
+      color: $EhE;
+    }
+    .news .right-content h3 {
+      color: $EhE;
+    }
+    .news .right-content p a {
+      color: $EhE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $EhE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $EhE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $EhE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $EhE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $EhE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $EhE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $EhE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $EhE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $EhE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $EhE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $EhE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $EhE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $EhE;
+    }
+  }
+}
+
+
+//Whittier El
+.whittier {
+    #header {
+    .first-logo {
+      h1 {
+        color: $WtE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $WtE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $WtE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $WtE;
+  }
+  
+  #footer .footer-col a {
+    color: $WtE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $WtE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $WtE;
+    }
+    &.news-wrapper .see-more {
+      color: $WtE;
+    }
+    &.events-wrapper .see-more {
+      color: $WtE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $WtE;
+    }
+    h4 {
+      border-bottom: 3px solid $WtE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $WtE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $WtE;
+          border-color: $WtE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $WtE;
+      }
+    }
+    &.events-wrapper p {
+      color: $WtE;
+    }
+    .news .right-content h3 {
+      color: $WtE;
+    }
+    .news .right-content p a {
+      color: $WtE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $WtE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $WtE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $WtE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $WtE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $WtE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $WtE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $WtE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $WtE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $WtE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $WtE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $WtE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $WtE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $WtE;
+    }
+  }
+}
+
+
+//Freedom El
+.freedom {
+    #header {
+    .first-logo {
+      h1 {
+        color: $FE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $FE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $FE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $FE;
+  }
+  
+  #footer .footer-col a {
+    color: $FE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $FE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $FE;
+    }
+    &.news-wrapper .see-more {
+      color: $FE;
+    }
+    &.events-wrapper .see-more {
+      color: $FE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $FE;
+    }
+    h4 {
+      border-bottom: 3px solid $FE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $FE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $FE;
+          border-color: $FE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $FE;
+      }
+    }
+    &.events-wrapper p {
+      color: $FE;
+    }
+    .news .right-content h3 {
+      color: $FE;
+    }
+    .news .right-content p a {
+      color: $FE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $FE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $FE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $FE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $FE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $FE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $FE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $FE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $FE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $FE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $FE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $FE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $FE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $FE;
+    }
+  }
+
+}
+
+
+//Washington El
+.washington {
+    #header {
+    .first-logo {
+      h1 {
+        color: $WaE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $WaE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $WaE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $WaE;
+  }
+  
+  #footer .footer-col a {
+    color: $WaE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $WaE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $WaE;
+    }
+    &.news-wrapper .see-more {
+      color: $WaE;
+    }
+    &.events-wrapper .see-more {
+      color: $WaE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $WaE;
+    }
+    h4 {
+      border-bottom: 3px solid $WaE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $WaE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $WaE;
+          border-color: $WaE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $WaE;
+      }
+    }
+    &.events-wrapper p {
+      color: $WaE;
+    }
+    .news .right-content h3 {
+      color: $WaE;
+    }
+    .news .right-content p a {
+      color: $WaE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $WaE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $WaE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $WaE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $WaE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $WaE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $WaE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $WaE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $WaE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $WaE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $WaE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $WaE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $WaE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $WaE;
+    }
+  }
+
+}
+
+
+//Sullivan Village El
+.sullivan-village {
+    #header {
+    .first-logo {
+      h1 {
+        color: $SVE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $SVE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $SVE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $SVE;
+  }
+  
+  #footer .footer-col a {
+    color: $SVE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $SVE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $SVE;
+    }
+    &.news-wrapper .see-more {
+      color: $SVE;
+    }
+    &.events-wrapper .see-more {
+      color: $SVE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $SVE;
+    }
+    h4 {
+      border-bottom: 3px solid $SVE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $SVE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $SVE;
+          border-color: $SVE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $SVE;
+      }
+    }
+    &.events-wrapper p {
+      color: $SVE;
+    }
+    .news .right-content h3 {
+      color: $SVE;
+    }
+    .news .right-content p a {
+      color: $SVE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $SVE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $SVE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $SVE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $SVE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $SVE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $SVE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $SVE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $SVE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $SVE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $SVE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $SVE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $SVE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $SVE;
+    }
+  }
+
+}
+
+
+//Hugh Bish El
+.hugh-bish {
+    #header {
+    .first-logo {
+      h1 {
+        color: $HBE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $HBE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $HBE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $HBE;
+  }
+  
+  #footer .footer-col a {
+    color: $HBE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $HBE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $HBE;
+    }
+    &.news-wrapper .see-more {
+      color: $HBE;
+    }
+    &.events-wrapper .see-more {
+      color: $HBE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $HBE;
+    }
+    h4 {
+      border-bottom: 3px solid $HBE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $HBE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $HBE;
+          border-color: $HBE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $HBE;
+      }
+    }
+    &.events-wrapper p {
+      color: $HBE;
+    }
+    .news .right-content h3 {
+      color: $HBE;
+    }
+    .news .right-content p a {
+      color: $HBE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $HBE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $HBE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $HBE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $HBE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $HBE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $HBE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $HBE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $HBE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $HBE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $HBE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $HBE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $HBE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $HBE;
+    }
+  }
+
+}
+
+
+//Ridgecrest El
+.ridgecrest {
+    #header {
+    .first-logo {
+      h1 {
+        color: $RE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $RE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $RE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $RE;
+  }
+  
+  #footer .footer-col a {
+    color: $RE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $RE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $RE;
+    }
+    &.news-wrapper .see-more {
+      color: $RE;
+    }
+    &.events-wrapper .see-more {
+      color: $RE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $RE;
+    }
+    h4 {
+      border-bottom: 3px solid $RE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $RE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $RE;
+          border-color: $RE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $RE;
+      }
+    }
+    &.events-wrapper p {
+      color: $RE;
+    }
+    .news .right-content h3 {
+      color: $RE;
+    }
+    .news .right-content p a {
+      color: $RE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $RE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $RE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $RE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $RE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $RE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $RE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $RE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $RE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $RE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $RE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $RE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $RE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $RE;
+    }
+  }
+
+}
+
+
+//Learning Tree Academy
+.learning-tree {
+    #header {
+    .first-logo {
+      h1 {
+        color: $LTA;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $LTA url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $LTA;
+  }
+
+  #right-nav .menu-wrap {
+    background: $LTA;
+  }
+  
+  #footer .footer-col a {
+    color: $LTA;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $LTA;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $LTA;
+    }
+    &.news-wrapper .see-more {
+      color: $LTA;
+    }
+    &.events-wrapper .see-more {
+      color: $LTA;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $LTA;
+    }
+    h4 {
+      border-bottom: 3px solid $LTA;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $LTA;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $LTA;
+          border-color: $LTA;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $LTA;
+      }
+    }
+    &.events-wrapper p {
+      color: $LTA;
+    }
+    .news .right-content h3 {
+      color: $LTA;
+    }
+    .news .right-content p a {
+      color: $LTA;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $LTA;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $LTA;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $LTA;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $LTA;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $LTA;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $LTA;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $LTA;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $LTA;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $LTA;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $LTA;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $LTA;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $LTA url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $LTA;
+    }
+  }
+
+}
+
+
+//Lincoln El
+.lincoln {
+    #header {
+    .first-logo {
+      h1 {
+        color: $LE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $LE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $LE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $LE;
+  }
+  
+  #footer .footer-col a {
+    color: $LE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $LE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $LE;
+    }
+    &.news-wrapper .see-more {
+      color: $LE;
+    }
+    &.events-wrapper .see-more {
+      color: $LE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $LE;
+    }
+    h4 {
+      border-bottom: 3px solid $LE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $LE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $LE;
+          border-color: $LE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $LE;
+      }
+    }
+    &.events-wrapper p {
+      color: $LE;
+    }
+    .news .right-content h3 {
+      color: $LE;
+    }
+    .news .right-content p a {
+      color: $LE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $LE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $LE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $LE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $LE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $LE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $LE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $LE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $LE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $LE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $LE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $LE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $LE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $LE;
+    }
+  }
+
+}
+
+
+//Pioneer Park El
+.pioneer-park {
+    #header {
+    .first-logo {
+      h1 {
+        color: $PPE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $PPE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $PPE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $PPE;
+  }
+  
+  #footer .footer-col a {
+    color: $PPE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $PPE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $PPE;
+    }
+    &.news-wrapper .see-more {
+      color: $PPE;
+    }
+    &.events-wrapper .see-more {
+      color: $PPE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $PPE;
+    }
+    h4 {
+      border-bottom: 3px solid $PPE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $PPE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $PPE;
+          border-color: $PPE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $PPE;
+      }
+    }
+    &.events-wrapper p {
+      color: $PPE;
+    }
+    .news .right-content h3 {
+      color: $PPE;
+    }
+    .news .right-content p a {
+      color: $PPE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $PPE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $PPE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $PPE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $PPE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $PPE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $PPE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $PPE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $PPE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $PPE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $PPE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $PPE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $PPE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $PPE;
+    }
+  }
+
+}
+
+
+//Pat Henry El
+.pat-henry {
+    #header {
+    .first-logo {
+      h1 {
+        color: $PHE;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $PHE url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $PHE;
+  }
+
+  #right-nav .menu-wrap {
+    background: $PHE;
+  }
+  
+  #footer .footer-col a {
+    color: $PHE;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $PHE;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $PHE;
+    }
+    &.news-wrapper .see-more {
+      color: $PHE;
+    }
+    &.events-wrapper .see-more {
+      color: $PHE;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $PHE;
+    }
+    h4 {
+      border-bottom: 3px solid $PHE;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $PHE;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $PHE;
+          border-color: $PHE;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $PHE;
+      }
+    }
+    &.events-wrapper p {
+      color: $PHE;
+    }
+    .news .right-content h3 {
+      color: $PHE;
+    }
+    .news .right-content p a {
+      color: $PHE;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $PHE;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $PHE;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $PHE;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $PHE;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $PHE;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $PHE;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $PHE;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $PHE;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $PHE;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $PHE;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $PHE;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $PHE url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $PHE;
+    }
+  }
+
+}
+
+
+//Eisenhower High
+.eisenhower-sr-high {
+    #header {
+    .first-logo {
+      h1 {
+        color: $EH;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $EH url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $EH;
+  }
+
+  #right-nav .menu-wrap {
+    background: $EH;
+  }
+  
+  #footer .footer-col a {
+    color: $EH;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $EHb;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $EH;
+    }
+    &.news-wrapper .see-more {
+      color: $EH;
+    }
+    &.events-wrapper .see-more {
+      color: $EH;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $EH;
+    }
+    h4 {
+      border-bottom: 3px solid $EH;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $EH;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $EH;
+          border-color: $EH;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $EH;
+      }
+    }
+    &.events-wrapper p {
+      color: $EH;
+    }
+    .news .right-content h3 {
+      color: $EH;
+    }
+    .news .right-content p a {
+      color: $EH;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $EH;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $EH;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $EH;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $EH;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $EH;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $EH;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $EH;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $EH;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $EH;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $EH;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $EH;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $EH url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $EH;
+    }
+  }
+
+}
+
+
+//Lawton High
+.lawton-sr-high {
+    #header {
+    .first-logo {
+      h1 {
+        color: $LH;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $LH url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $LH;
+  }
+
+  #right-nav .menu-wrap {
+    background: $LH;
+  }
+  
+  #footer .footer-col a {
+    color: $LH;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $LH;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $LH;
+    }
+    &.news-wrapper .see-more {
+      color: $LH;
+    }
+    &.events-wrapper .see-more {
+      color: $LH;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $LH;
+    }
+    h4 {
+      border-bottom: 3px solid $LH;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $LH;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $LH;
+          border-color: $LH;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $LH;
+      }
+    }
+    &.events-wrapper p {
+      color: $LH;
+    }
+    .news .right-content h3 {
+      color: $LH;
+    }
+    .news .right-content p a {
+      color: $LH;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $LH;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $LH;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $LH;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $LH;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $LH;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $LH;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $LH;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $LH;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $LH;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $LH;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $LH;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $LH url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $LH;
+    }
+  }
+
+}
+
+
+//MacArthur High
+.macarthur-sr-high {
+    #header {
+    .first-logo {
+      h1 {
+        color: $MH;
+      }
+    }
+    #right-nav .menu-btn span.active {
+      background: $MH url("school.png") no-repeat 94% 9px;
+    }
+  }
+
+
+  #right-nav .menu-btn > span.active {
+    background-color: $MH;
+  }
+
+  #right-nav .menu-wrap {
+    background: $MH;
+  }
+  
+  #footer .footer-col a {
+    color: $MH;
+  }
+
+.homepage .diagonal-line {
+  &:after {
+    background-color: $MH;
+  }
+}
+  
+  .main .col-item {
+    .see-more {
+      color: $MH;
+    }
+    &.news-wrapper .see-more {
+      color: $MH;
+    }
+    &.events-wrapper .see-more {
+      color: $MH;
+    }
+    &.live-feeds-wrapper .see-more {
+      color: $MH;
+    }
+    h4 {
+      border-bottom: 3px solid $MH;
+    }
+    &.live-feeds-wrapper .right-content h5,
+    &.live-feeds-wrapper .right-content h5 a {
+      color: $MH;
+    }
+    &.events-wrapper .event {
+      .clearfix {
+        &:hover {
+          background: $MH;
+          border-color: $MH;
+        }
+      }
+    }
+    .event .date {
+      span {
+        color: $MH;
+      }
+    }
+    &.events-wrapper p {
+      color: $MH;
+    }
+    .news .right-content h3 {
+      color: $MH;
+    }
+    .news .right-content p a {
+      color: $MH;
+    }
+  }
+
+  .breadcrumb li a {
+      color: $MH;
+  }
+
+  .right-content p a, .subpage p a {
+      color: $MH;
+  }
+
+  .left-sidebar .left-links li a {
+      color: $MH;
+  }
+
+  .right-content h1,
+  .subpage h1 {
+     color: $MH;
+  }
+  
+  .right-content h2,
+  .subpage h2 {
+      color: $MH;
+  }
+  
+  .right-content h3,
+  .subpage h3 {
+      color: $MH;
+  }
+  
+  .right-content h4,
+  .subpage h4 {
+      color: $MH;
+  }
+  
+  .right-content h5,
+  .subpage h5 {
+      color: $MH;
+  }
+  
+  .right-content h6,
+  .subpage h6 {
+      color: $MH;
+  }
+  @media only screen and (max-width: 65em) {
+    body .homepage #slider .social-media,
+    .js .homepage #slider .social-media.active,
+    .js .homepage #slider .social-media {
+      background: $MH;
+    }
+    .first-logo,
+    .js .homepage .first-logo.active,
+    .js .homepage .first-logo {
+      background: $MH;
+    }
+    #header #right-nav .menu-btn span.active {
+      background: $MH url("school.png") no-repeat 95% 0;
+    }
+
+    .homepage {
+      background: url('diagonal-line.png') no-repeat right top;
+    }
+
+    #slider .slider-info {
+      background: $MH;
+    }
+  }
+
+}

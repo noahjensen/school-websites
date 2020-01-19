@@ -1,0 +1,95 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<% if params[:org] == "district" %>
+    <title>Pleasant Valley School District</title>
+ <% elsif params[:org] == "camarillo-heights" %>
+     <title>Camarillo Heights STEM Academy</title>
+
+  <% elsif params[:org] == "dos-caminos" %>
+      <title>Dos Caminos Elementary School</title>
+
+   <% elsif params[:org] == "la-mariposa" %>
+       <title>La Mariposa School</title>
+
+    <% elsif params[:org] == "las-colinas" %>
+        <title>Las Colinas Schools</title>
+
+     <% elsif params[:org] == "las-posas" %>
+         <title>Las Posas Elementary </title>
+
+      <% elsif params[:org] == "lpssa" %>
+    <title>Los Primeros School of Science and Arts</title>
+
+       <% elsif params[:org] == "monte-vista" %>
+           <title>Monte Vista Middle School</title>
+
+        <% elsif params[:org] == "pvsea" %>
+            <title>Pleasant Valley School of Engineering and Arts</title>
+
+         <% elsif params[:org] == "rancho-rosal" %>
+             <title>Rancho Rosal Elementary School</title>
+
+          <% elsif params[:org] == "srtms" %>
+              <title>Santa Rosa Technology Magnet School</title>
+
+           <% elsif params[:org] == "tierra-linda" %>
+               <title>Tierra Linda Elementary School</title>
+
+
+
+ <% else %>
+     <title>Pleasant Valley School District</title>
+
+ <% end %>
+    <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,900,400italic,700italic' rel='stylesheet' type='text/css'>
+      <script src="https://use.typekit.net/zkm1gub.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <% if params[:org] == "district" %>
+    <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-district.ico" %>
+
+ <% elsif params[:org] == "camarillo-heights" %>
+     <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-camarillo-heights.ico" %>
+
+  <% elsif params[:org] == "dos-caminos" %>
+       <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-dos-caminos.ico" %>
+
+   <% elsif params[:org] == "la-mariposa" %>
+        <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-la-mariposa.ico" %>
+
+    <% elsif params[:org] == "las-colinas" %>
+         <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-las-colinas.ico" %>
+
+     <% elsif params[:org] == "las-posas" %>
+          <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-las-posas.ico" %>
+
+      <% elsif params[:org] == "lpssa" %>
+           <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-lpssa.ico" %>
+
+       <% elsif params[:org] == "monte-vista" %>
+            <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-monte-vista.ico" %>
+
+        <% elsif params[:org] == "pvsea" %>
+             <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-pvsea.ico" %>
+
+         <% elsif params[:org] == "rancho-rosal" %>
+              <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-rancho-rosal.ico" %>
+
+          <% elsif params[:org] == "srtms" %>
+               <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-srtms.ico" %>
+
+           <% elsif params[:org] == "tierra-linda" %>
+                <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-tierra-linda.ico" %>
+
+
+
+ <% else %>
+     <%= favicon_link_tag "apptegy_cms/themes/pleasantvalleyca/favicon-district.ico" %>
+
+ <% end %>
+
+
+
+
+        <%= javascript_include_tag "apptegy_cms/themes/pleasantvalleyca/application" %>
+            <%= stylesheet_link_tag "apptegy_cms/themes/pleasantvalleyca/application", :media => "all"  %>
